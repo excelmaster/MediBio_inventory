@@ -1,9 +1,11 @@
 <?php
-//BindEvents Method @1-C0634196
+//BindEvents Method @1-F33A6605
 function BindEvents()
 {
     global $Login1;
+    global $CCSEvents;
     $Login1->Button_DoLogin->CCSEvents["OnClick"] = "Login1_Button_DoLogin_OnClick";
+    $CCSEvents["BeforeUnload"] = "Page_BeforeUnload";
 }
 //End BindEvents Method
 
@@ -39,10 +41,35 @@ function Login1_Button_DoLogin_OnClick(& $sender)
     }
 //End Login
 
+//Declare Variable @14-5E9BEDB9
+    global $$link_dirije;
+    $$link_dirije = "";
+//End Declare Variable
+
 //Close Login1_Button_DoLogin_OnClick @3-53D741FA
     return $Login1_Button_DoLogin_OnClick;
 }
 //End Close Login1_Button_DoLogin_OnClick
+
+//Page_BeforeUnload @1-DEED6D32
+function Page_BeforeUnload(& $sender)
+{
+    $Page_BeforeUnload = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $login; //Compatibility
+//End Page_BeforeUnload
+
+//Custom Code @15-2A29BDB7
+// -------------------------
+    // Write your own code here.
+// -------------------------
+//End Custom Code
+
+//Close Page_BeforeUnload @1-CFAEC742
+    return $Page_BeforeUnload;
+}
+//End Close Page_BeforeUnload
 
 
 ?>

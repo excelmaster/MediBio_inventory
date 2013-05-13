@@ -137,7 +137,15 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
                 $this->PressedButton = "Button_DoLogin";
             }
         }
-        $Redirect = "redirije.php";
+        
+        //$Redirect = "grupo1.php";
+        rol_redirije();
+        $Redirect = CCGetSession("pageRedir");
+        
+        
+      	/*$redirect = rolb_login();
+      	echo $redirect;*/
+      	
         if($this->Validate()) {
             if($this->PressedButton == "Button_DoLogin") {
                 if(!CCGetEvent($this->Button_DoLogin->CCSEvents, "OnClick", $this->Button_DoLogin)) {

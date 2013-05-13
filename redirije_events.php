@@ -19,12 +19,7 @@ function Page_AfterInitialize(& $sender)
 //Custom Code @8-2A29BDB7
 // -------------------------
     // Write your own code here.
-    
-    global $Redirect;
-    $db = new clsDBConnection1();
-    $sSql= "select group_init.pageRedirect from group_init where group_init.grupo = 1";
-    $redirect=$db->query($sSql);
-    
+
 
 // -------------------------
 //End Custom Code

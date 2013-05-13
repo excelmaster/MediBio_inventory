@@ -2111,5 +2111,21 @@ function CCLogoutUser()
 }
 //End CCLogoutUser
 
+// begin rol based redirection 
+function rol_redirije() 
+{
+	$db = new clsDBConnection1();
+    /*$SQL = "select group_init.pageRedirect from group_init where group_init.grupo =".CCToSQL(CCGetGroupID(),ccsInteger);
+    $db->query($SQL);
+    $Result = $db->next_record();
+    return $Result;
+    echo $result;
+  	$db->close();  */
+  	$result=CCDLookUp("pageRedirect","group_init","grupo=".CCGetGroupID(),$db);
+  	CCSetSession("pageRedir",$result);
+  	return ;
+}
+
+// end rol based redirection
 
 ?>

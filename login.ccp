@@ -10,6 +10,7 @@
 								<Event name="OnClick" type="Server">
 									<Actions>
 										<Action actionName="Login" actionCategory="Security" id="6" redirectToPreviousPage="True" loginParameter="login" passwordParameter="password" autoLoginParameter="autoLogin" eventType="Server"/>
+										<Action actionName="Declare Variable" actionCategory="General" id="14" name="$link_dirije"/>
 									</Actions>
 								</Event>
 							</Events>
@@ -95,5 +96,10 @@
 				<Action actionName="Set Focus" actionCategory="General" id="8" form="Login1" name="login"/>
 			</Actions>
 		</Event>
-	</Events>
+		<Event name="BeforeUnload" type="Server">
+<Actions>
+<Action actionName="Custom Code" actionCategory="General" id="15"/>
+</Actions>
+</Event>
+</Events>
 </Page>
