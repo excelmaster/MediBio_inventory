@@ -309,10 +309,12 @@ if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     header("Location: " . $Redirect);
+    CCSetSession("pageRedir", "");
     unset($Login1);
     unset($Tpl);
     exit;
 }
+
 //End Go to destination page
 
 //Show Page @1-8BA48B14

@@ -63,7 +63,7 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
-		<Panel id="11" visible="True" name="pie" contentPlaceholder="pie">
+		<Panel id="11" visible="True" name="pie" contentPlaceholder="cabecera">
 			<Components/>
 			<Events/>
 			<Attributes/>
@@ -97,9 +97,9 @@
 			</Actions>
 		</Event>
 		<Event name="BeforeUnload" type="Server">
-<Actions>
-<Action actionName="Custom Code" actionCategory="General" id="15"/>
-</Actions>
-</Event>
-</Events>
+			<Actions>
+				<Action actionName="Custom Code" actionCategory="General" id="15"/>
+			</Actions>
+		</Event>
+	</Events>
 </Page>
