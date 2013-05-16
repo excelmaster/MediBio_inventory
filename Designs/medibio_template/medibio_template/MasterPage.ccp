@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="..\.." fullRelativePath=".\Designs\BookStore" secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath="..\..\.." fullRelativePath=".\Designs\medibio_template\medibio_template" secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" needGeneration="0">
 	<Components>
 		<ContentPlaceholder id="222" name="Head" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Head">
 			<Components/>

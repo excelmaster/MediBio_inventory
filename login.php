@@ -9,8 +9,8 @@ include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-//Master Page implementation @1-DF903F6E
-include_once(RelativePath . "/Designs/masterpage.php");
+//Master Page implementation @1-8E4799B9
+include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
 class clsRecordLogin1 { //Login1 Class @2-621CEC6C
@@ -213,7 +213,7 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
 
 } //End Login1 Class @2-FCB6E20C
 
-//Initialize Page @1-4343C1D4
+//Initialize Page @1-92E602F1
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -228,7 +228,7 @@ $TemplatePathValue = "";
 // Events;
 $CCSEvents = "";
 $CCSEventResult = "";
-$masterpage = null;
+$MasterPage = null;
 $TemplateSource = "";
 
 $FileName = FileName;
@@ -249,28 +249,41 @@ include_once("./login_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-C2C65388
+//Initialize Objects @1-F1508DBB
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$masterpage = new clsmasterpage("/Designs/", "masterpage", $MainPage);
-$masterpage->Attributes = $Attributes;
-$masterpage->Initialize();
+$MasterPage = new clsMasterPage("/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
+$MasterPage->Attributes = $Attributes;
+$MasterPage->Initialize();
+$Head1 = new clsPanel("Head1", $MainPage);
+$Head1->PlaceholderName = "Head";
+$Content1 = new clsPanel("Content1", $MainPage);
+$Content1->PlaceholderName = "Content";
+$Content = new clsPanel("Content", $MainPage);
+$Login1 = new clsRecordLogin1("", $MainPage);
+$Head = new clsPanel("Head", $MainPage);
+$Menu = new clsPanel("Menu", $MainPage);
+$Sidebar1 = new clsPanel("Sidebar1", $MainPage);
+$Sidebar1->PlaceholderName = "Sidebar1";
 $contenido = new clsPanel("contenido", $MainPage);
 $contenido->PlaceholderName = "contenido";
-$Login1 = new clsRecordLogin1("", $MainPage);
 $pie = new clsPanel("pie", $MainPage);
-$pie->PlaceholderName = "pie";
-$Head = new clsPanel("Head", $MainPage);
-$Content = new clsPanel("Content", $MainPage);
-$MainPage->contenido = & $contenido;
-$MainPage->Login1 = & $Login1;
-$MainPage->pie = & $pie;
-$MainPage->Head = & $Head;
+$pie->PlaceholderName = "cabecera";
+$MainPage->Head1 = & $Head1;
+$MainPage->Content1 = & $Content1;
 $MainPage->Content = & $Content;
-$contenido->AddComponent("Login1", $Login1);
+$MainPage->Login1 = & $Login1;
+$MainPage->Head = & $Head;
+$MainPage->Menu = & $Menu;
+$MainPage->Sidebar1 = & $Sidebar1;
+$MainPage->contenido = & $contenido;
+$MainPage->pie = & $pie;
+$Content1->AddComponent("Content", $Content);
+$Content1->AddComponent("Head", $Head);
+$Content->AddComponent("Login1", $Login1);
 
 BindEvents();
 
@@ -299,8 +312,8 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-849290D5
-$masterpage->Operations();
+//Execute Components @1-4FE7D741
+$MasterPage->Operations();
 $Login1->Operation();
 //End Execute Components
 
@@ -317,23 +330,28 @@ if($Redirect)
 
 //End Go to destination page
 
-//Show Page @1-8BA48B14
+//Show Page @1-7042E19D
+$Head1->Show();
+$Content1->Show();
+$Menu->Show();
+$Sidebar1->Show();
 $contenido->Show();
 $pie->Show();
-$Head->Show();
-$Content->Show();
-$masterpage->Tpl->SetVar("contenido", $Tpl->GetVar("Panel contenido"));
-$masterpage->Tpl->SetVar("pie", $Tpl->GetVar("Panel pie"));
-$masterpage->Show();
-if (!isset($main_block)) $main_block = $masterpage->HTML;
+$MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head1"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content1"));
+$MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
+$MasterPage->Tpl->SetVar("contenido", $Tpl->GetVar("Panel contenido"));
+$MasterPage->Tpl->SetVar("cabecera", $Tpl->GetVar("Panel pie"));
+$MasterPage->Show();
+if (!isset($main_block)) $main_block = $MasterPage->HTML;
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $TemplateEncoding);
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-BE4D9B96
+//Unload Page @1-B1C7C49F
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
-unset($masterpage);
+unset($MasterPage);
 unset($Login1);
 unset($Tpl);
 //End Unload Page
