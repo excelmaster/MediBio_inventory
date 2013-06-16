@@ -5,16 +5,31 @@ include(RelativePath . "/Classes.php");
 include(RelativePath . "/db_adapter.php");
 //End Include Files
 
-//Connection Settings @0-0F4B3539
+//Connection Settings @0-F6C2C609
 $CCConnectionSettings = array (
     "Connection1" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
+        "Database" => "inventario_mb",
+        "Host" => "127.0.0.1",
+        "Port" => "3306;Database=inventario_mb",
+        "User" => "hfTest",
+        "Password" => "HFpruebas*",
+        "Encoding" => array("", "cp1252"),
+        "Persistent" => false,
+        "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
+        "BooleanFormat" => array(1, 0, ""),
+        "Uppercase" => false
+    ), 
+    "invt" => array(
+        "Type" => "MySQL",
+        "DBLib" => "MySQL",
         "Database" => "invt_mb",
-        "Host" => "localhost",
+        "Host" => "127.0.0.1",
         "Port" => "3306;Database=invt_mb",
-        "User" => "root",
-        "Password" => "mgMEN19",
+        "User" => "hfTest",
+        "Password" => "HFpruebas*",
+        "Encoding" => array("", "cp1252"),
         "Persistent" => false,
         "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
         "BooleanFormat" => array(1, 0, ""),
@@ -23,7 +38,7 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-55637FFF
+//Initialize Common Variables @0-B887EE7B
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
@@ -47,7 +62,7 @@ $CCSLocales = new clsLocales(RelativePath);
 $CCSLocales->AddLocale("en", Array("en", "US", array("Yes", "No", ""), 2, ".", ",", array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"), array("S", "M", "T", "W", "T", "F", "S"), array("m", "/", "d", "/", "yyyy"), array("dddd", ", ", "mmmm", " ", "dd", ", ", "yyyy"), array("h", ":", "nn", " ", "tt"), array("h", ":", "nn", ":", "ss", " ", "tt"), "AM", "PM", 0, false, "", "windows-1252", "CP1252", array(1, 7)));
 $CCSLocales->DefaultLocale = strtolower("en");
 $CCSLocales->Init();
-$Charset = "";
+$Charset = $CCSLocales->GetFormatInfo("Encoding");
 
 if ($PHPLocale = $CCSLocales->GetFormatInfo("PHPLocale"))
     setlocale(LC_ALL, $PHPLocale);
@@ -115,6 +130,26 @@ class clsDBConnection1 extends DB_Adapter
 
 }
 //End Connection1 Connection Class
+
+//invt Connection Class @-A60876B4
+
+{
+    function clsDBConnection1()
+    {
+        $this->Initialize();
+    }
+
+    function Initialize()
+    {
+        global $CCConnectionSettings;
+        $this->SetProvider($CCConnectionSettings["invt"]);
+        parent::Initialize();
+        $this->DateLeftDelimiter = "'";
+        $this->DateRightDelimiter = "'";
+    }
+
+}
+//End invt Connection Class
 
 //Initialize Cookie Check @0-56800F96
 CCCheckAutoLoginCookies();
@@ -1036,7 +1071,7 @@ function CCGetIndex($ArrayValues, $Value, $IgnoreCase = true)
 }
 //End CCGetIndex
 
-//CCFormatNumber @0-ECA37772
+//CCFormatNumber @0-5EF57318
 function CCFormatNumber($NumberToFormat, $FormatArray, $DataType = ccsFloat, $isDBFormat = false)
 {
   global $CCSLocales;
@@ -1051,13 +1086,13 @@ function CCFormatNumber($NumberToFormat, $FormatArray, $DataType = ccsFloat, $is
   
     if($IsExtendedFormat) // Extended format
     {
-      $DecimalSeparator        = !is_null($FormatArray[2]) ? $FormatArray[2] : ".";
-      $PeriodSeparator         = !is_null($FormatArray[3]) ? $FormatArray[3] : ",";
+      $DecimalSeparator        = !is_null($FormatArray[2]) ? $FormatArray[2] : ($isDBFormat ? "." : $CCSLocales->GetFormatInfo("DecimalSeparator"));
+      $PeriodSeparator         = !is_null($FormatArray[3]) ? $FormatArray[3] : ($isDBFormat ? "" : $CCSLocales->GetFormatInfo("GroupSeparator"));
 
       $ObligatoryBeforeDecimal = 0;
       $DigitsBeforeDecimal = 0;
       $BeforeDecimal = $FormatArray[5];
-      $AfterDecimal = !is_null($FormatArray[6]) ? $FormatArray[6] : ($DataType != ccsInteger ? 100 : 0);
+      $AfterDecimal = !is_null($FormatArray[6]) ? $FormatArray[6] : ($DataType != ccsInteger ? ($isDBFormat ? 100 : $CCSLocales->GetFormatInfo("DecimalDigits")) : 0);
       if(is_array($BeforeDecimal)) {
         for($i = 0; $i < sizeof($BeforeDecimal); $i++) {
           if($BeforeDecimal[$i] == "0") {
@@ -1159,9 +1194,9 @@ function CCFormatNumber($NumberToFormat, $FormatArray, $DataType = ccsFloat, $is
     }
     else // Simple format
     {
-      $DecimalSeparator = !is_null($FormatArray[2]) ? $FormatArray[2] : ".";
-      $PeriodSeparator = !is_null($FormatArray[3]) ? $FormatArray[3] : ",";
-      $AfterDecimal = !is_null($FormatArray[1]) ? $FormatArray[1] : ($DataType != ccsInteger ? 100 : 0);
+      $DecimalSeparator = !is_null($FormatArray[2]) ? $FormatArray[2] : ($isDBFormat ? "." : $CCSLocales->GetFormatInfo("DecimalSeparator"));
+      $PeriodSeparator = !is_null($FormatArray[3]) ? $FormatArray[3] : ($isDBFormat ? "" : $CCSLocales->GetFormatInfo("GroupSeparator"));
+      $AfterDecimal = !is_null($FormatArray[1]) ? $FormatArray[1] : ($DataType != ccsInteger ? ($isDBFormat ? 100 : $CCSLocales->GetFormatInfo("DecimalDigits")) : 0);
 
       $Result = number_format($NumberToFormat, $AfterDecimal, '.', ',');
       $Result = str_replace(".", '---', $Result);
@@ -1178,8 +1213,16 @@ function CCFormatNumber($NumberToFormat, $FormatArray, $DataType = ccsFloat, $is
       $Result = CCToHTML($Result);
 
   }
-  else
-    $Result = $NumberToFormat;
+  elseif (strlen($NumberToFormat))
+  { 
+    if ($DataType != ccsInteger) {
+      $DecimalSeparator        = $isDBFormat ? "." : $CCSLocales->GetFormatInfo("DecimalSeparator");
+      $Result = str_replace(",", $DecimalSeparator, $NumberToFormat);
+      $Result = str_replace(".", $DecimalSeparator, $Result);
+    } else {
+      $Result = $NumberToFormat;
+    }
+  }
 
   if(is_array($FormatArray) && strlen($FormatArray[9])) {
     if($CCSIsXHTML) {
@@ -1232,9 +1275,10 @@ function CCParseNumber($NumberValue, $FormatArray, $DataType, $isDBFormat = fals
 }
 //End CCParseNumber
 
-//CCCleanNumber @0-AFA6FB0D
+//CCCleanNumber @0-70E63D24
 function CCCleanNumber($NumberValue, $FormatArray, $isDBFormat = false)
 {
+  global $CCSLocales;
   if(is_array($FormatArray))
   {
     $IsExtendedFormat = $FormatArray[0];
@@ -1275,8 +1319,8 @@ function CCCleanNumber($NumberValue, $FormatArray, $isDBFormat = false)
       if(strlen($FormatArray[6]))
         $NumberValue = str_replace($FormatArray[6], "", $NumberValue);
     }
-    $DecimalSeparator = !is_null($FormatArray[2]) ? $FormatArray[2] : ".";
-    $PeriodSeparator = !is_null($FormatArray[3]) ? $FormatArray[3] : ",";
+    $DecimalSeparator = !is_null($FormatArray[2]) ? $FormatArray[2] : ($isDBFormat ? "." : $CCSLocales->GetFormatInfo("DecimalSeparator"));
+    $PeriodSeparator = !is_null($FormatArray[3]) ? $FormatArray[3] : ($isDBFormat ? "," : $CCSLocales->GetFormatInfo("GroupSeparator"));
 
     $NumberValue = str_replace($PeriodSeparator, "", $NumberValue); // Period separator
     $NumberValue = str_replace($DecimalSeparator, ".", $NumberValue); // Decimal separator
@@ -1293,7 +1337,13 @@ function CCCleanNumber($NumberValue, $FormatArray, $isDBFormat = false)
     }
     return $NumberValue;
   }
-  $NumberValue = str_replace(",", ".", $NumberValue);
+  if ($isDBFormat) {
+    $NumberValue = str_replace(",", ".", $NumberValue);
+  } else {
+    $NumberValue = str_replace($CCSLocales->GetFormatInfo("GroupSeparator"), "", $NumberValue);
+    $NumberValue = str_replace($CCSLocales->GetFormatInfo("DecimalSeparator"), ".", $NumberValue);
+  }
+  
   $NumberValue = preg_replace("/^(-?)(\\.\\d+)$/", "\${1}0\${2}", $NumberValue);
 
   return $NumberValue;
@@ -1642,11 +1692,14 @@ function CCConvertEncodingArray($array, $from="", $to="")
 }
 //End CCConvertEncodingArray
 
-//CCConvertDataArrays @0-67F649CD
+//CCConvertDataArrays @0-303D5215
 function CCConvertDataArrays($from="", $to="")
 {
     global $FileEncoding;
     global $TemplateEncoding;
+    global $CCSLocales;
+    if ($from == "")
+        $from = $CCSLocales->GetFormatInfo("PHPEncoding");
     if ($from == "")
         $from = $TemplateEncoding;
     if ($to == "")
@@ -2123,9 +2176,10 @@ function rol_redirije()
   	$db->close();  */
   	$result=CCDLookUp("pageRedirect","group_init","grupo=".CCGetGroupID(),$db);
   	CCSetSession("pageRedir",$result);
-  	return ;
+  	return;
 }
 
 // end rol based redirection
+
 
 ?>

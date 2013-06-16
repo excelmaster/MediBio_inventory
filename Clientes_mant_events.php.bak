@@ -1,0 +1,143 @@
+<?php
+//BindEvents Method @1-44FFE096
+function BindEvents()
+{
+    global $unidadesmedida_categoria;
+    global $CCSEvents;
+    $unidadesmedida_categoria->unidadesmedida_categoria_TotalRecords->CCSEvents["BeforeShow"] = "unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow";
+}
+//End BindEvents Method
+
+//unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow @93-8AF3E027
+function unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow(& $sender)
+{
+    $unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $unidadesmedida_categoria; //Compatibility
+//End unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow
+
+//Retrieve number of records @94-ABE656B4
+    $Component->SetValue($Container->DataSource->RecordsCount);
+//End Retrieve number of records
+
+//Close unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow @93-362E3562
+    return $unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow;
+}
+//End Close unidadesmedida_categoria_unidadesmedida_categoria_TotalRecords_BeforeShow
+
+//Page_BeforeInitialize @1-85F5B036
+function Page_BeforeInitialize(& $sender)
+{
+    $Page_BeforeInitialize = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $Clientes_mant; //Compatibility
+//End Page_BeforeInitialize
+
+//YahooAutocomplete1 Initialization @120-3C5A73D1
+    if ('Contentunidadesmedida_categoria2s_prinombre1YahooAutocomplete1' == CCGetParam('callbackControl')) {
+        $Service = new Service();
+        $Service->SetFormatter(new JsonFormatter());
+//End YahooAutocomplete1 Initialization
+
+//YahooAutocomplete1 DataSource @120-8A191050
+        $Service->DataSource = new clsDBConnection1();
+        $Service->ds = & $Service->DataSource;
+        $Service->DataSource->SQL = "SELECT * \n" .
+"FROM clientes {SQL_Where} {SQL_OrderBy}";
+        $Service->DataSource->Parameters["urlquery"] = CCGetFromGet("query", NULL);
+        $Service->DataSource->wp = new clsSQLParameters();
+        $Service->DataSource->wp->AddParameter("1", "urlquery", ccsText, "", "", $Service->DataSource->Parameters["urlquery"], -1, false);
+        $Service->DataSource->wp->Criterion[1] = $Service->DataSource->wp->Operation(opBeginsWith, "prinombre", $Service->DataSource->wp->GetDBValue("1"), $Service->DataSource->ToSQL($Service->DataSource->wp->GetDBValue("1"), ccsText),false);
+        $Service->DataSource->Where = 
+             $Service->DataSource->wp->Criterion[1];
+        $Service->SetDataSourceQuery(CCBuildSQL($Service->DataSource->SQL, $Service->DataSource->Where, $Service->DataSource->Order));
+//End YahooAutocomplete1 DataSource
+
+//YahooAutocomplete1 DataFields @120-ECAC7D3C
+        $Service->AddDataSourceField('prinombre');
+//End YahooAutocomplete1 DataFields
+
+//YahooAutocomplete1 Execution @120-73F24F96
+        echo '{"Result":' . $Service->Execute() . '}';
+//End YahooAutocomplete1 Execution
+
+//YahooAutocomplete1 Tail @120-27890EF8
+        exit;
+    }
+//End YahooAutocomplete1 Tail
+
+//YahooAutocomplete2 Initialization @121-497488D2
+    if ('Contentunidadesmedida_categoria2s_priapellido1YahooAutocomplete2' == CCGetParam('callbackControl')) {
+        $Service = new Service();
+        $Service->SetFormatter(new JsonFormatter());
+//End YahooAutocomplete2 Initialization
+
+//YahooAutocomplete2 DataSource @121-C4088FBC
+        $Service->DataSource = new clsDBConnection1();
+        $Service->ds = & $Service->DataSource;
+        $Service->DataSource->SQL = "SELECT * \n" .
+"FROM clientes {SQL_Where} {SQL_OrderBy}";
+        $Service->DataSource->Parameters["urlquery"] = CCGetFromGet("query", NULL);
+        $Service->DataSource->wp = new clsSQLParameters();
+        $Service->DataSource->wp->AddParameter("1", "urlquery", ccsText, "", "", $Service->DataSource->Parameters["urlquery"], -1, false);
+        $Service->DataSource->wp->Criterion[1] = $Service->DataSource->wp->Operation(opBeginsWith, "priapellido", $Service->DataSource->wp->GetDBValue("1"), $Service->DataSource->ToSQL($Service->DataSource->wp->GetDBValue("1"), ccsText),false);
+        $Service->DataSource->Where = 
+             $Service->DataSource->wp->Criterion[1];
+        $Service->SetDataSourceQuery(CCBuildSQL($Service->DataSource->SQL, $Service->DataSource->Where, $Service->DataSource->Order));
+//End YahooAutocomplete2 DataSource
+
+//YahooAutocomplete2 DataFields @121-F6EF3AEF
+        $Service->AddDataSourceField('priapellido');
+//End YahooAutocomplete2 DataFields
+
+//YahooAutocomplete2 Execution @121-73F24F96
+        echo '{"Result":' . $Service->Execute() . '}';
+//End YahooAutocomplete2 Execution
+
+//YahooAutocomplete2 Tail @121-27890EF8
+        exit;
+    }
+//End YahooAutocomplete2 Tail
+
+//YahooAutocomplete3 Initialization @122-F56F2F3E
+    if ('Contentunidadesmedida_categoria2s_num_documento1YahooAutocomplete3' == CCGetParam('callbackControl')) {
+        $Service = new Service();
+        $Service->SetFormatter(new JsonFormatter());
+//End YahooAutocomplete3 Initialization
+
+//YahooAutocomplete3 DataSource @122-18D09B82
+        $Service->DataSource = new clsDBConnection1();
+        $Service->ds = & $Service->DataSource;
+        $Service->DataSource->SQL = "SELECT * \n" .
+"FROM clientes {SQL_Where} {SQL_OrderBy}";
+        $Service->DataSource->Parameters["urlquery"] = CCGetFromGet("query", NULL);
+        $Service->DataSource->wp = new clsSQLParameters();
+        $Service->DataSource->wp->AddParameter("1", "urlquery", ccsText, "", "", $Service->DataSource->Parameters["urlquery"], -1, false);
+        $Service->DataSource->wp->Criterion[1] = $Service->DataSource->wp->Operation(opBeginsWith, "num_documento", $Service->DataSource->wp->GetDBValue("1"), $Service->DataSource->ToSQL($Service->DataSource->wp->GetDBValue("1"), ccsText),false);
+        $Service->DataSource->Where = 
+             $Service->DataSource->wp->Criterion[1];
+        $Service->SetDataSourceQuery(CCBuildSQL($Service->DataSource->SQL, $Service->DataSource->Where, $Service->DataSource->Order));
+//End YahooAutocomplete3 DataSource
+
+//YahooAutocomplete3 DataFields @122-33A11240
+        $Service->AddDataSourceField('num_documento');
+//End YahooAutocomplete3 DataFields
+
+//YahooAutocomplete3 Execution @122-73F24F96
+        echo '{"Result":' . $Service->Execute() . '}';
+//End YahooAutocomplete3 Execution
+
+//YahooAutocomplete3 Tail @122-27890EF8
+        exit;
+    }
+//End YahooAutocomplete3 Tail
+
+//Close Page_BeforeInitialize @1-23E6A029
+    return $Page_BeforeInitialize;
+}
+//End Close Page_BeforeInitialize
+
+
+?>
