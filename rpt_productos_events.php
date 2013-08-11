@@ -9,7 +9,11 @@ function BindEvents()
 }
 //End BindEvents Method
 
+<<<<<<< HEAD
 //Report_Print_BeforeShow @5-6CD7E3F9
+=======
+//Report_Print_BeforeShow @68-6CD7E3F9
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 function Report_Print_BeforeShow(& $sender)
 {
     $Report_Print_BeforeShow = true;
@@ -18,19 +22,31 @@ function Report_Print_BeforeShow(& $sender)
     global $Report_Print; //Compatibility
 //End Report_Print_BeforeShow
 
+<<<<<<< HEAD
 //Hide-Show Component @7-286F3E6C
+=======
+//Hide-Show Component @70-286F3E6C
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     $Parameter1 = CCGetFromGet("ViewMode", "");
     $Parameter2 = "Print";
     if (0 == CCCompareValues($Parameter1, $Parameter2, ccsText))
         $Component->Visible = false;
 //End Hide-Show Component
 
+<<<<<<< HEAD
 //Close Report_Print_BeforeShow @5-0DD1CC60
+=======
+//Close Report_Print_BeforeShow @68-0DD1CC60
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     return $Report_Print_BeforeShow;
 }
 //End Close Report_Print_BeforeShow
 
+<<<<<<< HEAD
 //categoria_productos_unida_ds_BeforeBuildSelect @8-AD0464EB
+=======
+//categoria_productos_unida_ds_BeforeBuildSelect @71-AD0464EB
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 function categoria_productos_unida_ds_BeforeBuildSelect(& $sender)
 {
     $categoria_productos_unida_ds_BeforeBuildSelect = true;
@@ -39,7 +55,11 @@ function categoria_productos_unida_ds_BeforeBuildSelect(& $sender)
     global $categoria_productos_unida; //Compatibility
 //End categoria_productos_unida_ds_BeforeBuildSelect
 
+<<<<<<< HEAD
 //Advanced Search @66-E493BC17
+=======
+//Advanced Search @126-E493BC17
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     global $productos_unidadesmedida;
     $s_keyword = CCGetParam("s_keyword", "");
     $searchConditions = CCGetParam("searchConditions", "");
@@ -82,10 +102,17 @@ function categoria_productos_unida_ds_BeforeBuildSelect(& $sender)
     }
 //End Advanced Search
 
+<<<<<<< HEAD
 //Close categoria_productos_unida_ds_BeforeBuildSelect @8-2226510E
     return $categoria_productos_unida_ds_BeforeBuildSelect;
 }
 //End Close categoria_productos_unida_ds_BeforeBuildSelect
 
 
+=======
+//Close categoria_productos_unida_ds_BeforeBuildSelect @71-2226510E
+    return $categoria_productos_unida_ds_BeforeBuildSelect;
+}
+//End Close categoria_productos_unida_ds_BeforeBuildSelect
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 ?>

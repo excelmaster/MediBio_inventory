@@ -11,8 +11,22 @@
 <script language="JavaScript" type="text/javascript">
 //End Include Common JSFunctions
 
+<<<<<<< HEAD
 //bind_events @1-BF0EB765
 function bind_events() {
+=======
+//ContentproductosButton_Cancel_OnClick @122-50EE7B13
+function ContentproductosButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End ContentproductosButton_Cancel_OnClick
+
+//bind_events @1-624DE9F6
+function bind_events() {
+    addEventHandler("ContentproductosButton_Cancel", "click", ContentproductosButton_Cancel_OnClick);
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 }
 //End bind_events
 
@@ -36,6 +50,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 <!-- END Panel Head --><br>
 <!-- BEGIN Panel Content -->
 <p align="center">
+<<<<<<< HEAD
 <!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 -->&nbsp; 
 <!-- BEGIN Record unidadesmedida_productos1 -->
 <form id="Contentunidadesmedida_productos1" method="post" name="{HTMLFormName}" action="{Action}">
@@ -43,6 +58,15 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
     <tr>
       <td valign="top">
         <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+=======
+<!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 --></p>
+<!-- BEGIN Record unidadesmedida_productos1 -->
+<form id="Contentunidadesmedida_productos1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
@@ -58,7 +82,11 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1s_keyword">{res:CCS_Filter}</label></td> 
+<<<<<<< HEAD
             <td><input id="Contentunidadesmedida_productos1s_keyword" maxlength="200" size="50" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+=======
+            <td><input id="Contentunidadesmedida_productos1s_keyword" value="{s_keyword}" maxlength="200" size="50" name="{s_keyword_Name}"></td> 
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1searchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
               <select id="Contentunidadesmedida_productos1searchConditions" name="{searchConditions_Name}">
@@ -76,7 +104,11 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <tr class="BottomBlueprint">
             <td><a href="{ClearParameters_Src}" id="Contentunidadesmedida_productos1ClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right" colspan="5">
+<<<<<<< HEAD
               <!-- BEGIN Button Button_DoSearch --><input type="image" id="Contentunidadesmedida_productos1Button_DoSearch" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+=======
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentunidadesmedida_productos1Button_DoSearch" value="{res:CCS_Search}" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
           </tr>
         </table>
       </td>
@@ -85,10 +117,17 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </form>
 <!-- END Record unidadesmedida_productos1 --><br>
 <!-- BEGIN Grid unidadesmedida_productos -->
+<<<<<<< HEAD
 <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td valign="top">
       <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+=======
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
           <td class="thBlueprint"><strong>Listado de Productos </strong></td> 
@@ -98,7 +137,11 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
       <table class="GridBlueprint" cellspacing="0" cellpadding="0">
         <tr class="RowBlueprint">
+<<<<<<< HEAD
           <td colspan="8">{res:CCS_TotalRecords}&nbsp;{unidadesmedida_productos_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{unidadesmedida_productos_Insert1_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert1">{res:CCS_InsertLink}</a></td>
+=======
+          <td colspan="8">{res:CCS_TotalRecords}&nbsp;{unidadesmedida_productos_TotalRecords}</td>
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
         </tr>
  
         <tr class="CaptionBlueprint">
@@ -191,7 +234,11 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
         <tr class="FooterBlueprint">
           <td colspan="8"><a href="{unidadesmedida_productos_Insert_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert">{res:CCS_InsertLink}</a>&nbsp; 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+<<<<<<< HEAD
             <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+=======
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
               <option selected value="">-</option>
  {PageSize_Options}
             </select>
@@ -210,7 +257,116 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
   </tr>
 </table>
 <!-- END Grid unidadesmedida_productos --><br>
+<<<<<<< HEAD
 &nbsp;</p>
+=======
+<!-- BEGIN Record productos -->
+<form id="Contentproductos" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>Ingresar o editar Productos </strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosname_producto">{res:name_producto}</label></td> 
+            <td><input id="Contentproductosname_producto" value="{name_producto}" maxlength="200" size="50" name="{name_producto_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductoscategoria_producto_id">{res:categoria_producto_id}</label></td> 
+            <td>
+              <select id="Contentproductoscategoria_producto_id" name="{categoria_producto_id_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {categoria_producto_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosunidad_medida_id">{res:unidad_medida_id}</label></td> 
+            <td>
+              <select id="Contentproductosunidad_medida_id" name="{unidad_medida_id_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {unidad_medida_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductoscantidad_producto">{res:cantidad_producto}</label></td> 
+            <td><input id="Contentproductoscantidad_producto" value="{cantidad_producto}" maxlength="10" size="10" name="{cantidad_producto_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosdescripcion_producto">{res:descripcion_producto}</label></td> 
+            <td><input id="Contentproductosdescripcion_producto" value="{descripcion_producto}" maxlength="200" size="50" name="{descripcion_producto_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosactivo">{res:activo}</label></td> 
+            <td>
+              <select id="Contentproductosactivo" name="{activo_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {activo_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosmin_stock">{res:min_stock}</label></td> 
+            <td><input id="Contentproductosmin_stock" value="{min_stock}" maxlength="10" size="10" name="{min_stock_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosmax_stock">{res:max_stock}</label></td> 
+            <td><input id="Contentproductosmax_stock" value="{max_stock}" maxlength="10" size="10" name="{max_stock_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosnivel_pedido">{res:nivel_pedido}</label></td> 
+            <td><input id="Contentproductosnivel_pedido" value="{nivel_pedido}" maxlength="10" size="10" name="{nivel_pedido_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosimg_producto_1">{res:img_producto_1}</label></td> 
+            <td><input id="Contentproductosimg_producto_1" value="{img_producto_1}" maxlength="200" size="50" name="{img_producto_1_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosimg_producto_2">{res:img_producto_2}</label></td> 
+            <td><input id="Contentproductosimg_producto_2" value="{img_producto_2}" maxlength="200" size="50" name="{img_producto_2_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentproductosimg_producto_3">{res:img_producto_3}</label></td> 
+            <td><input id="Contentproductosimg_producto_3" value="{img_producto_3}" maxlength="200" size="50" name="{img_producto_3_Name}"></td>
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentproductosButton_Insert" value="{res:CCS_Insert}" alt="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentproductosButton_Update" value="{res:CCS_Update}" alt="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentproductosButton_Cancel" value="{res:CCS_Cancel}" alt="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record productos --><br>
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 <!-- END Panel Content -->
 <!-- BEGIN Panel Menu -->&nbsp;<!-- END Panel Menu -->
 <!-- BEGIN Panel Sidebar1 -->&nbsp; 

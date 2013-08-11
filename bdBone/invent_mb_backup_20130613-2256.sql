@@ -3,7 +3,7 @@
 -- Server version:               5.6.11-log - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2013-06-15 09:37:08
+-- Date/time:                    2013-06-13 22:51:48
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -11,18 +11,11 @@
 /*!40014 SET FOREIGN_KEY_CHECKS=0 */;
 
 -- Dumping database structure for inventario_mb
-DROP DATABASE IF EXISTS `inventario_mb`;
-<<<<<<< HEAD
-CREATE DATABASE IF NOT EXISTS `a4104228_mb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `a4104228_mb`;
-=======
 CREATE DATABASE IF NOT EXISTS `inventario_mb` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `inventario_mb`;
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 
 
 -- Dumping structure for table inventario_mb.admin_redir
-DROP TABLE IF EXISTS `admin_redir`;
 CREATE TABLE IF NOT EXISTS `admin_redir` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(11) DEFAULT NULL,
@@ -46,7 +39,6 @@ INSERT INTO `admin_redir` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_sitio
 
 
 -- Dumping structure for table inventario_mb.categoria_productos
-DROP TABLE IF EXISTS `categoria_productos`;
 CREATE TABLE IF NOT EXISTS `categoria_productos` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `categoria_descrip` varchar(200) DEFAULT NULL,
@@ -67,7 +59,6 @@ INSERT INTO `categoria_productos` (`id`, `categoria_descrip`, `tag_categdescrip`
 
 
 -- Dumping structure for table inventario_mb.clientes
-DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `prinombre` varchar(100) NOT NULL,
@@ -90,18 +81,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `email_cliente_2` varchar(150) DEFAULT NULL,
   `email_cliente_3` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='tabla de clientes de MediBiologica';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='tabla de clientes de MediBiologica';
 
--- Dumping data for table inventario_mb.clientes: ~1 rows (approximately)
+-- Dumping data for table inventario_mb.clientes: ~0 rows (approximately)
 DELETE FROM `clientes`;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` (`id`, `prinombre`, `demasnombres`, `priapellido`, `segapellido`, `tipo_documento`, `num_documento`, `lugar_nacimiento`, `fecha_nacimiento`, `lugar_residencia`, `direccion_residencia`, `telfijo_cliente_1`, `telfijo_cliente_2`, `telfijo_cliente_3`, `celular_cliente_1`, `celular_cliente_2`, `celular_cliente_3`, `email_cliente_1`, `email_cliente_2`, `email_cliente_3`) VALUES
-	(1, 'humberto', '-', 'Fierro', 'Prieto', '1', '79879282', 5086, NULL, 5079, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 
 
 -- Dumping structure for table inventario_mb.company
-DROP TABLE IF EXISTS `company`;
 CREATE TABLE IF NOT EXISTS `company` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `razon_social` varchar(200) DEFAULT NULL,
@@ -133,7 +121,6 @@ DELETE FROM `company`;
 
 
 -- Dumping structure for table inventario_mb.depto_dame
-DROP TABLE IF EXISTS `depto_dame`;
 CREATE TABLE IF NOT EXISTS `depto_dame` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `departamentoId` varchar(4) DEFAULT NULL,
@@ -184,7 +171,6 @@ INSERT INTO `depto_dame` (`id`, `departamentoId`, `departamento`, `zonaId`, `dep
 
 
 -- Dumping structure for table inventario_mb.farmacias
-DROP TABLE IF EXISTS `farmacias`;
 CREATE TABLE IF NOT EXISTS `farmacias` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name_farmacia` varchar(100) DEFAULT NULL,
@@ -211,7 +197,6 @@ DELETE FROM `farmacias`;
 
 
 -- Dumping structure for table inventario_mb.group_init
-DROP TABLE IF EXISTS `group_init`;
 CREATE TABLE IF NOT EXISTS `group_init` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(10) NOT NULL,
@@ -232,7 +217,6 @@ INSERT INTO `group_init` (`id`, `grupo`, `rol-description`, `pageRedirect`) VALU
 
 
 -- Dumping structure for table inventario_mb.main_redirection
-DROP TABLE IF EXISTS `main_redirection`;
 CREATE TABLE IF NOT EXISTS `main_redirection` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(11) DEFAULT NULL,
@@ -256,7 +240,6 @@ INSERT INTO `main_redirection` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_
 
 
 -- Dumping structure for table inventario_mb.menu_categories
-DROP TABLE IF EXISTS `menu_categories`;
 CREATE TABLE IF NOT EXISTS `menu_categories` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `CategoryId` int(10) NOT NULL,
@@ -272,7 +255,6 @@ DELETE FROM `menu_categories`;
 
 
 -- Dumping structure for table inventario_mb.munc_dane
-DROP TABLE IF EXISTS `munc_dane`;
 CREATE TABLE IF NOT EXISTS `munc_dane` (
   `Id` int(10) NOT NULL AUTO_INCREMENT,
   `municipioCod` varchar(4) DEFAULT NULL,
@@ -289,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `munc_dane` (
   CONSTRAINT `FK1depto` FOREIGN KEY (`depto_id`) REFERENCES `depto_dame` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2002 DEFAULT CHARSET=utf8 COMMENT='tabla de municipios del DANE';
 
--- Dumping data for table inventario_mb.munc_dane: ~1,228 rows (approximately)
+-- Dumping data for table inventario_mb.munc_dane: ~1,120 rows (approximately)
 DELETE FROM `munc_dane`;
 /*!40000 ALTER TABLE `munc_dane` DISABLE KEYS */;
 INSERT INTO `munc_dane` (`Id`, `municipioCod`, `municipio`, `depto_id`, `depto_cod`, `munic_fonetico`, `dept_fonetico`, `key_munc`, `cod_Ciudad_DANE`, `Munc_Depto`) VALUES
@@ -1419,7 +1401,6 @@ INSERT INTO `munc_dane` (`Id`, `municipioCod`, `municipio`, `depto_id`, `depto_c
 
 
 -- Dumping structure for table inventario_mb.productos
-DROP TABLE IF EXISTS `productos`;
 CREATE TABLE IF NOT EXISTS `productos` (
   `id_producto` int(10) NOT NULL AUTO_INCREMENT,
   `name_producto` varchar(200) NOT NULL,
@@ -1451,7 +1432,6 @@ INSERT INTO `productos` (`id_producto`, `name_producto`, `categoria_producto_id`
 
 
 -- Dumping structure for table inventario_mb.proveedores
-DROP TABLE IF EXISTS `proveedores`;
 CREATE TABLE IF NOT EXISTS `proveedores` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `razon_social` varchar(200) DEFAULT NULL,
@@ -1477,31 +1457,7 @@ DELETE FROM `proveedores`;
 /*!40000 ALTER TABLE `proveedores` ENABLE KEYS */;
 
 
--- Dumping structure for table inventario_mb.tipo_doc
-DROP TABLE IF EXISTS `tipo_doc`;
-CREATE TABLE IF NOT EXISTS `tipo_doc` (
-  `id_tip_doc` int(10) NOT NULL AUTO_INCREMENT,
-  `descp_tip_doc` varchar(50) DEFAULT NULL,
-  `sigla_tipDoc` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_tip_doc`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='tipos de documento para clientes y proveedores';
-
--- Dumping data for table inventario_mb.tipo_doc: ~7 rows (approximately)
-DELETE FROM `tipo_doc`;
-/*!40000 ALTER TABLE `tipo_doc` DISABLE KEYS */;
-INSERT INTO `tipo_doc` (`id_tip_doc`, `descp_tip_doc`, `sigla_tipDoc`) VALUES
-	(1, 'cedula de ciudadania', 'CC'),
-	(2, 'Tarjeta de identidad', 'TI'),
-	(3, 'Numero unico de identidad personal', 'NUIP'),
-	(4, 'Numero identificacion personal', 'NIP'),
-	(5, 'Cedula de extranjeria', 'CE'),
-	(6, 'Registro civil ', 'RC'),
-	(7, 'Numero de identificacion Tributaria', 'NIT');
-/*!40000 ALTER TABLE `tipo_doc` ENABLE KEYS */;
-
-
 -- Dumping structure for table inventario_mb.unidadesmedida
-DROP TABLE IF EXISTS `unidadesmedida`;
 CREATE TABLE IF NOT EXISTS `unidadesmedida` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `descrp_unidad` varchar(200) DEFAULT NULL,
@@ -1519,7 +1475,6 @@ INSERT INTO `unidadesmedida` (`id`, `descrp_unidad`, `obsv_unidad`) VALUES
 
 
 -- Dumping structure for table inventario_mb.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `prinombre` varchar(100) NOT NULL,
@@ -1546,7 +1501,6 @@ INSERT INTO `users` (`id`, `prinombre`, `demasnombres`, `priapellido`, `segapell
 
 
 -- Dumping structure for table inventario_mb.warehouse
-DROP TABLE IF EXISTS `warehouse`;
 CREATE TABLE IF NOT EXISTS `warehouse` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name_warehouse` varchar(100) DEFAULT NULL,

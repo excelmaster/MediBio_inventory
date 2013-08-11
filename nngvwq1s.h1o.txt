@@ -1,0 +1,62 @@
+﻿Merge branch 'master' of https://github.com/excelmaster/MediBio_inventory
+
+Conflicts:
+	Clientes_mant.ccp
+	Clientes_mant.html
+	Clientes_mant.php
+	Clientes_mant_events.php
+	Common.php
+	Connection1_DataDictionary.xml
+	Styles/Blueprint/Images/en/ButtonSearch.gif
+	Styles/Blueprint/Images/en/ButtonUpdate.gif
+	Styles/None/Images/en/ButtonSearch.gif
+	Styles/None/Images/en/ButtonUpdate.gif
+	bdBone/invent_mb_backup_20130615-0936.sql
+	connection1_cache.xml
+	en.txt
+	invt_alternativo.ccs
+	productos_mant.ccp
+	productos_mant.html
+	productos_mant.php
+	rpt_productos.ccp
+	rpt_productos.html
+	rpt_productos.php
+	rpt_productos_events.php
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   Clientes_mant.ccp
+#	modified:   Clientes_mant.html
+#	modified:   Clientes_mant.php
+#	modified:   Clientes_mant_events.php
+#	modified:   Common.php
+#	modified:   Connection1_DataDictionary.xml
+#	new file:   bdBone/invent_mb_backup_20130613-2256.sql
+#	modified:   bdBone/invent_mb_backup_20130615-0936.sql
+#	modified:   connection1_cache.xml
+#	modified:   en.txt
+#	modified:   invt_alternativo.ccs
+#	modified:   productos_mant.ccp
+#	modified:   productos_mant.html
+#	modified:   productos_mant.php
+#	modified:   rpt_productos.ccp
+#	modified:   rpt_productos.html
+#	modified:   rpt_productos.php
+#	modified:   rpt_productos_events.php
+#
+
