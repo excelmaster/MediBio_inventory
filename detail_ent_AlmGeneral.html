@@ -1,0 +1,104 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
+<title>detail_ent_AlmGeneral</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style_Components_doctype.css">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp;<br>
+<!-- BEGIN EditableGrid detail_ent_alm_general1 -->
+<form id="Contentdetail_ent_alm_general1" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" name="FormState" value="{FormState}">{FormScript} 
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:detail_ent_alm_general_EditableGridForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="RowBlueprint">
+            <td colspan="4">{res:CCS_TotalRecords}&nbsp;{detail_ent_alm_general1_TotalRecords}</td> 
+          </tr>
+ 
+          <tr class="CaptionBlueprint">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_general1Sorter_id">{res:id}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id_producto --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_general1Sorter_id_producto">{res:id_producto}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id_producto --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_cantidad --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_general1Sorter_cantidad">{res:cantidad}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_cantidad --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_observacion --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_general1Sorter_observacion">{res:observacion}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_observacion --></th>
+ 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="ErrorBlueprint">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr class="RowBlueprint">
+            <td>{id}</td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_general1id_producto_{detail_ent_alm_general1:rowNumber}">{res:id_producto}</label><input id="Contentdetail_ent_alm_general1id_producto_{detail_ent_alm_general1:rowNumber}" name="{id_producto_Name}" maxlength="10" value="{id_producto}" size="10"></td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_general1cantidad_{detail_ent_alm_general1:rowNumber}">{res:cantidad}</label><input id="Contentdetail_ent_alm_general1cantidad_{detail_ent_alm_general1:rowNumber}" name="{cantidad_Name}" maxlength="10" value="{cantidad}" size="10"></td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_general1observacion_{detail_ent_alm_general1:rowNumber}">{res:observacion}</label><input id="Contentdetail_ent_alm_general1observacion_{detail_ent_alm_general1:rowNumber}" name="{observacion_Name}" maxlength="10" value="{observacion}" size="10"></td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN Separator -->
+          <tr class="SeparatorBlueprint">
+            <td colspan="4"></td> 
+          </tr>
+ <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecordsBlueprint">
+            <td colspan="4">{res:CCS_NoRecords}</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="FooterBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentdetail_ent_alm_general1Button_Submit" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif"><!-- END Button Button_Submit --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid detail_ent_alm_general1 --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

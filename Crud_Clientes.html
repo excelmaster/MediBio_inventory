@@ -1,0 +1,207 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-C586A1EA
+
+var clientes1_DatePicker_fecha_nacimiento1 = new Object(); 
+clientes1_DatePicker_fecha_nacimiento1.format           = "yyyy/mm/dd";
+clientes1_DatePicker_fecha_nacimiento1.style            = "Designs/medibio_template/medibio_template";
+clientes1_DatePicker_fecha_nacimiento1.relativePathPart = "";
+clientes1_DatePicker_fecha_nacimiento1.themeVersion     = "3.0";
+clientes1_DatePicker_fecha_nacimiento1.hasMasterPage    = true;
+
+//End Date Picker Object Definitions
+
+//Contentclientes1Button_Cancel_OnClick @9-9A7FAF8C
+function Contentclientes1Button_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentclientes1Button_Cancel_OnClick
+
+//Handle Contentclientes1fecha_nacimientoInlineDatePicker2 @20-2BA175E8
+function Contentclientes1fecha_nacimientoInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy/mm/dd","");
+}
+//End Handle Contentclientes1fecha_nacimientoInlineDatePicker2
+
+//bind_events @1-6D59E6C4
+function bind_events() {
+    addEventHandler("Contentclientes1fecha_nacimiento", "load", Contentclientes1fecha_nacimientoInlineDatePicker2_start);
+    addEventHandler("Contentclientes1Button_Cancel", "click", Contentclientes1Button_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>Crud_Clentes</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record clientes1 -->
+<form id="Contentclientes1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:clientes_RecordForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1prinombre">{res:prinombre}</label></td> 
+            <td><input id="Contentclientes1prinombre" maxlength="100" size="50" value="{prinombre}" name="{prinombre_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1demasnombres">{res:demasnombres}</label></td> 
+            <td><input id="Contentclientes1demasnombres" maxlength="100" size="50" value="{demasnombres}" name="{demasnombres_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1priapellido">{res:priapellido}</label></td> 
+            <td><input id="Contentclientes1priapellido" maxlength="100" size="50" value="{priapellido}" name="{priapellido_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1segapellido">{res:segapellido}</label></td> 
+            <td><input id="Contentclientes1segapellido" maxlength="100" size="50" value="{segapellido}" name="{segapellido_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1tipo_documento">{res:tipo_documento}</label></td> 
+            <td>
+              <select id="Contentclientes1tipo_documento" name="{tipo_documento_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {tipo_documento_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1num_documento">{res:num_documento}</label></td> 
+            <td><input id="Contentclientes1num_documento" maxlength="100" size="50" value="{num_documento}" name="{num_documento_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1lugar_nacimiento">{res:lugar_nacimiento}</label></td> 
+            <td>
+              <select id="Contentclientes1lugar_nacimiento" name="{lugar_nacimiento_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {lugar_nacimiento_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1fecha_nacimiento">{res:fecha_nacimiento}</label></td> 
+            <td><input id="Contentclientes1fecha_nacimiento" style="HEIGHT: 22px; WIDTH: 158px" maxlength="100" size="8" value="{fecha_nacimiento}" name="{fecha_nacimiento_Name}">
+              <!-- BEGIN DatePicker DatePicker_fecha_nacimiento1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Contentclientes1DatePicker_fecha_nacimiento1"><img id="Contentclientes1DatePicker_fecha_nacimiento1_Image" border="0" alt="Show Date Picker" src="{CCS_PathToMasterPage}/Images/DatePicker.png"></a><!-- END DatePicker DatePicker_fecha_nacimiento1 --></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1lugar_residencia">{res:lugar_residencia}</label></td> 
+            <td>
+              <select id="Contentclientes1lugar_residencia" name="{lugar_residencia_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {lugar_residencia_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1direccion_residencia">{res:direccion_residencia}</label></td> 
+            <td><input id="Contentclientes1direccion_residencia" maxlength="200" size="50" value="{direccion_residencia}" name="{direccion_residencia_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_1">{res:telfijo_cliente_1}</label></td> 
+            <td><input id="Contentclientes1telfijo_cliente_1" maxlength="15" size="15" value="{telfijo_cliente_1}" name="{telfijo_cliente_1_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_2">{res:telfijo_cliente_2}</label></td> 
+            <td><input id="Contentclientes1telfijo_cliente_2" maxlength="15" size="15" value="{telfijo_cliente_2}" name="{telfijo_cliente_2_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_3">{res:telfijo_cliente_3}</label></td> 
+            <td><input id="Contentclientes1telfijo_cliente_3" maxlength="15" size="15" value="{telfijo_cliente_3}" name="{telfijo_cliente_3_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1celular_cliente_1">{res:celular_cliente_1}</label></td> 
+            <td><input id="Contentclientes1celular_cliente_1" maxlength="15" size="15" value="{celular_cliente_1}" name="{celular_cliente_1_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1celular_cliente_2">{res:celular_cliente_2}</label></td> 
+            <td><input id="Contentclientes1celular_cliente_2" maxlength="15" size="15" value="{celular_cliente_2}" name="{celular_cliente_2_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1celular_cliente_3">{res:celular_cliente_3}</label></td> 
+            <td><input id="Contentclientes1celular_cliente_3" maxlength="15" size="15" value="{celular_cliente_3}" name="{celular_cliente_3_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1email_cliente_1">{res:email_cliente_1}</label></td> 
+            <td><input id="Contentclientes1email_cliente_1" maxlength="150" size="50" value="{email_cliente_1}" name="{email_cliente_1_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1email_cliente_2">{res:email_cliente_2}</label></td> 
+            <td><input id="Contentclientes1email_cliente_2" maxlength="150" size="50" value="{email_cliente_2}" name="{email_cliente_2_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentclientes1email_cliente_3">{res:email_cliente_3}</label></td> 
+            <td><input id="Contentclientes1email_cliente_3" maxlength="150" size="50" value="{email_cliente_3}" name="{email_cliente_3_Name}"></td>
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" id="Contentclientes1Button_Insert" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif" value="{res:CCS_Insert}" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" id="Contentclientes1Button_Update" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" id="Contentclientes1Button_Cancel" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record clientes1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

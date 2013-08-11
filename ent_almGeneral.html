@@ -1,0 +1,267 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1161487D
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo/yahoo-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/datasource/datasource-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/connection/connection-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/animation/animation-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/json/json-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/autocomplete/autocomplete-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/autocomplete-commons.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}js/yui/build/autocomplete/assets/skins/sam/autocomplete.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}ent_almGeneral_style.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Contentent_alm_general1Button_Cancel_OnClick @46-9062287F
+function Contentent_alm_general1Button_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentent_alm_general1Button_Cancel_OnClick
+
+//Initialize Contentent_alm_generalSearchs_idYahooAutocomplete1 @55-78BEDADC
+function Contentent_alm_generalSearchs_idYahooAutocomplete1_start() {
+    initAutocomplete("Contentent_alm_generalSearchs_id", "services/ent_almGeneral_s_id_YahooAutocomplete1.php");
+}
+//End Initialize Contentent_alm_generalSearchs_idYahooAutocomplete1
+
+//Handle Contentent_alm_general1fecha_procesoInlineDatePicker1 @49-8FE8902F
+function Contentent_alm_general1fecha_procesoInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "ShortDate","Blueprint");
+}
+//End Handle Contentent_alm_general1fecha_procesoInlineDatePicker1
+
+//Handle Contentent_alm_general1fecharegInlineDatePicker2 @54-0D152EDF
+function Contentent_alm_general1fecharegInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "ShortDate","Blueprint");
+}
+//End Handle Contentent_alm_general1fecharegInlineDatePicker2
+
+//bind_events @1-7A4BE47D
+function bind_events() {
+    Contentent_alm_generalSearchs_idYahooAutocomplete1_start();
+    addEventHandler("Contentent_alm_general1fecha_proceso", "load", Contentent_alm_general1fecha_procesoInlineDatePicker1_start);
+    addEventHandler("Contentent_alm_general1fechareg", "load", Contentent_alm_general1fecharegInlineDatePicker2_start);
+    addEventHandler("Contentent_alm_general1Button_Cancel", "click", Contentent_alm_general1Button_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>ent_almGeneral</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record ent_alm_generalSearch -->
+<form id="Contentent_alm_generalSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_generalSearchs_id">{res:id}</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_id --><input id="Contentent_alm_generalSearchs_id" name="{s_id_Name}" maxlength="10" value="{s_id}" size="10" autocomplete="off"><!-- END TextBox s_id --></td> 
+            <td class="thBlueprint"><label for="Contentent_alm_generalSearchent_alm_generalPageSize">{res:CCS_RecPerPage}</label></td> 
+            <td>
+              <select id="Contentent_alm_generalSearchent_alm_generalPageSize" name="{ent_alm_generalPageSize_Name}">
+                {ent_alm_generalPageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Contentent_alm_generalSearchButton_DoSearch" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ent_alm_generalSearch --><br>
+<!-- BEGIN Grid ent_alm_general -->
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <td class="thBlueprint"><strong>{res:ent_alm_general_GridForm} </strong></td> 
+          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+        <tr class="CaptionBlueprint">
+          <!-- BEGIN Panel Header_id -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="Contentent_alm_generalHeader_idSorter_id">{res:id}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id --></th>
+ <!-- END Panel Header_id -->
+          <!-- BEGIN Panel Header_fecha_proceso -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_fecha_proceso --><span class="Sorter"><a href="{Sort_URL}" id="Contentent_alm_generalHeader_fecha_procesoSorter_fecha_proceso">{res:fecha_proceso}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_fecha_proceso --></th>
+ <!-- END Panel Header_fecha_proceso -->
+          <!-- BEGIN Panel Header_num_factura -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_num_factura --><span class="Sorter"><a href="{Sort_URL}" id="Contentent_alm_generalHeader_num_facturaSorter_num_factura">{res:num_factura}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_num_factura --></th>
+ <!-- END Panel Header_num_factura -->
+          <!-- BEGIN Panel Header_observaciones -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_observaciones --><span class="Sorter"><a href="{Sort_URL}" id="Contentent_alm_generalHeader_observacionesSorter_observaciones">{res:observaciones}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_observaciones --></th>
+ <!-- END Panel Header_observaciones -->
+          <!-- BEGIN Panel Header_activa -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_activa --><span class="Sorter"><a href="{Sort_URL}" id="Contentent_alm_generalHeader_activaSorter_activa">{res:activa}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_activa --></th>
+ <!-- END Panel Header_activa -->
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {ent_alm_general:rowStyle}>
+          <!-- BEGIN Panel Data_id -->
+          <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="Contentent_alm_generalData_idid_{ent_alm_general:rowNumber}">{id}</a>&nbsp;</td> <!-- END Panel Data_id -->
+          <!-- BEGIN Panel Data_fecha_proceso -->
+          <td>{fecha_proceso}&nbsp;</td> <!-- END Panel Data_fecha_proceso -->
+          <!-- BEGIN Panel Data_num_factura -->
+          <td>{num_factura}&nbsp;</td> <!-- END Panel Data_num_factura -->
+          <!-- BEGIN Panel Data_observaciones -->
+          <td>{observaciones}&nbsp;</td> <!-- END Panel Data_observaciones -->
+          <!-- BEGIN Panel Data_activa -->
+          <td>{activa}&nbsp;</td> <!-- END Panel Data_activa -->
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecordsBlueprint">
+          <td colspan="5">{res:CCS_NoRecords}</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="FooterBlueprint">
+          <td colspan="5"><a href="{ent_alm_general_Insert_Src}" id="Contentent_alm_generalent_alm_general_Insert">{res:CCS_InsertLink}</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">{res:CCS_First}</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->{res:CCS_First} <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">{res:CCS_Previous}</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->{res:CCS_Previous} <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->{res:CCS_Of} &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">{res:CCS_Next}</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->{res:CCS_Next} <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">{res:CCS_Last}</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->{res:CCS_Last} <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid ent_alm_general --><br>
+<!-- BEGIN Record ent_alm_general1 -->
+<form id="Contentent_alm_general1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:ent_alm_general_RecordForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general1fecha_proceso">{res:fecha_proceso}</label></td> 
+            <td><input id="Contentent_alm_general1fecha_proceso" name="{fecha_proceso_Name}" maxlength="100" value="{fecha_proceso}" size="8"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general1num_factura">{res:num_factura}</label></td> 
+            <td><input id="Contentent_alm_general1num_factura" name="{num_factura_Name}" maxlength="100" value="{num_factura}" size="50"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general1observaciones">{res:observaciones}</label></td> 
+            <td><input id="Contentent_alm_general1observaciones" name="{observaciones_Name}" maxlength="200" value="{observaciones}" size="50"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general1activa">{res:activa}</label></td> 
+            <td><input id="Contentent_alm_general1activa" name="{activa_Name}" maxlength="200" value="{activa}" size="50"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general1fechareg">{res:fechareg}</label></td> 
+            <td><input id="Contentent_alm_general1fechareg" name="{fechareg_Name}" maxlength="100" value="{fechareg}" size="8"></td>
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_general1Button_Insert" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_general1Button_Update" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_general1Button_Cancel" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ent_alm_general1 --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

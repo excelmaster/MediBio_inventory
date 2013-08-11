@@ -118,7 +118,7 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
     }
 //End CheckErrors Method
 
-//Operation Method @2-0CC9A055
+//Operation Method @2-084758C5
     function Operation()
     {
         if(!$this->Visible)
@@ -137,17 +137,10 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
                 $this->PressedButton = "Button_DoLogin";
             }
         }
-        
-        //$Redirect = "grupo1.php";
-        rol_redirije();
-        $Redirect = CCGetSession("pageRedir");
-        
-        
-      	/*$redirect = rolb_login();
-      	echo $redirect;*/
-      	
+        $Redirect = $FileName;
         if($this->Validate()) {
             if($this->PressedButton == "Button_DoLogin") {
+                $Redirect = "main.php";
                 if(!CCGetEvent($this->Button_DoLogin->CCSEvents, "OnClick", $this->Button_DoLogin)) {
                     $Redirect = "";
                 }
@@ -158,7 +151,7 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
     }
 //End Operation Method
 
-//Show Method @2-647D5337
+//Show Method @2-C848C1D2
     function Show()
     {
         global $CCSUseAmp;
@@ -177,8 +170,6 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
         $ParentPath = $Tpl->block_path;
         $Tpl->block_path = $ParentPath . "/" . $RecordBlock;
         $this->EditMode = $this->EditMode && $this->ReadAllowed;
-        if (!$this->FormSubmitted) {
-        }
 
         if($this->FormSubmitted || $this->CheckErrors()) {
             $Error = "";
@@ -249,7 +240,7 @@ include_once("./login_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-F1508DBB
+//Initialize Objects @1-0E2035E5
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -258,31 +249,20 @@ $MainPage->Attributes = & $Attributes;
 $MasterPage = new clsMasterPage("/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
-$Head1 = new clsPanel("Head1", $MainPage);
-$Head1->PlaceholderName = "Head";
-$Content1 = new clsPanel("Content1", $MainPage);
-$Content1->PlaceholderName = "Content";
-$Content = new clsPanel("Content", $MainPage);
-$Login1 = new clsRecordLogin1("", $MainPage);
 $Head = new clsPanel("Head", $MainPage);
+$Head->PlaceholderName = "Head";
+$Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
+$Login1 = new clsRecordLogin1("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
+$Menu->PlaceholderName = "Menu";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
-$contenido = new clsPanel("contenido", $MainPage);
-$contenido->PlaceholderName = "contenido";
-$pie = new clsPanel("pie", $MainPage);
-$pie->PlaceholderName = "cabecera";
-$MainPage->Head1 = & $Head1;
-$MainPage->Content1 = & $Content1;
+$MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->Login1 = & $Login1;
-$MainPage->Head = & $Head;
 $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
-$MainPage->contenido = & $contenido;
-$MainPage->pie = & $pie;
-$Content1->AddComponent("Content", $Content);
-$Content1->AddComponent("Head", $Head);
 $Content->AddComponent("Login1", $Login1);
 
 BindEvents();
@@ -296,13 +276,13 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-380C9A2B
+//Initialize HTML Template @1-554B8835
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
-    $Tpl->LoadTemplateFromStr($TemplateSource, $BlockToParse, "CP1252");
+    $Tpl->LoadTemplateFromStr($TemplateSource, $BlockToParse, "CP1252", "replace");
 } else {
-    $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "CP1252");
+    $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "CP1252", "replace");
 }
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
@@ -322,29 +302,24 @@ if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     header("Location: " . $Redirect);
-    CCSetSession("pageRedir", "");
     unset($Login1);
     unset($Tpl);
     exit;
 }
-
 //End Go to destination page
 
-//Show Page @1-7042E19D
-$Head1->Show();
-$Content1->Show();
+//Show Page @1-F6C60005
+$Head->Show();
+$Content->Show();
 $Menu->Show();
 $Sidebar1->Show();
-$contenido->Show();
-$pie->Show();
-$MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head1"));
-$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content1"));
+$MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
+$MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
 $MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
-$MasterPage->Tpl->SetVar("contenido", $Tpl->GetVar("Panel contenido"));
-$MasterPage->Tpl->SetVar("cabecera", $Tpl->GetVar("Panel pie"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
-$main_block = CCConvertEncoding($main_block, $FileEncoding, $TemplateEncoding);
+$main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
