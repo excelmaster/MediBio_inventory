@@ -9,15 +9,11 @@ include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-<<<<<<< HEAD
 //Master Page implementation @1-E714A8AA
 include_once(RelativePath . "/Designs/medibio_reports/medibio_reports/MasterPage.php");
 //End Master Page implementation
 
 //categoria_productos_unida ReportGroup class @8-A1755BAA
-=======
-//categoria_productos_unida ReportGroup class @71-A1755BAA
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 class clsReportGroupcategoria_productos_unida {
     public $GroupType;
     public $mode; //1 - open, 2 - close
@@ -135,11 +131,7 @@ class clsReportGroupcategoria_productos_unida {
 }
 //End categoria_productos_unida ReportGroup class
 
-<<<<<<< HEAD
 //categoria_productos_unida GroupsCollection class @8-435C7BED
-=======
-//categoria_productos_unida GroupsCollection class @71-435C7BED
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 class clsGroupsCollectioncategoria_productos_unida {
     public $Groups;
     public $mPageCurrentHeaderIndex;
@@ -333,15 +325,9 @@ class clsGroupsCollectioncategoria_productos_unida {
 }
 //End categoria_productos_unida GroupsCollection class
 
-<<<<<<< HEAD
 class clsReportcategoria_productos_unida { //categoria_productos_unida Class @8-6F52D54A
 
 //categoria_productos_unida Variables @8-DB32099B
-=======
-class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71-6F52D54A
-
-//categoria_productos_unida Variables @71-DB32099B
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 
     public $ComponentType = "Report";
     public $PageSize;
@@ -387,11 +373,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     public $Sorter_nivel_pedido;
 //End categoria_productos_unida Variables
 
-<<<<<<< HEAD
 //Class_Initialize Event @8-41CCE709
-=======
-//Class_Initialize Event @71-41CCE709
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function clsReportcategoria_productos_unida($RelativePath = "", & $Parent)
     {
         global $FileName;
@@ -483,11 +465,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     }
 //End Class_Initialize Event
 
-<<<<<<< HEAD
 //Initialize Method @8-6C59EE65
-=======
-//Initialize Method @71-6C59EE65
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Initialize()
     {
         if(!$this->Visible) return;
@@ -498,11 +476,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     }
 //End Initialize Method
 
-<<<<<<< HEAD
 //CheckErrors Method @8-DAE3287E
-=======
-//CheckErrors Method @71-DAE3287E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function CheckErrors()
     {
         $errors = false;
@@ -526,11 +500,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     }
 //End CheckErrors Method
 
-<<<<<<< HEAD
 //GetErrors Method @8-667FC6DA
-=======
-//GetErrors Method @71-667FC6DA
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function GetErrors()
     {
         $errors = "";
@@ -554,11 +524,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     }
 //End GetErrors Method
 
-<<<<<<< HEAD
 //Show Method @8-AF6477EE
-=======
-//Show Method @71-AF6477EE
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -788,19 +754,11 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71
     }
 //End Show Method
 
-<<<<<<< HEAD
 } //End categoria_productos_unida Class @8-FCB6E20C
 
 class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categoria_productos_unidaDataSource Class @8-256C841A
 
 //DataSource Variables @8-68666D63
-=======
-} //End categoria_productos_unida Class @71-FCB6E20C
-
-class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categoria_productos_unidaDataSource Class @71-256C841A
-
-//DataSource Variables @71-68666D63
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -822,11 +780,7 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     public $nivel_pedido;
 //End DataSource Variables
 
-<<<<<<< HEAD
 //DataSourceClass_Initialize Event @8-069E4CD9
-=======
-//DataSourceClass_Initialize Event @71-069E4CD9
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function clscategoria_productos_unidaDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -854,11 +808,7 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End DataSourceClass_Initialize Event
 
-<<<<<<< HEAD
 //SetOrder Method @8-E11DC20E
-=======
-//SetOrder Method @71-E11DC20E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "name_producto";
@@ -874,11 +824,7 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End SetOrder Method
 
-<<<<<<< HEAD
 //Prepare Method @8-14D6CD9D
-=======
-//Prepare Method @71-14D6CD9D
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Prepare()
     {
         global $CCSLocales;
@@ -886,11 +832,7 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End Prepare Method
 
-<<<<<<< HEAD
 //Open Method @8-61B68DE4
-=======
-//Open Method @71-61B68DE4
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
@@ -904,11 +846,7 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End Open Method
 
-<<<<<<< HEAD
 //SetValues Method @8-335F6AF1
-=======
-//SetValues Method @71-335F6AF1
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function SetValues()
     {
         $this->categoria_descrip->SetDBValue($this->f("categoria_descrip"));
@@ -923,19 +861,11 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End SetValues Method
 
-<<<<<<< HEAD
 } //End categoria_productos_unidaDataSource Class @8-FCB6E20C
 
 class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @60-0BEBE0BD
 
 //Variables @60-9E315808
-=======
-} //End categoria_productos_unidaDataSource Class @71-FCB6E20C
-
-class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-0BEBE0BD
-
-//Variables @120-9E315808
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 
     // Public variables
     public $ComponentType = "Record";
@@ -969,11 +899,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
     // Class variables
 //End Variables
 
-<<<<<<< HEAD
 //Class_Initialize Event @60-2FA41560
-=======
-//Class_Initialize Event @120-FF5248DD
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function clsRecordproductos_unidadesmedida($RelativePath, & $Parent)
     {
 
@@ -1001,7 +927,6 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
             $this->ClearParameters->Parameters = CCGetQueryString("QueryString", array("s_keyword", "categoria_productos_unidaPageSize", "ccsForm"));
             $this->ClearParameters->Page = "rpt_productos.php";
             $this->Button_DoSearch = new clsButton("Button_DoSearch", $Method, $this);
-<<<<<<< HEAD
             $this->s_keyword = new clsControl(ccsTextBox, "s_keyword", "Keyword", ccsText, "", CCGetRequestParam("s_keyword", $Method, NULL), $this);
             $this->searchConditions = new clsControl(ccsListBox, "searchConditions", "searchConditions", ccsText, "", CCGetRequestParam("searchConditions", $Method, NULL), $this);
             $this->searchConditions->DSType = dsListOfValues;
@@ -1009,24 +934,11 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
             $this->categoria_productos_unidaPageSize = new clsControl(ccsListBox, "categoria_productos_unidaPageSize", "categoria_productos_unidaPageSize", ccsText, "", CCGetRequestParam("categoria_productos_unidaPageSize", $Method, NULL), $this);
             $this->categoria_productos_unidaPageSize->DSType = dsListOfValues;
             $this->categoria_productos_unidaPageSize->Values = array(array("", "Select Value"), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
-=======
-            $this->s_keyword = new clsControl(ccsTextBox, "s_keyword", $CCSLocales->GetText("CCS_Filter"), ccsText, "", CCGetRequestParam("s_keyword", $Method, NULL), $this);
-            $this->searchConditions = new clsControl(ccsListBox, "searchConditions", "searchConditions", ccsText, "", CCGetRequestParam("searchConditions", $Method, NULL), $this);
-            $this->searchConditions->DSType = dsListOfValues;
-            $this->searchConditions->Values = array(array("1", $CCSLocales->GetText("CCS_AdvSearchAnyOfWords")), array("2", $CCSLocales->GetText("CCS_AdvSearchAllWords")), array("3", $CCSLocales->GetText("CCS_AdvSearchExactPhrase")));
-            $this->categoria_productos_unidaPageSize = new clsControl(ccsListBox, "categoria_productos_unidaPageSize", "categoria_productos_unidaPageSize", ccsText, "", CCGetRequestParam("categoria_productos_unidaPageSize", $Method, NULL), $this);
-            $this->categoria_productos_unidaPageSize->DSType = dsListOfValues;
-            $this->categoria_productos_unidaPageSize->Values = array(array("", $CCSLocales->GetText("CCS_SelectValue")), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
         }
     }
 //End Class_Initialize Event
 
-<<<<<<< HEAD
 //Validate Method @60-904DC0ED
-=======
-//Validate Method @120-904DC0ED
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Validate()
     {
         global $CCSLocales;
@@ -1043,11 +955,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
     }
 //End Validate Method
 
-<<<<<<< HEAD
 //CheckErrors Method @60-6AF4D452
-=======
-//CheckErrors Method @120-6AF4D452
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function CheckErrors()
     {
         $errors = false;
@@ -1060,11 +968,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
     }
 //End CheckErrors Method
 
-<<<<<<< HEAD
 //Operation Method @60-4B4CBAFE
-=======
-//Operation Method @120-4B4CBAFE
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Operation()
     {
         if(!$this->Visible)
@@ -1097,11 +1001,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
     }
 //End Operation Method
 
-<<<<<<< HEAD
 //Show Method @60-2A398313
-=======
-//Show Method @120-2A398313
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
     function Show()
     {
         global $CCSUseAmp;
@@ -1158,15 +1058,9 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
     }
 //End Show Method
 
-<<<<<<< HEAD
 } //End productos_unidadesmedida Class @60-FCB6E20C
 
 //Initialize Page @1-3E9CFFCA
-=======
-} //End productos_unidadesmedida Class @120-FCB6E20C
-
-//Initialize Page @1-3320E132
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -1175,19 +1069,13 @@ $TemplateFileName = "";
 $BlockToParse = "";
 $ComponentName = "";
 $Attributes = "";
-<<<<<<< HEAD
 $PathToCurrentMasterPage = "";
 $TemplatePathValue = "";
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 
 // Events;
 $CCSEvents = "";
 $CCSEventResult = "";
-<<<<<<< HEAD
 $MasterPage = null;
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $TemplateSource = "";
 
 $FileName = FileName;
@@ -1208,11 +1096,7 @@ include_once("./rpt_productos_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-<<<<<<< HEAD
 //Initialize Objects @1-101AF1E9
-=======
-//Initialize Objects @1-8779D13A
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1220,7 +1104,6 @@ $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-<<<<<<< HEAD
 $MasterPage = new clsMasterPage("/Designs/medibio_reports/medibio_reports/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
@@ -1228,16 +1111,10 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
-=======
-$Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
-$Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
-$Link1->Page = "productos_mant.php";
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $Report_Print = new clsControl(ccsLink, "Report_Print", "Report_Print", ccsText, "", CCGetRequestParam("Report_Print", ccsGet, NULL), $MainPage);
 $Report_Print->Page = "rpt_productos.php";
 $categoria_productos_unida = new clsReportcategoria_productos_unida("", $MainPage);
 $productos_unidadesmedida = new clsRecordproductos_unidadesmedida("", $MainPage);
-<<<<<<< HEAD
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
@@ -1254,12 +1131,6 @@ $Content->AddComponent("categoria_productos_unida", $categoria_productos_unida);
 $Content->AddComponent("productos_unidadesmedida", $productos_unidadesmedida);
 $Content->AddComponent("Report_Print", $Report_Print);
 $Menu->AddComponent("Link1", $Link1);
-=======
-$MainPage->Link1 = & $Link1;
-$MainPage->Report_Print = & $Report_Print;
-$MainPage->categoria_productos_unida = & $categoria_productos_unida;
-$MainPage->productos_unidadesmedida = & $productos_unidadesmedida;
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $Report_Print->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Report_Print->Parameters = CCAddParam($Report_Print->Parameters, "ViewMode", "Print");
 $categoria_productos_unida->Initialize();
@@ -1275,11 +1146,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-<<<<<<< HEAD
 //Initialize HTML Template @1-554B8835
-=======
-//Initialize HTML Template @1-FFE96B5E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -1288,22 +1155,15 @@ if (strlen($TemplateSource)) {
     $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "CP1252", "replace");
 }
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
-<<<<<<< HEAD
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
 $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-<<<<<<< HEAD
 //Execute Components @1-B8A719E1
 $MasterPage->Operations();
-=======
-//Execute Components @1-2F193346
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $productos_unidadesmedida->Operation();
 //End Execute Components
 
@@ -1320,7 +1180,6 @@ if($Redirect)
 }
 //End Go to destination page
 
-<<<<<<< HEAD
 //Show Page @1-9289D706
 $Head->Show();
 $Content->Show();
@@ -1330,31 +1189,15 @@ $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
-=======
-//Show Page @1-CEE080AB
-$categoria_productos_unida->Show();
-$productos_unidadesmedida->Show();
-$Link1->Show();
-$Report_Print->Show();
-$Tpl->block_path = "";
-$Tpl->Parse($BlockToParse, false);
-if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-<<<<<<< HEAD
 //Unload Page @1-5A5C25A0
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
-=======
-//Unload Page @1-A94C3B0E
-$CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
-$DBConnection1->close();
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 unset($categoria_productos_unida);
 unset($productos_unidadesmedida);
 unset($Tpl);

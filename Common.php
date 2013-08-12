@@ -5,28 +5,16 @@ include(RelativePath . "/Classes.php");
 include(RelativePath . "/db_adapter.php");
 //End Include Files
 
-<<<<<<< HEAD
 //Connection Settings @0-7BA92B93
-=======
-//Connection Settings @0-F6C2C609
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
 $CCConnectionSettings = array (
     "Connection1" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
-<<<<<<< HEAD
         "Database" => "a4104228_mb",
         "Host" => "localhost",
         "Port" => "3306;Database=a4104228_mb",
         "User" => "a4104228_admin",
         "Password" => "mb2013",
-=======
-        "Database" => "inventario_mb",
-        "Host" => "127.0.0.1",
-        "Port" => "3306;Database=inventario_mb",
-        "User" => "hfTest",
-        "Password" => "HFpruebas*",
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
         "Encoding" => array("", "cp1252"),
         "Persistent" => false,
         "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
@@ -37,7 +25,7 @@ $CCConnectionSettings = array (
         "Type" => "MySQL",
         "DBLib" => "MySQL",
         "Database" => "invt_mb",
-        "Host" => "127.0.0.1",
+        "Host" => "localhost",
         "Port" => "3306;Database=invt_mb",
         "User" => "hfTest",
         "Password" => "HFpruebas*",

@@ -209,7 +209,20 @@
 					<Attributes/>
 					<Features/>
 				</Record>
-			</Components>
+				<Panel id="36" visible="True" name="Panel1" wizardTheme="Blueprint" wizardThemeType="File" wizardThemeVersion="3.0" PathID="ContentPanel1">
+<Components>
+<Label id="37" fieldSourceType="DBColumn" dataType="Text" html="False" name="Label1" wizardTheme="Blueprint" wizardThemeType="File" wizardThemeVersion="3.0" PathID="ContentPanel1Label1" defaultValue="&quot;Registro y edición de clientes&quot;">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Label>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
