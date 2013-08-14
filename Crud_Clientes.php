@@ -741,7 +741,7 @@ $Charset = $Charset ? $Charset : "windows-1252";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-6B5A1642
+//Initialize Objects @1-0065BCC1
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -757,6 +757,8 @@ $Head->PlaceholderName = "Head";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
 $clientes1 = new clsRecordclientes1("", $MainPage);
+$Panel1 = new clsPanel("Panel1", $MainPage);
+$Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
@@ -764,9 +766,15 @@ $Sidebar1->PlaceholderName = "Sidebar1";
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->clientes1 = & $clientes1;
+$MainPage->Panel1 = & $Panel1;
+$MainPage->Label1 = & $Label1;
 $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("clientes1", $clientes1);
+$Content->AddComponent("Panel1", $Panel1);
+$Panel1->AddComponent("Label1", $Label1);
+if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
+    $Label1->SetText("Registro y edición de clientes");
 $clientes1->Initialize();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);

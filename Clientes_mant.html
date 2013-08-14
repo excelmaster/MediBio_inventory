@@ -1,8 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
+<!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
-<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
@@ -25,17 +23,17 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </script>
 <title>productos_mant</title>
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
-</head>
-<body>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
 <p align="center">
 <!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 --></p>
 <p align="center">
 <!-- BEGIN Record clientesSearch -->
-<form id="clientesSearch" method="post" name="{HTMLFormName}" action="{Action}">
-  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<form id="ContentclientesSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top">
-        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
@@ -51,45 +49,45 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           </tr>
  <!-- END Error -->
           <tr class="ControlsBlueprint">
-            <td class="thBlueprint"><label for="clientesSearchs_keyword">{res:CCS_Filter}</label></td> 
-            <td><input id="clientesSearchs_keyword" maxlength="10" size="10" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <td class="thBlueprint"><label for="ContentclientesSearchs_keyword">{res:CCS_Filter}</label></td> 
+            <td><input id="ContentclientesSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td> 
           </tr>
  
           <tr class="ControlsBlueprint">
-            <td class="thBlueprint"><label for="clientesSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
+            <td class="thBlueprint"><label for="ContentclientesSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
-              <select id="clientesSearchsearchConditions" name="{searchConditions_Name}">
+              <select id="ContentclientesSearchsearchConditions" name="{searchConditions_Name}">
                 {searchConditions_Options} 
               </select>
  </td> 
           </tr>
  
           <tr class="ControlsBlueprint">
-            <td class="thBlueprint"><label for="clientesSearchclientes_tipo_docDirOrder">{res:CCS_SortBy}</label></td> 
+            <td class="thBlueprint"><label for="ContentclientesSearchclientes_tipo_docDirOrder">{res:CCS_SortBy}</label></td> 
             <td>
-              <select id="clientesSearchclientes_tipo_docDirOrder" name="clientes_tipo_docOrder">
+              <select id="ContentclientesSearchclientes_tipo_docDirOrder" name="clientes_tipo_docOrder">
                 {clientes_tipo_docOrder_Options} 
               </select>
- <label for="clientesSearchclientes_tipo_docDirDir" style="display: none;">{res:CCS_SortDir}</label> 
-              <select id="clientesSearchclientes_tipo_docDirDir" name="clientes_tipo_docDir">
+ <label for="ContentclientesSearchclientes_tipo_docDirDir" style="display: none;">{res:CCS_SortDir}</label> 
+              <select id="ContentclientesSearchclientes_tipo_docDirDir" name="clientes_tipo_docDir">
                 {clientes_tipo_docDir_Options} 
               </select>
  </td> 
           </tr>
  
           <tr class="ControlsBlueprint">
-            <td class="thBlueprint"><label for="clientesSearchclientes_tipo_docPageSize">{res:CCS_RecPerPage}</label></td> 
+            <td class="thBlueprint"><label for="ContentclientesSearchclientes_tipo_docPageSize">{res:CCS_RecPerPage}</label></td> 
             <td>
-              <select id="clientesSearchclientes_tipo_docPageSize" name="{clientes_tipo_docPageSize_Name}">
+              <select id="ContentclientesSearchclientes_tipo_docPageSize" name="{clientes_tipo_docPageSize_Name}">
                 {clientes_tipo_docPageSize_Options} 
               </select>
  </td> 
           </tr>
  
           <tr class="BottomBlueprint">
-            <td><a href="{ClearParameters_Src}" id="clientesSearchClearParameters">{res:CCS_Clear}</a></td> 
+            <td><a href="{ClearParameters_Src}" id="ContentclientesSearchClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right">
-              <!-- BEGIN Button Button_DoSearch --><input type="image" id="clientesSearchButton_DoSearch" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentclientesSearchButton_DoSearch" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td> 
           </tr>
  
         </table>
@@ -100,10 +98,10 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </form>
 <!-- END Record clientesSearch --><br>
 <!-- BEGIN Grid clientes -->
-<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
-      <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
           <td class="thBlueprint"><strong>{res:clientestipo_doc_GridForm} </strong></td> 
@@ -114,44 +112,44 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
       <table class="GridBlueprint" cellspacing="0" cellpadding="0">
         <tr class="RowBlueprint">
-          <td colspan="8">{res:CCS_TotalRecords}&nbsp;{clientes_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{clientes_Insert1_Src}" id="clientesclientes_Insert1">{res:CCS_InsertLink}</a></td> 
+          <td colspan="8">{res:CCS_TotalRecords}&nbsp;{clientes_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{clientes_Insert1_Src}" id="Contentclientesclientes_Insert1">{res:CCS_InsertLink}</a></td> 
         </tr>
  
         <tr class="CaptionBlueprint">
           <th scope="col">&nbsp;</th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_id">{res:id}</a> 
+          <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_id">{res:id}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_prinombre --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_prinombre">{res:prinombre}</a> 
+          <!-- BEGIN Sorter Sorter_prinombre --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_prinombre">{res:prinombre}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_prinombre --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_demasnombres --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_demasnombres">{res:demasnombres}</a> 
+          <!-- BEGIN Sorter Sorter_demasnombres --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_demasnombres">{res:demasnombres}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_demasnombres --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_priapellido --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_priapellido">{res:priapellido}</a> 
+          <!-- BEGIN Sorter Sorter_priapellido --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_priapellido">{res:priapellido}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_priapellido --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_segapellido --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_segapellido">{res:segapellido}</a> 
+          <!-- BEGIN Sorter Sorter_segapellido --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_segapellido">{res:segapellido}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_segapellido --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_tipo_documento --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_tipo_documento">{res:tipo_documento}</a> 
+          <!-- BEGIN Sorter Sorter_tipo_documento --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_tipo_documento">{res:tipo_documento}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_tipo_documento --></th>
  
           <th scope="col">
-          <!-- BEGIN Sorter Sorter_num_documento --><span class="Sorter"><a href="{Sort_URL}" id="clientesSorter_num_documento">{res:num_documento}</a> 
+          <!-- BEGIN Sorter Sorter_num_documento --><span class="Sorter"><a href="{Sort_URL}" id="ContentclientesSorter_num_documento">{res:num_documento}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_num_documento --></th>
  
@@ -159,7 +157,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
         <!-- BEGIN Row -->
         <tr class="RowBlueprint">
-          <td><a href="{Detail_Src}" id="clientesDetail_{clientes:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> 
+          <td><a href="{Detail_Src}" id="ContentclientesDetail_{clientes:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> 
           <td style="TEXT-ALIGN: right">{id}&nbsp;</td> 
           <td>{prinombre}&nbsp;</td> 
           <td>{demasnombres}&nbsp;</td> 
@@ -171,7 +169,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  <!-- END Row -->
         <!-- BEGIN AltRow -->
         <tr class="AltRowBlueprint">
-          <td><a href="{Alt_Detail_Src}" id="clientesAlt_Detail_{clientes:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> 
+          <td><a href="{Alt_Detail_Src}" id="ContentclientesAlt_Detail_{clientes:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> 
           <td style="TEXT-ALIGN: right">{Alt_id}&nbsp;</td> 
           <td>{Alt_prinombre}&nbsp;</td> 
           <td>{Alt_demasnombres}&nbsp;</td> 
@@ -192,9 +190,9 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
         </tr>
  <!-- END NoRecords -->
         <tr class="FooterBlueprint">
-          <td colspan="8"><a href="{clientes_Insert2_Src}" id="clientesclientes_Insert2">{res:CCS_InsertLink}</a>&nbsp; 
+          <td colspan="8"><a href="{clientes_Insert2_Src}" id="Contentclientesclientes_Insert2">{res:CCS_InsertLink}</a>&nbsp; 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
-            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
               <option selected value="">-</option>
  {PageSize_Options} 
             </select>
@@ -213,18 +211,17 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  </td> 
   </tr>
 </table>
-<!-- END Grid clientes --><br>
-<br>
-</p>
-&nbsp; 
+<!-- END Grid clientes --></p>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;&nbsp; 
 <table width="100%">
   <tr>
-    <td>&nbsp; <a href="{Link1_Src}" id="Sidebar1Link1">Volver al panel principal</a></td> 
+    <td>&nbsp;<a href="{Link1_Src}" id="ContentSidebar1Link1">Volver al panel principal</a></td> 
   </tr>
  
   <tr>
-    <td>&nbsp;<a href="{Link2_Src}" id="Sidebar1Link2">Ir a pagina de reportes</a></td> 
+    <td>&nbsp;<a href="{Link2_Src}" id="ContentSidebar1Link2">Ir a pagina de reportes</a></td> 
   </tr>
 </table>
-</body>
-</html>
+<!-- END Panel Sidebar1 -->

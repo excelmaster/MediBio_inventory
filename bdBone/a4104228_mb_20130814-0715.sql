@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.6.11-log - MySQL Community Server (GPL)
+-- Versión del servidor:         5.6.12-log - MySQL Community Server (GPL)
 -- SO del servidor:              Win32
 -- HeidiSQL Versión:             8.0.0.4396
 -- --------------------------------------------------------
@@ -10,12 +10,12 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Volcando estructura de base de datos para a4104228_mb
-CREATE DATABASE IF NOT EXISTS `u392883857_inven` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci */;
+-- Volcando estructura de base de datos para u392883857_inven
+CREATE DATABASE IF NOT EXISTS `u392883857_inven` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci */;
 USE `u392883857_inven`;
 
 
--- Volcando estructura para tabla a4104228_mb.admin_redir
+-- Volcando estructura para tabla u392883857_inven.admin_redir
 CREATE TABLE IF NOT EXISTS `admin_redir` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(11) DEFAULT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `admin_redir` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Volcando datos para la tabla a4104228_mb.admin_redir: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.admin_redir: ~5 rows (aproximadamente)
 DELETE FROM `admin_redir`;
 /*!40000 ALTER TABLE `admin_redir` DISABLE KEYS */;
 INSERT INTO `admin_redir` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_sitio`, `page`) VALUES
@@ -38,7 +38,7 @@ INSERT INTO `admin_redir` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_sitio
 /*!40000 ALTER TABLE `admin_redir` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.categoria_productos
+-- Volcando estructura para tabla u392883857_inven.categoria_productos
 CREATE TABLE IF NOT EXISTS `categoria_productos` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `categoria_descrip` varchar(200) DEFAULT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `categoria_productos` (
   KEY `FK1unidad` (`unidad_medida_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='tabla de categorizacion de productos';
 
--- Volcando datos para la tabla a4104228_mb.categoria_productos: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.categoria_productos: ~2 rows (aproximadamente)
 DELETE FROM `categoria_productos`;
 /*!40000 ALTER TABLE `categoria_productos` DISABLE KEYS */;
 INSERT INTO `categoria_productos` (`id`, `categoria_descrip`, `tag_categdescrip`, `unidad_medida_id`, `observa_categdescrip`) VALUES
@@ -58,7 +58,7 @@ INSERT INTO `categoria_productos` (`id`, `categoria_descrip`, `tag_categdescrip`
 /*!40000 ALTER TABLE `categoria_productos` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.clientes
+-- Volcando estructura para tabla u392883857_inven.clientes
 CREATE TABLE IF NOT EXISTS `clientes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `prinombre` varchar(100) NOT NULL,
@@ -87,15 +87,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   CONSTRAINT `FK3_lugarResidencia` FOREIGN KEY (`lugar_residencia`) REFERENCES `depto_dame` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `FK1_tipDoc` FOREIGN KEY (`tipo_documento`) REFERENCES `tipo_doc` (`id_tip_doc`) ON UPDATE CASCADE,
   CONSTRAINT `FK2_lugarNacimiento` FOREIGN KEY (`lugar_nacimiento`) REFERENCES `depto_dame` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='tabla de clientes de MediBiologica';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='tabla de clientes de MediBiologica';
 
--- Volcando datos para la tabla a4104228_mb.clientes: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.clientes: ~0 rows (aproximadamente)
 DELETE FROM `clientes`;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.company
+-- Volcando estructura para tabla u392883857_inven.company
 CREATE TABLE IF NOT EXISTS `company` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `razon_social` varchar(200) DEFAULT NULL,
@@ -120,13 +120,13 @@ CREATE TABLE IF NOT EXISTS `company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='List of company';
 
--- Volcando datos para la tabla a4104228_mb.company: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.company: ~0 rows (aproximadamente)
 DELETE FROM `company`;
 /*!40000 ALTER TABLE `company` DISABLE KEYS */;
 /*!40000 ALTER TABLE `company` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.depto_dame
+-- Volcando estructura para tabla u392883857_inven.depto_dame
 CREATE TABLE IF NOT EXISTS `depto_dame` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `departamentoId` varchar(4) DEFAULT NULL,
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `depto_dame` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1288 DEFAULT CHARSET=utf8 COMMENT='tabla de departamentos del DANE';
 
--- Volcando datos para la tabla a4104228_mb.depto_dame: ~33 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.depto_dame: ~33 rows (aproximadamente)
 DELETE FROM `depto_dame`;
 /*!40000 ALTER TABLE `depto_dame` DISABLE KEYS */;
 INSERT INTO `depto_dame` (`id`, `departamentoId`, `departamento`, `zonaId`, `dept_fonetico`) VALUES
@@ -176,7 +176,7 @@ INSERT INTO `depto_dame` (`id`, `departamentoId`, `departamento`, `zonaId`, `dep
 /*!40000 ALTER TABLE `depto_dame` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.detail_ent_alm_general
+-- Volcando estructura para tabla u392883857_inven.detail_ent_alm_general
 CREATE TABLE IF NOT EXISTS `detail_ent_alm_general` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `id_ent_alm_general` int(10) DEFAULT NULL,
@@ -191,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `detail_ent_alm_general` (
   CONSTRAINT `FK2_idproducto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
--- Volcando datos para la tabla a4104228_mb.detail_ent_alm_general: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.detail_ent_alm_general: ~1 rows (aproximadamente)
 DELETE FROM `detail_ent_alm_general`;
 /*!40000 ALTER TABLE `detail_ent_alm_general` DISABLE KEYS */;
 INSERT INTO `detail_ent_alm_general` (`id`, `id_ent_alm_general`, `id_producto`, `cantidad`, `observacion`, `fecregistro`) VALUES
@@ -199,7 +199,7 @@ INSERT INTO `detail_ent_alm_general` (`id`, `id_ent_alm_general`, `id_producto`,
 /*!40000 ALTER TABLE `detail_ent_alm_general` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.ent_alm_general
+-- Volcando estructura para tabla u392883857_inven.ent_alm_general
 CREATE TABLE IF NOT EXISTS `ent_alm_general` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `fecha_proceso` datetime DEFAULT NULL,
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `ent_alm_general` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
--- Volcando datos para la tabla a4104228_mb.ent_alm_general: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.ent_alm_general: ~2 rows (aproximadamente)
 DELETE FROM `ent_alm_general`;
 /*!40000 ALTER TABLE `ent_alm_general` DISABLE KEYS */;
 INSERT INTO `ent_alm_general` (`id`, `fecha_proceso`, `num_factura`, `observaciones`, `activa`, `fechareg`) VALUES
@@ -219,7 +219,7 @@ INSERT INTO `ent_alm_general` (`id`, `fecha_proceso`, `num_factura`, `observacio
 /*!40000 ALTER TABLE `ent_alm_general` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.farmacias
+-- Volcando estructura para tabla u392883857_inven.farmacias
 CREATE TABLE IF NOT EXISTS `farmacias` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name_farmacia` varchar(100) DEFAULT NULL,
@@ -238,13 +238,13 @@ CREATE TABLE IF NOT EXISTS `farmacias` (
   KEY `FK1warehouse` (`id_warehouse`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='list of warehouses';
 
--- Volcando datos para la tabla a4104228_mb.farmacias: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.farmacias: ~0 rows (aproximadamente)
 DELETE FROM `farmacias`;
 /*!40000 ALTER TABLE `farmacias` DISABLE KEYS */;
 /*!40000 ALTER TABLE `farmacias` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.group_init
+-- Volcando estructura para tabla u392883857_inven.group_init
 CREATE TABLE IF NOT EXISTS `group_init` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(10) NOT NULL,
@@ -254,7 +254,7 @@ CREATE TABLE IF NOT EXISTS `group_init` (
   UNIQUE KEY `grupo` (`grupo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='begin page to init the app for the groupid of session';
 
--- Volcando datos para la tabla a4104228_mb.group_init: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.group_init: ~3 rows (aproximadamente)
 DELETE FROM `group_init`;
 /*!40000 ALTER TABLE `group_init` DISABLE KEYS */;
 INSERT INTO `group_init` (`id`, `grupo`, `rol-description`, `pageRedirect`) VALUES
@@ -264,7 +264,7 @@ INSERT INTO `group_init` (`id`, `grupo`, `rol-description`, `pageRedirect`) VALU
 /*!40000 ALTER TABLE `group_init` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.main_redirection
+-- Volcando estructura para tabla u392883857_inven.main_redirection
 CREATE TABLE IF NOT EXISTS `main_redirection` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `grupo` int(11) DEFAULT NULL,
@@ -275,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `main_redirection` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla a4104228_mb.main_redirection: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.main_redirection: ~5 rows (aproximadamente)
 DELETE FROM `main_redirection`;
 /*!40000 ALTER TABLE `main_redirection` DISABLE KEYS */;
 INSERT INTO `main_redirection` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_sitio`, `page`) VALUES
@@ -287,7 +287,7 @@ INSERT INTO `main_redirection` (`id`, `grupo`, `name_sitio`, `link_sitio`, `img_
 /*!40000 ALTER TABLE `main_redirection` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.menu_categories
+-- Volcando estructura para tabla u392883857_inven.menu_categories
 CREATE TABLE IF NOT EXISTS `menu_categories` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `CategoryId` int(10) NOT NULL,
@@ -296,13 +296,13 @@ CREATE TABLE IF NOT EXISTS `menu_categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='menu dinamico con categorias\r\n';
 
--- Volcando datos para la tabla a4104228_mb.menu_categories: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.menu_categories: ~0 rows (aproximadamente)
 DELETE FROM `menu_categories`;
 /*!40000 ALTER TABLE `menu_categories` DISABLE KEYS */;
 /*!40000 ALTER TABLE `menu_categories` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.munc_dane
+-- Volcando estructura para tabla u392883857_inven.munc_dane
 CREATE TABLE IF NOT EXISTS `munc_dane` (
   `Id` int(10) NOT NULL AUTO_INCREMENT,
   `municipioCod` varchar(4) DEFAULT NULL,
@@ -318,7 +318,7 @@ CREATE TABLE IF NOT EXISTS `munc_dane` (
   KEY `FK1depto` (`depto_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='tabla de municipios del DANE';
 
--- Volcando datos para la tabla a4104228_mb.munc_dane: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.munc_dane: ~1 rows (aproximadamente)
 DELETE FROM `munc_dane`;
 /*!40000 ALTER TABLE `munc_dane` DISABLE KEYS */;
 INSERT INTO `munc_dane` (`Id`, `municipioCod`, `municipio`, `depto_id`, `depto_cod`, `munic_fonetico`, `dept_fonetico`, `key_munc`, `cod_Ciudad_DANE`, `Munc_Depto`) VALUES
@@ -326,7 +326,7 @@ INSERT INTO `munc_dane` (`Id`, `municipioCod`, `municipio`, `depto_id`, `depto_c
 /*!40000 ALTER TABLE `munc_dane` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.productos
+-- Volcando estructura para tabla u392883857_inven.productos
 CREATE TABLE IF NOT EXISTS `productos` (
   `id_producto` int(10) NOT NULL AUTO_INCREMENT,
   `name_producto` varchar(200) NOT NULL,
@@ -346,15 +346,17 @@ CREATE TABLE IF NOT EXISTS `productos` (
   KEY `FK2unimed` (`unidad_medida_id`),
   CONSTRAINT `FK1_categoria_producto` FOREIGN KEY (`categoria_producto_id`) REFERENCES `categoria_productos` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `FK2_unidad_medida` FOREIGN KEY (`unidad_medida_id`) REFERENCES `unidadesmedida` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='listado de productos';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='listado de productos';
 
--- Volcando datos para la tabla a4104228_mb.productos: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.productos: ~0 rows (aproximadamente)
 DELETE FROM `productos`;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` (`id_producto`, `name_producto`, `categoria_producto_id`, `unidad_medida_id`, `cantidad_producto`, `descripcion_producto`, `activo`, `min_stock`, `max_stock`, `nivel_pedido`, `img_producto_1`, `img_producto_2`, `img_producto_3`) VALUES
+	(1, 'Argentum', 3, 1, 10, 'Argentum', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.proveedores
+-- Volcando estructura para tabla u392883857_inven.proveedores
 CREATE TABLE IF NOT EXISTS `proveedores` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `razon_social` varchar(200) DEFAULT NULL,
@@ -374,13 +376,13 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='List of company';
 
--- Volcando datos para la tabla a4104228_mb.proveedores: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.proveedores: ~0 rows (aproximadamente)
 DELETE FROM `proveedores`;
 /*!40000 ALTER TABLE `proveedores` DISABLE KEYS */;
 /*!40000 ALTER TABLE `proveedores` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.tipo_doc
+-- Volcando estructura para tabla u392883857_inven.tipo_doc
 CREATE TABLE IF NOT EXISTS `tipo_doc` (
   `id_tip_doc` int(10) NOT NULL AUTO_INCREMENT,
   `descp_tip_doc` varchar(50) DEFAULT NULL,
@@ -388,7 +390,7 @@ CREATE TABLE IF NOT EXISTS `tipo_doc` (
   PRIMARY KEY (`id_tip_doc`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='tipos de documento para clientes y proveedores';
 
--- Volcando datos para la tabla a4104228_mb.tipo_doc: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.tipo_doc: ~4 rows (aproximadamente)
 DELETE FROM `tipo_doc`;
 /*!40000 ALTER TABLE `tipo_doc` DISABLE KEYS */;
 INSERT INTO `tipo_doc` (`id_tip_doc`, `descp_tip_doc`, `sigla_tipDoc`) VALUES
@@ -399,21 +401,23 @@ INSERT INTO `tipo_doc` (`id_tip_doc`, `descp_tip_doc`, `sigla_tipDoc`) VALUES
 /*!40000 ALTER TABLE `tipo_doc` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.unidadesmedida
+-- Volcando estructura para tabla u392883857_inven.unidadesmedida
 CREATE TABLE IF NOT EXISTS `unidadesmedida` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `descrp_unidad` varchar(200) DEFAULT NULL,
   `obsv_unidad` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='unidades de medida';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='unidades de medida';
 
--- Volcando datos para la tabla a4104228_mb.unidadesmedida: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.unidadesmedida: ~0 rows (aproximadamente)
 DELETE FROM `unidadesmedida`;
 /*!40000 ALTER TABLE `unidadesmedida` DISABLE KEYS */;
+INSERT INTO `unidadesmedida` (`id`, `descrp_unidad`, `obsv_unidad`) VALUES
+	(1, 'C.C.', 'Centimetros cubicos');
 /*!40000 ALTER TABLE `unidadesmedida` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.users
+-- Volcando estructura para tabla u392883857_inven.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `prinombre` varchar(100) NOT NULL,
@@ -428,7 +432,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `grupo` (`rol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='tabla de usuarios del sistema';
 
--- Volcando datos para la tabla a4104228_mb.users: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.users: ~3 rows (aproximadamente)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `prinombre`, `demasnombres`, `priapellido`, `segapellido`, `username`, `password`, `cargo`, `rol`) VALUES
@@ -438,7 +442,7 @@ INSERT INTO `users` (`id`, `prinombre`, `demasnombres`, `priapellido`, `segapell
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 
--- Volcando estructura para tabla a4104228_mb.warehouse
+-- Volcando estructura para tabla u392883857_inven.warehouse
 CREATE TABLE IF NOT EXISTS `warehouse` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name_warehouse` varchar(100) DEFAULT NULL,
@@ -457,7 +461,7 @@ CREATE TABLE IF NOT EXISTS `warehouse` (
   KEY `id_company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='list of warehouses';
 
--- Volcando datos para la tabla a4104228_mb.warehouse: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla u392883857_inven.warehouse: ~0 rows (aproximadamente)
 DELETE FROM `warehouse`;
 /*!40000 ALTER TABLE `warehouse` DISABLE KEYS */;
 /*!40000 ALTER TABLE `warehouse` ENABLE KEYS */;
