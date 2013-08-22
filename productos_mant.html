@@ -39,10 +39,10 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 <!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 -->&nbsp; 
 <!-- BEGIN Record unidadesmedida_productos1 -->
 <form id="Contentunidadesmedida_productos1" method="post" name="{HTMLFormName}" action="{Action}">
-  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top">
-        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
@@ -58,7 +58,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1s_keyword">{res:CCS_Filter}</label></td> 
-            <td><input id="Contentunidadesmedida_productos1s_keyword" maxlength="200" size="50" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <td><input id="Contentunidadesmedida_productos1s_keyword" name="{s_keyword_Name}" maxlength="200" value="{s_keyword}" size="30"></td> 
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1searchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
               <select id="Contentunidadesmedida_productos1searchConditions" name="{searchConditions_Name}">
@@ -76,7 +76,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <tr class="BottomBlueprint">
             <td><a href="{ClearParameters_Src}" id="Contentunidadesmedida_productos1ClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right" colspan="5">
-              <!-- BEGIN Button Button_DoSearch --><input type="image" id="Contentunidadesmedida_productos1Button_DoSearch" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentunidadesmedida_productos1Button_DoSearch" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td>
           </tr>
         </table>
       </td>
@@ -85,10 +85,10 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </form>
 <!-- END Record unidadesmedida_productos1 --><br>
 <!-- BEGIN Grid unidadesmedida_productos -->
-<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
-      <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
           <td class="thBlueprint"><strong>Listado de Productos </strong></td> 
@@ -191,7 +191,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
         <tr class="FooterBlueprint">
           <td colspan="8"><a href="{unidadesmedida_productos_Insert_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert">{res:CCS_InsertLink}</a>&nbsp; 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
-            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
               <option selected value="">-</option>
  {PageSize_Options}
             </select>

@@ -42,9 +42,9 @@
         <column COLUMN_NAME="email_cliente_1" ORDINAL_POSITION="18" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="150" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="email_cliente_2" ORDINAL_POSITION="19" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="150" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="email_cliente_3" ORDINAL_POSITION="20" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="150" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK3_lugarResidencia" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="lugar_residencia" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="tipo_doc" PK_COLUMN_NAME="id_tip_doc" KEY_NAME="FK1_tipDoc" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="tipo_documento" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK2_lugarNacimiento" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="lugar_nacimiento" full="True" />
+        <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK3_lugarResidencia" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="lugar_residencia" full="True" />
       </table>
       <table TABLE_NAME="company" TABLE_TYPE="5" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
