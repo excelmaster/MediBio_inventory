@@ -7,7 +7,7 @@ function BindEvents()
 }
 //End BindEvents Method
 
-//Logout_BeforeShow @18-9E4497AF
+//Logout_BeforeShow @11-9E4497AF
 function Logout_BeforeShow(& $sender)
 {
     $Logout_BeforeShow = true;
@@ -16,12 +16,12 @@ function Logout_BeforeShow(& $sender)
     global $Logout; //Compatibility
 //End Logout_BeforeShow
 
-//Logout @24-F421D883
+//Logout @13-F421D883
     CCLogoutUser();
     CCSetCookie("invt_bmLogin", "");
 //End Logout
 
-//Close Logout_BeforeShow @18-5AB7ACC1
+//Close Logout_BeforeShow @11-5AB7ACC1
     return $Logout_BeforeShow;
 }
 //End Close Logout_BeforeShow

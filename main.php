@@ -285,11 +285,19 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
+//Authenticate User @1-BF95B68F
+CCSecurityRedirect("1;2;3;4", "");
+//End Authenticate User
+
+//Include events file @1-ACD9315F
+include_once("./main_events.php");
+//End Include events file
+
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-81A39C34
+//Initialize Objects @1-81B8EF32
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -307,15 +315,23 @@ $Content->PlaceholderName = "Content";
 $main_redirection = new clsGridmain_redirection("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
+$Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
+$Logout->Page = "login.php";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->main_redirection = & $main_redirection;
 $MainPage->Menu = & $Menu;
+$MainPage->Logout = & $Logout;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("main_redirection", $main_redirection);
+$Menu->AddComponent("Logout", $Logout);
+$Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $main_redirection->Initialize();
+
+BindEvents();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

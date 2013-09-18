@@ -1,10 +1,12 @@
 <?php
-//BindEvents Method @1-E6763133
+//BindEvents Method @1-8BCD9BC9
 function BindEvents()
 {
     global $clientes;
+    global $Logout;
     $clientes->clientes_TotalRecords->CCSEvents["BeforeShow"] = "clientes_clientes_TotalRecords_BeforeShow";
     $clientes->ds->CCSEvents["BeforeBuildSelect"] = "clientes_ds_BeforeBuildSelect";
+    $Logout->CCSEvents["BeforeShow"] = "Logout_BeforeShow";
 }
 //End BindEvents Method
 
@@ -122,6 +124,25 @@ function clientes_ds_BeforeBuildSelect(& $sender)
     return $clientes_ds_BeforeBuildSelect;
 }
 //End Close clientes_ds_BeforeBuildSelect
+
+//Logout_BeforeShow @127-9E4497AF
+function Logout_BeforeShow(& $sender)
+{
+    $Logout_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $Logout; //Compatibility
+//End Logout_BeforeShow
+
+//Logout @129-F421D883
+    CCLogoutUser();
+    CCSetCookie("invt_bmLogin", "");
+//End Logout
+
+//Close Logout_BeforeShow @127-5AB7ACC1
+    return $Logout_BeforeShow;
+}
+//End Close Logout_BeforeShow
 
 
 ?>

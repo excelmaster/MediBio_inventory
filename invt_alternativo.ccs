@@ -68,6 +68,9 @@
 	</CodeFiles>
 	<Groups>
 		<Group id="10" name="administrador" value="1"/>
+<Group id="11" name="Almacen_general" value="2"/>
+<Group id="12" name="Farmacia" value="3"/>
+<Group id="13" name="atencion_usuario" value="4"/>
 </Groups>
 	<Styles>
 		<Style id="1" name="Compact" caption="Compact"/>

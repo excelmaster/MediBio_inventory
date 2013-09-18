@@ -1,14 +1,14 @@
 <Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" needGeneration="0" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp">
 	<Components>
 		<Panel id="123" visible="True" name="Head" contentPlaceholder="Head">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="124" visible="True" name="Content" contentPlaceholder="Content">
-<Components>
-<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="clientes" connection="Connection1" dataSource="clientes, tipo_doc" orderBy="priapellido, segapellido, prinombre desc" pageSizeLimit="100" pageSize="True" wizardCaption="{res:clientestipo_doc_GridForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="SimpleDir" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="{res:CCS_CustomLinkField}" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="False" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="13" isParent="True">
+			<Components/>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="124" visible="True" name="Content" contentPlaceholder="Content">
+			<Components>
+				<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="clientes" connection="Connection1" dataSource="clientes, tipo_doc" orderBy="priapellido, segapellido, prinombre desc" pageSizeLimit="100" pageSize="True" wizardCaption="{res:clientestipo_doc_GridForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="SimpleDir" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="{res:CCS_CustomLinkField}" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="False" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="13" isParent="True">
 					<Components>
 						<Label id="82" fieldSourceType="DBColumn" dataType="Text" html="False" name="clientes_TotalRecords" wizardUseTemplateBlock="False" PathID="Contentclientesclientes_TotalRecords" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 							<Components/>
@@ -216,7 +216,7 @@
 					<Attributes/>
 					<Features/>
 				</Grid>
-<Record id="110" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="clientesSearch" searchIds="110" fictitiousConnection="Connection1" wizardCaption="{res:Search_Form}" wizardTheme="Blueprint" wizardOrientation="Vertical" wizardFormMethod="post" gridSearchClearLink="True" wizardTypeComponent="Search" gridSearchType="Advanced" wizardInteractiveSearch="True" gridSearchRecPerPage="True" wizardTypeButtons="image" wizardDefaultButton="True" gridSearchSortField="True" wizardUseInterVariables="True" wizardThemeApplyTo="Component" addTemplatePanel="False" wizardType="GridRecord" returnPage="Clientes_mant.ccp" PathID="ContentclientesSearch" wizardThemeVersion="3.0" composition="13">
+				<Record id="110" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="clientesSearch" searchIds="110" fictitiousConnection="Connection1" wizardCaption="{res:Search_Form}" wizardTheme="Blueprint" wizardOrientation="Vertical" wizardFormMethod="post" gridSearchClearLink="True" wizardTypeComponent="Search" gridSearchType="Advanced" wizardInteractiveSearch="True" gridSearchRecPerPage="True" wizardTypeButtons="image" wizardDefaultButton="True" gridSearchSortField="True" wizardUseInterVariables="True" wizardThemeApplyTo="Component" addTemplatePanel="False" wizardType="GridRecord" returnPage="Clientes_mant.ccp" PathID="ContentclientesSearch" wizardThemeVersion="3.0" composition="13">
 					<Components>
 						<Link id="111" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="ClearParameters" hrefSource="Clientes_mant.ccp" removeParameters="s_keyword;clientes_tipo_docOrder;clientes_tipo_docDir;clientes_tipo_docPageSize" wizardTheme="Blueprint" wizardThemeItem="SorterLink" wizardDefaultValue="{res:CCS_Clear}" PathID="ContentclientesSearchClearParameters" wizardThemeVersion="3.0">
 							<Components/>
@@ -228,7 +228,6 @@
 						<Button id="112" urlType="Relative" enableValidation="True" isDefault="True" name="Button_DoSearch" operation="Search" wizardTheme="Blueprint" wizardCaption="{res:CCS_Search}" wizardThemeItem="FooterIMG" wizardButtonImage="ButtonSearchOn" PathID="ContentclientesSearchButton_DoSearch" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
-
 							<Attributes/>
 							<Features/>
 						</Button>
@@ -313,7 +312,7 @@
 					<Attributes/>
 					<Features/>
 				</Record>
-<Panel id="120" visible="True" name="Panel1" PathID="ContentPanel1">
+				<Panel id="120" visible="True" name="Panel1" PathID="ContentPanel1">
 					<Components>
 						<Label id="121" fieldSourceType="DBColumn" dataType="Text" html="False" name="Label1" PathID="ContentPanel1Label1" defaultValue="&quot;MANTENIMIENTO DE CLIENTES&quot;">
 							<Components/>
@@ -326,53 +325,53 @@
 					<Attributes/>
 					<Features/>
 				</Panel>
-</Components>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="125" visible="True" name="Menu" contentPlaceholder="Menu">
-<Components>
-<Link id="127" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-<Components/>
-<Events>
-<Event name="BeforeShow" type="Server">
-<Actions>
-<Action actionName="Logout" actionCategory="Security" id="129" pageRedirects="True"/>
-</Actions>
-</Event>
-</Events>
-<LinkParameters>
-<LinkParameter id="128" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="126" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
-<Components>
-<Link id="66" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="admin.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel principal','textSourceDB':'','hrefSource':'admin.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="125" visible="True" name="Menu" contentPlaceholder="Menu">
+			<Components>
+				<Link id="127" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
+					<Components/>
+					<Events>
+						<Event name="BeforeShow" type="Server">
+							<Actions>
+								<Action actionName="Logout" actionCategory="Security" id="129" pageRedirects="True"/>
+							</Actions>
+						</Event>
+					</Events>
+					<LinkParameters>
+						<LinkParameter id="128" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="126" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
+			<Components>
+				<Link id="66" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="admin.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel principal','textSourceDB':'','hrefSource':'admin.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
 					<Events/>
 					<LinkParameters/>
 					<Attributes/>
 					<Features/>
 				</Link>
-<Link id="67" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link2" PathID="Sidebar1Link2" hrefSource="rpt_clientes.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Ir a pagina de reportes','textSourceDB':'','hrefSource':'rpt_clientes.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+				<Link id="67" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link2" PathID="Sidebar1Link2" hrefSource="rpt_clientes.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Ir a pagina de reportes','textSourceDB':'','hrefSource':'rpt_clientes.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
 					<Events/>
 					<LinkParameters/>
 					<Attributes/>
 					<Features/>
 				</Link>
-</Components>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-</Components>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="Clientes_mant.php" forShow="True" url="Clientes_mant.php" comment="//" codePage="windows-1252"/>
 		<CodeFile id="Events" language="PHPTemplates" name="Clientes_mant_events.php" forShow="False" comment="//" codePage="windows-1252"/>
