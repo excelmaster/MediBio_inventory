@@ -15,7 +15,7 @@ include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPa
 
 class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B535373D
 
-//Variables @68-45358071
+//Variables @68-D22F08B3
 
     // Public variables
     public $ComponentType = "Grid";
@@ -52,10 +52,9 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
     public $Sorter_descripcion_producto;
     public $Sorter_activo;
     public $Sorter_descrp_unidad;
-    public $Sorter_id_producto;
 //End Variables
 
-//Class_Initialize Event @68-DA1EE16D
+//Class_Initialize Event @68-2D1A854F
     function clsGridunidadesmedida_productos($RelativePath, & $Parent)
     {
         global $FileName;
@@ -113,7 +112,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->Sorter_descripcion_producto = new clsSorter($this->ComponentName, "Sorter_descripcion_producto", $FileName, $this);
         $this->Sorter_activo = new clsSorter($this->ComponentName, "Sorter_activo", $FileName, $this);
         $this->Sorter_descrp_unidad = new clsSorter($this->ComponentName, "Sorter_descrp_unidad", $FileName, $this);
-        $this->Sorter_id_producto = new clsSorter($this->ComponentName, "Sorter_id_producto", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
         $this->Navigator->PageSizes = array("1", "5", "10", "25", "50");
         $this->unidadesmedida_productos_Insert1 = new clsControl(ccsLink, "unidadesmedida_productos_Insert1", "unidadesmedida_productos_Insert1", ccsText, "", CCGetRequestParam("unidadesmedida_productos_Insert1", ccsGet, NULL), $this);
@@ -133,7 +131,7 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
     }
 //End Initialize Method
 
-//Show Method @68-67B0F6C3
+//Show Method @68-1AC7F654
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -264,7 +262,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->Sorter_descripcion_producto->Show();
         $this->Sorter_activo->Show();
         $this->Sorter_descrp_unidad->Show();
-        $this->Sorter_id_producto->Show();
         $this->Navigator->Show();
         $this->unidadesmedida_productos_Insert1->Show();
         $Tpl->parse();
@@ -369,7 +366,7 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @68-C2247E4C
+//SetOrder Method @68-449D106A
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "id_producto";
@@ -379,8 +376,7 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
             "Sorter_cantidad_producto" => array("cantidad_producto", ""), 
             "Sorter_descripcion_producto" => array("descripcion_producto", ""), 
             "Sorter_activo" => array("activo", ""), 
-            "Sorter_descrp_unidad" => array("descrp_unidad", ""), 
-            "Sorter_id_producto" => array("id_producto", "")));
+            "Sorter_descrp_unidad" => array("descrp_unidad", "")));
     }
 //End SetOrder Method
 

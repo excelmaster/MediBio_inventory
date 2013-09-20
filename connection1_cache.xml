@@ -6,7 +6,7 @@
     <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="u392883857_inven" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
-      <table TABLE_NAME="admin_redir" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="admin_redir" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="name_sitio" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -14,14 +14,14 @@
         <column COLUMN_NAME="img_sitio" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="page" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="categoria_productos" TABLE_TYPE="Table" DESCRIPTION="tabla de categorizacion de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="categoria_productos" DESCRIPTION="tabla de categorizacion de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="categoria_descrip" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="tag_categdescrip" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="unidad_medida_id" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="observa_categdescrip" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="clientes" TABLE_TYPE="Table" DESCRIPTION="tabla de clientes de MediBiologica" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="clientes" DESCRIPTION="tabla de clientes de MediBiologica" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="prinombre" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="demasnombres" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -46,7 +46,7 @@
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK2_lugarNacimiento" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="lugar_nacimiento" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK3_lugarResidencia" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="clientes" FK_COLUMN_NAME="lugar_residencia" full="True" />
       </table>
-      <table TABLE_NAME="company" TABLE_TYPE="Table" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="company" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="razon_social" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="nombre" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -68,14 +68,14 @@
         <column COLUMN_NAME="celular_3" ORDINAL_POSITION="19" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="15" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="representante legal" ORDINAL_POSITION="20" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="150" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="depto_dame" TABLE_TYPE="Table" DESCRIPTION="tabla de departamentos del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="depto_dame" DESCRIPTION="tabla de departamentos del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="departamentoId" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="4" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="departamento" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="zonaId" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="dept_fonetico" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="detail_ent_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="detail_ent_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="id_ent_alm_general" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="id_producto" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -85,7 +85,7 @@
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="ent_alm_general" PK_COLUMN_NAME="id" KEY_NAME="FK1_idEntradaAlmGeneral" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="detail_ent_alm_general" FK_COLUMN_NAME="id_ent_alm_general" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="productos" PK_COLUMN_NAME="id_producto" KEY_NAME="FK2_idproducto" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="detail_ent_alm_general" FK_COLUMN_NAME="id_producto" full="True" />
       </table>
-      <table TABLE_NAME="ent_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="ent_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="fecha_proceso" ORDINAL_POSITION="2" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="num_factura" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -93,7 +93,7 @@
         <column COLUMN_NAME="activa" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="fechareg" ORDINAL_POSITION="6" DATA_TYPE="134" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="farmacias" TABLE_TYPE="Table" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="farmacias" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="name_farmacia" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="id_warehouse" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
@@ -108,14 +108,14 @@
         <column COLUMN_NAME="horario_farmacia" ORDINAL_POSITION="12" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="img-mapa_llegada_farmacia" ORDINAL_POSITION="13" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="group_init" TABLE_TYPE="Table" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
+      <table TABLE_NAME="group_init" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="rol-description" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="pageRedirect" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <primaryKey PK_COLUMN_NAME="id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
-      <table TABLE_NAME="main_redirection" TABLE_TYPE="Table" DESCRIPTION="" allColumns="True" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="main_redirection" DESCRIPTION="" allColumns="True" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="name_sitio" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -123,13 +123,13 @@
         <column COLUMN_NAME="img_sitio" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="page" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="menu_categories" TABLE_TYPE="Table" DESCRIPTION="menu dinamico con categorias&#xD;&#xA;" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="menu_categories" DESCRIPTION="menu dinamico con categorias&#xD;&#xA;" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="CategoryId" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="CategoryName" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="ParentCategory" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="munc_dane" TABLE_TYPE="Table" DESCRIPTION="tabla de municipios del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="munc_dane" DESCRIPTION="tabla de municipios del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="Id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="municipioCod" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="4" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="municipio" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -141,7 +141,7 @@
         <column COLUMN_NAME="cod_Ciudad_DANE" ORDINAL_POSITION="9" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="Munc_Depto" ORDINAL_POSITION="10" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="productos" TABLE_TYPE="Table" DESCRIPTION="listado de productos" allColumns="True" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="productos" DESCRIPTION="listado de productos" allColumns="True" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id_producto" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="name_producto" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="categoria_producto_id" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
@@ -158,7 +158,7 @@
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="categoria_productos" PK_COLUMN_NAME="id" KEY_NAME="FK1_categoria_producto" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="productos" FK_COLUMN_NAME="categoria_producto_id" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="unidadesmedida" PK_COLUMN_NAME="id" KEY_NAME="FK2_unidad_medida" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="productos" FK_COLUMN_NAME="unidad_medida_id" full="True" />
       </table>
-      <table TABLE_NAME="proveedores" TABLE_TYPE="Table" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="proveedores" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="razon_social" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="nombre" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -175,17 +175,17 @@
         <column COLUMN_NAME="celular_3" ORDINAL_POSITION="14" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="15" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="representante legal" ORDINAL_POSITION="15" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="150" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="tipo_doc" TABLE_TYPE="Table" DESCRIPTION="tipos de documento para clientes y proveedores" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="tipo_doc" DESCRIPTION="tipos de documento para clientes y proveedores" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id_tip_doc" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="descp_tip_doc" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="sigla_tipDoc" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="50" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="unidadesmedida" TABLE_TYPE="Table" DESCRIPTION="unidades de medida" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="unidadesmedida" DESCRIPTION="unidades de medida" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="descrp_unidad" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="obsv_unidad" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="users" TABLE_TYPE="Table" DESCRIPTION="tabla de usuarios del sistema" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
+      <table TABLE_NAME="users" DESCRIPTION="tabla de usuarios del sistema" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="prinombre" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="demasnombres" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -197,7 +197,7 @@
         <column COLUMN_NAME="rol" ORDINAL_POSITION="9" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <primaryKey PK_COLUMN_NAME="id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
-      <table TABLE_NAME="warehouse" TABLE_TYPE="Table" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="warehouse" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="name_warehouse" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="id_company" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />

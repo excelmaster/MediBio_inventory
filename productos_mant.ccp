@@ -78,12 +78,6 @@
 							<Attributes/>
 							<Features/>
 						</Sorter>
-						<Sorter id="90" visible="True" name="Sorter_id_producto" column="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardSortingType="Extended" wizardControl="id_producto" wizardAddNbsp="False" PathID="Contentunidadesmedida_productosSorter_id_producto" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Sorter>
 						<Link id="91" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="CrudProducto.ccp" wizardThemeItem="GridA" PathID="Contentunidadesmedida_productosDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'1':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':2,'objectType':'linkParameters'}}">
 							<Components/>
 							<Events/>
@@ -306,6 +300,7 @@
 			</Components>
 			<Events/>
 			<Attributes/>
+
 			<Features/>
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
