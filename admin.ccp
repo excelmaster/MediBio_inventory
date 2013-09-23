@@ -9,21 +9,15 @@
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
 				<Link id="11" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-					<Components/>
-					<Events>
-						<Event name="BeforeShow" type="Server">
-							<Actions>
-								<Action actionName="Logout" actionCategory="Security" id="13" pageRedirects="True"/>
-							</Actions>
-						</Event>
-					</Events>
-					<LinkParameters>
-						<LinkParameter id="12" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-					</LinkParameters>
-					<Attributes/>
-					<Features/>
-				</Link>
-			</Components>
+<Components/>
+<Events/>
+<LinkParameters>
+<LinkParameter id="12" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+</LinkParameters>
+<Attributes/>
+<Features/>
+</Link>
+</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -74,8 +68,7 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="admin.php" forShow="True" url="admin.php" comment="//" codePage="windows-1252"/>
-		<CodeFile id="Events" language="PHPTemplates" name="admin_events.php" forShow="False" comment="//" codePage="windows-1252"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups>
 		<Group id="6" groupID="1"/>
 	</SecurityGroups>

@@ -1,14 +1,14 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" needGeneration="0" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp">
 	<Components>
-		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
-			<Components/>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
-			<Components>
-				<Record id="6" sourceType="Table" urlType="Relative" secured="False" allowInsert="True" allowUpdate="True" allowDelete="False" validateData="True" preserveParameters="GET" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="proveedores1" connection="Connection1" dataSource="proveedores" errorSummator="Error" allowCancel="True" recordDeleteConfirmation="False" buttonsType="image" wizardRecordKey="id" encryptPasswordField="False" wizardUseInterVariables="True" pkIsAutoincrement="True" wizardCaption="{res:proveedores_RecordForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardFormMethod="post" wizardType="GridRecord" changedCaptionRecord="False" recordDirection="Vertical" templatePageRecord="C:/Users/Usuario.Usuario-PC/Documents/Humberto/CodeChargeStudio5_xyz/Projects/invt_alternativo/Templates/Record/Horizontal.ccp|userTemplate" recordAddTemplatePanel="False" PathID="Contentproveedores1" wizardThemeVersion="3.0" composition="15">
+		<Panel id="26" visible="True" name="Head" contentPlaceholder="Head">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+<Panel id="27" visible="True" name="Content" contentPlaceholder="Content">
+<Components>
+<Record id="6" sourceType="Table" urlType="Relative" secured="False" allowInsert="True" allowUpdate="True" allowDelete="False" validateData="True" preserveParameters="GET" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="proveedores1" connection="Connection1" dataSource="proveedores" errorSummator="Error" allowCancel="True" recordDeleteConfirmation="False" buttonsType="image" wizardRecordKey="id" encryptPasswordField="False" wizardUseInterVariables="True" pkIsAutoincrement="True" wizardCaption="{res:proveedores_RecordForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardFormMethod="post" wizardType="GridRecord" changedCaptionRecord="False" recordDirection="Vertical" templatePageRecord="C:/Users/Usuario.Usuario-PC/Documents/Humberto/CodeChargeStudio5_xyz/Projects/invt_alternativo/Templates/Record/Horizontal.ccp|userTemplate" recordAddTemplatePanel="False" PathID="Contentproveedores1" wizardThemeVersion="3.0" composition="15">
 					<Components>
 						<Button id="7" urlType="Relative" enableValidation="True" isDefault="False" name="Button_Insert" operation="Insert" wizardTheme="Blueprint" wizardCaption="{res:CCS_Insert}" wizardThemeItem="FooterIMG" wizardButtonImage="ButtonInsertOn" PathID="Contentproveedores1Button_Insert" wizardThemeVersion="3.0" returnPage="provee_mant.ccp">
 							<Components/>
@@ -139,24 +139,24 @@
 					<Attributes/>
 					<Features/>
 				</Record>
-			</Components>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
-			<Components/>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
-			<Components/>
-			<Events/>
-			<Attributes/>
-			<Features/>
-		</Panel>
-	</Components>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+<Panel id="28" visible="True" name="Menu" contentPlaceholder="Menu">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+<Panel id="29" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
+</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="crud_provee.php" forShow="True" url="crud_provee.php" comment="//" codePage="windows-1252"/>
 	</CodeFiles>

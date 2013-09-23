@@ -281,15 +281,11 @@ $Charset = $Charset ? $Charset : "windows-1252";
 CCSecurityRedirect("1", "");
 //End Authenticate User
 
-//Include events file @1-0CF0A736
-include_once("./admin_events.php");
-//End Include events file
-
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-C4A9C212
+//Initialize Objects @1-0A4AE824
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -322,8 +318,6 @@ $Content->AddComponent("admin_redir", $admin_redir);
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $admin_redir->Initialize();
-
-BindEvents();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

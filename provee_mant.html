@@ -1,15 +1,12 @@
 
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
-<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
-<title>provee_mant</title>
-<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 <script language="JavaScript" type="text/javascript">
 //Begin CCS script
 //Include Common JSFunctions @1-D3B5F5BF
 </script>
-<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
 <script language="JavaScript" type="text/javascript">
 //End Include Common JSFunctions
 
@@ -22,6 +19,8 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 
 //End CCS script
 </script>
+<title>provee_mant</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 <!-- END Panel Head -->
 <!-- BEGIN Panel Content -->
 <div align="center">
@@ -29,94 +28,90 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
   <div align="center">
     {Label1} 
   </div>
- <!-- END Panel Panel1 -->
+  <!-- END Panel Panel1 -->
 </div>
 &nbsp; 
 <!-- BEGIN Record proveedoresSearch -->
 <form id="ContentproveedoresSearch" method="post" name="{HTMLFormName}" action="{Action}">
-  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top">
-        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
-            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
           </tr>
- 
         </table>
  
         <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
           <tr class="ErrorBlueprint">
-            <td colspan="2">{Error}</td> 
+            <td colspan="2">{Error}</td>
           </tr>
- <!-- END Error -->
+          <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentproveedoresSearchs_keyword">{res:CCS_Filter}</label></td> 
-            <td><input id="ContentproveedoresSearchs_keyword" maxlength="10" size="10" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <td><input id="ContentproveedoresSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentproveedoresSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
               <select id="ContentproveedoresSearchsearchConditions" name="{searchConditions_Name}">
-                {searchConditions_Options} 
+                {searchConditions_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentproveedoresSearchproveedoresDirOrder">{res:CCS_SortBy}</label></td> 
             <td>
               <select id="ContentproveedoresSearchproveedoresDirOrder" name="proveedoresOrder">
-                {proveedoresOrder_Options} 
+                {proveedoresOrder_Options}
               </select>
  <label for="ContentproveedoresSearchproveedoresDirDir" style="display: none;">{res:CCS_SortDir}</label> 
               <select id="ContentproveedoresSearchproveedoresDirDir" name="proveedoresDir">
-                {proveedoresDir_Options} 
+                {proveedoresDir_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentproveedoresSearchproveedoresPageSize">{res:CCS_RecPerPage}</label></td> 
             <td>
               <select id="ContentproveedoresSearchproveedoresPageSize" name="{proveedoresPageSize_Name}">
-                {proveedoresPageSize_Options} 
+                {proveedoresPageSize_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="BottomBlueprint">
             <td><a href="{ClearParameters_Src}" id="ContentproveedoresSearchClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right">
-              <!-- BEGIN Button Button_DoSearch --><input type="image" id="ContentproveedoresSearchButton_DoSearch" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentproveedoresSearchButton_DoSearch" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td>
           </tr>
- 
         </table>
- </td> 
+      </td>
     </tr>
- 
   </table>
 </form>
 <!-- END Record proveedoresSearch --><br>
 <!-- BEGIN Grid proveedores -->
-<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
-      <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
-          <td class="thBlueprint"><strong>{res:proveedores_GridForm} </strong></td> 
-          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <td class="thBlueprint"><strong>{res:proveedores_GridForm}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></td> 
+          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
         </tr>
- 
       </table>
  
       <table class="GridBlueprint" cellspacing="0" cellpadding="0">
         <tr class="RowBlueprint">
-          <td colspan="5">{res:CCS_TotalRecords}&nbsp;{proveedores_TotalRecords}</td> 
+          <td colspan="5">{res:CCS_TotalRecords}&nbsp;{proveedores_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{proveedores_Insert1_Src}" id="Contentproveedoresproveedores_Insert1">{res:CCS_InsertLink}</a></td>
         </tr>
  
         <tr class="CaptionBlueprint">
@@ -141,7 +136,6 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- BEGIN Sorter Sorter_nit --><span class="Sorter"><a href="{Sort_URL}" id="ContentproveedoresSorter_nit">{res:nit}</a> 
           <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_nit --></th>
- 
         </tr>
  
         <!-- BEGIN Row -->
@@ -150,7 +144,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <td style="TEXT-ALIGN: right">{id}&nbsp;</td> 
           <td>{razon_social}&nbsp;</td> 
           <td>{nombre}&nbsp;</td> 
-          <td>{nit}&nbsp;</td> 
+          <td>{nit}&nbsp;</td>
         </tr>
  <!-- END Row -->
         <!-- BEGIN AltRow -->
@@ -159,25 +153,25 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <td style="TEXT-ALIGN: right">{Alt_id}&nbsp;</td> 
           <td>{Alt_razon_social}&nbsp;</td> 
           <td>{Alt_nombre}&nbsp;</td> 
-          <td>{Alt_nit}&nbsp;</td> 
+          <td>{Alt_nit}&nbsp;</td>
         </tr>
  <!-- END AltRow -->
         <!-- BEGIN Separator -->
         <tr class="SeparatorBlueprint">
-          <td colspan="5"></td> 
+          <td colspan="5"></td>
         </tr>
- <!-- END Separator -->
+        <!-- END Separator -->
         <!-- BEGIN NoRecords -->
         <tr class="NoRecordsBlueprint">
-          <td colspan="5">{res:CCS_NoRecords}</td> 
+          <td colspan="5">{res:CCS_NoRecords}</td>
         </tr>
- <!-- END NoRecords -->
+        <!-- END NoRecords -->
         <tr class="FooterBlueprint">
           <td colspan="5"><a href="{proveedores_Insert_Src}" id="Contentproveedoresproveedores_Insert">{res:CCS_InsertLink}</a>&nbsp; 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
-            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
               <option selected value="">-</option>
- {PageSize_Options} 
+ {PageSize_Options}
             </select>
  
             <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
@@ -187,25 +181,24 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
             <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
             <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
-            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
         </tr>
- 
       </table>
- </td> 
+    </td>
   </tr>
 </table>
 <!-- END Grid proveedores --><br>
 <br>
 <!-- END Panel Content -->
-<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
 <!-- BEGIN Panel Sidebar1 -->&nbsp;&nbsp; 
 <table width="100%">
   <tr>
-    <td>&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver al panel principal</a></td> 
+    <td>&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver al panel principal</a></td>
   </tr>
  
   <tr>
-    <td>&nbsp;<a href="{Link2_Src}" id="Sidebar1Link2">Ir a pagina de reportes</a></td> 
+    <td>&nbsp;<a href="{Link2_Src}" id="Sidebar1Link2">Ir a pagina de reportes</a></td>
   </tr>
 </table>
 <!-- END Panel Sidebar1 -->

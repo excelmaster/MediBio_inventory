@@ -27,7 +27,7 @@
           <!-- END Error -->
           <tr class="Controlsreport">
             <td class="threport"><label for="Contentproductos_unidadesmedidas_keyword">Keyword</label></td> 
-            <td><input id="Contentproductos_unidadesmedidas_keyword" value="{s_keyword}" maxlength="200" size="50" name="{s_keyword_Name}"></td> 
+            <td><input id="Contentproductos_unidadesmedidas_keyword" name="{s_keyword_Name}" maxlength="200" value="{s_keyword}" size="50"></td> 
             <td class="threport"><label for="Contentproductos_unidadesmedidasearchConditions">Search For</label></td> 
             <td>
               <select id="Contentproductos_unidadesmedidasearchConditions" name="{searchConditions_Name}">
@@ -45,7 +45,7 @@
           <tr class="Bottomreport">
             <td><a href="{ClearParameters_Src}" id="Contentproductos_unidadesmedidaClearParameters">Clear</a></td> 
             <td style="TEXT-ALIGN: right" colspan="5">
-              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentproductos_unidadesmedidaButton_DoSearch" value="Search" alt="Search" src="Styles/report/Images/en/ButtonSearch.gif" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentproductos_unidadesmedidaButton_DoSearch" name="{Button_Name}" alt="Search" value="Search" src="Styles/report/Images/en/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td>
           </tr>
         </table>
       </td>
@@ -75,7 +75,11 @@
         <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
         <!-- BEGIN Section Page_Footer -->
         <tr class="Footerreport">
-          <td>{Report_CurrentDateTime}</td> 
+          <td>
+            <p>Fecha y hora del reporte:</p>
+ 
+            <p>{Report_CurrentDateTime}</p>
+          </td> 
           <td style="TEXT-ALIGN: right" colspan="8">Page {Report_CurrentPage} of {Report_TotalPages} 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">
             <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/report/Images/First.gif"></a> <!-- END First_On -->

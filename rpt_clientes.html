@@ -1,10 +1,183 @@
+
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
-<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
 <title>rpt_clientes</title>
-<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_doctype.css">
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 <!-- END Panel Head -->
-<!-- BEGIN Panel Content -->
-
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record clientesSearch -->
+<form id="ContentclientesSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="ContentclientesSearchs_keyword">{res:CCS_Filter}</label></td> 
+            <td><input id="ContentclientesSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="ContentclientesSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
+            <td>
+              <select id="ContentclientesSearchsearchConditions" name="{searchConditions_Name}">
+                {searchConditions_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="ContentclientesSearchclientesDirOrder">{res:CCS_SortBy}</label></td> 
+            <td>
+              <select id="ContentclientesSearchclientesDirOrder" name="clientesOrder">
+                {clientesOrder_Options}
+              </select>
+ <label for="ContentclientesSearchclientesDirDir" style="display: none;">{res:CCS_SortDir}</label> 
+              <select id="ContentclientesSearchclientesDirDir" name="clientesDir">
+                {clientesDir_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="ContentclientesSearchclientesPageSize">{res:CCS_RecPerPage}</label></td> 
+            <td>
+              <select id="ContentclientesSearchclientesPageSize" name="{clientesPageSize_Name}">
+                {clientesPageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td><a href="{ClearParameters_Src}" id="ContentclientesSearchClearParameters">{res:CCS_Clear}</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="ContentclientesSearchButton_DoSearch" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record clientesSearch --><br>
+<!-- BEGIN Link Report_Print -->
+<p align="right"><a href="{Report_Print_Src}" id="ContentReport_Print" target="_blank">{res:CCS_ReportPrintLink}</a></p>
+<!-- END Link Report_Print -->
+<!-- BEGIN Report clientes -->
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <td class="thBlueprint"><strong>{res:clientes_ReportForm}</strong></td> 
+          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header -->
+        <caption class="RowBlueprint">{res:CCS_TotalRecords}&nbsp;{Report_TotalRecords}&nbsp;</caption>
+ <!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <thead style="DISPLAY: table-header-group">
+          <tr class="CaptionBlueprint">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}">{res:id}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_priapellido --><span class="Sorter"><a href="{Sort_URL}">{res:priapellido}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_priapellido -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_segapellido --><span class="Sorter"><a href="{Sort_URL}">{res:segapellido}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_segapellido -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_prinombre --><span class="Sorter"><a href="{Sort_URL}">{res:prinombre}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_prinombre -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_demasnombres --><span class="Sorter"><a href="{Sort_URL}">{res:demasnombres}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_demasnombres -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_tipo_documento --><span class="Sorter"><a href="{Sort_URL}">{res:tipo_documento}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_tipo_documento -->&nbsp;</th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_num_documento --><span class="Sorter"><a href="{Sort_URL}">{res:num_documento}</a> 
+            <!-- BEGIN Asc_On --><img alt="" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_num_documento -->&nbsp;</th>
+          </tr>
+ 
+        </thead>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tfoot style="DISPLAY: table-footer-group">
+          <tr class="FooterBlueprint">
+            <td>
+              <p>Fechay Hora del Reporte</p>
+ 
+              <p>{Report_CurrentDateTime}</p>
+            </td> 
+            <td colspan="6">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">
+              <!-- BEGIN First_On --><a href="{First_URL}">{res:CCS_First}</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->{res:CCS_First} <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">{res:CCS_Previous}</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->{res:CCS_Previous} <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->{res:CCS_Of} &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">{res:CCS_Next}</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->{res:CCS_Next} <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">{res:CCS_Last}</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->{res:CCS_Last} <!-- END Last_Off --></span><!-- END Navigator Navigator --></td>
+          </tr>
+        </tfoot>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="RowBlueprint">
+          <td style="TEXT-ALIGN: right">{id} </td> 
+          <td>{priapellido} </td> 
+          <td>{segapellido} </td> 
+          <td>{prinombre} </td> 
+          <td>{demasnombres} </td> 
+          <td style="TEXT-ALIGN: right">{tipo_documento} </td> 
+          <td>{num_documento} </td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecordsBlueprint">
+          <td colspan="7">{res:CCS_NoRecords}</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report clientes --><br>
 <!-- END Panel Content -->
-<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Link1_Src}" id="MenuLink1">Volver a Clientes</a><!-- END Panel Menu -->

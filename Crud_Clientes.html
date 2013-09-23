@@ -57,6 +57,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 
 //End CCS script
 </script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Basic/Style_Components_doctype.css">
 <title>Crud_Clentes</title>
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 <!-- END Panel Head -->
@@ -72,35 +73,34 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:clientes_RecordForm}</strong></td> 
-            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
           </tr>
- 
         </table>
  
         <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
           <tr class="ErrorBlueprint">
-            <td colspan="2">{Error}</td> 
+            <td colspan="2">{Error}</td>
           </tr>
- <!-- END Error -->
+          <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1prinombre">{res:prinombre}</label></td> 
-            <td><input id="Contentclientes1prinombre" name="{prinombre_Name}" maxlength="100" value="{prinombre}" size="50"></td> 
+            <td><input id="Contentclientes1prinombre" name="{prinombre_Name}" maxlength="100" value="{prinombre}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1demasnombres">{res:demasnombres}</label></td> 
-            <td><input id="Contentclientes1demasnombres" name="{demasnombres_Name}" maxlength="100" value="{demasnombres}" size="50"></td> 
+            <td><input id="Contentclientes1demasnombres" name="{demasnombres_Name}" maxlength="100" value="{demasnombres}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1priapellido">{res:priapellido}</label></td> 
-            <td><input id="Contentclientes1priapellido" name="{priapellido_Name}" maxlength="100" value="{priapellido}" size="50"></td> 
+            <td><input id="Contentclientes1priapellido" name="{priapellido_Name}" maxlength="100" value="{priapellido}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1segapellido">{res:segapellido}</label></td> 
-            <td><input id="Contentclientes1segapellido" name="{segapellido_Name}" maxlength="100" value="{segapellido}" size="50"></td> 
+            <td><input id="Contentclientes1segapellido" name="{segapellido_Name}" maxlength="100" value="{segapellido}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
@@ -108,14 +108,14 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td>
               <select id="Contentclientes1tipo_documento" name="{tipo_documento_Name}">
                 <option selected value="">{res:CCS_SelectValue}</option>
- {tipo_documento_Options} 
+                {tipo_documento_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1num_documento">{res:num_documento}</label></td> 
-            <td><input id="Contentclientes1num_documento" name="{num_documento_Name}" maxlength="100" value="{num_documento}" size="50"></td> 
+            <td><input id="Contentclientes1num_documento" name="{num_documento_Name}" maxlength="100" value="{num_documento}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
@@ -123,15 +123,15 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td>
               <select id="Contentclientes1lugar_nacimiento" name="{lugar_nacimiento_Name}">
                 <option selected value="">{res:CCS_SelectValue}</option>
- {lugar_nacimiento_Options} 
+                {lugar_nacimiento_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1fecha_nacimiento">{res:fecha_nacimiento}</label></td> 
             <td><input style="WIDTH: 158px; HEIGHT: 22px" id="Contentclientes1fecha_nacimiento" name="{fecha_nacimiento_Name}" maxlength="100" value="{fecha_nacimiento}" size="8">
-              <!-- BEGIN DatePicker DatePicker_fecha_nacimiento1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Contentclientes1DatePicker_fecha_nacimiento1"><img id="Contentclientes1DatePicker_fecha_nacimiento1_Image" border="0" alt="Show Date Picker" src="{CCS_PathToMasterPage}/Images/DatePicker.png"></a><!-- END DatePicker DatePicker_fecha_nacimiento1 --></td> 
+              <!-- BEGIN DatePicker DatePicker_fecha_nacimiento1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Contentclientes1DatePicker_fecha_nacimiento1"><img id="Contentclientes1DatePicker_fecha_nacimiento1_Image" border="0" alt="Show Date Picker" src="{CCS_PathToMasterPage}/Images/DatePicker.png"></a><!-- END DatePicker DatePicker_fecha_nacimiento1 --></td>
           </tr>
  
           <tr class="ControlsBlueprint">
@@ -139,74 +139,72 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td>
               <select id="Contentclientes1lugar_residencia" name="{lugar_residencia_Name}">
                 <option selected value="">{res:CCS_SelectValue}</option>
- {lugar_residencia_Options} 
+                {lugar_residencia_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1direccion_residencia">{res:direccion_residencia}</label></td> 
-            <td><input id="Contentclientes1direccion_residencia" name="{direccion_residencia_Name}" maxlength="200" value="{direccion_residencia}" size="50"></td> 
+            <td><input id="Contentclientes1direccion_residencia" name="{direccion_residencia_Name}" maxlength="200" value="{direccion_residencia}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_1">{res:telfijo_cliente_1}</label></td> 
-            <td><input id="Contentclientes1telfijo_cliente_1" name="{telfijo_cliente_1_Name}" maxlength="15" value="{telfijo_cliente_1}" size="15"></td> 
+            <td><input id="Contentclientes1telfijo_cliente_1" name="{telfijo_cliente_1_Name}" maxlength="15" value="{telfijo_cliente_1}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_2">{res:telfijo_cliente_2}</label></td> 
-            <td><input id="Contentclientes1telfijo_cliente_2" name="{telfijo_cliente_2_Name}" maxlength="15" value="{telfijo_cliente_2}" size="15"></td> 
+            <td><input id="Contentclientes1telfijo_cliente_2" name="{telfijo_cliente_2_Name}" maxlength="15" value="{telfijo_cliente_2}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1telfijo_cliente_3">{res:telfijo_cliente_3}</label></td> 
-            <td><input id="Contentclientes1telfijo_cliente_3" name="{telfijo_cliente_3_Name}" maxlength="15" value="{telfijo_cliente_3}" size="15"></td> 
+            <td><input id="Contentclientes1telfijo_cliente_3" name="{telfijo_cliente_3_Name}" maxlength="15" value="{telfijo_cliente_3}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1celular_cliente_1">{res:celular_cliente_1}</label></td> 
-            <td><input id="Contentclientes1celular_cliente_1" name="{celular_cliente_1_Name}" maxlength="15" value="{celular_cliente_1}" size="15"></td> 
+            <td><input id="Contentclientes1celular_cliente_1" name="{celular_cliente_1_Name}" maxlength="15" value="{celular_cliente_1}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1celular_cliente_2">{res:celular_cliente_2}</label></td> 
-            <td><input id="Contentclientes1celular_cliente_2" name="{celular_cliente_2_Name}" maxlength="15" value="{celular_cliente_2}" size="15"></td> 
+            <td><input id="Contentclientes1celular_cliente_2" name="{celular_cliente_2_Name}" maxlength="15" value="{celular_cliente_2}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1celular_cliente_3">{res:celular_cliente_3}</label></td> 
-            <td><input id="Contentclientes1celular_cliente_3" name="{celular_cliente_3_Name}" maxlength="15" value="{celular_cliente_3}" size="15"></td> 
+            <td><input id="Contentclientes1celular_cliente_3" name="{celular_cliente_3_Name}" maxlength="15" value="{celular_cliente_3}" size="15"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1email_cliente_1">{res:email_cliente_1}</label></td> 
-            <td><input id="Contentclientes1email_cliente_1" name="{email_cliente_1_Name}" maxlength="150" value="{email_cliente_1}" size="50"></td> 
+            <td><input id="Contentclientes1email_cliente_1" name="{email_cliente_1_Name}" maxlength="150" value="{email_cliente_1}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1email_cliente_2">{res:email_cliente_2}</label></td> 
-            <td><input id="Contentclientes1email_cliente_2" name="{email_cliente_2_Name}" maxlength="150" value="{email_cliente_2}" size="50"></td> 
+            <td><input id="Contentclientes1email_cliente_2" name="{email_cliente_2_Name}" maxlength="150" value="{email_cliente_2}" size="50"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentclientes1email_cliente_3">{res:email_cliente_3}</label></td> 
-            <td><input id="Contentclientes1email_cliente_3" name="{email_cliente_3_Name}" maxlength="150" value="{email_cliente_3}" size="50"></td> 
+            <td><input id="Contentclientes1email_cliente_3" name="{email_cliente_3_Name}" maxlength="150" value="{email_cliente_3}" size="50"></td>
           </tr>
  
           <tr class="BottomBlueprint">
             <td style="TEXT-ALIGN: right" colspan="2">
               <!-- BEGIN Button Button_Insert --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentclientes1Button_Insert" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif"><!-- END Button Button_Insert -->
               <!-- BEGIN Button Button_Update --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentclientes1Button_Update" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif"><!-- END Button Button_Update -->
-              <!-- BEGIN Button Button_Cancel --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentclientes1Button_Cancel" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif"><!-- END Button Button_Cancel --></td> 
+              <!-- BEGIN Button Button_Cancel --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentclientes1Button_Cancel" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif"><!-- END Button Button_Cancel --></td>
           </tr>
- 
         </table>
- </td> 
+      </td>
     </tr>
- 
   </table>
 </form>
 <!-- END Record clientes1 --><!-- END Panel Content -->
-<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
-<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver a Clientes</a><!-- END Panel Sidebar1 -->
