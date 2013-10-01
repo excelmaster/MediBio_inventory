@@ -123,12 +123,6 @@
 							<Attributes/>
 							<Features/>
 						</Label>
-						<Label id="99" fieldSourceType="DBColumn" dataType="Integer" html="False" name="id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosid_producto" wizardTheme="Blueprint" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Label>
 						<Link id="100" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="Detalles" hrefSource="CrudProducto.ccp" wizardThemeItem="FooterA" PathID="Contentunidadesmedida_productosAlt_Detail" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':1,'objectType':'linkParameters'}}">
 							<Components/>
 							<Events/>
@@ -169,12 +163,6 @@
 							<Features/>
 						</Label>
 						<Label id="107" fieldSourceType="DBColumn" dataType="Text" html="False" name="Alt_descrp_unidad" fieldSource="descrp_unidad" wizardCaption="{res:descrp_unidad}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosAlt_descrp_unidad" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Label>
-						<Label id="108" fieldSourceType="DBColumn" dataType="Integer" html="False" name="Alt_id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosAlt_id_producto" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
 							<Attributes/>
@@ -300,7 +288,6 @@
 			</Components>
 			<Events/>
 			<Attributes/>
-
 			<Features/>
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">

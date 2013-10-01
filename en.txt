@@ -170,3 +170,6 @@ Text1=<STRONG>Busqueda </STRONG>
 Text2=Volver al panel principal
 tipo_documento=Tipo Documento
 unidad_medida_id=Unidad de Medida
+obsv_unidad=Obsv Unidad
+unidadesmedida_GridForm=unidadesmedida_GridForm
+unidadesmedida_RecordForm=Agregar / Editar Unidadesmedida 

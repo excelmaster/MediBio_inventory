@@ -13,9 +13,9 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
-class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
+class clsRecordproveedores1 { //proveedores1 Class @30-F284CF0B
 
-//Variables @6-9E315808
+//Variables @30-9E315808
 
     // Public variables
     public $ComponentType = "Record";
@@ -49,7 +49,7 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
     // Class variables
 //End Variables
 
-//Class_Initialize Event @6-1C456E4B
+//Class_Initialize Event @30-305396BB
     function clsRecordproveedores1($RelativePath, & $Parent)
     {
 
@@ -94,12 +94,11 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
             $this->celular_1 = new clsControl(ccsTextBox, "celular_1", $CCSLocales->GetText("celular_1"), ccsText, "", CCGetRequestParam("celular_1", $Method, NULL), $this);
             $this->celular_2 = new clsControl(ccsTextBox, "celular_2", $CCSLocales->GetText("celular_2"), ccsText, "", CCGetRequestParam("celular_2", $Method, NULL), $this);
             $this->celular_3 = new clsControl(ccsTextBox, "celular_3", $CCSLocales->GetText("celular_3"), ccsText, "", CCGetRequestParam("celular_3", $Method, NULL), $this);
-            $this->representante_legal = new clsControl(ccsTextBox, "representante_legal", $CCSLocales->GetText("representante_legal"), ccsText, "", CCGetRequestParam("representante_legal", $Method, NULL), $this);
         }
     }
 //End Class_Initialize Event
 
-//Initialize Method @6-2832F4DC
+//Initialize Method @30-2832F4DC
     function Initialize()
     {
 
@@ -110,7 +109,7 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
     }
 //End Initialize Method
 
-//Validate Method @6-7AF6A844
+//Validate Method @30-D3CAE092
     function Validate()
     {
         global $CCSLocales;
@@ -129,7 +128,6 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $Validation = ($this->celular_1->Validate() && $Validation);
         $Validation = ($this->celular_2->Validate() && $Validation);
         $Validation = ($this->celular_3->Validate() && $Validation);
-        $Validation = ($this->representante_legal->Validate() && $Validation);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
         $Validation =  $Validation && ($this->razon_social->Errors->Count() == 0);
         $Validation =  $Validation && ($this->nombre->Errors->Count() == 0);
@@ -144,12 +142,11 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $Validation =  $Validation && ($this->celular_1->Errors->Count() == 0);
         $Validation =  $Validation && ($this->celular_2->Errors->Count() == 0);
         $Validation =  $Validation && ($this->celular_3->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->representante_legal->Errors->Count() == 0);
         return (($this->Errors->Count() == 0) && $Validation);
     }
 //End Validate Method
 
-//CheckErrors Method @6-493E6AAD
+//CheckErrors Method @30-4326662B
     function CheckErrors()
     {
         $errors = false;
@@ -166,14 +163,13 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $errors = ($errors || $this->celular_1->Errors->Count());
         $errors = ($errors || $this->celular_2->Errors->Count());
         $errors = ($errors || $this->celular_3->Errors->Count());
-        $errors = ($errors || $this->representante_legal->Errors->Count());
         $errors = ($errors || $this->Errors->Count());
         $errors = ($errors || $this->DataSource->Errors->Count());
         return $errors;
     }
 //End CheckErrors Method
 
-//Operation Method @6-E56E67A4
+//Operation Method @30-0BF2B389
     function Operation()
     {
         if(!$this->Visible)
@@ -200,18 +196,15 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         }
         $Redirect = $FileName . "?" . CCGetQueryString("QueryString", array("ccsForm"));
         if($this->PressedButton == "Button_Cancel") {
-            $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
             if(!CCGetEvent($this->Button_Cancel->CCSEvents, "OnClick", $this->Button_Cancel)) {
                 $Redirect = "";
             }
         } else if($this->Validate()) {
             if($this->PressedButton == "Button_Insert") {
-                $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
                 if(!CCGetEvent($this->Button_Insert->CCSEvents, "OnClick", $this->Button_Insert) || !$this->InsertRow()) {
                     $Redirect = "";
                 }
             } else if($this->PressedButton == "Button_Update") {
-                $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
                 if(!CCGetEvent($this->Button_Update->CCSEvents, "OnClick", $this->Button_Update) || !$this->UpdateRow()) {
                     $Redirect = "";
                 }
@@ -224,7 +217,7 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
     }
 //End Operation Method
 
-//InsertRow Method @6-82DB568C
+//InsertRow Method @30-50FFD5FC
     function InsertRow()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInsert", $this);
@@ -242,14 +235,13 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $this->DataSource->celular_1->SetValue($this->celular_1->GetValue(true));
         $this->DataSource->celular_2->SetValue($this->celular_2->GetValue(true));
         $this->DataSource->celular_3->SetValue($this->celular_3->GetValue(true));
-        $this->DataSource->representante_legal->SetValue($this->representante_legal->GetValue(true));
         $this->DataSource->Insert();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterInsert", $this);
         return (!$this->CheckErrors());
     }
 //End InsertRow Method
 
-//UpdateRow Method @6-9739F0FD
+//UpdateRow Method @30-98452059
     function UpdateRow()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeUpdate", $this);
@@ -267,14 +259,13 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $this->DataSource->celular_1->SetValue($this->celular_1->GetValue(true));
         $this->DataSource->celular_2->SetValue($this->celular_2->GetValue(true));
         $this->DataSource->celular_3->SetValue($this->celular_3->GetValue(true));
-        $this->DataSource->representante_legal->SetValue($this->representante_legal->GetValue(true));
         $this->DataSource->Update();
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterUpdate", $this);
         return (!$this->CheckErrors());
     }
 //End UpdateRow Method
 
-//Show Method @6-E56236A1
+//Show Method @30-64AB5699
     function Show()
     {
         global $CCSUseAmp;
@@ -315,7 +306,6 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
                     $this->celular_1->SetValue($this->DataSource->celular_1->GetValue());
                     $this->celular_2->SetValue($this->DataSource->celular_2->GetValue());
                     $this->celular_3->SetValue($this->DataSource->celular_3->GetValue());
-                    $this->representante_legal->SetValue($this->DataSource->representante_legal->GetValue());
                 }
             } else {
                 $this->EditMode = false;
@@ -337,7 +327,6 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
             $Error = ComposeStrings($Error, $this->celular_1->Errors->ToString());
             $Error = ComposeStrings($Error, $this->celular_2->Errors->ToString());
             $Error = ComposeStrings($Error, $this->celular_3->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->representante_legal->Errors->ToString());
             $Error = ComposeStrings($Error, $this->Errors->ToString());
             $Error = ComposeStrings($Error, $this->DataSource->Errors->ToString());
             $Tpl->SetVar("Error", $Error);
@@ -374,18 +363,17 @@ class clsRecordproveedores1 { //proveedores1 Class @6-F284CF0B
         $this->celular_1->Show();
         $this->celular_2->Show();
         $this->celular_3->Show();
-        $this->representante_legal->Show();
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
     }
 //End Show Method
 
-} //End proveedores1 Class @6-FCB6E20C
+} //End proveedores1 Class @30-FCB6E20C
 
-class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSource Class @6-B9F86BEE
+class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSource Class @30-B9F86BEE
 
-//DataSource Variables @6-E5A9CF0F
+//DataSource Variables @30-03D46F12
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -414,10 +402,9 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
     public $celular_1;
     public $celular_2;
     public $celular_3;
-    public $representante_legal;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @6-5DDC4E3A
+//DataSourceClass_Initialize Event @30-ABB10572
     function clsproveedores1DataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -449,8 +436,6 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         
         $this->celular_3 = new clsField("celular_3", ccsText, "");
         
-        $this->representante_legal = new clsField("representante_legal", ccsText, "");
-        
 
         $this->InsertFields["razon_social"] = array("Name" => "razon_social", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->InsertFields["nombre"] = array("Name" => "nombre", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
@@ -465,7 +450,6 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         $this->InsertFields["celular_1"] = array("Name" => "celular_1", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->InsertFields["celular_2"] = array("Name" => "celular_2", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->InsertFields["celular_3"] = array("Name" => "celular_3", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-        $this->InsertFields["representante_legal"] = array("Name" => "representante_legal", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["razon_social"] = array("Name" => "razon_social", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["nombre"] = array("Name" => "nombre", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["nit"] = array("Name" => "nit", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
@@ -479,11 +463,10 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         $this->UpdateFields["celular_1"] = array("Name" => "celular_1", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["celular_2"] = array("Name" => "celular_2", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
         $this->UpdateFields["celular_3"] = array("Name" => "celular_3", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-        $this->UpdateFields["representante_legal"] = array("Name" => "representante_legal", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
     }
 //End DataSourceClass_Initialize Event
 
-//Prepare Method @6-35B33087
+//Prepare Method @30-35B33087
     function Prepare()
     {
         global $CCSLocales;
@@ -497,7 +480,7 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
     }
 //End Prepare Method
 
-//Open Method @6-D95FA80E
+//Open Method @30-D95FA80E
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
@@ -509,7 +492,7 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
     }
 //End Open Method
 
-//SetValues Method @6-7F28CB08
+//SetValues Method @30-55E06B71
     function SetValues()
     {
         $this->razon_social->SetDBValue($this->f("razon_social"));
@@ -525,11 +508,10 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         $this->celular_1->SetDBValue($this->f("celular_1"));
         $this->celular_2->SetDBValue($this->f("celular_2"));
         $this->celular_3->SetDBValue($this->f("celular_3"));
-        $this->representante_legal->SetDBValue($this->f("representante_legal"));
     }
 //End SetValues Method
 
-//Insert Method @6-40FA0BA7
+//Insert Method @30-0334AA23
     function Insert()
     {
         global $CCSLocales;
@@ -549,7 +531,6 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         $this->InsertFields["celular_1"]["Value"] = $this->celular_1->GetDBValue(true);
         $this->InsertFields["celular_2"]["Value"] = $this->celular_2->GetDBValue(true);
         $this->InsertFields["celular_3"]["Value"] = $this->celular_3->GetDBValue(true);
-        $this->InsertFields["representante_legal"]["Value"] = $this->representante_legal->GetDBValue(true);
         $this->SQL = CCBuildInsert("proveedores", $this->InsertFields, $this);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteInsert", $this->Parent);
         if($this->Errors->Count() == 0 && $this->CmdExecution) {
@@ -559,7 +540,7 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
     }
 //End Insert Method
 
-//Update Method @6-EDD3D60F
+//Update Method @30-3839AA27
     function Update()
     {
         global $CCSLocales;
@@ -580,7 +561,6 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
         $this->UpdateFields["celular_1"]["Value"] = $this->celular_1->GetDBValue(true);
         $this->UpdateFields["celular_2"]["Value"] = $this->celular_2->GetDBValue(true);
         $this->UpdateFields["celular_3"]["Value"] = $this->celular_3->GetDBValue(true);
-        $this->UpdateFields["representante_legal"]["Value"] = $this->representante_legal->GetDBValue(true);
         $this->SQL = CCBuildUpdate("proveedores", $this->UpdateFields, $this);
         $this->SQL .= strlen($this->Where) ? " WHERE " . $this->Where : $this->Where;
         if (!strlen($this->Where) && $this->Errors->Count() == 0) 
@@ -593,7 +573,7 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
     }
 //End Update Method
 
-} //End proveedores1DataSource Class @6-FCB6E20C
+} //End proveedores1DataSource Class @30-FCB6E20C
 
 //Initialize Page @1-A34CF007
 // Variables
@@ -627,7 +607,7 @@ $Charset = $Charset ? $Charset : "windows-1252";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-4BAC278C
+//Initialize Objects @1-929CB34D
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -640,18 +620,28 @@ $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
-$Content = new clsPanel("Content", $MainPage);
-$Content->PlaceholderName = "Content";
-$proveedores1 = new clsRecordproveedores1("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
+$Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
+$Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Link1->Page = "provee_mant.php";
+$Link2 = new clsControl(ccsLink, "Link2", "Link2", ccsText, "", CCGetRequestParam("Link2", ccsGet, NULL), $MainPage);
+$Link2->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Link2->Page = "rpt_provee.php";
+$Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
+$proveedores1 = new clsRecordproveedores1("", $MainPage);
 $MainPage->Head = & $Head;
-$MainPage->Content = & $Content;
-$MainPage->proveedores1 = & $proveedores1;
 $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
+$MainPage->Link1 = & $Link1;
+$MainPage->Link2 = & $Link2;
+$MainPage->Content = & $Content;
+$MainPage->proveedores1 = & $proveedores1;
+$Sidebar1->AddComponent("Link1", $Link1);
+$Sidebar1->AddComponent("Link2", $Link2);
 $Content->AddComponent("proveedores1", $proveedores1);
 $proveedores1->Initialize();
 
@@ -697,15 +687,15 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-F6C60005
+//Show Page @1-03CA695E
 $Head->Show();
-$Content->Show();
 $Menu->Show();
 $Sidebar1->Show();
+$Content->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
-$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
 $MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
