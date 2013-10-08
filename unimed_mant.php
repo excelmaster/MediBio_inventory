@@ -13,9 +13,9 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
-class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
+class clsGridunidadesmedida { //unidadesmedida class @53-18E9FB7D
 
-//Variables @6-30462EB5
+//Variables @53-30462EB5
 
     // Public variables
     public $ComponentType = "Grid";
@@ -51,7 +51,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     public $Sorter_obsv_unidad;
 //End Variables
 
-//Class_Initialize Event @6-29948E84
+//Class_Initialize Event @53-29948E84
     function clsGridunidadesmedida($RelativePath, & $Parent)
     {
         global $FileName;
@@ -119,7 +119,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     }
 //End Class_Initialize Event
 
-//Initialize Method @6-90E704C5
+//Initialize Method @53-90E704C5
     function Initialize()
     {
         if(!$this->Visible) return;
@@ -130,7 +130,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     }
 //End Initialize Method
 
-//Show Method @6-07448A2A
+//Show Method @53-07448A2A
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -245,7 +245,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     }
 //End Show Method
 
-//GetErrors Method @6-1C9D1935
+//GetErrors Method @53-1C9D1935
     function GetErrors()
     {
         $errors = "";
@@ -261,11 +261,11 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     }
 //End GetErrors Method
 
-} //End unidadesmedida Class @6-FCB6E20C
+} //End unidadesmedida Class @53-FCB6E20C
 
-class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDataSource Class @6-292E388D
+class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDataSource Class @53-292E388D
 
-//DataSource Variables @6-EF7B10C7
+//DataSource Variables @53-EF7B10C7
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -285,7 +285,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     public $Alt_obsv_unidad;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @6-BDA9DDF3
+//DataSourceClass_Initialize Event @53-BDA9DDF3
     function clsunidadesmedidaDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -307,7 +307,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @6-D170D5C9
+//SetOrder Method @53-D170D5C9
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "id";
@@ -318,7 +318,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     }
 //End SetOrder Method
 
-//Prepare Method @6-14D6CD9D
+//Prepare Method @53-14D6CD9D
     function Prepare()
     {
         global $CCSLocales;
@@ -326,7 +326,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     }
 //End Prepare Method
 
-//Open Method @6-293601F2
+//Open Method @53-293601F2
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
@@ -345,7 +345,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     }
 //End Open Method
 
-//SetValues Method @6-BEC4B075
+//SetValues Method @53-BEC4B075
     function SetValues()
     {
         $this->id->SetDBValue(trim($this->f("id")));
@@ -357,11 +357,11 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
     }
 //End SetValues Method
 
-} //End unidadesmedidaDataSource Class @6-FCB6E20C
+} //End unidadesmedidaDataSource Class @53-FCB6E20C
 
-class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
+class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @82-4B2FBAEF
 
-//Variables @35-9E315808
+//Variables @82-9E315808
 
     // Public variables
     public $ComponentType = "Record";
@@ -395,7 +395,7 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     // Class variables
 //End Variables
 
-//Class_Initialize Event @35-C6A30703
+//Class_Initialize Event @82-C6A30703
     function clsRecordunidadesmedidaSearch($RelativePath, & $Parent)
     {
 
@@ -440,7 +440,7 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     }
 //End Class_Initialize Event
 
-//Validate Method @35-DAAE2D07
+//Validate Method @82-DAAE2D07
     function Validate()
     {
         global $CCSLocales;
@@ -461,7 +461,7 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     }
 //End Validate Method
 
-//CheckErrors Method @35-1585BD6C
+//CheckErrors Method @82-1585BD6C
     function CheckErrors()
     {
         $errors = false;
@@ -476,7 +476,7 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     }
 //End CheckErrors Method
 
-//Operation Method @35-7772F11A
+//Operation Method @82-7772F11A
     function Operation()
     {
         if(!$this->Visible)
@@ -509,7 +509,7 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     }
 //End Operation Method
 
-//Show Method @35-5D604C20
+//Show Method @82-5D604C20
     function Show()
     {
         global $CCSUseAmp;
@@ -572,382 +572,9 @@ class clsRecordunidadesmedidaSearch { //unidadesmedidaSearch Class @35-4B2FBAEF
     }
 //End Show Method
 
-} //End unidadesmedidaSearch Class @35-FCB6E20C
-
-class clsRecordunidadesmedida1 { //unidadesmedida1 Class @44-9684EBB1
-
-//Variables @44-9E315808
-
-    // Public variables
-    public $ComponentType = "Record";
-    public $ComponentName;
-    public $Parent;
-    public $HTMLFormAction;
-    public $PressedButton;
-    public $Errors;
-    public $ErrorBlock;
-    public $FormSubmitted;
-    public $FormEnctype;
-    public $Visible;
-    public $IsEmpty;
-
-    public $CCSEvents = "";
-    public $CCSEventResult;
-
-    public $RelativePath = "";
-
-    public $InsertAllowed = false;
-    public $UpdateAllowed = false;
-    public $DeleteAllowed = false;
-    public $ReadAllowed   = false;
-    public $EditMode      = false;
-    public $ds;
-    public $DataSource;
-    public $ValidatingControls;
-    public $Controls;
-    public $Attributes;
-
-    // Class variables
-//End Variables
-
-//Class_Initialize Event @44-5F675568
-    function clsRecordunidadesmedida1($RelativePath, & $Parent)
-    {
-
-        global $FileName;
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        $this->Visible = true;
-        $this->Parent = & $Parent;
-        $this->RelativePath = $RelativePath;
-        $this->Errors = new clsErrors();
-        $this->ErrorBlock = "Record unidadesmedida1/Error";
-        $this->DataSource = new clsunidadesmedida1DataSource($this);
-        $this->ds = & $this->DataSource;
-        $this->InsertAllowed = true;
-        $this->UpdateAllowed = true;
-        $this->ReadAllowed = true;
-        if($this->Visible)
-        {
-            $this->ComponentName = "unidadesmedida1";
-            $this->Attributes = new clsAttributes($this->ComponentName . ":");
-            $CCSForm = explode(":", CCGetFromGet("ccsForm", ""), 2);
-            if(sizeof($CCSForm) == 1)
-                $CCSForm[1] = "";
-            list($FormName, $FormMethod) = $CCSForm;
-            $this->EditMode = ($FormMethod == "Edit");
-            $this->FormEnctype = "application/x-www-form-urlencoded";
-            $this->FormSubmitted = ($FormName == $this->ComponentName);
-            $Method = $this->FormSubmitted ? ccsPost : ccsGet;
-            $this->Button_Insert = new clsButton("Button_Insert", $Method, $this);
-            $this->Button_Update = new clsButton("Button_Update", $Method, $this);
-            $this->Button_Cancel = new clsButton("Button_Cancel", $Method, $this);
-            $this->descrp_unidad = new clsControl(ccsTextBox, "descrp_unidad", $CCSLocales->GetText("descrp_unidad"), ccsText, "", CCGetRequestParam("descrp_unidad", $Method, NULL), $this);
-            $this->obsv_unidad = new clsControl(ccsTextBox, "obsv_unidad", $CCSLocales->GetText("obsv_unidad"), ccsText, "", CCGetRequestParam("obsv_unidad", $Method, NULL), $this);
-        }
-    }
-//End Class_Initialize Event
-
-//Initialize Method @44-2832F4DC
-    function Initialize()
-    {
-
-        if(!$this->Visible)
-            return;
-
-        $this->DataSource->Parameters["urlid"] = CCGetFromGet("id", NULL);
-    }
-//End Initialize Method
-
-//Validate Method @44-27D9B9F8
-    function Validate()
-    {
-        global $CCSLocales;
-        $Validation = true;
-        $Where = "";
-        $Validation = ($this->descrp_unidad->Validate() && $Validation);
-        $Validation = ($this->obsv_unidad->Validate() && $Validation);
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
-        $Validation =  $Validation && ($this->descrp_unidad->Errors->Count() == 0);
-        $Validation =  $Validation && ($this->obsv_unidad->Errors->Count() == 0);
-        return (($this->Errors->Count() == 0) && $Validation);
-    }
-//End Validate Method
-
-//CheckErrors Method @44-9A019823
-    function CheckErrors()
-    {
-        $errors = false;
-        $errors = ($errors || $this->descrp_unidad->Errors->Count());
-        $errors = ($errors || $this->obsv_unidad->Errors->Count());
-        $errors = ($errors || $this->Errors->Count());
-        $errors = ($errors || $this->DataSource->Errors->Count());
-        return $errors;
-    }
-//End CheckErrors Method
-
-//Operation Method @44-0BF2B389
-    function Operation()
-    {
-        if(!$this->Visible)
-            return;
-
-        global $Redirect;
-        global $FileName;
-
-        $this->DataSource->Prepare();
-        if(!$this->FormSubmitted) {
-            $this->EditMode = $this->DataSource->AllParametersSet;
-            return;
-        }
-
-        if($this->FormSubmitted) {
-            $this->PressedButton = $this->EditMode ? "Button_Update" : "Button_Insert";
-            if($this->Button_Insert->Pressed) {
-                $this->PressedButton = "Button_Insert";
-            } else if($this->Button_Update->Pressed) {
-                $this->PressedButton = "Button_Update";
-            } else if($this->Button_Cancel->Pressed) {
-                $this->PressedButton = "Button_Cancel";
-            }
-        }
-        $Redirect = $FileName . "?" . CCGetQueryString("QueryString", array("ccsForm"));
-        if($this->PressedButton == "Button_Cancel") {
-            if(!CCGetEvent($this->Button_Cancel->CCSEvents, "OnClick", $this->Button_Cancel)) {
-                $Redirect = "";
-            }
-        } else if($this->Validate()) {
-            if($this->PressedButton == "Button_Insert") {
-                if(!CCGetEvent($this->Button_Insert->CCSEvents, "OnClick", $this->Button_Insert) || !$this->InsertRow()) {
-                    $Redirect = "";
-                }
-            } else if($this->PressedButton == "Button_Update") {
-                if(!CCGetEvent($this->Button_Update->CCSEvents, "OnClick", $this->Button_Update) || !$this->UpdateRow()) {
-                    $Redirect = "";
-                }
-            }
-        } else {
-            $Redirect = "";
-        }
-        if ($Redirect)
-            $this->DataSource->close();
-    }
-//End Operation Method
-
-//InsertRow Method @44-DA821AAC
-    function InsertRow()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInsert", $this);
-        if(!$this->InsertAllowed) return false;
-        $this->DataSource->descrp_unidad->SetValue($this->descrp_unidad->GetValue(true));
-        $this->DataSource->obsv_unidad->SetValue($this->obsv_unidad->GetValue(true));
-        $this->DataSource->Insert();
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterInsert", $this);
-        return (!$this->CheckErrors());
-    }
-//End InsertRow Method
-
-//UpdateRow Method @44-7CE53366
-    function UpdateRow()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeUpdate", $this);
-        if(!$this->UpdateAllowed) return false;
-        $this->DataSource->descrp_unidad->SetValue($this->descrp_unidad->GetValue(true));
-        $this->DataSource->obsv_unidad->SetValue($this->obsv_unidad->GetValue(true));
-        $this->DataSource->Update();
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterUpdate", $this);
-        return (!$this->CheckErrors());
-    }
-//End UpdateRow Method
-
-//Show Method @44-E2A324BF
-    function Show()
-    {
-        global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
-        global $FileName;
-        global $CCSLocales;
-        $Error = "";
-
-        if(!$this->Visible)
-            return;
-
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeSelect", $this);
+} //End unidadesmedidaSearch Class @82-FCB6E20C
 
 
-        $RecordBlock = "Record " . $this->ComponentName;
-        $ParentPath = $Tpl->block_path;
-        $Tpl->block_path = $ParentPath . "/" . $RecordBlock;
-        $this->EditMode = $this->EditMode && $this->ReadAllowed;
-        if($this->EditMode) {
-            if($this->DataSource->Errors->Count()){
-                $this->Errors->AddErrors($this->DataSource->Errors);
-                $this->DataSource->Errors->clear();
-            }
-            $this->DataSource->Open();
-            if($this->DataSource->Errors->Count() == 0 && $this->DataSource->next_record()) {
-                $this->DataSource->SetValues();
-                if(!$this->FormSubmitted){
-                    $this->descrp_unidad->SetValue($this->DataSource->descrp_unidad->GetValue());
-                    $this->obsv_unidad->SetValue($this->DataSource->obsv_unidad->GetValue());
-                }
-            } else {
-                $this->EditMode = false;
-            }
-        }
-
-        if($this->FormSubmitted || $this->CheckErrors()) {
-            $Error = "";
-            $Error = ComposeStrings($Error, $this->descrp_unidad->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->obsv_unidad->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->Errors->ToString());
-            $Error = ComposeStrings($Error, $this->DataSource->Errors->ToString());
-            $Tpl->SetVar("Error", $Error);
-            $Tpl->Parse("Error", false);
-        }
-        $CCSForm = $this->EditMode ? $this->ComponentName . ":" . "Edit" : $this->ComponentName;
-        $this->HTMLFormAction = $FileName . "?" . CCAddParam(CCGetQueryString("QueryString", ""), "ccsForm", $CCSForm);
-        $Tpl->SetVar("Action", !$CCSUseAmp ? $this->HTMLFormAction : str_replace("&", "&amp;", $this->HTMLFormAction));
-        $Tpl->SetVar("HTMLFormName", $this->ComponentName);
-        $Tpl->SetVar("HTMLFormEnctype", $this->FormEnctype);
-        $this->Button_Insert->Visible = !$this->EditMode && $this->InsertAllowed;
-        $this->Button_Update->Visible = $this->EditMode && $this->UpdateAllowed;
-
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
-        $this->Attributes->Show();
-        if(!$this->Visible) {
-            $Tpl->block_path = $ParentPath;
-            return;
-        }
-
-        $this->Button_Insert->Show();
-        $this->Button_Update->Show();
-        $this->Button_Cancel->Show();
-        $this->descrp_unidad->Show();
-        $this->obsv_unidad->Show();
-        $Tpl->parse();
-        $Tpl->block_path = $ParentPath;
-        $this->DataSource->close();
-    }
-//End Show Method
-
-} //End unidadesmedida1 Class @44-FCB6E20C
-
-class clsunidadesmedida1DataSource extends clsDBConnection1 {  //unidadesmedida1DataSource Class @44-6E62A872
-
-//DataSource Variables @44-E4FFEAC5
-    public $Parent = "";
-    public $CCSEvents = "";
-    public $CCSEventResult;
-    public $ErrorBlock;
-    public $CmdExecution;
-
-    public $InsertParameters;
-    public $UpdateParameters;
-    public $wp;
-    public $AllParametersSet;
-
-    public $InsertFields = array();
-    public $UpdateFields = array();
-
-    // Datasource fields
-    public $descrp_unidad;
-    public $obsv_unidad;
-//End DataSource Variables
-
-//DataSourceClass_Initialize Event @44-15679B67
-    function clsunidadesmedida1DataSource(& $Parent)
-    {
-        $this->Parent = & $Parent;
-        $this->ErrorBlock = "Record unidadesmedida1/Error";
-        $this->Initialize();
-        $this->descrp_unidad = new clsField("descrp_unidad", ccsText, "");
-        
-        $this->obsv_unidad = new clsField("obsv_unidad", ccsText, "");
-        
-
-        $this->InsertFields["descrp_unidad"] = array("Name" => "descrp_unidad", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-        $this->InsertFields["obsv_unidad"] = array("Name" => "obsv_unidad", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-        $this->UpdateFields["descrp_unidad"] = array("Name" => "descrp_unidad", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-        $this->UpdateFields["obsv_unidad"] = array("Name" => "obsv_unidad", "Value" => "", "DataType" => ccsText, "OmitIfEmpty" => 1);
-    }
-//End DataSourceClass_Initialize Event
-
-//Prepare Method @44-35B33087
-    function Prepare()
-    {
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        $this->wp = new clsSQLParameters($this->ErrorBlock);
-        $this->wp->AddParameter("1", "urlid", ccsInteger, "", "", $this->Parameters["urlid"], "", false);
-        $this->AllParametersSet = $this->wp->AllParamsSet();
-        $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "id", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
-        $this->Where = 
-             $this->wp->Criterion[1];
-    }
-//End Prepare Method
-
-//Open Method @44-4218CEB5
-    function Open()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
-        $this->SQL = "SELECT * \n\n" .
-        "FROM unidadesmedida {SQL_Where} {SQL_OrderBy}";
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
-        $this->query(CCBuildSQL($this->SQL, $this->Where, $this->Order));
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterExecuteSelect", $this->Parent);
-    }
-//End Open Method
-
-//SetValues Method @44-640C1618
-    function SetValues()
-    {
-        $this->descrp_unidad->SetDBValue($this->f("descrp_unidad"));
-        $this->obsv_unidad->SetDBValue($this->f("obsv_unidad"));
-    }
-//End SetValues Method
-
-//Insert Method @44-A3E8D11B
-    function Insert()
-    {
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        $this->CmdExecution = true;
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildInsert", $this->Parent);
-        $this->InsertFields["descrp_unidad"]["Value"] = $this->descrp_unidad->GetDBValue(true);
-        $this->InsertFields["obsv_unidad"]["Value"] = $this->obsv_unidad->GetDBValue(true);
-        $this->SQL = CCBuildInsert("unidadesmedida", $this->InsertFields, $this);
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteInsert", $this->Parent);
-        if($this->Errors->Count() == 0 && $this->CmdExecution) {
-            $this->query($this->SQL);
-            $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterExecuteInsert", $this->Parent);
-        }
-    }
-//End Insert Method
-
-//Update Method @44-FAFD5535
-    function Update()
-    {
-        global $CCSLocales;
-        global $DefaultDateFormat;
-        $this->CmdExecution = true;
-        $Where = "";
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildUpdate", $this->Parent);
-        $this->UpdateFields["descrp_unidad"]["Value"] = $this->descrp_unidad->GetDBValue(true);
-        $this->UpdateFields["obsv_unidad"]["Value"] = $this->obsv_unidad->GetDBValue(true);
-        $this->SQL = CCBuildUpdate("unidadesmedida", $this->UpdateFields, $this);
-        $this->SQL .= strlen($this->Where) ? " WHERE " . $this->Where : $this->Where;
-        if (!strlen($this->Where) && $this->Errors->Count() == 0) 
-            $this->Errors->addError($CCSLocales->GetText("CCS_CustomOperationError_MissingParameters"));
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteUpdate", $this->Parent);
-        if($this->Errors->Count() == 0 && $this->CmdExecution) {
-            $this->query($this->SQL);
-            $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterExecuteUpdate", $this->Parent);
-        }
-    }
-//End Update Method
-
-} //End unidadesmedida1DataSource Class @44-FCB6E20C
 
 //Initialize Page @1-827CA7AA
 // Variables
@@ -985,7 +612,7 @@ include_once("./unimed_mant_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-EED8487A
+//Initialize Objects @1-CEF0BCBA
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1002,7 +629,6 @@ $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
 $unidadesmedida = new clsGridunidadesmedida("", $MainPage);
 $unidadesmedidaSearch = new clsRecordunidadesmedidaSearch("", $MainPage);
-$unidadesmedida1 = new clsRecordunidadesmedida1("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
@@ -1011,14 +637,11 @@ $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->unidadesmedida = & $unidadesmedida;
 $MainPage->unidadesmedidaSearch = & $unidadesmedidaSearch;
-$MainPage->unidadesmedida1 = & $unidadesmedida1;
 $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("unidadesmedida", $unidadesmedida);
 $Content->AddComponent("unidadesmedidaSearch", $unidadesmedidaSearch);
-$Content->AddComponent("unidadesmedida1", $unidadesmedida1);
 $unidadesmedida->Initialize();
-$unidadesmedida1->Initialize();
 
 BindEvents();
 
@@ -1047,13 +670,12 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-F47AB42B
+//Execute Components @1-8B786F7A
 $MasterPage->Operations();
-$unidadesmedida1->Operation();
 $unidadesmedidaSearch->Operation();
 //End Execute Components
 
-//Go to destination page @1-EDA9BF8A
+//Go to destination page @1-82C7411B
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
@@ -1061,7 +683,6 @@ if($Redirect)
     header("Location: " . $Redirect);
     unset($unidadesmedida);
     unset($unidadesmedidaSearch);
-    unset($unidadesmedida1);
     unset($Tpl);
     exit;
 }
@@ -1083,13 +704,12 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-C60FF54C
+//Unload Page @1-715F4715
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
 unset($unidadesmedida);
 unset($unidadesmedidaSearch);
-unset($unidadesmedida1);
 unset($Tpl);
 //End Unload Page
 

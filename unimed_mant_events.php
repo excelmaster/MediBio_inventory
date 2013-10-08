@@ -8,7 +8,7 @@ function BindEvents()
 }
 //End BindEvents Method
 
-//unidadesmedida_unidadesmedida_TotalRecords_BeforeShow @10-04CE86AB
+//unidadesmedida_unidadesmedida_TotalRecords_BeforeShow @59-04CE86AB
 function unidadesmedida_unidadesmedida_TotalRecords_BeforeShow(& $sender)
 {
     $unidadesmedida_unidadesmedida_TotalRecords_BeforeShow = true;
@@ -17,16 +17,16 @@ function unidadesmedida_unidadesmedida_TotalRecords_BeforeShow(& $sender)
     global $unidadesmedida; //Compatibility
 //End unidadesmedida_unidadesmedida_TotalRecords_BeforeShow
 
-//Retrieve number of records @11-ABE656B4
+//Retrieve number of records @60-ABE656B4
     $Component->SetValue($Container->DataSource->RecordsCount);
 //End Retrieve number of records
 
-//Close unidadesmedida_unidadesmedida_TotalRecords_BeforeShow @10-169CF838
+//Close unidadesmedida_unidadesmedida_TotalRecords_BeforeShow @59-169CF838
     return $unidadesmedida_unidadesmedida_TotalRecords_BeforeShow;
 }
 //End Close unidadesmedida_unidadesmedida_TotalRecords_BeforeShow
 
-//unidadesmedida_ds_BeforeBuildSelect @6-9685732A
+//unidadesmedida_ds_BeforeBuildSelect @53-9685732A
 function unidadesmedida_ds_BeforeBuildSelect(& $sender)
 {
     $unidadesmedida_ds_BeforeBuildSelect = true;
@@ -35,7 +35,7 @@ function unidadesmedida_ds_BeforeBuildSelect(& $sender)
     global $unidadesmedida; //Compatibility
 //End unidadesmedida_ds_BeforeBuildSelect
 
-//Advanced Search @43-C353DCEE
+//Advanced Search @90-C353DCEE
     global $unidadesmedidaSearch;
     $s_keyword = CCGetParam("s_keyword", "");
     $searchConditions = CCGetParam("searchConditions", "");
@@ -86,10 +86,8 @@ function unidadesmedida_ds_BeforeBuildSelect(& $sender)
     }
 //End Advanced Search
 
-//Close unidadesmedida_ds_BeforeBuildSelect @6-31D48BFE
+//Close unidadesmedida_ds_BeforeBuildSelect @53-31D48BFE
     return $unidadesmedida_ds_BeforeBuildSelect;
 }
 //End Close unidadesmedida_ds_BeforeBuildSelect
-
-
 ?>
