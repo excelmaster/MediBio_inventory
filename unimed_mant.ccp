@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" needGeneration="0" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp">
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp">
 	<Components>
 		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
 <Components/>
@@ -8,7 +8,7 @@
 </Panel>
 <Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
 <Components>
-<Grid id="6" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida" connection="Connection1" dataSource="unidadesmedida" pageSizeLimit="100" pageSize="True" wizardCaption="{res:unidadesmedida_GridForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="SimpleDir" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="True" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="{res:CCS_CustomLinkField}" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="False" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="20" isParent="True">
+<Grid id="6" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida" connection="Connection1" dataSource="unidadesmedida" orderBy="id" pageSizeLimit="100" pageSize="True" wizardCaption="{res:unidadesmedida_GridForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="SimpleDir" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="True" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="{res:CCS_CustomLinkField}" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="False" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="21" isParent="True">
 <Components>
 <Link id="9" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="unidadesmedida_Insert" hrefSource="unimed_mant.ccp" removeParameters="id" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentunidadesmedidaunidadesmedida_Insert" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components/>
@@ -76,7 +76,7 @@
 </Panel>
 <Panel id="19" visible="True" name="Data_Detail" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components>
-<Link id="20" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="unimed_mant.ccp" wizardThemeItem="GridA" PathID="ContentunidadesmedidaData_DetailDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0">
+<Link id="20" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="crud_unimed.ccp" wizardThemeItem="GridA" PathID="ContentunidadesmedidaData_DetailDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{&quot;textSource&quot;:&quot;{res:CCS_CustomLinkField}&quot;,&quot;textSourceDB&quot;:&quot;&quot;,&quot;hrefSource&quot;:&quot;crud_unimed.ccp&quot;,&quot;hrefSourceDB&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;target&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;linkParameters&quot;:{&quot;0&quot;:{&quot;sourceType&quot;:&quot;DataField&quot;,&quot;parameterSource&quot;:&quot;id&quot;,&quot;parameterName&quot;:&quot;id&quot;},&quot;length&quot;:1,&quot;objectType&quot;:&quot;linkParameters&quot;}}">
 <Components/>
 <Events/>
 <LinkParameters>
@@ -131,8 +131,7 @@
 </Panel>
 <Panel id="30" visible="True" name="Data_Alt_Detail" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components>
-<Link id="31" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="{res:CCS_CustomLinkField}" hrefSource="unimed_mant.ccp" wizardThemeItem="FooterA" PathID="ContentunidadesmedidaData_Alt_DetailAlt_Detail" wizardThemeVersion="3.0">
-<Components/>
+<Link id="31" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="{res:CCS_CustomLinkField}" hrefSource="crud_unimed.ccp" wizardThemeItem="FooterA" PathID="ContentunidadesmedidaData_Alt_DetailAlt_Detail" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_CustomLinkField}','textSourceDB':'','hrefSource':'crud_unimed.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id','parameterName':'id'},'length':1,'objectType':'linkParameters'}}"><Components/>
 <Events/>
 <LinkParameters>
 <LinkParameter id="32" sourceType="DataField" format="yyyy-mm-dd" name="id" source="id"/>
@@ -215,7 +214,7 @@
 <Attributes/>
 <Features/>
 </Grid>
-<Record id="40" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="unidadesmedidaSearch" searchIds="40" fictitiousConnection="Connection1" wizardCaption="{res:Search_Form}" wizardTheme="Blueprint" wizardOrientation="Horizontal" wizardFormMethod="post" gridSearchClearLink="True" wizardTypeComponent="Search" gridSearchType="Advanced" wizardInteractiveSearch="True" gridSearchRecPerPage="True" wizardTypeButtons="button" wizardDefaultButton="True" gridSearchSortField="True" wizardUseInterVariables="True" wizardThemeApplyTo="Component" addTemplatePanel="False" wizardType="GridRecord" returnPage="unimed_mant.ccp" PathID="ContentunidadesmedidaSearch" wizardThemeVersion="3.0" composition="20">
+<Record id="40" sourceType="Table" urlType="Relative" secured="False" allowInsert="False" allowUpdate="False" allowDelete="False" validateData="True" preserveParameters="None" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="unidadesmedidaSearch" searchIds="40" fictitiousConnection="Connection1" wizardCaption="{res:Search_Form}" wizardTheme="Blueprint" wizardOrientation="Vertical" wizardFormMethod="post" gridSearchClearLink="True" wizardTypeComponent="Search" gridSearchType="Advanced" wizardInteractiveSearch="True" gridSearchRecPerPage="True" wizardTypeButtons="button" wizardDefaultButton="True" gridSearchSortField="True" wizardUseInterVariables="True" wizardThemeApplyTo="Component" addTemplatePanel="False" wizardType="GridRecord" returnPage="unimed_mant.ccp" PathID="ContentunidadesmedidaSearch" wizardThemeVersion="3.0" composition="21">
 <Components>
 <Link id="41" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="ClearParameters" hrefSource="unimed_mant.ccp" removeParameters="s_keyword;unidadesmedidaOrder;unidadesmedidaDir;unidadesmedidaPageSize" wizardTheme="Blueprint" wizardThemeItem="SorterLink" wizardDefaultValue="{res:CCS_Clear}" PathID="ContentunidadesmedidaSearchClearParameters" wizardThemeVersion="3.0">
 <Components/>
@@ -311,6 +310,19 @@
 <Attributes/>
 <Features/>
 </Record>
+<Panel id="49" visible="True" name="Panel1" PathID="ContentPanel1">
+<Components>
+<Label id="50" fieldSourceType="DBColumn" dataType="Text" html="False" name="Label1" PathID="ContentPanel1Label1" defaultValue="&quot;Unidades de medida&quot;">
+<Components/>
+<Events/>
+<Attributes/>
+<Features/>
+</Label>
+</Components>
+<Events/>
+<Attributes/>
+<Features/>
+</Panel>
 </Components>
 <Events/>
 <Attributes/>
@@ -334,8 +346,8 @@
 <CodeFile id="Code" language="PHPTemplates" name="unimed_mant.php" forShow="True" url="unimed_mant.php" comment="//" codePage="windows-1252"/>
 </CodeFiles>
 	<SecurityGroups/>
-	<CachingParameters/>
-	<Attributes/>
-	<Features/>
-	<Events/>
+<CachingParameters/>
+<Attributes/>
+<Features/>
+<Events/>
 </Page>

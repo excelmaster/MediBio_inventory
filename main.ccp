@@ -55,17 +55,11 @@
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
-<Link id="18" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
+				<Link id="24" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
 <Components/>
-<Events>
-<Event name="BeforeShow" type="Server">
-<Actions>
-<Action actionName="Logout" actionCategory="Security" id="24" pageRedirects="True"/>
-</Actions>
-</Event>
-</Events>
+<Events/>
 <LinkParameters>
-<LinkParameter id="19" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+<LinkParameter id="25" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
 </LinkParameters>
 <Attributes/>
 <Features/>
@@ -87,13 +81,19 @@
 		<CodeFile id="Events" language="PHPTemplates" name="main_events.php" forShow="False" comment="//" codePage="windows-1252"/>
 </CodeFiles>
 	<SecurityGroups>
-<Group id="20" groupID="1"/>
-<Group id="21" groupID="2"/>
-<Group id="22" groupID="3"/>
-<Group id="23" groupID="4"/>
-</SecurityGroups>
+		<Group id="20" groupID="1"/>
+		<Group id="21" groupID="2"/>
+		<Group id="22" groupID="3"/>
+		<Group id="23" groupID="4"/>
+	</SecurityGroups>
 	<CachingParameters/>
 	<Attributes/>
 	<Features/>
-	<Events/>
+	<Events>
+<Event name="AfterInitialize" type="Server">
+<Actions>
+<Action actionName="Logout" actionCategory="Security" id="26" pageRedirects="True" parameterName="Logout" returnPage="main.ccp"/>
+</Actions>
+</Event>
+</Events>
 </Page>
