@@ -1,10 +1,12 @@
 <?php
-//BindEvents Method @1-171304E4
+//BindEvents Method @1-B49FFDD1
 function BindEvents()
 {
     global $unidadesmedida;
+    global $CCSEvents;
     $unidadesmedida->unidadesmedida_TotalRecords->CCSEvents["BeforeShow"] = "unidadesmedida_unidadesmedida_TotalRecords_BeforeShow";
     $unidadesmedida->ds->CCSEvents["BeforeBuildSelect"] = "unidadesmedida_ds_BeforeBuildSelect";
+    $CCSEvents["AfterInitialize"] = "Page_AfterInitialize";
 }
 //End BindEvents Method
 
@@ -90,6 +92,30 @@ function unidadesmedida_ds_BeforeBuildSelect(& $sender)
     return $unidadesmedida_ds_BeforeBuildSelect;
 }
 //End Close unidadesmedida_ds_BeforeBuildSelect
+
+//Page_AfterInitialize @1-352021A9
+function Page_AfterInitialize(& $sender)
+{
+    $Page_AfterInitialize = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $unimed_mant; //Compatibility
+//End Page_AfterInitialize
+
+//Logout @53-C52B4B67
+    if(strlen(CCGetParam("Logout", ""))) 
+    {
+        CCLogoutUser();
+        CCSetCookie("invt_bmLogin", "");
+        global $Redirect;
+        $Redirect = "unimed_mant.php";
+    }
+//End Logout
+
+//Close Page_AfterInitialize @1-379D319D
+    return $Page_AfterInitialize;
+}
+//End Close Page_AfterInitialize
 
 
 ?>

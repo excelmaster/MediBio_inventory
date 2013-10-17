@@ -1,7 +1,6 @@
 
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
-<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
 <script language="JavaScript" type="text/javascript">
 //Begin CCS script
@@ -34,63 +33,60 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
-            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
           </tr>
- 
         </table>
  
         <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
           <tr class="ErrorBlueprint">
-            <td colspan="2">{Error}</td> 
+            <td colspan="2">{Error}</td>
           </tr>
- <!-- END Error -->
+          <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentunidadesmedidaSearchs_keyword">{res:CCS_Filter}</label></td> 
-            <td><input id="ContentunidadesmedidaSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td> 
+            <td><input id="ContentunidadesmedidaSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentunidadesmedidaSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
               <select id="ContentunidadesmedidaSearchsearchConditions" name="{searchConditions_Name}">
-                {searchConditions_Options} 
+                {searchConditions_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentunidadesmedidaSearchunidadesmedidaDirOrder">{res:CCS_SortBy}</label></td> 
             <td>
               <select id="ContentunidadesmedidaSearchunidadesmedidaDirOrder" name="unidadesmedidaOrder">
-                {unidadesmedidaOrder_Options} 
+                {unidadesmedidaOrder_Options}
               </select>
  <label for="ContentunidadesmedidaSearchunidadesmedidaDirDir" style="display: none;">{res:CCS_SortDir}</label> 
               <select id="ContentunidadesmedidaSearchunidadesmedidaDirDir" name="unidadesmedidaDir">
-                {unidadesmedidaDir_Options} 
+                {unidadesmedidaDir_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="ContentunidadesmedidaSearchunidadesmedidaPageSize">{res:CCS_RecPerPage}</label></td> 
             <td>
               <select id="ContentunidadesmedidaSearchunidadesmedidaPageSize" name="{unidadesmedidaPageSize_Name}">
-                {unidadesmedidaPageSize_Options} 
+                {unidadesmedidaPageSize_Options}
               </select>
- </td> 
+ </td>
           </tr>
  
           <tr class="BottomBlueprint">
             <td><a href="{ClearParameters_Src}" id="ContentunidadesmedidaSearchClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right">
-              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentunidadesmedidaSearchButton_DoSearch" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}"><!-- END Button Button_DoSearch --></td> 
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentunidadesmedidaSearchButton_DoSearch" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}"><!-- END Button Button_DoSearch --></td>
           </tr>
- 
         </table>
- </td> 
+      </td>
     </tr>
- 
   </table>
 </form>
 <!-- END Record unidadesmedidaSearch --><br>
@@ -102,14 +98,13 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
           <td class="thBlueprint"><strong>{res:unidadesmedida_GridForm} </strong></td> 
-          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
         </tr>
- 
       </table>
  
       <table class="GridBlueprint" cellspacing="0" cellpadding="0">
         <tr class="RowBlueprint">
-          <td colspan="4">{res:CCS_TotalRecords}&nbsp;{unidadesmedida_TotalRecords}</td> 
+          <td colspan="4">{res:CCS_TotalRecords}&nbsp;{unidadesmedida_TotalRecords}</td>
         </tr>
  
         <tr class="CaptionBlueprint">
@@ -162,20 +157,20 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  <!-- END AltRow -->
         <!-- BEGIN Separator -->
         <tr class="SeparatorBlueprint">
-          <td colspan="4"></td> 
+          <td colspan="4"></td>
         </tr>
- <!-- END Separator -->
+        <!-- END Separator -->
         <!-- BEGIN NoRecords -->
         <tr class="NoRecordsBlueprint">
-          <td colspan="4">{res:CCS_NoRecords}</td> 
+          <td colspan="4">{res:CCS_NoRecords}</td>
         </tr>
- <!-- END NoRecords -->
+        <!-- END NoRecords -->
         <tr class="FooterBlueprint">
           <td colspan="4"><a href="{unidadesmedida_Insert_Src}" id="Contentunidadesmedidaunidadesmedida_Insert">{res:CCS_InsertLink}</a>&nbsp; 
             <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
             <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
               <option selected value="">-</option>
- {PageSize_Options} 
+ {PageSize_Options}
             </select>
  
             <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
@@ -185,15 +180,24 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
             <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
             <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
-            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
         </tr>
- 
       </table>
- </td> 
+    </td>
   </tr>
 </table>
 <!-- END Grid unidadesmedida --><br>
 <br>
 <!-- END Panel Content -->
-<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
-<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;&nbsp; 
+<table width="100%">
+  <tr>
+    <td>&nbsp;<a href="admin.php">Volver al panel principal</a></td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;<a>Ir a página de reportes</a></td>
+  </tr>
+</table>
+<!-- END Panel Sidebar1 -->

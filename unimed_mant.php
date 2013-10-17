@@ -51,7 +51,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
     public $Sorter_obsv_unidad;
 //End Variables
 
-//Class_Initialize Event @6-E169B79A
+//Class_Initialize Event @6-72074B55
     function clsGridunidadesmedida($RelativePath, & $Parent)
     {
         global $FileName;
@@ -101,7 +101,7 @@ class clsGridunidadesmedida { //unidadesmedida class @6-18E9FB7D
         $this->Alt_obsv_unidad = new clsControl(ccsLabel, "Alt_obsv_unidad", "Alt_obsv_unidad", ccsText, "", CCGetRequestParam("Alt_obsv_unidad", ccsGet, NULL), $this);
         $this->unidadesmedida_Insert = new clsControl(ccsLink, "unidadesmedida_Insert", "unidadesmedida_Insert", ccsText, "", CCGetRequestParam("unidadesmedida_Insert", ccsGet, NULL), $this);
         $this->unidadesmedida_Insert->Parameters = CCGetQueryString("QueryString", array("id", "ccsForm"));
-        $this->unidadesmedida_Insert->Page = "unimed_mant.php";
+        $this->unidadesmedida_Insert->Page = "crud_unimed.php";
         $this->unidadesmedida_TotalRecords = new clsControl(ccsLabel, "unidadesmedida_TotalRecords", "unidadesmedida_TotalRecords", ccsText, "", CCGetRequestParam("unidadesmedida_TotalRecords", ccsGet, NULL), $this);
         $this->Header_Detail = new clsPanel("Header_Detail", $this);
         $this->Header_id = new clsPanel("Header_id", $this);
@@ -626,7 +626,7 @@ include_once("./unimed_mant_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-3EDB8565
+//Initialize Objects @1-56BD9451
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -647,6 +647,8 @@ $Panel1 = new clsPanel("Panel1", $MainPage);
 $Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
+$Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
+$Logout->Page = "login.php";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
 $MainPage->Head = & $Head;
@@ -656,13 +658,17 @@ $MainPage->unidadesmedidaSearch = & $unidadesmedidaSearch;
 $MainPage->Panel1 = & $Panel1;
 $MainPage->Label1 = & $Label1;
 $MainPage->Menu = & $Menu;
+$MainPage->Logout = & $Logout;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("unidadesmedida", $unidadesmedida);
 $Content->AddComponent("unidadesmedidaSearch", $unidadesmedidaSearch);
 $Content->AddComponent("Panel1", $Panel1);
 $Panel1->AddComponent("Label1", $Label1);
+$Menu->AddComponent("Logout", $Logout);
 if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
     $Label1->SetText("Unidades de medida");
+$Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $unidadesmedida->Initialize();
 
 BindEvents();

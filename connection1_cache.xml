@@ -14,12 +14,13 @@
         <column COLUMN_NAME="img_sitio" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="page" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="categoria_productos" DESCRIPTION="tabla de categorizacion de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="categoria_productos" DESCRIPTION="tabla de categorizacion de productos" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="categoria_descrip" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="tag_categdescrip" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="unidad_medida_id" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="observa_categdescrip" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
       <table TABLE_NAME="clientes" DESCRIPTION="tabla de clientes de MediBiologica" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
@@ -108,11 +109,12 @@
         <column COLUMN_NAME="horario_farmacia" ORDINAL_POSITION="12" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="img-mapa_llegada_farmacia" ORDINAL_POSITION="13" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
-      <table TABLE_NAME="group_init" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" full="True">
+      <table TABLE_NAME="group_init" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="rol-description" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="pageRedirect" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
       <table TABLE_NAME="main_redirection" DESCRIPTION="" allColumns="True" allPrimaryKeys="False" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
@@ -213,28 +215,6 @@
         <column COLUMN_NAME="img-mapa_llegada" ORDINAL_POSITION="13" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
       </table>
     </schema>
-    <schema allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
-      <table TABLE_NAME="Query1" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
-        <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="name_sitio" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="link_sitio" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="img_sitio" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="page" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <primaryKey PK_COLUMN_NAME="id" KEY_NAME="id" ENABLED="True" full="True" />
-      </table>
-      <table TABLE_NAME="source_main" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="rpt_productos" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
-        <column COLUMN_NAME="name_producto" ORDINAL_POSITION="1" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="cantidad_producto" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="descripcion_producto" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="False" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="activo" ORDINAL_POSITION="4" DATA_TYPE="16" CCS_TYPE="0" NATIVE_TYPE="System.SByte" NUMERIC_PRECISION="3" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="min_stock" ORDINAL_POSITION="5" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="max_stock" ORDINAL_POSITION="6" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="nivel_pedido" ORDINAL_POSITION="7" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-      </table>
-      <table TABLE_NAME="productos_mant" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="Grilla_clientesMant" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True" />
-    </schema>
+    <schema allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False" />
   </catalog>
 </LldlCache>
