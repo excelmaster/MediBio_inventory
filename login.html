@@ -43,7 +43,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 <!-- BEGIN Record Login1 -->
 <form id="ContentLogin1" method="post" name="{HTMLFormName}" action="{Action}">
   <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
-    <tr>
+    <tr style="HEIGHT: 10px">
       <td valign="top">
         <table class="Header" border="0" cellspacing="0" cellpadding="0">
           <tr>
@@ -55,8 +55,8 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
  
         <table class="Record" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
-          <tr class="Error">
-            <td colspan="2">{Error}</td>
+          <tr style="BORDER-BOTTOM-COLOR: red; BACKGROUND-COLOR: #ffcc33; BORDER-TOP-COLOR: red; BORDER-RIGHT-COLOR: red; BORDER-LEFT-COLOR: red" class="Error">
+            <td colspan="2"><font style="BACKGROUND-COLOR: #e36c09" color="#ffffff">{Error}</font></td>
           </tr>
           <!-- END Error -->
           <tr class="Controls">
