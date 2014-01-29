@@ -55,7 +55,7 @@ class clsGridclientes { //clientes class @68-9CC2092A
     public $Sorter_num_documento;
 //End Variables
 
-//Class_Initialize Event @68-8C23AE8F
+//Class_Initialize Event @68-C14D66C6
     function clsGridclientes($RelativePath, & $Parent)
     {
         global $FileName;
@@ -86,7 +86,7 @@ class clsGridclientes { //clientes class @68-9CC2092A
         $this->SorterDirection = CCGetParam("clientesDir", "");
 
         $this->Detail = new clsControl(ccsLink, "Detail", "Detail", ccsText, "", CCGetRequestParam("Detail", ccsGet, NULL), $this);
-        $this->Detail->Page = "Crud_Clentes.php";
+        $this->Detail->Page = "Crud_Clientes.php";
         $this->id = new clsControl(ccsLabel, "id", "id", ccsInteger, "", CCGetRequestParam("id", ccsGet, NULL), $this);
         $this->prinombre = new clsControl(ccsLabel, "prinombre", "prinombre", ccsText, "", CCGetRequestParam("prinombre", ccsGet, NULL), $this);
         $this->demasnombres = new clsControl(ccsLabel, "demasnombres", "demasnombres", ccsText, "", CCGetRequestParam("demasnombres", ccsGet, NULL), $this);
@@ -95,7 +95,7 @@ class clsGridclientes { //clientes class @68-9CC2092A
         $this->tipo_documento = new clsControl(ccsLabel, "tipo_documento", "tipo_documento", ccsText, "", CCGetRequestParam("tipo_documento", ccsGet, NULL), $this);
         $this->num_documento = new clsControl(ccsLabel, "num_documento", "num_documento", ccsText, "", CCGetRequestParam("num_documento", ccsGet, NULL), $this);
         $this->Alt_Detail = new clsControl(ccsLink, "Alt_Detail", "Alt_Detail", ccsText, "", CCGetRequestParam("Alt_Detail", ccsGet, NULL), $this);
-        $this->Alt_Detail->Page = "Crud_Clentes.php";
+        $this->Alt_Detail->Page = "Crud_Clientes.php";
         $this->Alt_id = new clsControl(ccsLabel, "Alt_id", "Alt_id", ccsInteger, "", CCGetRequestParam("Alt_id", ccsGet, NULL), $this);
         $this->Alt_prinombre = new clsControl(ccsLabel, "Alt_prinombre", "Alt_prinombre", ccsText, "", CCGetRequestParam("Alt_prinombre", ccsGet, NULL), $this);
         $this->Alt_demasnombres = new clsControl(ccsLabel, "Alt_demasnombres", "Alt_demasnombres", ccsText, "", CCGetRequestParam("Alt_demasnombres", ccsGet, NULL), $this);

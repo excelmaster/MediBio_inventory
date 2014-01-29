@@ -12,7 +12,13 @@
 					<Components>
 						<Button id="7" urlType="Relative" enableValidation="True" isDefault="False" name="Button_Insert" operation="Insert" wizardTheme="Blueprint" wizardCaption="{res:CCS_Insert}" wizardThemeItem="FooterIMG" wizardButtonImage="ButtonInsertOn" PathID="ContentproductosButton_Insert" wizardThemeVersion="3.0" returnPage="productos_mant.ccp">
 							<Components/>
-							<Events/>
+							<Events>
+<Event name="OnClick" type="Server">
+<Actions>
+<Action actionName="Custom Code" actionCategory="General" id="27"/>
+</Actions>
+</Event>
+</Events>
 							<Attributes/>
 							<Features/>
 						</Button>
@@ -119,7 +125,13 @@
 							<Features/>
 						</TextBox>
 					</Components>
-					<Events/>
+					<Events>
+<Event name="BeforeExecuteInsert" type="Server">
+<Actions>
+<Action actionName="Print Text" actionCategory="General" id="26" expr="&quot;antes de insertar&quot;"/>
+</Actions>
+</Event>
+</Events>
 					<TableParameters>
 						<TableParameter id="24" conditionType="Parameter" useIsNull="False" field="id_producto" parameterSource="id_producto" dataType="Integer" logicOperator="And" searchConditionType="Equal" parameterType="URL" orderNumber="1"/>
 					</TableParameters>
@@ -165,7 +177,8 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="CrudProducto.php" forShow="True" url="CrudProducto.php" comment="//" codePage="windows-1252"/>
-	</CodeFiles>
+		<CodeFile id="Events" language="PHPTemplates" name="CrudProducto_events.php" forShow="False" comment="//" codePage="windows-1252"/>
+</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>

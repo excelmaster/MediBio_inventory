@@ -1,8 +1,8 @@
 <?php
-//Include Common Files @1-82091D48
+//Include Common Files @1-84992E6A
 define("RelativePath", ".");
 define("PathToCurrentPage", "/");
-define("FileName", "admin.php");
+define("FileName", "almacen_main.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
 include_once(RelativePath . "/Sorter.php");
@@ -13,9 +13,9 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
-class clsGridadmin_redir { //admin_redir class @7-7E7F1718
+class clsGridmain_redirection { //main_redirection class @6-29DF65D9
 
-//Variables @7-6E51DF5A
+//Variables @6-CD0FC040
 
     // Public variables
     public $ComponentType = "Grid";
@@ -44,22 +44,24 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     // Grid Controls
     public $StaticControls;
     public $RowControls;
+    public $Sorter_name_sitio;
+    public $Sorter_img_sitio;
 //End Variables
 
-//Class_Initialize Event @7-955C50D0
-    function clsGridadmin_redir($RelativePath, & $Parent)
+//Class_Initialize Event @6-6F682ADD
+    function clsGridmain_redirection($RelativePath, & $Parent)
     {
         global $FileName;
         global $CCSLocales;
         global $DefaultDateFormat;
-        $this->ComponentName = "admin_redir";
+        $this->ComponentName = "main_redirection";
         $this->Visible = True;
         $this->Parent = & $Parent;
         $this->RelativePath = $RelativePath;
         $this->Errors = new clsErrors();
-        $this->ErrorBlock = "Grid admin_redir";
+        $this->ErrorBlock = "Grid main_redirection";
         $this->Attributes = new clsAttributes($this->ComponentName . ":");
-        $this->DataSource = new clsadmin_redirDataSource($this);
+        $this->DataSource = new clsmain_redirectionDataSource($this);
         $this->ds = & $this->DataSource;
         $this->PageSize = CCGetParam($this->ComponentName . "PageSize", "");
         if(!is_numeric($this->PageSize) || !strlen($this->PageSize))
@@ -72,14 +74,18 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
             $this->Errors->addError("<p>Form: Grid " . $this->ComponentName . "<BR>Error: (CCS06) Invalid page size.</p>");
         $this->PageNumber = intval(CCGetParam($this->ComponentName . "Page", 1));
         if ($this->PageNumber <= 0) $this->PageNumber = 1;
+        $this->SorterName = CCGetParam("main_redirectionOrder", "");
+        $this->SorterDirection = CCGetParam("main_redirectionDir", "");
 
         $this->name_sitio = new clsControl(ccsLabel, "name_sitio", "name_sitio", ccsText, "", CCGetRequestParam("name_sitio", ccsGet, NULL), $this);
         $this->img_sitio = new clsControl(ccsImageLink, "img_sitio", "img_sitio", ccsText, "", CCGetRequestParam("img_sitio", ccsGet, NULL), $this);
         $this->img_sitio->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+        $this->Sorter_name_sitio = new clsSorter($this->ComponentName, "Sorter_name_sitio", $FileName, $this);
+        $this->Sorter_img_sitio = new clsSorter($this->ComponentName, "Sorter_img_sitio", $FileName, $this);
     }
 //End Class_Initialize Event
 
-//Initialize Method @7-90E704C5
+//Initialize Method @6-90E704C5
     function Initialize()
     {
         if(!$this->Visible) return;
@@ -90,7 +96,7 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     }
 //End Initialize Method
 
-//Show Method @7-E8C9AF04
+//Show Method @6-3346DB3D
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -99,6 +105,8 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
 
         $this->RowNumber = 0;
 
+        $this->DataSource->Parameters["sesgroupid"] = CCGetSession("groupid", NULL);
+        $this->DataSource->Parameters["expr9"] = "almacen_main";
 
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeSelect", $this);
 
@@ -151,13 +159,15 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
             $Tpl->block_path = $ParentPath;
             return;
         }
+        $this->Sorter_name_sitio->Show();
+        $this->Sorter_img_sitio->Show();
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
     }
 //End Show Method
 
-//GetErrors Method @7-F0807456
+//GetErrors Method @6-F0807456
     function GetErrors()
     {
         $errors = "";
@@ -169,11 +179,11 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     }
 //End GetErrors Method
 
-} //End admin_redir Class @7-FCB6E20C
+} //End main_redirection Class @6-FCB6E20C
 
-class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSource Class @7-CCC33F85
+class clsmain_redirectionDataSource extends clsDBConnection1 {  //main_redirectionDataSource Class @6-17046FC9
 
-//DataSource Variables @7-0D3AC7CE
+//DataSource Variables @6-0D3AC7CE
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -189,11 +199,11 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     public $img_sitio;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @7-166E0AC0
-    function clsadmin_redirDataSource(& $Parent)
+//DataSourceClass_Initialize Event @6-06BC8EA3
+    function clsmain_redirectionDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
-        $this->ErrorBlock = "Grid admin_redir";
+        $this->ErrorBlock = "Grid main_redirection";
         $this->Initialize();
         $this->name_sitio = new clsField("name_sitio", ccsText, "");
         
@@ -203,31 +213,41 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @7-9E1383D1
+//SetOrder Method @6-24EF25F7
     function SetOrder($SorterName, $SorterDirection)
     {
-        $this->Order = "";
+        $this->Order = "name_sitio";
         $this->Order = CCGetOrder($this->Order, $SorterName, $SorterDirection, 
-            "");
+            array("Sorter_name_sitio" => array("name_sitio", ""), 
+            "Sorter_img_sitio" => array("img_sitio", "")));
     }
 //End SetOrder Method
 
-//Prepare Method @7-14D6CD9D
+//Prepare Method @6-849D3FA0
     function Prepare()
     {
         global $CCSLocales;
         global $DefaultDateFormat;
+        $this->wp = new clsSQLParameters($this->ErrorBlock);
+        $this->wp->AddParameter("1", "sesgroupid", ccsInteger, "", "", $this->Parameters["sesgroupid"], "", false);
+        $this->wp->AddParameter("2", "expr9", ccsText, "", "", $this->Parameters["expr9"], "", false);
+        $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "grupo", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
+        $this->wp->Criterion[2] = $this->wp->Operation(opEqual, "page", $this->wp->GetDBValue("2"), $this->ToSQL($this->wp->GetDBValue("2"), ccsText),false);
+        $this->Where = $this->wp->opAND(
+             false, 
+             $this->wp->Criterion[1], 
+             $this->wp->Criterion[2]);
     }
 //End Prepare Method
 
-//Open Method @7-A21EB5B5
+//Open Method @6-0D1D5E40
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
         $this->CountSQL = "SELECT COUNT(*)\n\n" .
-        "FROM admin_redir";
-        $this->SQL = "SELECT * \n\n" .
-        "FROM admin_redir {SQL_Where} {SQL_OrderBy}";
+        "FROM main_redirection";
+        $this->SQL = "SELECT name_sitio, img_sitio, link_sitio, id \n\n" .
+        "FROM main_redirection {SQL_Where} {SQL_OrderBy}";
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         if ($this->CountSQL) 
             $this->RecordsCount = CCGetDBValue(CCBuildSQL($this->CountSQL, $this->Where, ""), $this);
@@ -239,7 +259,7 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     }
 //End Open Method
 
-//SetValues Method @7-D1780BE0
+//SetValues Method @6-D1780BE0
     function SetValues()
     {
         $this->name_sitio->SetDBValue($this->f("name_sitio"));
@@ -247,9 +267,9 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     }
 //End SetValues Method
 
-} //End admin_redirDataSource Class @7-FCB6E20C
+} //End main_redirectionDataSource Class @6-FCB6E20C
 
-//Initialize Page @1-CB057696
+//Initialize Page @1-A734E658
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -269,7 +289,7 @@ $TemplateSource = "";
 
 $FileName = FileName;
 $Redirect = "";
-$TemplateFileName = "admin.html";
+$TemplateFileName = "almacen_main.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
@@ -277,15 +297,11 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
-//Authenticate User @1-DC94A87D
-CCSecurityRedirect("1", "");
-//End Authenticate User
-
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-D35E23FC
+//Initialize Objects @1-CF0898A1
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -298,6 +314,9 @@ $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
+$Content = new clsPanel("Content", $MainPage);
+$Content->PlaceholderName = "Content";
+$main_redirection = new clsGridmain_redirection("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
@@ -307,22 +326,19 @@ $Sidebar1->PlaceholderName = "Sidebar1";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "main.php";
-$Content = new clsPanel("Content", $MainPage);
-$Content->PlaceholderName = "Content";
-$admin_redir = new clsGridadmin_redir("", $MainPage);
 $MainPage->Head = & $Head;
+$MainPage->Content = & $Content;
+$MainPage->main_redirection = & $main_redirection;
 $MainPage->Menu = & $Menu;
 $MainPage->Logout = & $Logout;
 $MainPage->Sidebar1 = & $Sidebar1;
 $MainPage->Link1 = & $Link1;
-$MainPage->Content = & $Content;
-$MainPage->admin_redir = & $admin_redir;
+$Content->AddComponent("main_redirection", $main_redirection);
 $Menu->AddComponent("Logout", $Logout);
 $Sidebar1->AddComponent("Link1", $Link1);
-$Content->AddComponent("admin_redir", $admin_redir);
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
-$admin_redir->Initialize();
+$main_redirection->Initialize();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
@@ -353,27 +369,27 @@ $Attributes->Show();
 $MasterPage->Operations();
 //End Execute Components
 
-//Go to destination page @1-2545B204
+//Go to destination page @1-86413984
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     $DBConnection1->close();
     header("Location: " . $Redirect);
-    unset($admin_redir);
+    unset($main_redirection);
     unset($Tpl);
     exit;
 }
 //End Go to destination page
 
-//Show Page @1-03CA695E
+//Show Page @1-F6C60005
 $Head->Show();
+$Content->Show();
 $Menu->Show();
 $Sidebar1->Show();
-$Content->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
+$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
 $MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
-$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
@@ -381,11 +397,11 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-86E4084F
+//Unload Page @1-2D23F422
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
-unset($admin_redir);
+unset($main_redirection);
 unset($Tpl);
 //End Unload Page
 

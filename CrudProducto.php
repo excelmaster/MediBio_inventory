@@ -608,11 +608,15 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
+//Include events file @1-96579F2B
+include_once("./CrudProducto_events.php");
+//End Include events file
+
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-67FF023B
+//Initialize Objects @1-FFB90775
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -639,6 +643,8 @@ $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("productos", $productos);
 $productos->Initialize();
+
+BindEvents();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

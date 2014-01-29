@@ -169,7 +169,7 @@ class clsRecordproveedores1 { //proveedores1 Class @30-F284CF0B
     }
 //End CheckErrors Method
 
-//Operation Method @30-0BF2B389
+//Operation Method @30-E56E67A4
     function Operation()
     {
         if(!$this->Visible)
@@ -196,15 +196,18 @@ class clsRecordproveedores1 { //proveedores1 Class @30-F284CF0B
         }
         $Redirect = $FileName . "?" . CCGetQueryString("QueryString", array("ccsForm"));
         if($this->PressedButton == "Button_Cancel") {
+            $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
             if(!CCGetEvent($this->Button_Cancel->CCSEvents, "OnClick", $this->Button_Cancel)) {
                 $Redirect = "";
             }
         } else if($this->Validate()) {
             if($this->PressedButton == "Button_Insert") {
+                $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
                 if(!CCGetEvent($this->Button_Insert->CCSEvents, "OnClick", $this->Button_Insert) || !$this->InsertRow()) {
                     $Redirect = "";
                 }
             } else if($this->PressedButton == "Button_Update") {
+                $Redirect = "provee_mant.php" . "?" . CCGetQueryString("QueryString", array("ccsForm"));
                 if(!CCGetEvent($this->Button_Update->CCSEvents, "OnClick", $this->Button_Update) || !$this->UpdateRow()) {
                     $Redirect = "";
                 }
