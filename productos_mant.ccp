@@ -21,7 +21,7 @@
 					<Attributes/>
 					<Features/>
 				</Panel>
-				<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida_productos" connection="Connection1" dataSource="categoria_productos, productos, unidadesmedida" orderBy="id_producto" pageSizeLimit="100" pageSize="True" wizardCaption="Listado de Productos" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="Extended" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="Detalles" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="12" isParent="True">
+				<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida_productos" connection="Connection1" dataSource="categoria_productos, productos, unidadesmedida" orderBy="id_producto" pageSizeLimit="100" pageSize="True" wizardCaption="Listado de Productos" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="Extended" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="Detalles" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="12" isParent="True" editableComponentTypeString="Grid">
 					<Components>
 						<Link id="81" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="unidadesmedida_productos_Insert" hrefSource="CrudProducto.ccp" removeParameters="id_producto" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentunidadesmedida_productosunidadesmedida_productos_Insert" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_InsertLink}','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}">
 							<Components/>
@@ -78,12 +78,6 @@
 							<Attributes/>
 							<Features/>
 						</Sorter>
-						<Sorter id="90" visible="True" name="Sorter_id_producto" column="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardSortingType="Extended" wizardControl="id_producto" wizardAddNbsp="False" PathID="Contentunidadesmedida_productosSorter_id_producto" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Sorter>
 						<Link id="91" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="CrudProducto.ccp" wizardThemeItem="GridA" PathID="Contentunidadesmedida_productosDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'1':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':2,'objectType':'linkParameters'}}">
 							<Components/>
 							<Events/>
@@ -129,12 +123,6 @@
 							<Attributes/>
 							<Features/>
 						</Label>
-						<Label id="99" fieldSourceType="DBColumn" dataType="Integer" html="False" name="id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosid_producto" wizardTheme="Blueprint" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Label>
 						<Link id="100" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="Detalles" hrefSource="CrudProducto.ccp" wizardThemeItem="FooterA" PathID="Contentunidadesmedida_productosAlt_Detail" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':1,'objectType':'linkParameters'}}">
 							<Components/>
 							<Events/>
@@ -175,12 +163,6 @@
 							<Features/>
 						</Label>
 						<Label id="107" fieldSourceType="DBColumn" dataType="Text" html="False" name="Alt_descrp_unidad" fieldSource="descrp_unidad" wizardCaption="{res:descrp_unidad}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosAlt_descrp_unidad" wizardThemeVersion="3.0">
-							<Components/>
-							<Events/>
-							<Attributes/>
-							<Features/>
-						</Label>
-						<Label id="108" fieldSourceType="DBColumn" dataType="Integer" html="False" name="Alt_id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosAlt_id_producto" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
 							<Attributes/>

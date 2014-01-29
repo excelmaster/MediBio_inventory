@@ -39,10 +39,10 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 <!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 -->&nbsp; 
 <!-- BEGIN Record unidadesmedida_productos1 -->
 <form id="Contentunidadesmedida_productos1" method="post" name="{HTMLFormName}" action="{Action}">
-  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td valign="top">
-        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
             <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
@@ -58,7 +58,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- END Error -->
           <tr class="ControlsBlueprint">
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1s_keyword">{res:CCS_Filter}</label></td> 
-            <td><input id="Contentunidadesmedida_productos1s_keyword" maxlength="200" size="50" value="{s_keyword}" name="{s_keyword_Name}"></td> 
+            <td><input id="Contentunidadesmedida_productos1s_keyword" name="{s_keyword_Name}" maxlength="200" value="{s_keyword}" size="30"></td> 
             <td class="thBlueprint"><label for="Contentunidadesmedida_productos1searchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
             <td>
               <select id="Contentunidadesmedida_productos1searchConditions" name="{searchConditions_Name}">
@@ -76,7 +76,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <tr class="BottomBlueprint">
             <td><a href="{ClearParameters_Src}" id="Contentunidadesmedida_productos1ClearParameters">{res:CCS_Clear}</a></td> 
             <td style="TEXT-ALIGN: right" colspan="5">
-              <!-- BEGIN Button Button_DoSearch --><input type="image" id="Contentunidadesmedida_productos1Button_DoSearch" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+              <!-- BEGIN Button Button_DoSearch --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentunidadesmedida_productos1Button_DoSearch" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonSearch.gif"><!-- END Button Button_DoSearch --></td>
           </tr>
         </table>
       </td>
@@ -85,10 +85,10 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 </form>
 <!-- END Record unidadesmedida_productos1 --><br>
 <!-- BEGIN Grid unidadesmedida_productos -->
-<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
-      <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
           <td class="thBlueprint"><strong>Listado de Productos </strong></td> 
@@ -96,7 +96,7 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
         </tr>
       </table>
  
-      <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+      <table style="WIDTH: 75.31%; HEIGHT: 255px" class="GridBlueprint" cellspacing="0" cellpadding="0">
         <tr class="RowBlueprint">
           <td colspan="8">{res:CCS_TotalRecords}&nbsp;{unidadesmedida_productos_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{unidadesmedida_productos_Insert1_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert1">{res:CCS_InsertLink}</a></td>
         </tr>
@@ -146,81 +146,72 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
           <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->
           <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentunidadesmedida_productosSorter_descrp_unidad"><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/DescOff.gif"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_descrp_unidad --></th>
  
-          <th scope="col">
-          <!-- BEGIN Sorter Sorter_id_producto --><span class="Sorter">{res:id_producto} 
-          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
-          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentunidadesmedida_productosSorter_id_producto"><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/AscOff.gif"></a><!-- END Asc_Off -->
-          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->
-          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentunidadesmedida_productosSorter_id_producto"><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/DescOff.gif"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_id_producto --></th>
-        </tr>
- 
-        <!-- BEGIN Row -->
-        <tr class="RowBlueprint">
-          <td><a href="{Detail_Src}" id="Contentunidadesmedida_productosDetail_{unidadesmedida_productos:rowNumber}">Detalles</a>&nbsp;</td> 
-          <td>{categoria_descrip}&nbsp;</td> 
-          <td>{name_producto}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{cantidad_producto}&nbsp;</td> 
-          <td>{descripcion_producto}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{activo}&nbsp;</td> 
-          <td>{descrp_unidad}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{id_producto}&nbsp;</td>
-        </tr>
+          <!-- BEGIN Row -->
+          <tr class="RowBlueprint">
+            <td><a href="{Detail_Src}" id="Contentunidadesmedida_productosDetail_{unidadesmedida_productos:rowNumber}">Detalles</a>&nbsp;</td> 
+            <td>{categoria_descrip}&nbsp;</td> 
+            <td>{name_producto}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{cantidad_producto}&nbsp;</td> 
+            <td>{descripcion_producto}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{activo}&nbsp;</td> 
+            <td>{descrp_unidad}&nbsp;</td>
+          </tr>
  <!-- END Row -->
-        <!-- BEGIN AltRow -->
-        <tr class="AltRowBlueprint">
-          <td><a href="{Alt_Detail_Src}" id="Contentunidadesmedida_productosAlt_Detail_{unidadesmedida_productos:rowNumber}">Detalles</a>&nbsp;</td> 
-          <td>{Alt_categoria_descrip}&nbsp;</td> 
-          <td>{Alt_name_producto}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{Alt_cantidad_producto}&nbsp;</td> 
-          <td>{Alt_descripcion_producto}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{Alt_activo}&nbsp;</td> 
-          <td>{Alt_descrp_unidad}&nbsp;</td> 
-          <td style="TEXT-ALIGN: right">{Alt_id_producto}&nbsp;</td>
-        </tr>
+          <!-- BEGIN AltRow -->
+          <tr class="AltRowBlueprint">
+            <td><a href="{Alt_Detail_Src}" id="Contentunidadesmedida_productosAlt_Detail_{unidadesmedida_productos:rowNumber}">Detalles</a>&nbsp;</td> 
+            <td>{Alt_categoria_descrip}&nbsp;</td> 
+            <td>{Alt_name_producto}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_cantidad_producto}&nbsp;</td> 
+            <td>{Alt_descripcion_producto}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_activo}&nbsp;</td> 
+            <td>{Alt_descrp_unidad}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">&nbsp;</td>
+          </tr>
  <!-- END AltRow -->
-        <!-- BEGIN Separator -->
-        <tr class="SeparatorBlueprint">
-          <td colspan="8"></td>
-        </tr>
-        <!-- END Separator -->
-        <!-- BEGIN NoRecords -->
-        <tr class="NoRecordsBlueprint">
-          <td colspan="8">{res:CCS_NoRecords}</td>
-        </tr>
-        <!-- END NoRecords -->
-        <tr class="FooterBlueprint">
-          <td colspan="8"><a href="{unidadesmedida_productos_Insert_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert">{res:CCS_InsertLink}</a>&nbsp; 
-            <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
-            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
-              <option selected value="">-</option>
+          <!-- BEGIN Separator -->
+          <tr class="SeparatorBlueprint">
+            <td colspan="8"></td>
+          </tr>
+          <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecordsBlueprint">
+            <td colspan="8">{res:CCS_NoRecords}</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="FooterBlueprint">
+            <td colspan="8"><a href="{unidadesmedida_productos_Insert_Src}" id="Contentunidadesmedida_productosunidadesmedida_productos_Insert">{res:CCS_InsertLink}</a>&nbsp; 
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+              <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                <option selected value="">-</option>
  {PageSize_Options}
-            </select>
+              </select>
  
-            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
-            <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
-            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
-            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
-            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
-            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
-            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
-            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<!-- END Grid unidadesmedida_productos --><br>
-&nbsp;</p>
-<!-- END Panel Content -->
-<!-- BEGIN Panel Menu -->&nbsp;<!-- END Panel Menu -->
-<!-- BEGIN Panel Sidebar1 -->&nbsp; 
-<table width="100%">
-  <tr>
-    <td>&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver al panel principal</a></td>
-  </tr>
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- END Grid unidadesmedida_productos --><br>
+  &nbsp;</p>
+  <!-- END Panel Content -->
+  <!-- BEGIN Panel Menu -->&nbsp;<!-- END Panel Menu -->
+  <!-- BEGIN Panel Sidebar1 -->&nbsp; 
+  <table width="100%">
+    <tr>
+      <td>&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver al panel principal</a></td>
+    </tr>
  
-  <tr>
-    <td>&nbsp;<a href="{Link2_Src}" id="Sidebar1Link2">Ir a pagina de reportes</a></td>
-  </tr>
-</table>
-<!-- END Panel Sidebar1 -->
+    <tr>
+      <td>&nbsp;<a href="{Link2_Src}" id="Sidebar1Link2">Ir a pagina de reportes</a></td>
+    </tr>
+  </table>
+  <!-- END Panel Sidebar1 -->

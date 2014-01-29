@@ -1,0 +1,265 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+<title>catprod_mant</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentcategoria_productos1Button_Cancel_OnClick @55-2EC180DE
+function Contentcategoria_productos1Button_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentcategoria_productos1Button_Cancel_OnClick
+
+//bind_events @1-862ECB44
+function bind_events() {
+    addEventHandler("Contentcategoria_productos1Button_Cancel", "click", Contentcategoria_productos1Button_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Panel Panel1 -->&nbsp;{Label1}<!-- END Panel Panel1 -->
+<!-- BEGIN Record categoria_productosSearch -->
+<form id="Contentcategoria_productosSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:Search_Form}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productosSearchs_keyword">{res:CCS_Filter}</label></td> 
+            <td><input id="Contentcategoria_productosSearchs_keyword" name="{s_keyword_Name}" maxlength="10" value="{s_keyword}" size="10"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productosSearchsearchConditions">{res:CCS_AdvSearchConditionsCaption}</label></td> 
+            <td>
+              <select id="Contentcategoria_productosSearchsearchConditions" name="{searchConditions_Name}">
+                {searchConditions_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productosSearchcategoria_productosDirOrder">{res:CCS_SortBy}</label></td> 
+            <td>
+              <select id="Contentcategoria_productosSearchcategoria_productosDirOrder" name="categoria_productosOrder">
+                {categoria_productosOrder_Options} 
+              </select>
+ <label for="Contentcategoria_productosSearchcategoria_productosDirDir" style="display: none;">{res:CCS_SortDir}</label> 
+              <select id="Contentcategoria_productosSearchcategoria_productosDirDir" name="categoria_productosDir">
+                {categoria_productosDir_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productosSearchcategoria_productosPageSize">{res:CCS_RecPerPage}</label></td> 
+            <td>
+              <select id="Contentcategoria_productosSearchcategoria_productosPageSize" name="{categoria_productosPageSize_Name}">
+                {categoria_productosPageSize_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td><a href="{ClearParameters_Src}" id="Contentcategoria_productosSearchClearParameters">{res:CCS_Clear}</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Contentcategoria_productosSearchButton_DoSearch" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record categoria_productosSearch --><br>
+<!-- BEGIN Grid categoria_productos -->
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <td class="thBlueprint"><strong>{res:categoria_productos_GridForm} </strong></td> 
+          <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+        <tr class="RowBlueprint">
+          <td colspan="4">{res:CCS_TotalRecords}&nbsp;{categoria_productos_TotalRecords}</td> 
+        </tr>
+ 
+        <tr class="CaptionBlueprint">
+          <!-- BEGIN Panel Header_Detail -->
+          <th scope="col">&nbsp;</th>
+ <!-- END Panel Header_Detail -->
+          <!-- BEGIN Panel Header_id -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="Contentcategoria_productosHeader_idSorter_id">{res:id}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id --></th>
+ <!-- END Panel Header_id -->
+          <!-- BEGIN Panel Header_categoria_descrip -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_categoria_descrip --><span class="Sorter"><a href="{Sort_URL}" id="Contentcategoria_productosHeader_categoria_descripSorter_categoria_descrip">{res:categoria_descrip}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_categoria_descrip --></th>
+ <!-- END Panel Header_categoria_descrip -->
+          <!-- BEGIN Panel Header_observa_categdescrip -->
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_observa_categdescrip --><span class="Sorter"><a href="{Sort_URL}" id="Contentcategoria_productosHeader_observa_categdescripSorter_observa_categdescrip">{res:observa_categdescrip}</a> 
+          <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_observa_categdescrip --></th>
+ <!-- END Panel Header_observa_categdescrip -->
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="RowBlueprint">
+          <!-- BEGIN Panel Data_Detail -->
+          <td><a href="{Detail_Src}" id="Contentcategoria_productosData_DetailDetail_{categoria_productos:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> <!-- END Panel Data_Detail -->
+          <!-- BEGIN Panel Data_id -->
+          <td style="TEXT-ALIGN: right">{id}&nbsp;</td> <!-- END Panel Data_id -->
+          <!-- BEGIN Panel Data_categoria_descrip -->
+          <td>{categoria_descrip}&nbsp;</td> <!-- END Panel Data_categoria_descrip -->
+          <!-- BEGIN Panel Data_observa_categdescrip -->
+          <td>{observa_categdescrip}&nbsp;</td> <!-- END Panel Data_observa_categdescrip -->
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRowBlueprint">
+          <!-- BEGIN Panel Data_Alt_Detail -->
+          <td><a href="{Alt_Detail_Src}" id="Contentcategoria_productosData_Alt_DetailAlt_Detail_{categoria_productos:rowNumber}">{res:CCS_CustomLinkField}</a>&nbsp;</td> <!-- END Panel Data_Alt_Detail -->
+          <!-- BEGIN Panel Data_Alt_id -->
+          <td style="TEXT-ALIGN: right">{Alt_id}&nbsp;</td> <!-- END Panel Data_Alt_id -->
+          <!-- BEGIN Panel Data_Alt_categoria_descrip -->
+          <td>{Alt_categoria_descrip}&nbsp;</td> <!-- END Panel Data_Alt_categoria_descrip -->
+          <!-- BEGIN Panel Data_Alt_observa_categdescrip -->
+          <td>{Alt_observa_categdescrip}&nbsp;</td> <!-- END Panel Data_Alt_observa_categdescrip -->
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN Separator -->
+        <tr class="SeparatorBlueprint">
+          <td colspan="4"></td> 
+        </tr>
+ <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecordsBlueprint">
+          <td colspan="4">{res:CCS_NoRecords}</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="FooterBlueprint">
+          <td colspan="4"><a href="{categoria_productos_Insert_Src}" id="Contentcategoria_productoscategoria_productos_Insert">{res:CCS_InsertLink}</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid categoria_productos --><br>
+<!-- BEGIN Record categoria_productos1 -->
+<form id="Contentcategoria_productos1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:categoria_productos_RecordForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productos1categoria_descrip">{res:categoria_descrip}</label></td> 
+            <td><input id="Contentcategoria_productos1categoria_descrip" name="{categoria_descrip_Name}" maxlength="200" value="{categoria_descrip}" size="50"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productos1tag_categdescrip">{res:tag_categdescrip}</label></td> 
+            <td><input id="Contentcategoria_productos1tag_categdescrip" name="{tag_categdescrip_Name}" maxlength="200" value="{tag_categdescrip}" size="50"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentcategoria_productos1observa_categdescrip">{res:observa_categdescrip}</label></td> 
+            <td><input id="Contentcategoria_productos1observa_categdescrip" name="{observa_categdescrip_Name}" maxlength="200" value="{observa_categdescrip}" size="50"></td> 
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Contentcategoria_productos1Button_Insert" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="Contentcategoria_productos1Button_Update" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Contentcategoria_productos1Button_Cancel" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record categoria_productos1 --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;&nbsp; 
+<table width="100%">
+  <tr>
+    <td>&nbsp;<a href="admin.php">Volver al panel principal</a></td> 
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;<a>Ir a reportes</a></td> 
+  </tr>
+</table>
+<!-- END Panel Sidebar1 -->

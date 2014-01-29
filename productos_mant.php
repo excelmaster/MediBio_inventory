@@ -15,7 +15,7 @@ include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPa
 
 class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B535373D
 
-//Variables @68-45358071
+//Variables @68-D22F08B3
 
     // Public variables
     public $ComponentType = "Grid";
@@ -52,10 +52,9 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
     public $Sorter_descripcion_producto;
     public $Sorter_activo;
     public $Sorter_descrp_unidad;
-    public $Sorter_id_producto;
 //End Variables
 
-//Class_Initialize Event @68-DA1EE16D
+//Class_Initialize Event @68-D0F8F2C3
     function clsGridunidadesmedida_productos($RelativePath, & $Parent)
     {
         global $FileName;
@@ -93,7 +92,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->descripcion_producto = new clsControl(ccsLabel, "descripcion_producto", "descripcion_producto", ccsText, "", CCGetRequestParam("descripcion_producto", ccsGet, NULL), $this);
         $this->activo = new clsControl(ccsLabel, "activo", "activo", ccsInteger, "", CCGetRequestParam("activo", ccsGet, NULL), $this);
         $this->descrp_unidad = new clsControl(ccsLabel, "descrp_unidad", "descrp_unidad", ccsText, "", CCGetRequestParam("descrp_unidad", ccsGet, NULL), $this);
-        $this->id_producto = new clsControl(ccsLabel, "id_producto", "id_producto", ccsInteger, "", CCGetRequestParam("id_producto", ccsGet, NULL), $this);
         $this->Alt_Detail = new clsControl(ccsLink, "Alt_Detail", "Alt_Detail", ccsText, "", CCGetRequestParam("Alt_Detail", ccsGet, NULL), $this);
         $this->Alt_Detail->Page = "CrudProducto.php";
         $this->Alt_categoria_descrip = new clsControl(ccsLabel, "Alt_categoria_descrip", "Alt_categoria_descrip", ccsText, "", CCGetRequestParam("Alt_categoria_descrip", ccsGet, NULL), $this);
@@ -102,7 +100,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->Alt_descripcion_producto = new clsControl(ccsLabel, "Alt_descripcion_producto", "Alt_descripcion_producto", ccsText, "", CCGetRequestParam("Alt_descripcion_producto", ccsGet, NULL), $this);
         $this->Alt_activo = new clsControl(ccsLabel, "Alt_activo", "Alt_activo", ccsInteger, "", CCGetRequestParam("Alt_activo", ccsGet, NULL), $this);
         $this->Alt_descrp_unidad = new clsControl(ccsLabel, "Alt_descrp_unidad", "Alt_descrp_unidad", ccsText, "", CCGetRequestParam("Alt_descrp_unidad", ccsGet, NULL), $this);
-        $this->Alt_id_producto = new clsControl(ccsLabel, "Alt_id_producto", "Alt_id_producto", ccsInteger, "", CCGetRequestParam("Alt_id_producto", ccsGet, NULL), $this);
         $this->unidadesmedida_productos_Insert = new clsControl(ccsLink, "unidadesmedida_productos_Insert", "unidadesmedida_productos_Insert", ccsText, "", CCGetRequestParam("unidadesmedida_productos_Insert", ccsGet, NULL), $this);
         $this->unidadesmedida_productos_Insert->Parameters = CCGetQueryString("QueryString", array("id_producto", "ccsForm"));
         $this->unidadesmedida_productos_Insert->Page = "CrudProducto.php";
@@ -113,7 +110,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->Sorter_descripcion_producto = new clsSorter($this->ComponentName, "Sorter_descripcion_producto", $FileName, $this);
         $this->Sorter_activo = new clsSorter($this->ComponentName, "Sorter_activo", $FileName, $this);
         $this->Sorter_descrp_unidad = new clsSorter($this->ComponentName, "Sorter_descrp_unidad", $FileName, $this);
-        $this->Sorter_id_producto = new clsSorter($this->ComponentName, "Sorter_id_producto", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
         $this->Navigator->PageSizes = array("1", "5", "10", "25", "50");
         $this->unidadesmedida_productos_Insert1 = new clsControl(ccsLink, "unidadesmedida_productos_Insert1", "unidadesmedida_productos_Insert1", ccsText, "", CCGetRequestParam("unidadesmedida_productos_Insert1", ccsGet, NULL), $this);
@@ -133,7 +129,7 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
     }
 //End Initialize Method
 
-//Show Method @68-67B0F6C3
+//Show Method @68-50989E60
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -168,7 +164,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
             $this->ControlsVisible["descripcion_producto"] = $this->descripcion_producto->Visible;
             $this->ControlsVisible["activo"] = $this->activo->Visible;
             $this->ControlsVisible["descrp_unidad"] = $this->descrp_unidad->Visible;
-            $this->ControlsVisible["id_producto"] = $this->id_producto->Visible;
             while ($this->ForceIteration || (($this->RowNumber < $this->PageSize) &&  ($this->HasRecord = $this->DataSource->has_next_record()))) {
                 // Parse Separator
                 if($this->RowNumber) {
@@ -191,7 +186,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
                     $this->descripcion_producto->SetValue($this->DataSource->descripcion_producto->GetValue());
                     $this->activo->SetValue($this->DataSource->activo->GetValue());
                     $this->descrp_unidad->SetValue($this->DataSource->descrp_unidad->GetValue());
-                    $this->id_producto->SetValue($this->DataSource->id_producto->GetValue());
                     $this->Attributes->SetValue("rowNumber", $this->RowNumber);
                     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShowRow", $this);
                     $this->Attributes->Show();
@@ -202,7 +196,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
                     $this->descripcion_producto->Show();
                     $this->activo->Show();
                     $this->descrp_unidad->Show();
-                    $this->id_producto->Show();
                     $Tpl->block_path = $ParentPath . "/" . $GridBlock;
                     $Tpl->parse("Row", true);
                 }
@@ -217,7 +210,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
                     $this->Alt_descripcion_producto->SetValue($this->DataSource->Alt_descripcion_producto->GetValue());
                     $this->Alt_activo->SetValue($this->DataSource->Alt_activo->GetValue());
                     $this->Alt_descrp_unidad->SetValue($this->DataSource->Alt_descrp_unidad->GetValue());
-                    $this->Alt_id_producto->SetValue($this->DataSource->Alt_id_producto->GetValue());
                     $this->Attributes->SetValue("rowNumber", $this->RowNumber);
                     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShowRow", $this);
                     $this->Attributes->Show();
@@ -228,7 +220,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
                     $this->Alt_descripcion_producto->Show();
                     $this->Alt_activo->Show();
                     $this->Alt_descrp_unidad->Show();
-                    $this->Alt_id_producto->Show();
                     $Tpl->block_path = $ParentPath . "/" . $GridBlock;
                     $Tpl->parseto("AltRow", true, "Row");
                 }
@@ -264,7 +255,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $this->Sorter_descripcion_producto->Show();
         $this->Sorter_activo->Show();
         $this->Sorter_descrp_unidad->Show();
-        $this->Sorter_id_producto->Show();
         $this->Navigator->Show();
         $this->unidadesmedida_productos_Insert1->Show();
         $Tpl->parse();
@@ -273,7 +263,7 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
     }
 //End Show Method
 
-//GetErrors Method @68-A37D2A4B
+//GetErrors Method @68-CE2C3BF7
     function GetErrors()
     {
         $errors = "";
@@ -284,7 +274,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $errors = ComposeStrings($errors, $this->descripcion_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->activo->Errors->ToString());
         $errors = ComposeStrings($errors, $this->descrp_unidad->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->id_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_Detail->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_categoria_descrip->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_name_producto->Errors->ToString());
@@ -292,7 +281,6 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
         $errors = ComposeStrings($errors, $this->Alt_descripcion_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_activo->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_descrp_unidad->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->Alt_id_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Errors->ToString());
         $errors = ComposeStrings($errors, $this->DataSource->Errors->ToString());
         return $errors;
@@ -303,7 +291,7 @@ class clsGridunidadesmedida_productos { //unidadesmedida_productos class @68-B53
 
 class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidadesmedida_productosDataSource Class @68-7377E95B
 
-//DataSource Variables @68-1A34BEFB
+//DataSource Variables @68-DD6A6C8E
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -321,17 +309,15 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
     public $descripcion_producto;
     public $activo;
     public $descrp_unidad;
-    public $id_producto;
     public $Alt_categoria_descrip;
     public $Alt_name_producto;
     public $Alt_cantidad_producto;
     public $Alt_descripcion_producto;
     public $Alt_activo;
     public $Alt_descrp_unidad;
-    public $Alt_id_producto;
 //End DataSource Variables
 
-//DataSourceClass_Initialize Event @68-3D96524A
+//DataSourceClass_Initialize Event @68-ED446D7E
     function clsunidadesmedida_productosDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -349,8 +335,6 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
         
         $this->descrp_unidad = new clsField("descrp_unidad", ccsText, "");
         
-        $this->id_producto = new clsField("id_producto", ccsInteger, "");
-        
         $this->Alt_categoria_descrip = new clsField("Alt_categoria_descrip", ccsText, "");
         
         $this->Alt_name_producto = new clsField("Alt_name_producto", ccsText, "");
@@ -363,13 +347,11 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
         
         $this->Alt_descrp_unidad = new clsField("Alt_descrp_unidad", ccsText, "");
         
-        $this->Alt_id_producto = new clsField("Alt_id_producto", ccsInteger, "");
-        
 
     }
 //End DataSourceClass_Initialize Event
 
-//SetOrder Method @68-C2247E4C
+//SetOrder Method @68-449D106A
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "id_producto";
@@ -379,8 +361,7 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
             "Sorter_cantidad_producto" => array("cantidad_producto", ""), 
             "Sorter_descripcion_producto" => array("descripcion_producto", ""), 
             "Sorter_activo" => array("activo", ""), 
-            "Sorter_descrp_unidad" => array("descrp_unidad", ""), 
-            "Sorter_id_producto" => array("id_producto", "")));
+            "Sorter_descrp_unidad" => array("descrp_unidad", "")));
     }
 //End SetOrder Method
 
@@ -415,7 +396,7 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
     }
 //End Open Method
 
-//SetValues Method @68-47AA3EEA
+//SetValues Method @68-C772A1A6
     function SetValues()
     {
         $this->categoria_descrip->SetDBValue($this->f("categoria_descrip"));
@@ -424,14 +405,12 @@ class clsunidadesmedida_productosDataSource extends clsDBConnection1 {  //unidad
         $this->descripcion_producto->SetDBValue($this->f("descripcion_producto"));
         $this->activo->SetDBValue(trim($this->f("activo")));
         $this->descrp_unidad->SetDBValue($this->f("descrp_unidad"));
-        $this->id_producto->SetDBValue(trim($this->f("id_producto")));
         $this->Alt_categoria_descrip->SetDBValue($this->f("categoria_descrip"));
         $this->Alt_name_producto->SetDBValue($this->f("name_producto"));
         $this->Alt_cantidad_producto->SetDBValue(trim($this->f("cantidad_producto")));
         $this->Alt_descripcion_producto->SetDBValue($this->f("descripcion_producto"));
         $this->Alt_activo->SetDBValue(trim($this->f("activo")));
         $this->Alt_descrp_unidad->SetDBValue($this->f("descrp_unidad"));
-        $this->Alt_id_producto->SetDBValue(trim($this->f("id_producto")));
     }
 //End SetValues Method
 

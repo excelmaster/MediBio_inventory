@@ -1096,7 +1096,7 @@ include_once("./rpt_productos_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-101AF1E9
+//Initialize Objects @1-8CFBE910
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1120,6 +1120,8 @@ $Menu->PlaceholderName = "Menu";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "productos_mant.php";
+$Panel1 = new clsPanel("Panel1", $MainPage);
+$Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->Report_Print = & $Report_Print;
@@ -1127,10 +1129,15 @@ $MainPage->categoria_productos_unida = & $categoria_productos_unida;
 $MainPage->productos_unidadesmedida = & $productos_unidadesmedida;
 $MainPage->Menu = & $Menu;
 $MainPage->Link1 = & $Link1;
+$MainPage->Panel1 = & $Panel1;
+$MainPage->Label1 = & $Label1;
 $Content->AddComponent("categoria_productos_unida", $categoria_productos_unida);
 $Content->AddComponent("productos_unidadesmedida", $productos_unidadesmedida);
 $Content->AddComponent("Report_Print", $Report_Print);
 $Menu->AddComponent("Link1", $Link1);
+$Panel1->AddComponent("Label1", $Label1);
+if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
+    $Label1->SetText("REPORTE DE PRODUCTOS");
 $Report_Print->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Report_Print->Parameters = CCAddParam($Report_Print->Parameters, "ViewMode", "Print");
 $categoria_productos_unida->Initialize();
@@ -1180,10 +1187,11 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-9289D706
+//Show Page @1-F3A9ED8C
 $Head->Show();
 $Content->Show();
 $Menu->Show();
+$Panel1->Show();
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));

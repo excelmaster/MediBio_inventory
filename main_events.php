@@ -1,52 +1,35 @@
 <?php
-//BindEvents Method @1-AC98F56B
+//BindEvents Method @1-397EAC53
 function BindEvents()
 {
-    global $main_redirection;
-    $main_redirection->main_redirection_TotalRecords->CCSEvents["BeforeShow"] = "main_redirection_main_redirection_TotalRecords_BeforeShow";
-    $main_redirection->ds->CCSEvents["BeforeBuildSelect"] = "main_redirection_ds_BeforeBuildSelect";
+    global $CCSEvents;
+    $CCSEvents["AfterInitialize"] = "Page_AfterInitialize";
 }
 //End BindEvents Method
 
-//main_redirection_main_redirection_TotalRecords_BeforeShow @8-B0F66DE1
-function main_redirection_main_redirection_TotalRecords_BeforeShow(& $sender)
+//Page_AfterInitialize @1-6B9A39D8
+function Page_AfterInitialize(& $sender)
 {
-    $main_redirection_main_redirection_TotalRecords_BeforeShow = true;
+    $Page_AfterInitialize = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $main_redirection; //Compatibility
-//End main_redirection_main_redirection_TotalRecords_BeforeShow
+    global $main; //Compatibility
+//End Page_AfterInitialize
 
-//Retrieve number of records @9-ABE656B4
-    $Component->SetValue($Container->DataSource->RecordsCount);
-//End Retrieve number of records
+//Logout @26-7AA50964
+    if(strlen(CCGetParam("Logout", ""))) 
+    {
+        CCLogoutUser();
+        CCSetCookie("invt_bmLogin", "");
+        global $Redirect;
+        $Redirect = "main.php";
+    }
+//End Logout
 
-//Close main_redirection_main_redirection_TotalRecords_BeforeShow @8-6F334C21
-    return $main_redirection_main_redirection_TotalRecords_BeforeShow;
+//Close Page_AfterInitialize @1-379D319D
+    return $Page_AfterInitialize;
 }
-//End Close main_redirection_main_redirection_TotalRecords_BeforeShow
-
-//main_redirection_ds_BeforeBuildSelect @6-0B14B809
-function main_redirection_ds_BeforeBuildSelect(& $sender)
-{
-    $main_redirection_ds_BeforeBuildSelect = true;
-    $Component = & $sender;
-    $Container = & CCGetParentContainer($sender);
-    global $main_redirection; //Compatibility
-//End main_redirection_ds_BeforeBuildSelect
-
-//Custom Code @15-2A29BDB7
-// -------------------------
-  
-
-  
-// -------------------------
-//End Custom Code
-
-//Close main_redirection_ds_BeforeBuildSelect @6-849B47F8
-    return $main_redirection_ds_BeforeBuildSelect;
-}
-//End Close main_redirection_ds_BeforeBuildSelect
+//End Close Page_AfterInitialize
 
 
 ?>

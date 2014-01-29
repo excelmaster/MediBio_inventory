@@ -355,6 +355,19 @@
 			<Attributes/>
 			<Features/>
 		</Panel>
+		<Panel id="68" visible="True" name="Panel1" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Panel1">
+			<Components>
+				<Label id="69" fieldSourceType="CodeExpression" dataType="Text" html="False" name="Label1" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Panel1Label1" defaultValue="&quot;REPORTE DE PRODUCTOS&quot;">
+					<Components/>
+					<Events/>
+					<Attributes/>
+					<Features/>
+				</Label>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Events" language="PHPTemplates" name="rpt_productos_events.php" forShow="False" comment="//" codePage="windows-1252"/>
