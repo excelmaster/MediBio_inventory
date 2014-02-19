@@ -52,7 +52,11 @@ class clsGridproveedores { //proveedores class @6-73383A95
     public $Sorter_nit;
 //End Variables
 
+<<<<<<< HEAD
 //Class_Initialize Event @6-836C7E71
+=======
+//Class_Initialize Event @6-4B814E9C
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsGridproveedores($RelativePath, & $Parent)
     {
         global $FileName;
@@ -104,6 +108,12 @@ class clsGridproveedores { //proveedores class @6-73383A95
         $this->Sorter_nit = new clsSorter($this->ComponentName, "Sorter_nit", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
         $this->Navigator->PageSizes = array("1", "5", "10", "25", "50");
+<<<<<<< HEAD
+=======
+        $this->proveedores_Insert1 = new clsControl(ccsLink, "proveedores_Insert1", "proveedores_Insert1", ccsText, "", CCGetRequestParam("proveedores_Insert1", ccsGet, NULL), $this);
+        $this->proveedores_Insert1->Parameters = CCGetQueryString("QueryString", array("id", "ccsForm"));
+        $this->proveedores_Insert1->Page = "crud_provee.php";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     }
 //End Class_Initialize Event
 
@@ -118,7 +128,11 @@ class clsGridproveedores { //proveedores class @6-73383A95
     }
 //End Initialize Method
 
+<<<<<<< HEAD
 //Show Method @6-099E15F3
+=======
+//Show Method @6-BBA9EB65
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -233,6 +247,10 @@ class clsGridproveedores { //proveedores class @6-73383A95
         $this->Sorter_nombre->Show();
         $this->Sorter_nit->Show();
         $this->Navigator->Show();
+<<<<<<< HEAD
+=======
+        $this->proveedores_Insert1->Show();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
@@ -617,7 +635,11 @@ include_once("./provee_mant_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
+<<<<<<< HEAD
 //Initialize Objects @1-F4AC1337
+=======
+//Initialize Objects @1-336CEFEC
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -638,6 +660,11 @@ $Panel1 = new clsPanel("Panel1", $MainPage);
 $Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
+<<<<<<< HEAD
+=======
+$Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
+$Logout->Page = "login.php";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
@@ -653,6 +680,10 @@ $MainPage->proveedoresSearch = & $proveedoresSearch;
 $MainPage->Panel1 = & $Panel1;
 $MainPage->Label1 = & $Label1;
 $MainPage->Menu = & $Menu;
+<<<<<<< HEAD
+=======
+$MainPage->Logout = & $Logout;
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MainPage->Sidebar1 = & $Sidebar1;
 $MainPage->Link1 = & $Link1;
 $MainPage->Link2 = & $Link2;
@@ -660,10 +691,19 @@ $Content->AddComponent("proveedores", $proveedores);
 $Content->AddComponent("proveedoresSearch", $proveedoresSearch);
 $Content->AddComponent("Panel1", $Panel1);
 $Panel1->AddComponent("Label1", $Label1);
+<<<<<<< HEAD
+=======
+$Menu->AddComponent("Logout", $Logout);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Sidebar1->AddComponent("Link1", $Link1);
 $Sidebar1->AddComponent("Link2", $Link2);
 if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
     $Label1->SetText("MANTENIMIENTO DE PROVEEDORES");
+<<<<<<< HEAD
+=======
+$Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $proveedores->Initialize();
 
 BindEvents();

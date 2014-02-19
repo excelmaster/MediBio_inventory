@@ -209,19 +209,60 @@
 					<Attributes/>
 					<Features/>
 				</Record>
+<<<<<<< HEAD
+=======
+				<Panel id="36" visible="True" name="Panel1" wizardTheme="Blueprint" wizardThemeType="File" wizardThemeVersion="3.0" PathID="ContentPanel1">
+					<Components>
+						<Label id="37" fieldSourceType="DBColumn" dataType="Text" html="False" name="Label1" wizardTheme="Blueprint" wizardThemeType="File" wizardThemeVersion="3.0" PathID="ContentPanel1Label1" defaultValue="&quot;Registro y edición de clientes&quot;">
+							<Components/>
+							<Events/>
+							<Attributes/>
+							<Features/>
+						</Label>
+					</Components>
+					<Events/>
+					<Attributes/>
+					<Features/>
+				</Panel>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
+<<<<<<< HEAD
 			<Components/>
+=======
+			<Components>
+<Link id="38" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout" wizardTheme="Basic" wizardThemeVersion="3.0">
+<Components/>
+<Events/>
+<LinkParameters>
+<LinkParameter id="39" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+</LinkParameters>
+<Attributes/>
+<Features/>
+</Link>
+</Components>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 			<Events/>
 			<Attributes/>
 			<Features/>
 		</Panel>
 		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
+<<<<<<< HEAD
 			<Components/>
+=======
+			<Components>
+<Link id="40" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Sidebar1Link1" hrefSource="Clientes_mant.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver a Clientes','textSourceDB':'','hrefSource':'Clientes_mant.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+<Events/>
+<LinkParameters/>
+<Attributes/>
+<Features/>
+</Link>
+</Components>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 			<Events/>
 			<Attributes/>
 			<Features/>

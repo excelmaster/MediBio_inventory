@@ -14,6 +14,7 @@ include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPa
 //End Master Page implementation
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class clsGridclientes { //clientes class @68-9CC2092A
 
 //Variables @68-57A9933C
@@ -22,6 +23,11 @@ class clsGridclientes { //clientes class @6-9CC2092A
 
 //Variables @6-B483418D
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+class clsGridclientes { //clientes class @68-9CC2092A
+
+//Variables @68-57A9933C
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
     // Public variables
     public $ComponentType = "Grid";
@@ -58,10 +64,14 @@ class clsGridclientes { //clientes class @6-9CC2092A
     public $Sorter_priapellido;
     public $Sorter_segapellido;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $Sorter_tipo_documento;
     public $Sorter_num_documento;
 //End Variables
 
+<<<<<<< HEAD
 //Class_Initialize Event @68-8C23AE8F
 =======
     public $Sorter_num_documento;
@@ -69,6 +79,9 @@ class clsGridclientes { //clientes class @6-9CC2092A
 
 //Class_Initialize Event @6-8671A2D5
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Class_Initialize Event @68-C14D66C6
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsGridclientes($RelativePath, & $Parent)
     {
         global $FileName;
@@ -100,15 +113,20 @@ class clsGridclientes { //clientes class @6-9CC2092A
 
         $this->Detail = new clsControl(ccsLink, "Detail", "Detail", ccsText, "", CCGetRequestParam("Detail", ccsGet, NULL), $this);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->Detail->Page = "Crud_Clentes.php";
 =======
         $this->Detail->Page = "Clientes_mant.php";
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->Detail->Page = "Crud_Clientes.php";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->id = new clsControl(ccsLabel, "id", "id", ccsInteger, "", CCGetRequestParam("id", ccsGet, NULL), $this);
         $this->prinombre = new clsControl(ccsLabel, "prinombre", "prinombre", ccsText, "", CCGetRequestParam("prinombre", ccsGet, NULL), $this);
         $this->demasnombres = new clsControl(ccsLabel, "demasnombres", "demasnombres", ccsText, "", CCGetRequestParam("demasnombres", ccsGet, NULL), $this);
         $this->priapellido = new clsControl(ccsLabel, "priapellido", "priapellido", ccsText, "", CCGetRequestParam("priapellido", ccsGet, NULL), $this);
         $this->segapellido = new clsControl(ccsLabel, "segapellido", "segapellido", ccsText, "", CCGetRequestParam("segapellido", ccsGet, NULL), $this);
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->tipo_documento = new clsControl(ccsLabel, "tipo_documento", "tipo_documento", ccsText, "", CCGetRequestParam("tipo_documento", ccsGet, NULL), $this);
         $this->num_documento = new clsControl(ccsLabel, "num_documento", "num_documento", ccsText, "", CCGetRequestParam("num_documento", ccsGet, NULL), $this);
@@ -119,11 +137,18 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $this->Alt_Detail = new clsControl(ccsLink, "Alt_Detail", "Alt_Detail", ccsText, "", CCGetRequestParam("Alt_Detail", ccsGet, NULL), $this);
         $this->Alt_Detail->Page = "Clientes_mant.php";
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->tipo_documento = new clsControl(ccsLabel, "tipo_documento", "tipo_documento", ccsText, "", CCGetRequestParam("tipo_documento", ccsGet, NULL), $this);
+        $this->num_documento = new clsControl(ccsLabel, "num_documento", "num_documento", ccsText, "", CCGetRequestParam("num_documento", ccsGet, NULL), $this);
+        $this->Alt_Detail = new clsControl(ccsLink, "Alt_Detail", "Alt_Detail", ccsText, "", CCGetRequestParam("Alt_Detail", ccsGet, NULL), $this);
+        $this->Alt_Detail->Page = "Crud_Clientes.php";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Alt_id = new clsControl(ccsLabel, "Alt_id", "Alt_id", ccsInteger, "", CCGetRequestParam("Alt_id", ccsGet, NULL), $this);
         $this->Alt_prinombre = new clsControl(ccsLabel, "Alt_prinombre", "Alt_prinombre", ccsText, "", CCGetRequestParam("Alt_prinombre", ccsGet, NULL), $this);
         $this->Alt_demasnombres = new clsControl(ccsLabel, "Alt_demasnombres", "Alt_demasnombres", ccsText, "", CCGetRequestParam("Alt_demasnombres", ccsGet, NULL), $this);
         $this->Alt_priapellido = new clsControl(ccsLabel, "Alt_priapellido", "Alt_priapellido", ccsText, "", CCGetRequestParam("Alt_priapellido", ccsGet, NULL), $this);
         $this->Alt_segapellido = new clsControl(ccsLabel, "Alt_segapellido", "Alt_segapellido", ccsText, "", CCGetRequestParam("Alt_segapellido", ccsGet, NULL), $this);
+<<<<<<< HEAD
 <<<<<<< HEAD
         $this->Alt_tipo_documento = new clsControl(ccsLabel, "Alt_tipo_documento", "Alt_tipo_documento", ccsText, "", CCGetRequestParam("Alt_tipo_documento", ccsGet, NULL), $this);
         $this->Alt_num_documento = new clsControl(ccsLabel, "Alt_num_documento", "Alt_num_documento", ccsText, "", CCGetRequestParam("Alt_num_documento", ccsGet, NULL), $this);
@@ -133,6 +158,10 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $this->clientes_Insert->Parameters = CCGetQueryString("QueryString", array("id", "ccsForm"));
         $this->clientes_Insert->Page = "Clientes_mant.php";
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->Alt_tipo_documento = new clsControl(ccsLabel, "Alt_tipo_documento", "Alt_tipo_documento", ccsText, "", CCGetRequestParam("Alt_tipo_documento", ccsGet, NULL), $this);
+        $this->Alt_num_documento = new clsControl(ccsLabel, "Alt_num_documento", "Alt_num_documento", ccsText, "", CCGetRequestParam("Alt_num_documento", ccsGet, NULL), $this);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->clientes_TotalRecords = new clsControl(ccsLabel, "clientes_TotalRecords", "clientes_TotalRecords", ccsText, "", CCGetRequestParam("clientes_TotalRecords", ccsGet, NULL), $this);
         $this->Sorter_id = new clsSorter($this->ComponentName, "Sorter_id", $FileName, $this);
         $this->Sorter_prinombre = new clsSorter($this->ComponentName, "Sorter_prinombre", $FileName, $this);
@@ -140,6 +169,9 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $this->Sorter_priapellido = new clsSorter($this->ComponentName, "Sorter_priapellido", $FileName, $this);
         $this->Sorter_segapellido = new clsSorter($this->ComponentName, "Sorter_segapellido", $FileName, $this);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Sorter_tipo_documento = new clsSorter($this->ComponentName, "Sorter_tipo_documento", $FileName, $this);
         $this->Sorter_num_documento = new clsSorter($this->ComponentName, "Sorter_num_documento", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
@@ -154,6 +186,7 @@ class clsGridclientes { //clientes class @6-9CC2092A
 //End Class_Initialize Event
 
 //Initialize Method @68-90E704C5
+<<<<<<< HEAD
 =======
         $this->Sorter_num_documento = new clsSorter($this->ComponentName, "Sorter_num_documento", $FileName, $this);
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
@@ -163,6 +196,8 @@ class clsGridclientes { //clientes class @6-9CC2092A
 
 //Initialize Method @6-90E704C5
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Initialize()
     {
         if(!$this->Visible) return;
@@ -174,10 +209,14 @@ class clsGridclientes { //clientes class @6-9CC2092A
 //End Initialize Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Show Method @68-D85679AE
 =======
 //Show Method @6-0414DAEA
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Show Method @68-D85679AE
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -212,9 +251,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
             $this->ControlsVisible["priapellido"] = $this->priapellido->Visible;
             $this->ControlsVisible["segapellido"] = $this->segapellido->Visible;
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->ControlsVisible["tipo_documento"] = $this->tipo_documento->Visible;
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+            $this->ControlsVisible["tipo_documento"] = $this->tipo_documento->Visible;
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->ControlsVisible["num_documento"] = $this->num_documento->Visible;
             while ($this->ForceIteration || (($this->RowNumber < $this->PageSize) &&  ($this->HasRecord = $this->DataSource->has_next_record()))) {
                 // Parse Separator
@@ -238,9 +281,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
                     $this->priapellido->SetValue($this->DataSource->priapellido->GetValue());
                     $this->segapellido->SetValue($this->DataSource->segapellido->GetValue());
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->tipo_documento->SetValue($this->DataSource->tipo_documento->GetValue());
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+                    $this->tipo_documento->SetValue($this->DataSource->tipo_documento->GetValue());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                     $this->num_documento->SetValue($this->DataSource->num_documento->GetValue());
                     $this->Attributes->SetValue("rowNumber", $this->RowNumber);
                     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShowRow", $this);
@@ -252,9 +299,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
                     $this->priapellido->Show();
                     $this->segapellido->Show();
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->tipo_documento->Show();
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+                    $this->tipo_documento->Show();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                     $this->num_documento->Show();
                     $Tpl->block_path = $ParentPath . "/" . $GridBlock;
                     $Tpl->parse("Row", true);
@@ -270,9 +321,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
                     $this->Alt_priapellido->SetValue($this->DataSource->Alt_priapellido->GetValue());
                     $this->Alt_segapellido->SetValue($this->DataSource->Alt_segapellido->GetValue());
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->Alt_tipo_documento->SetValue($this->DataSource->Alt_tipo_documento->GetValue());
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+                    $this->Alt_tipo_documento->SetValue($this->DataSource->Alt_tipo_documento->GetValue());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                     $this->Alt_num_documento->SetValue($this->DataSource->Alt_num_documento->GetValue());
                     $this->Attributes->SetValue("rowNumber", $this->RowNumber);
                     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShowRow", $this);
@@ -284,9 +339,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
                     $this->Alt_priapellido->Show();
                     $this->Alt_segapellido->Show();
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $this->Alt_tipo_documento->Show();
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+                    $this->Alt_tipo_documento->Show();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                     $this->Alt_num_documento->Show();
                     $Tpl->block_path = $ParentPath . "/" . $GridBlock;
                     $Tpl->parseto("AltRow", true, "Row");
@@ -316,9 +375,12 @@ class clsGridclientes { //clientes class @6-9CC2092A
             $this->Navigator->Visible = false;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         $this->clientes_Insert->Show();
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->clientes_TotalRecords->Show();
         $this->Sorter_id->Show();
         $this->Sorter_prinombre->Show();
@@ -326,15 +388,21 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $this->Sorter_priapellido->Show();
         $this->Sorter_segapellido->Show();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Sorter_tipo_documento->Show();
         $this->Sorter_num_documento->Show();
         $this->Navigator->Show();
         $this->clientes_Insert1->Show();
         $this->clientes_Insert2->Show();
+<<<<<<< HEAD
 =======
         $this->Sorter_num_documento->Show();
         $this->Navigator->Show();
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
         $this->DataSource->close();
@@ -342,10 +410,14 @@ class clsGridclientes { //clientes class @6-9CC2092A
 //End Show Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //GetErrors Method @68-F4912F30
 =======
 //GetErrors Method @6-83C2D717
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//GetErrors Method @68-F4912F30
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function GetErrors()
     {
         $errors = "";
@@ -356,9 +428,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $errors = ComposeStrings($errors, $this->priapellido->Errors->ToString());
         $errors = ComposeStrings($errors, $this->segapellido->Errors->ToString());
 <<<<<<< HEAD
+<<<<<<< HEAD
         $errors = ComposeStrings($errors, $this->tipo_documento->Errors->ToString());
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $errors = ComposeStrings($errors, $this->tipo_documento->Errors->ToString());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $errors = ComposeStrings($errors, $this->num_documento->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_Detail->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_id->Errors->ToString());
@@ -367,9 +443,13 @@ class clsGridclientes { //clientes class @6-9CC2092A
         $errors = ComposeStrings($errors, $this->Alt_priapellido->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Alt_segapellido->Errors->ToString());
 <<<<<<< HEAD
+<<<<<<< HEAD
         $errors = ComposeStrings($errors, $this->Alt_tipo_documento->Errors->ToString());
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $errors = ComposeStrings($errors, $this->Alt_tipo_documento->Errors->ToString());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $errors = ComposeStrings($errors, $this->Alt_num_documento->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Errors->ToString());
         $errors = ComposeStrings($errors, $this->DataSource->Errors->ToString());
@@ -378,11 +458,15 @@ class clsGridclientes { //clientes class @6-9CC2092A
 //End GetErrors Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 } //End clientes Class @68-FCB6E20C
 
 class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Class @68-E85581CD
 
 //DataSource Variables @68-A74FAAE9
+<<<<<<< HEAD
 =======
 } //End clientes Class @6-FCB6E20C
 
@@ -390,6 +474,8 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
 
 //DataSource Variables @6-52121217
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -407,9 +493,13 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
     public $priapellido;
     public $segapellido;
 <<<<<<< HEAD
+<<<<<<< HEAD
     public $tipo_documento;
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+    public $tipo_documento;
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $num_documento;
     public $Alt_id;
     public $Alt_prinombre;
@@ -417,17 +507,23 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
     public $Alt_priapellido;
     public $Alt_segapellido;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $Alt_tipo_documento;
     public $Alt_num_documento;
 //End DataSource Variables
 
 //DataSourceClass_Initialize Event @68-EC9A9018
+<<<<<<< HEAD
 =======
     public $Alt_num_documento;
 //End DataSource Variables
 
 //DataSourceClass_Initialize Event @6-3362B904
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsclientesDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -444,10 +540,15 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
         $this->segapellido = new clsField("segapellido", ccsText, "");
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->tipo_documento = new clsField("tipo_documento", ccsText, "");
         
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->tipo_documento = new clsField("tipo_documento", ccsText, "");
+        
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->num_documento = new clsField("num_documento", ccsText, "");
         
         $this->Alt_id = new clsField("Alt_id", ccsInteger, "");
@@ -461,10 +562,15 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
         $this->Alt_segapellido = new clsField("Alt_segapellido", ccsText, "");
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->Alt_tipo_documento = new clsField("Alt_tipo_documento", ccsText, "");
         
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->Alt_tipo_documento = new clsField("Alt_tipo_documento", ccsText, "");
+        
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Alt_num_documento = new clsField("Alt_num_documento", ccsText, "");
         
 
@@ -472,16 +578,22 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
 //End DataSourceClass_Initialize Event
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //SetOrder Method @68-F9193203
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "priapellido, segapellido, prinombre desc";
+<<<<<<< HEAD
 =======
 //SetOrder Method @6-49C349AC
     function SetOrder($SorterName, $SorterDirection)
     {
         $this->Order = "";
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Order = CCGetOrder($this->Order, $SorterName, $SorterDirection, 
             array("Sorter_id" => array("id", ""), 
             "Sorter_prinombre" => array("prinombre", ""), 
@@ -489,18 +601,26 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
             "Sorter_priapellido" => array("priapellido", ""), 
             "Sorter_segapellido" => array("segapellido", ""), 
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Sorter_tipo_documento" => array("tipo_documento", ""), 
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+            "Sorter_tipo_documento" => array("tipo_documento", ""), 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             "Sorter_num_documento" => array("num_documento", "")));
     }
 //End SetOrder Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Prepare Method @68-14D6CD9D
 =======
 //Prepare Method @6-14D6CD9D
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Prepare Method @68-14D6CD9D
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Prepare()
     {
         global $CCSLocales;
@@ -509,25 +629,35 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
 //End Prepare Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Open Method @68-3D4FCCFB
 =======
 //Open Method @6-FCD59842
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Open Method @68-3D4FCCFB
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
         $this->CountSQL = "SELECT COUNT(*)\n\n" .
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         "FROM clientes INNER JOIN tipo_doc ON\n\n" .
         "clientes.tipo_documento = tipo_doc.id_tip_doc";
         $this->SQL = "SELECT id, priapellido, segapellido, prinombre, demasnombres, tipo_documento, num_documento \n\n" .
         "FROM clientes INNER JOIN tipo_doc ON\n\n" .
         "clientes.tipo_documento = tipo_doc.id_tip_doc {SQL_Where} {SQL_OrderBy}";
+<<<<<<< HEAD
 =======
         "FROM clientes";
         $this->SQL = "SELECT id, demasnombres, prinombre, priapellido, segapellido, num_documento \n\n" .
         "FROM clientes {SQL_Where} {SQL_OrderBy}";
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         if ($this->CountSQL) 
             $this->RecordsCount = CCGetDBValue(CCBuildSQL($this->CountSQL, $this->Where, ""), $this);
@@ -540,10 +670,14 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
 //End Open Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //SetValues Method @68-121B0749
 =======
 //SetValues Method @6-B55F96EF
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//SetValues Method @68-121B0749
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function SetValues()
     {
         $this->id->SetDBValue(trim($this->f("id")));
@@ -552,9 +686,13 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
         $this->priapellido->SetDBValue($this->f("priapellido"));
         $this->segapellido->SetDBValue($this->f("segapellido"));
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->tipo_documento->SetDBValue($this->f("tipo_documento"));
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->tipo_documento->SetDBValue($this->f("tipo_documento"));
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->num_documento->SetDBValue($this->f("num_documento"));
         $this->Alt_id->SetDBValue(trim($this->f("id")));
         $this->Alt_prinombre->SetDBValue($this->f("prinombre"));
@@ -562,19 +700,27 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
         $this->Alt_priapellido->SetDBValue($this->f("priapellido"));
         $this->Alt_segapellido->SetDBValue($this->f("segapellido"));
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->Alt_tipo_documento->SetDBValue($this->f("tipo_documento"));
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->Alt_tipo_documento->SetDBValue($this->f("tipo_documento"));
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Alt_num_documento->SetDBValue($this->f("num_documento"));
     }
 //End SetValues Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 } //End clientesDataSource Class @68-FCB6E20C
 
 class clsRecordclientesSearch { //clientesSearch Class @110-DF0C7DE5
 
 //Variables @110-9E315808
+<<<<<<< HEAD
 =======
 } //End clientesDataSource Class @6-FCB6E20C
 
@@ -582,6 +728,8 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
 
 //Variables @40-9E315808
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
     // Public variables
     public $ComponentType = "Record";
@@ -616,10 +764,14 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
 //End Variables
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Class_Initialize Event @110-E48E55AD
 =======
 //Class_Initialize Event @40-6614F1B9
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Class_Initialize Event @110-E48E55AD
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsRecordclientesSearch($RelativePath, & $Parent)
     {
 
@@ -645,10 +797,14 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
             $Method = $this->FormSubmitted ? ccsPost : ccsGet;
             $this->ClearParameters = new clsControl(ccsLink, "ClearParameters", "ClearParameters", ccsText, "", CCGetRequestParam("ClearParameters", $Method, NULL), $this);
 <<<<<<< HEAD
+<<<<<<< HEAD
             $this->ClearParameters->Parameters = CCGetQueryString("QueryString", array("s_keyword", "clientes_tipo_docOrder", "clientes_tipo_docDir", "clientes_tipo_docPageSize", "ccsForm"));
 =======
             $this->ClearParameters->Parameters = CCGetQueryString("QueryString", array("s_keyword", "clientesPageSize", "ccsForm"));
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+            $this->ClearParameters->Parameters = CCGetQueryString("QueryString", array("s_keyword", "clientes_tipo_docOrder", "clientes_tipo_docDir", "clientes_tipo_docPageSize", "ccsForm"));
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->ClearParameters->Page = "Clientes_mant.php";
             $this->Button_DoSearch = new clsButton("Button_DoSearch", $Method, $this);
             $this->s_keyword = new clsControl(ccsTextBox, "s_keyword", $CCSLocales->GetText("CCS_Filter"), ccsText, "", CCGetRequestParam("s_keyword", $Method, NULL), $this);
@@ -656,6 +812,9 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
             $this->searchConditions->DSType = dsListOfValues;
             $this->searchConditions->Values = array(array("1", $CCSLocales->GetText("CCS_AdvSearchAnyOfWords")), array("2", $CCSLocales->GetText("CCS_AdvSearchAllWords")), array("3", $CCSLocales->GetText("CCS_AdvSearchExactPhrase")));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->clientes_tipo_docOrder = new clsControl(ccsListBox, "clientes_tipo_docOrder", "clientes_tipo_docOrder", ccsText, "", CCGetRequestParam("clientes_tipo_docOrder", $Method, NULL), $this);
             $this->clientes_tipo_docOrder->DSType = dsListOfValues;
             $this->clientes_tipo_docOrder->Values = array(array("", $CCSLocales->GetText("CCS_SelectField")), array("Sorter_id", $CCSLocales->GetText("id")), array("Sorter_prinombre", $CCSLocales->GetText("prinombre")), array("Sorter_demasnombres", $CCSLocales->GetText("demasnombres")), array("Sorter_priapellido", $CCSLocales->GetText("priapellido")), array("Sorter_segapellido", $CCSLocales->GetText("segapellido")), array("Sorter_tipo_documento", $CCSLocales->GetText("tipo_documento")), array("Sorter_num_documento", $CCSLocales->GetText("num_documento")));
@@ -665,20 +824,27 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
             $this->clientes_tipo_docPageSize = new clsControl(ccsListBox, "clientes_tipo_docPageSize", "clientes_tipo_docPageSize", ccsText, "", CCGetRequestParam("clientes_tipo_docPageSize", $Method, NULL), $this);
             $this->clientes_tipo_docPageSize->DSType = dsListOfValues;
             $this->clientes_tipo_docPageSize->Values = array(array("", $CCSLocales->GetText("CCS_SelectValue")), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
+<<<<<<< HEAD
 =======
             $this->clientesPageSize = new clsControl(ccsListBox, "clientesPageSize", "clientesPageSize", ccsText, "", CCGetRequestParam("clientesPageSize", $Method, NULL), $this);
             $this->clientesPageSize->DSType = dsListOfValues;
             $this->clientesPageSize->Values = array(array("", $CCSLocales->GetText("CCS_SelectValue")), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         }
     }
 //End Class_Initialize Event
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Validate Method @110-C4E2234D
 =======
 //Validate Method @40-F48F1C01
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Validate Method @110-C4E2234D
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Validate()
     {
         global $CCSLocales;
@@ -687,6 +853,9 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
         $Validation = ($this->s_keyword->Validate() && $Validation);
         $Validation = ($this->searchConditions->Validate() && $Validation);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $Validation = ($this->clientes_tipo_docOrder->Validate() && $Validation);
         $Validation = ($this->clientes_tipo_docDir->Validate() && $Validation);
         $Validation = ($this->clientes_tipo_docPageSize->Validate() && $Validation);
@@ -696,6 +865,7 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
         $Validation =  $Validation && ($this->clientes_tipo_docOrder->Errors->Count() == 0);
         $Validation =  $Validation && ($this->clientes_tipo_docDir->Errors->Count() == 0);
         $Validation =  $Validation && ($this->clientes_tipo_docPageSize->Errors->Count() == 0);
+<<<<<<< HEAD
 =======
         $Validation = ($this->clientesPageSize->Validate() && $Validation);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "OnValidate", $this);
@@ -703,15 +873,21 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
         $Validation =  $Validation && ($this->searchConditions->Errors->Count() == 0);
         $Validation =  $Validation && ($this->clientesPageSize->Errors->Count() == 0);
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         return (($this->Errors->Count() == 0) && $Validation);
     }
 //End Validate Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //CheckErrors Method @110-85D2CC4C
 =======
 //CheckErrors Method @40-32E414B8
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//CheckErrors Method @110-85D2CC4C
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function CheckErrors()
     {
         $errors = false;
@@ -719,22 +895,32 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
         $errors = ($errors || $this->s_keyword->Errors->Count());
         $errors = ($errors || $this->searchConditions->Errors->Count());
 <<<<<<< HEAD
+<<<<<<< HEAD
         $errors = ($errors || $this->clientes_tipo_docOrder->Errors->Count());
         $errors = ($errors || $this->clientes_tipo_docDir->Errors->Count());
         $errors = ($errors || $this->clientes_tipo_docPageSize->Errors->Count());
 =======
         $errors = ($errors || $this->clientesPageSize->Errors->Count());
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $errors = ($errors || $this->clientes_tipo_docOrder->Errors->Count());
+        $errors = ($errors || $this->clientes_tipo_docDir->Errors->Count());
+        $errors = ($errors || $this->clientes_tipo_docPageSize->Errors->Count());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $errors = ($errors || $this->Errors->Count());
         return $errors;
     }
 //End CheckErrors Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Operation Method @110-B3E3D7E7
 =======
 //Operation Method @40-B3E3D7E7
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Operation Method @110-B3E3D7E7
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Operation()
     {
         if(!$this->Visible)
@@ -768,10 +954,14 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
 //End Operation Method
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Show Method @110-105D55DC
 =======
 //Show Method @40-59E84131
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Show Method @110-105D55DC
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Show()
     {
         global $CCSUseAmp;
@@ -787,12 +977,18 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
 
         $this->searchConditions->Prepare();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->clientes_tipo_docOrder->Prepare();
         $this->clientes_tipo_docDir->Prepare();
         $this->clientes_tipo_docPageSize->Prepare();
 =======
         $this->clientesPageSize->Prepare();
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->clientes_tipo_docOrder->Prepare();
+        $this->clientes_tipo_docDir->Prepare();
+        $this->clientes_tipo_docPageSize->Prepare();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
         $RecordBlock = "Record " . $this->ComponentName;
         $ParentPath = $Tpl->block_path;
@@ -807,12 +1003,18 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
             $Error = ComposeStrings($Error, $this->s_keyword->Errors->ToString());
             $Error = ComposeStrings($Error, $this->searchConditions->Errors->ToString());
 <<<<<<< HEAD
+<<<<<<< HEAD
             $Error = ComposeStrings($Error, $this->clientes_tipo_docOrder->Errors->ToString());
             $Error = ComposeStrings($Error, $this->clientes_tipo_docDir->Errors->ToString());
             $Error = ComposeStrings($Error, $this->clientes_tipo_docPageSize->Errors->ToString());
 =======
             $Error = ComposeStrings($Error, $this->clientesPageSize->Errors->ToString());
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+            $Error = ComposeStrings($Error, $this->clientes_tipo_docOrder->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->clientes_tipo_docDir->Errors->ToString());
+            $Error = ComposeStrings($Error, $this->clientes_tipo_docPageSize->Errors->ToString());
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $Error = ComposeStrings($Error, $this->Errors->ToString());
             $Tpl->SetVar("Error", $Error);
             $Tpl->Parse("Error", false);
@@ -835,17 +1037,24 @@ class clsRecordclientesSearch { //clientesSearch Class @40-DF0C7DE5
         $this->s_keyword->Show();
         $this->searchConditions->Show();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->clientes_tipo_docOrder->Show();
         $this->clientes_tipo_docDir->Show();
         $this->clientes_tipo_docPageSize->Show();
 =======
         $this->clientesPageSize->Show();
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+        $this->clientes_tipo_docOrder->Show();
+        $this->clientes_tipo_docDir->Show();
+        $this->clientes_tipo_docPageSize->Show();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $Tpl->parse();
         $Tpl->block_path = $ParentPath;
     }
 //End Show Method
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 } //End clientesSearch Class @110-FCB6E20C
 
@@ -1542,6 +1751,11 @@ class clsclientes1DataSource extends clsDBConnection1 {  //clientes1DataSource C
 
 } //End clientes1DataSource Class @47-FCB6E20C
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+} //End clientesSearch Class @110-FCB6E20C
+
+
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
 //Initialize Page @1-1DBA1798
 // Variables
@@ -1580,10 +1794,14 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Initialize Objects @1-D8394736
 =======
 //Initialize Objects @1-387C0181
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Initialize Objects @1-81695227
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1601,28 +1819,42 @@ $Content->PlaceholderName = "Content";
 $clientes = new clsGridclientes("", $MainPage);
 $clientesSearch = new clsRecordclientesSearch("", $MainPage);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 $clientes1 = new clsRecordclientes1("", $MainPage);
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Panel1 = new clsPanel("Panel1", $MainPage);
 $Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
+<<<<<<< HEAD
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
 <<<<<<< HEAD
+=======
+$Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
+$Logout->Page = "login.php";
+$Sidebar1 = new clsPanel("Sidebar1", $MainPage);
+$Sidebar1->PlaceholderName = "Sidebar1";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "admin.php";
 $Link2 = new clsControl(ccsLink, "Link2", "Link2", ccsText, "", CCGetRequestParam("Link2", ccsGet, NULL), $MainPage);
 $Link2->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link2->Page = "rpt_clientes.php";
+<<<<<<< HEAD
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->clientes = & $clientes;
 $MainPage->clientesSearch = & $clientesSearch;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 $MainPage->clientes1 = & $clientes1;
@@ -1632,16 +1864,28 @@ $MainPage->Label1 = & $Label1;
 $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 <<<<<<< HEAD
+=======
+$MainPage->Panel1 = & $Panel1;
+$MainPage->Label1 = & $Label1;
+$MainPage->Menu = & $Menu;
+$MainPage->Logout = & $Logout;
+$MainPage->Sidebar1 = & $Sidebar1;
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MainPage->Link1 = & $Link1;
 $MainPage->Link2 = & $Link2;
 $Content->AddComponent("clientes", $clientes);
 $Content->AddComponent("clientesSearch", $clientesSearch);
 $Content->AddComponent("Panel1", $Panel1);
 $Panel1->AddComponent("Label1", $Label1);
+<<<<<<< HEAD
+=======
+$Menu->AddComponent("Logout", $Logout);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Sidebar1->AddComponent("Link1", $Link1);
 $Sidebar1->AddComponent("Link2", $Link2);
 if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
     $Label1->SetText("MANTENIMIENTO DE CLIENTES");
+<<<<<<< HEAD
 $clientes->Initialize();
 =======
 $Content->AddComponent("clientes", $clientes);
@@ -1654,6 +1898,11 @@ if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== fa
 $clientes->Initialize();
 $clientes1->Initialize();
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+$Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
+$Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
+$clientes->Initialize();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
 BindEvents();
 
@@ -1683,12 +1932,16 @@ $Attributes->Show();
 //End Initialize HTML Template
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Execute Components @1-3F626C66
 $MasterPage->Operations();
 $clientesSearch->Operation();
 //End Execute Components
 
 //Go to destination page @1-EC364AA6
+<<<<<<< HEAD
 =======
 //Execute Components @1-F69B982B
 $MasterPage->Operations();
@@ -1698,6 +1951,8 @@ $clientesSearch->Operation();
 
 //Go to destination page @1-BBD865B2
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 if($Redirect)
 {
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
@@ -1706,9 +1961,12 @@ if($Redirect)
     unset($clientes);
     unset($clientesSearch);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     unset($clientes1);
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     unset($Tpl);
     exit;
 }
@@ -1731,19 +1989,26 @@ if ($CCSEventResult) echo $main_block;
 //End Show Page
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Unload Page @1-289E8542
 =======
 //Unload Page @1-D3014A64
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Unload Page @1-289E8542
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
 unset($clientes);
 unset($clientesSearch);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 unset($clientes1);
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 unset($Tpl);
 //End Unload Page
 

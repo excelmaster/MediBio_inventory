@@ -21,6 +21,7 @@
 					<Attributes/>
 					<Features/>
 				</Panel>
+<<<<<<< HEAD
 				<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida_productos" connection="Connection1" dataSource="categoria_productos, productos, unidadesmedida" orderBy="id_producto" pageSizeLimit="100" pageSize="True" wizardCaption="Listado de Productos" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="Extended" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="Detalles" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="12" isParent="True">
 					<Components>
 <<<<<<< HEAD
@@ -28,6 +29,11 @@
 =======
 						<Link id="81" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="unidadesmedida_productos_Insert" hrefSource="productos_mant.ccp" removeParameters="id_producto" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentunidadesmedida_productosunidadesmedida_productos_Insert" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+				<Grid id="68" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="20" name="unidadesmedida_productos" connection="Connection1" dataSource="categoria_productos, productos, unidadesmedida" orderBy="id_producto" pageSizeLimit="100" pageSize="True" wizardCaption="Listado de Productos" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardGridType="Tabular" wizardSortingType="Extended" wizardAllowInsert="True" wizardAltRecord="True" wizardAltRecordType="Controls" wizardRecordSeparator="True" wizardNoRecords="{res:CCS_NoRecords}" wizardGridPagingType="Simple" wizardUseSearch="True" wizardAddNbsp="True" gridTotalRecords="True" wizardAddPanels="False" wizardType="GridRecord" wizardGridRecordLinkFieldType="custom" wizardGridRecordLinkField="Detalles" wizardUseInterVariables="True" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" wizardThemeVersion="3.0" composition="12" isParent="True" editableComponentTypeString="Grid">
+					<Components>
+						<Link id="81" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="unidadesmedida_productos_Insert" hrefSource="CrudProducto.ccp" removeParameters="id_producto" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentunidadesmedida_productosunidadesmedida_productos_Insert" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_InsertLink}','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 							<Components/>
 							<Events/>
 							<LinkParameters/>
@@ -82,6 +88,7 @@
 							<Attributes/>
 							<Features/>
 						</Sorter>
+<<<<<<< HEAD
 						<Sorter id="90" visible="True" name="Sorter_id_producto" column="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardSortingType="Extended" wizardControl="id_producto" wizardAddNbsp="False" PathID="Contentunidadesmedida_productosSorter_id_producto" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
@@ -93,6 +100,9 @@
 =======
 						<Link id="91" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="productos_mant.ccp" wizardThemeItem="GridA" PathID="Contentunidadesmedida_productosDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" urlType="Relative">
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+						<Link id="91" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="CrudProducto.ccp" wizardThemeItem="GridA" PathID="Contentunidadesmedida_productosDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'1':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':2,'objectType':'linkParameters'}}">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 							<Components/>
 							<Events/>
 							<LinkParameters>
@@ -137,6 +147,7 @@
 							<Attributes/>
 							<Features/>
 						</Label>
+<<<<<<< HEAD
 						<Label id="99" fieldSourceType="DBColumn" dataType="Integer" html="False" name="id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosid_producto" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
@@ -148,6 +159,9 @@
 =======
 						<Link id="100" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="Detalles" hrefSource="productos_mant.ccp" wizardThemeItem="FooterA" PathID="Contentunidadesmedida_productosAlt_Detail" wizardThemeVersion="3.0" urlType="Relative">
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+						<Link id="100" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="Detalles" hrefSource="CrudProducto.ccp" wizardThemeItem="FooterA" PathID="Contentunidadesmedida_productosAlt_Detail" wizardThemeVersion="3.0" urlType="Relative" linkProperties="{'textSource':'Detalles','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id_producto','parameterName':'id_producto'},'length':1,'objectType':'linkParameters'}}">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 							<Components/>
 							<Events/>
 							<LinkParameters>
@@ -192,12 +206,15 @@
 							<Attributes/>
 							<Features/>
 						</Label>
+<<<<<<< HEAD
 						<Label id="108" fieldSourceType="DBColumn" dataType="Integer" html="False" name="Alt_id_producto" fieldSource="id_producto" wizardCaption="{res:id_producto}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAlign="right" wizardAddNbsp="True" PathID="Contentunidadesmedida_productosAlt_id_producto" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
 							<Attributes/>
 							<Features/>
 						</Label>
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 						<Navigator id="109" size="10" type="Centered" pageSizes="1;5;10;25;50" name="Navigator" wizardPagingType="Simple" wizardFirst="True" wizardFirstText="{res:CCS_First}" wizardPrev="True" wizardPrevText="{res:CCS_Previous}" wizardNext="True" wizardNextText="{res:CCS_Next}" wizardLast="True" wizardLastText="{res:CCS_Last}" wizardPageNumbers="Centered" wizardSize="10" wizardTotalPages="True" wizardHideDisabled="False" wizardOfText="{res:CCS_Of}" wizardPageSize="True" wizardTheme="Blueprint" wizardImagesScheme="Blueprint" wizardThemeVersion="3.0">
 							<Components/>
 							<Events/>
@@ -205,6 +222,9 @@
 							<Features/>
 						</Navigator>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 						<Link id="137" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="unidadesmedida_productos_Insert1" hrefSource="CrudProducto.ccp" removeParameters="id_producto" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentunidadesmedida_productosunidadesmedida_productos_Insert1" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_InsertLink}','textSourceDB':'','hrefSource':'CrudProducto.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}">
 							<Components/>
 							<Events/>
@@ -212,8 +232,11 @@
 							<Attributes/>
 							<Features/>
 						</Link>
+<<<<<<< HEAD
 =======
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 					</Components>
 					<Events>
 						<Event name="BeforeBuildSelect" type="Server">
@@ -318,6 +341,7 @@
 					<Attributes/>
 					<Features/>
 				</Record>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 				<Record id="117" sourceType="Table" urlType="Relative" secured="False" allowInsert="True" allowUpdate="True" allowDelete="False" validateData="True" preserveParameters="GET" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="productos" connection="Connection1" dataSource="productos" errorSummator="Error" allowCancel="True" recordDeleteConfirmation="False" buttonsType="image" wizardRecordKey="id_producto" encryptPasswordField="False" wizardUseInterVariables="True" pkIsAutoincrement="True" wizardCaption="Ingresar o editar Productos " wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardFormMethod="post" wizardType="GridRecord" changedCaptionRecord="True" recordDirection="Vertical" templatePageRecord="C:/Documents and Settings/Usuario/Mis documentos/CodeCharge Studio 5 Projects/invt_alternativo/Templates/Record/Horizontal.ccp|userTemplate" recordAddTemplatePanel="False" PathID="Contentproductos" wizardThemeVersion="3.0" composition="12">
@@ -465,6 +489,8 @@
 					<Features/>
 				</Record>
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 			</Components>
 			<Events/>
 			<Attributes/>

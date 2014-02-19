@@ -6,16 +6,38 @@ include(RelativePath . "/db_adapter.php");
 //End Include Files
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Connection Settings @0-7BA92B93
 =======
 //Connection Settings @0-F6C2C609
 >>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+//Connection Settings @0-22312690
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $CCConnectionSettings = array (
     "Connection1" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Database" => "a4104228_mb",
+=======
+        "Database" => "u392883857_inven",
+        "Host" => "localhost",
+        "Port" => "3306;Database=u392883857_inven",
+        "User" => "u392883857_admin",
+        "Password" => "mb2013",
+        "Encoding" => array("", "cp1252"),
+        "Persistent" => false,
+        "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
+        "BooleanFormat" => array(1, 0, ""),
+        "Uppercase" => false
+    ), 
+    "invt" => array(
+        "Type" => "MySQL",
+        "DBLib" => "MySQL",
+        "Database" => "invt_mb",
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         "Host" => "localhost",
         "Port" => "3306;Database=a4104228_mb",
         "User" => "a4104228_admin",

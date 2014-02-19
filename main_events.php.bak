@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //BindEvents Method @1-AC98F56B
 function BindEvents()
 {
@@ -47,6 +48,34 @@ function main_redirection_ds_BeforeBuildSelect(& $sender)
     return $main_redirection_ds_BeforeBuildSelect;
 }
 //End Close main_redirection_ds_BeforeBuildSelect
+=======
+//BindEvents Method @1-979DE65C
+function BindEvents()
+{
+    global $Logout;
+    $Logout->CCSEvents["BeforeShow"] = "Logout_BeforeShow";
+}
+//End BindEvents Method
+
+//Logout_BeforeShow @18-9E4497AF
+function Logout_BeforeShow(& $sender)
+{
+    $Logout_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $Logout; //Compatibility
+//End Logout_BeforeShow
+
+//Logout @24-F421D883
+    CCLogoutUser();
+    CCSetCookie("invt_bmLogin", "");
+//End Logout
+
+//Close Logout_BeforeShow @18-5AB7ACC1
+    return $Logout_BeforeShow;
+}
+//End Close Logout_BeforeShow
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
 
 ?>
