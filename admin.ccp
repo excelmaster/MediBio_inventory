@@ -24,13 +24,13 @@
 		</Panel>
 		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
 			<Components>
-<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel de control','textSourceDB':'','hrefSource':'main.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
-<Events/>
-<LinkParameters/>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel de control','textSourceDB':'','hrefSource':'main.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+					<Events/>
+					<LinkParameters/>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -54,13 +54,19 @@
 						</ImageLink>
 					</Components>
 					<Events/>
-					<TableParameters/>
+					<TableParameters>
+<TableParameter id="24" conditionType="Parameter" useIsNull="False" dataType="Integer" field="grupo" logicOperator="And" parameterSource="groupID" parameterType="Session" searchConditionType="Equal"/>
+</TableParameters>
 					<JoinTables>
-						<JoinTable id="8" tableName="admin_redir"/>
-					</JoinTables>
+						<JoinTable id="23" posHeight="152" posLeft="10" posTop="10" posWidth="115" schemaName="u392883857_inven" tableName="admin_redir"/>
+</JoinTables>
 					<JoinLinks/>
-					<Fields/>
-					<PKFields/>
+					<Fields>
+<Field id="25" fieldName="*"/>
+</Fields>
+					<PKFields>
+<PKField id="26" dataType="Integer" fieldName="id" tableName="admin_redir"/>
+</PKFields>
 					<SPParameters/>
 					<SQLParameters/>
 					<SecurityGroups/>

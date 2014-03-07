@@ -8,7 +8,7 @@
 		</Panel>
 		<Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
 			<Components>
-				<Grid id="6" secured="False" sourceType="Table" returnValueType="Number" defaultPageSize="10" name="main_redirection" connection="Connection1" dataSource="main_redirection" orderBy="name_sitio" pageSizeLimit="100" pageSize="False" wizardCaption="PANEL PRINCIPAL" wizardThemeApplyTo="Page" wizardGridType="Tabular" wizardAllowInsert="False" wizardAltRecord="False" wizardAltRecordType="Style" wizardRecordSeparator="False" wizardNoRecords="Su usuario no cuenta con menus asignados" wizardUseSearch="False" wizardAddNbsp="True" gridTotalRecords="False" wizardAddPanels="False" wizardType="Grid" wizardUseInterVariables="False" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" editableComponentTypeString="Grid">
+				<Grid id="6" secured="True" sourceType="Table" returnValueType="Number" defaultPageSize="10" name="main_redirection" connection="Connection1" dataSource="main_redirection" orderBy="name_sitio" pageSizeLimit="100" pageSize="False" wizardCaption="PANEL PRINCIPAL" wizardThemeApplyTo="Page" wizardGridType="Tabular" wizardAllowInsert="False" wizardAltRecord="False" wizardAltRecordType="Style" wizardRecordSeparator="False" wizardNoRecords="Su usuario no cuenta con menus asignados" wizardUseSearch="False" wizardAddNbsp="True" gridTotalRecords="False" wizardAddPanels="False" wizardType="Grid" wizardUseInterVariables="False" addTemplatePanel="False" changedCaptionGrid="True" gridExtendedHTML="False" editableComponentTypeString="Grid">
 					<Components>
 						<Label id="15" fieldSourceType="DBColumn" dataType="Text" html="False" name="name_sitio" fieldSource="name_sitio" wizardCaption="Name Sitio" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" PathID="Contentmain_redirectionname_sitio">
 							<Components/>
@@ -26,25 +26,32 @@
 					</Components>
 					<Events/>
 					<TableParameters>
-						<TableParameter id="8" conditionType="Parameter" useIsNull="False" dataType="Integer" field="grupo" format="0;(0)" logicOperator="And" parameterSource="GroupID" parameterType="Session" searchConditionType="Equal"/>
-					</TableParameters>
+						<TableParameter id="43" conditionType="Parameter" useIsNull="False" dataType="Integer" field="grupo" format="0;(0)" logicOperator="And" parameterSource="GroupID" parameterType="Session" searchConditionType="Equal"/>
+<TableParameter id="44" conditionType="Parameter" useIsNull="False" dataType="Text" field="page" logicOperator="And" parameterSource="'main'" parameterType="Expression" searchConditionType="Equal"/>
+</TableParameters>
 					<JoinTables>
-						<JoinTable id="17" tableName="main_redirection"/>
-					</JoinTables>
+						<JoinTable id="42" posHeight="168" posLeft="10" posTop="10" posWidth="115" tableName="main_redirection"/>
+</JoinTables>
 					<JoinLinks/>
 					<Fields>
-						<Field id="9" fieldName="id" tableName="main_redirection"/>
-						<Field id="10" fieldName="grupo" tableName="main_redirection"/>
-						<Field id="11" fieldName="name_sitio" tableName="main_redirection"/>
-						<Field id="12" fieldName="link_sitio" tableName="main_redirection"/>
-						<Field id="13" fieldName="img_sitio" tableName="main_redirection"/>
-					</Fields>
+						<Field id="45" fieldName="id" tableName="main_redirection"/>
+<Field id="46" fieldName="grupo" tableName="main_redirection"/>
+<Field id="47" fieldName="name_sitio" tableName="main_redirection"/>
+<Field id="48" fieldName="link_sitio" tableName="main_redirection"/>
+<Field id="49" fieldName="img_sitio" tableName="main_redirection"/>
+<Field id="50" fieldName="page" tableName="main_redirection"/>
+</Fields>
 					<PKFields>
-						<PKField id="14" dataType="Integer" fieldName="id" tableName="main_redirection"/>
-					</PKFields>
+						<PKField id="51" dataType="Integer" fieldName="id" tableName="main_redirection"/>
+</PKFields>
 					<SPParameters/>
 					<SQLParameters/>
-					<SecurityGroups/>
+					<SecurityGroups>
+						<Group id="28" groupID="1" read="True"/>
+						<Group id="29" groupID="2" read="True"/>
+						<Group id="30" groupID="3" read="True"/>
+						<Group id="31" groupID="4" read="True"/>
+					</SecurityGroups>
 					<Attributes/>
 					<Features/>
 				</Grid>
@@ -56,15 +63,15 @@
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
 				<Link id="24" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-<Components/>
-<Events/>
-<LinkParameters>
-<LinkParameter id="25" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+					<Components/>
+					<Events/>
+					<LinkParameters>
+						<LinkParameter id="25" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -79,7 +86,7 @@
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="main.php" forShow="True" url="main.php" comment="//" codePage="windows-1252"/>
 		<CodeFile id="Events" language="PHPTemplates" name="main_events.php" forShow="False" comment="//" codePage="windows-1252"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups>
 		<Group id="20" groupID="1"/>
 		<Group id="21" groupID="2"/>
@@ -90,10 +97,10 @@
 	<Attributes/>
 	<Features/>
 	<Events>
-<Event name="AfterInitialize" type="Server">
-<Actions>
-<Action actionName="Logout" actionCategory="Security" id="26" pageRedirects="True" parameterName="Logout" returnPage="main.ccp"/>
-</Actions>
-</Event>
-</Events>
+		<Event name="AfterInitialize" type="Server">
+			<Actions>
+				<Action actionName="Logout" actionCategory="Security" id="26" pageRedirects="True" parameterName="Logout" returnPage="main.ccp"/>
+			</Actions>
+		</Event>
+	</Events>
 </Page>

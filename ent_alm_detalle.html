@@ -1,0 +1,162 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentdetail_ent_alm_generalCancel_OnClick @28-E6EA2F77
+function Contentdetail_ent_alm_generalCancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentdetail_ent_alm_generalCancel_OnClick
+
+//bind_events @1-772E3CAB
+function bind_events() {
+    addEventHandler("Contentdetail_ent_alm_generalCancel", "click", Contentdetail_ent_alm_generalCancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<title>ent_alm_detalle</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="Styles/Compact/Style_Components_doctype.css">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content --><br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<br>
+&nbsp;
+<!-- BEGIN EditableGrid detail_ent_alm_general -->
+<form id="Contentdetail_ent_alm_general" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" name="FormState" value="{FormState}">{FormScript} 
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderCompact" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftCompact"><img alt="" src="Styles/Compact/Images/Spacer.gif"></td> 
+            <td class="thCompact"><strong>{res:detail_ent_alm_general_EditableGridForm}</strong></td> 
+            <td class="HeaderRightCompact"><img alt="" src="Styles/Compact/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="GridCompact" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorCompact">
+            <td colspan="5">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="RowCompact">
+            <td colspan="5">{res:CCS_TotalRecords}&nbsp;{detail_ent_alm_general_TotalRecords}</td> 
+          </tr>
+ 
+          <tr class="CaptionCompact">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_generalSorter_id">{res:id}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Compact/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Compact/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id_ent_alm_general --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_generalSorter_id_ent_alm_general">{res:id_ent_alm_general}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Compact/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Compact/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id_ent_alm_general --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id_producto --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_generalSorter_id_producto">{res:id_producto}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Compact/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Compact/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id_producto --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_cantidad --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_generalSorter_cantidad">{res:cantidad}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Compact/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Compact/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_cantidad --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_observacion --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_ent_alm_generalSorter_observacion">{res:observacion}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Compact/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Compact/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_observacion --></th>
+ 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="ErrorCompact">
+            <td colspan="5">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr class="RowCompact">
+            <td>{id}</td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_generalid_ent_alm_general_{detail_ent_alm_general:rowNumber}">{res:id_ent_alm_general}</label> 
+              <select id="Contentdetail_ent_alm_generalid_ent_alm_general_{detail_ent_alm_general:rowNumber}" name="{id_ent_alm_general_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {id_ent_alm_general_Options} 
+              </select>
+ </td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_generalid_producto_{detail_ent_alm_general:rowNumber}">{res:id_producto}</label> 
+              <select id="Contentdetail_ent_alm_generalid_producto_{detail_ent_alm_general:rowNumber}" name="{id_producto_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {id_producto_Options} 
+              </select>
+ </td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_generalcantidad_{detail_ent_alm_general:rowNumber}">{res:cantidad}</label><input id="Contentdetail_ent_alm_generalcantidad_{detail_ent_alm_general:rowNumber}" name="{cantidad_Name}" maxlength="10" value="{cantidad}" size="10"></td> 
+            <td><label style="display: none;" for="Contentdetail_ent_alm_generalobservacion_{detail_ent_alm_general:rowNumber}">{res:observacion}</label><input id="Contentdetail_ent_alm_generalobservacion_{detail_ent_alm_general:rowNumber}" name="{observacion_Name}" maxlength="200" value="{observacion}" size="50"></td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN Separator -->
+          <tr class="SeparatorCompact">
+            <td colspan="5"></td> 
+          </tr>
+ <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecordsCompact">
+            <td colspan="5">{res:CCS_NoRecords}</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="FooterCompact">
+            <td style="TEXT-ALIGN: right" colspan="5">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+              <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options} 
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Compact/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Compact/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Compact/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Compact/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Compact/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Compact/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Compact/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Compact/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="Contentdetail_ent_alm_generalButton_Submit" class="ButtonCompact" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="Contentdetail_ent_alm_generalCancel" class="ButtonCompact" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}"><!-- END Button Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid detail_ent_alm_general --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

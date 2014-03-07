@@ -1,0 +1,152 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-5973AD0E
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Contentent_alm_general_OnSubmit @6-90E86CEC
+function Contentent_alm_general_OnSubmit()
+{
+    var result = true;
+//End Contentent_alm_general_OnSubmit
+
+//Get Data From Form @36-7A570F8F
+    var frmMaster = document.getElementById("Contentent_alm_general");
+    var frmDetail = document.getElementById("");
+    if (frmMaster && frmDetail) {
+        var elements = frmDetail.elements;
+        var res = {};
+        var i;
+        for (i = 0; i < elements.length; i++) {
+            if (elements[i].type == "checkbox") {
+                if (elements[i].checked) res[elements[i].name] = elements[i].value;
+            } else {
+                res[elements[i].name] = elements[i].value;
+            }
+        }
+        var ctrl  = document.createElement("input");
+        ctrl.type = "hidden";
+        ctrl.value = Object.toJSON(res).toString();
+        ctrl.name  = "CCSDetailControls";
+        frmMaster.appendChild(ctrl);
+    }
+//End Get Data From Form
+
+//Close Contentent_alm_general_OnSubmit @6-BC33A33A
+    return result;
+}
+//End Close Contentent_alm_general_OnSubmit
+
+//Contentent_alm_generalButton_Cancel_OnClick @10-E69C2916
+function Contentent_alm_generalButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentent_alm_generalButton_Cancel_OnClick
+
+//Handle Contentent_alm_generalfecha_procesoInlineDatePicker1 @13-9D90ACD7
+function Contentent_alm_generalfecha_procesoInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "ShortDate","Compact");
+}
+//End Handle Contentent_alm_generalfecha_procesoInlineDatePicker1
+
+//bind_events @1-F5BB6112
+function bind_events() {
+    addEventHandler("Contentent_alm_generalfecha_proceso", "load", Contentent_alm_generalfecha_procesoInlineDatePicker1_start);
+    addEventHandler("Contentent_alm_general", "submit", Contentent_alm_general_OnSubmit);
+    addEventHandler("Contentent_alm_generalButton_Cancel", "click", Contentent_alm_generalButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+<title>Crud_entAlmGeneral</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record ent_alm_general -->
+<form id="Contentent_alm_general" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderCompact" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftCompact"><img alt="" src="Styles/Compact/Images/Spacer.gif"></td> 
+            <td class="thCompact"><strong>{res:ent_alm_general_RecordForm}</strong></td> 
+            <td class="HeaderRightCompact"><img alt="" src="Styles/Compact/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="RecordCompact" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorCompact">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsCompact">
+            <td class="thCompact"><label for="Contentent_alm_generalfecha_proceso">{res:fecha_proceso}</label></td> 
+            <td><input id="Contentent_alm_generalfecha_proceso" name="{fecha_proceso_Name}" maxlength="100" value="{fecha_proceso}" size="8"></td>
+          </tr>
+ 
+          <tr class="ControlsCompact">
+            <td class="thCompact"><label for="Contentent_alm_generalOrden_compra">{res:Orden_compra}</label></td> 
+            <td>
+              <select id="Contentent_alm_generalOrden_compra" name="{Orden_compra_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {Orden_compra_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="ControlsCompact">
+            <td class="thCompact"><label for="Contentent_alm_generalobservaciones">{res:observaciones}</label></td> 
+            <td><input id="Contentent_alm_generalobservaciones" name="{observaciones_Name}" maxlength="200" value="{observaciones}" size="50"></td>
+          </tr>
+ 
+          <tr class="ControlsCompact">
+            <td class="thCompact"><label for="Contentent_alm_generalactiva">{res:activa}</label></td> 
+            <td>
+              <select id="Contentent_alm_generalactiva" name="{activa_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {activa_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="BottomCompact">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_generalButton_Insert" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}" src="Styles/Compact/Images/{res:CCS_LanguageID}/ButtonInsert.gif"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_generalButton_Update" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" src="Styles/Compact/Images/{res:CCS_LanguageID}/ButtonUpdate.gif"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" style="BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px" id="Contentent_alm_generalButton_Cancel" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" src="Styles/Compact/Images/{res:CCS_LanguageID}/ButtonCancel.gif"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</form>
+<!-- END Record ent_alm_general --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

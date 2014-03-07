@@ -1,11 +1,11 @@
-<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False">
   <catalog allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
     <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="a4104228_mb" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="mysql" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
-    <schema SCHEMA_NAME="u392883857_inven" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
+    <schema SCHEMA_NAME="u392883857_inven" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False" full="True">
       <table TABLE_NAME="admin_redir" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="grupo" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
@@ -85,7 +85,7 @@
         <column COLUMN_NAME="id_ent_alm_general" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="id_producto" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="cantidad" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="observacion" ORDINAL_POSITION="5" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="observacion" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="fecregistro" ORDINAL_POSITION="6" DATA_TYPE="134" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="ent_alm_general" PK_COLUMN_NAME="id" KEY_NAME="FK1_idEntradaAlmGeneral" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="detail_ent_alm_general" FK_COLUMN_NAME="id_ent_alm_general" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="productos" PK_COLUMN_NAME="id_producto" KEY_NAME="FK2_idproducto" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="detail_ent_alm_general" FK_COLUMN_NAME="id_producto" full="True" />
@@ -93,11 +93,13 @@
       </table>
       <table TABLE_NAME="ent_alm_general" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="fecha_proceso" ORDINAL_POSITION="2" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
-        <column COLUMN_NAME="num_factura" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecha_proceso" ORDINAL_POSITION="2" DATA_TYPE="7" CCS_TYPE="7" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="Orden_compra" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="observaciones" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="activa" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="fechareg" ORDINAL_POSITION="6" DATA_TYPE="134" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_id" ORDINAL_POSITION="7" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="orden_compra" PK_COLUMN_NAME="Id" KEY_NAME="FK1_OrdenCompra" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="ent_alm_general" FK_COLUMN_NAME="Orden_compra" full="True" />
         <primaryKey PK_COLUMN_NAME="id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
       <table TABLE_NAME="farmacias" TABLE_TYPE="5" DESCRIPTION="list of warehouses" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
@@ -152,6 +154,18 @@
         <column COLUMN_NAME="cod_Ciudad_DANE" ORDINAL_POSITION="9" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="Munc_Depto" ORDINAL_POSITION="10" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="depto_dame" PK_COLUMN_NAME="id" KEY_NAME="FK1_depto" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="munc_dane" FK_COLUMN_NAME="depto_id" full="True" />
+        <primaryKey PK_COLUMN_NAME="Id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
+      </table>
+      <table TABLE_NAME="orden_compra" TABLE_TYPE="5" DESCRIPTION="Objeto que almacena las facturas de los pedidos realizados. Desde aqui se puede filtrar el estado y fecha de entrega." allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
+        <column COLUMN_NAME="Id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="Id_Proveedor" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecha_pedido" ORDINAL_POSITION="3" DATA_TYPE="7" CCS_TYPE="7" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="Documento_Contable" ORDINAL_POSITION="4" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecha_entrega" ORDINAL_POSITION="5" DATA_TYPE="7" CCS_TYPE="7" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecha_recepción" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="user_id" ORDINAL_POSITION="7" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecha_modificacion" ORDINAL_POSITION="8" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" IS_NULLABLE="False" DEFAULT_VALUE="False" DESCRIPTION="" full="True" />
+        <foreignKey PK_TABLE_SCHEMA="u392883857_inven" PK_TABLE_NAME="proveedores" PK_COLUMN_NAME="id" KEY_NAME="FK1_idProv ee" FK_TABLE_SCHEMA="u392883857_inven" FK_TABLE_NAME="orden_compra" FK_COLUMN_NAME="Id_Proveedor" full="True" />
         <primaryKey PK_COLUMN_NAME="Id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
       </table>
       <table TABLE_NAME="productos" TABLE_TYPE="5" DESCRIPTION="listado de productos" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
@@ -257,6 +271,15 @@
       <table TABLE_NAME="almacen_main" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
         <column COLUMN_NAME="name_sitio" ORDINAL_POSITION="1" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="img_sitio" ORDINAL_POSITION="2" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+      </table>
+      <table TABLE_NAME="det_ent_alm_general" TABLE_TYPE="7" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
+        <column COLUMN_NAME="id" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="id_ent_alm_general" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="id_producto" ORDINAL_POSITION="3" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="cantidad" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="observacion" ORDINAL_POSITION="5" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="200" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="fecregistro" ORDINAL_POSITION="6" DATA_TYPE="134" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="id" KEY_NAME="id" ENABLED="True" full="True" />
       </table>
     </schema>
     <schema SCHEMA_NAME="invt_mb" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="False">

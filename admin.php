@@ -90,7 +90,7 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     }
 //End Initialize Method
 
-//Show Method @7-E8C9AF04
+//Show Method @7-1C9EFCB2
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -99,6 +99,7 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
 
         $this->RowNumber = 0;
 
+        $this->DataSource->Parameters["sesgroupID"] = CCGetSession("groupID", NULL);
 
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeSelect", $this);
 
@@ -212,21 +213,26 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     }
 //End SetOrder Method
 
-//Prepare Method @7-14D6CD9D
+//Prepare Method @7-38849A92
     function Prepare()
     {
         global $CCSLocales;
         global $DefaultDateFormat;
+        $this->wp = new clsSQLParameters($this->ErrorBlock);
+        $this->wp->AddParameter("1", "sesgroupID", ccsInteger, "", "", $this->Parameters["sesgroupID"], "", false);
+        $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "grupo", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
+        $this->Where = 
+             $this->wp->Criterion[1];
     }
 //End Prepare Method
 
-//Open Method @7-A21EB5B5
+//Open Method @7-169A97C8
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
         $this->CountSQL = "SELECT COUNT(*)\n\n" .
         "FROM admin_redir";
-        $this->SQL = "SELECT * \n\n" .
+        $this->SQL = "SELECT *, id \n\n" .
         "FROM admin_redir {SQL_Where} {SQL_OrderBy}";
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         if ($this->CountSQL) 

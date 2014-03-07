@@ -1,14 +1,15 @@
 <?php
-//BindEvents Method @1-616B61C5
+//BindEvents Method @1-59065039
 function BindEvents()
 {
     global $ent_alm_general1;
     $ent_alm_general1->ent_alm_general1_TotalRecords->CCSEvents["BeforeShow"] = "ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow";
+    $ent_alm_general1->CCSEvents["BeforeShowRow"] = "ent_alm_general1_BeforeShowRow";
     $ent_alm_general1->ds->CCSEvents["BeforeBuildSelect"] = "ent_alm_general1_ds_BeforeBuildSelect";
 }
 //End BindEvents Method
 
-//ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow @14-788A01F9
+//ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow @80-788A01F9
 function ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow(& $sender)
 {
     $ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow = true;
@@ -17,16 +18,40 @@ function ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow(& $sender)
     global $ent_alm_general1; //Compatibility
 //End ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow
 
-//Retrieve number of records @15-ABE656B4
+//Retrieve number of records @81-ABE656B4
     $Component->SetValue($Container->DataSource->RecordsCount);
 //End Retrieve number of records
 
-//Close ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow @14-1B00C780
+//Close ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow @80-1B00C780
     return $ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow;
 }
 //End Close ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow
 
-//ent_alm_general1_ds_BeforeBuildSelect @6-60182E1E
+//ent_alm_general1_BeforeShowRow @76-EB1420A7
+function ent_alm_general1_BeforeShowRow(& $sender)
+{
+    $ent_alm_general1_BeforeShowRow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_general1; //Compatibility
+//End ent_alm_general1_BeforeShowRow
+
+//Set Row Style @92-78BECB7D
+    $styles = array("RowCompact", "AltRowCompact");
+    if (count($styles)) {
+        $Style = $styles[($Component->RowNumber - 1) % count($styles)];
+        if (strlen($Style) && !strpos($Style, "="))
+            $Style = (strpos($Style, ":") ? 'style="' : 'class="'). $Style . '"';
+        $Component->Attributes->SetValue("rowStyle", $Style);
+    }
+//End Set Row Style
+
+//Close ent_alm_general1_BeforeShowRow @76-0C19DCF0
+    return $ent_alm_general1_BeforeShowRow;
+}
+//End Close ent_alm_general1_BeforeShowRow
+
+//ent_alm_general1_ds_BeforeBuildSelect @76-60182E1E
 function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
 {
     $ent_alm_general1_ds_BeforeBuildSelect = true;
@@ -35,7 +60,7 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
     global $ent_alm_general1; //Compatibility
 //End ent_alm_general1_ds_BeforeBuildSelect
 
-//Advanced Search @60-C65E19FB
+//Advanced Search @115-534F6FD1
     global $ent_alm_generalSearch;
     $s_keyword = CCGetParam("s_keyword", "");
     $searchConditions = CCGetParam("searchConditions", "");
@@ -44,7 +69,7 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
     if (strlen($s_keyword)) {
         $f_id = "";
         $f_fecha_proceso = "";
-        $f_num_factura = "";
+        $f_Orden_compra = "";
         $f_observaciones = "";
         $f_activa = "";
         // Any of words
@@ -53,12 +78,12 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
                 $keyword = str_replace("'", "''", trim($keyword));
                 if (strlen($f_id)) $f_id .= " OR ";
                 if (strlen($f_fecha_proceso)) $f_fecha_proceso .= " OR ";
-                if (strlen($f_num_factura)) $f_num_factura .= " OR ";
+                if (strlen($f_Orden_compra)) $f_Orden_compra .= " OR ";
                 if (strlen($f_observaciones)) $f_observaciones .= " OR ";
                 if (strlen($f_activa)) $f_activa .= " OR ";
                 $f_id .= "id LIKE '%" . $keyword . "%'";
                 $f_fecha_proceso .= "fecha_proceso LIKE '%" . $keyword . "%'";
-                $f_num_factura .= "num_factura LIKE '%" . $keyword . "%'";
+                $f_Orden_compra .= "Orden_compra LIKE '%" . $keyword . "%'";
                 $f_observaciones .= "observaciones LIKE '%" . $keyword . "%'";
                 $f_activa .= "activa LIKE '%" . $keyword . "%'";
             }
@@ -68,12 +93,12 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
                 $keyword = str_replace("'", "''", trim($keyword));
                 if (strlen($f_id)) $f_id .= " AND ";
                 if (strlen($f_fecha_proceso)) $f_fecha_proceso .= " AND ";
-                if (strlen($f_num_factura)) $f_num_factura .= " AND ";
+                if (strlen($f_Orden_compra)) $f_Orden_compra .= " AND ";
                 if (strlen($f_observaciones)) $f_observaciones .= " AND ";
                 if (strlen($f_activa)) $f_activa .= " AND ";
                 $f_id .= "id LIKE '%" . $keyword . "%'";
                 $f_fecha_proceso .= "fecha_proceso LIKE '%" . $keyword . "%'";
-                $f_num_factura .= "num_factura LIKE '%" . $keyword . "%'";
+                $f_Orden_compra .= "Orden_compra LIKE '%" . $keyword . "%'";
                 $f_observaciones .= "observaciones LIKE '%" . $keyword . "%'";
                 $f_activa .= "activa LIKE '%" . $keyword . "%'";
             }
@@ -82,7 +107,7 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
             $keyword = str_replace("'", "''", $s_keyword);
             $f_id = "id LIKE '%" . $keyword . "%'";
             $f_fecha_proceso = "fecha_proceso LIKE '%" . $keyword . "%'";
-            $f_num_factura = "num_factura LIKE '%" . $keyword . "%'";
+            $f_Orden_compra = "Orden_compra LIKE '%" . $keyword . "%'";
             $f_observaciones = "observaciones LIKE '%" . $keyword . "%'";
             $f_activa = "activa LIKE '%" . $keyword . "%'";
         }
@@ -90,8 +115,8 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
         $Container->DataSource->Where .= "((" . $f_id . ")";
         if (strlen($f_fecha_proceso))
             $Container->DataSource->Where .= " OR (". $f_fecha_proceso .")";
-        if (strlen($f_num_factura))
-            $Container->DataSource->Where .= " OR (". $f_num_factura .")";
+        if (strlen($f_Orden_compra))
+            $Container->DataSource->Where .= " OR (". $f_Orden_compra .")";
         if (strlen($f_observaciones))
             $Container->DataSource->Where .= " OR (". $f_observaciones .")";
         if (strlen($f_activa))
@@ -102,7 +127,7 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
     }
 //End Advanced Search
 
-//Close ent_alm_general1_ds_BeforeBuildSelect @6-4B35F363
+//Close ent_alm_general1_ds_BeforeBuildSelect @76-4B35F363
     return $ent_alm_general1_ds_BeforeBuildSelect;
 }
 //End Close ent_alm_general1_ds_BeforeBuildSelect
