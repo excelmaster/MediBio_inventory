@@ -10,15 +10,208 @@
 <script language="JavaScript" type="text/javascript">
 //End Include Common JSFunctions
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+//Include User Scripts @1-B3E68BB8
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/pt/prototype.js" type="text/javascript"></script>
+=======
+//Include User Scripts @1-E5A43567
+</script>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
 <script language="JavaScript" src="{page:pathToRoot}js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
 <script language="JavaScript" src="{page:pathToRoot}js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
 <script language="JavaScript" src="{page:pathToRoot}js/yui/datepicker-commons.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint_1/ccs-yui-calendar.css">
 <script language="JavaScript" type="text/javascript">
+<<<<<<< HEAD
+=======
+//End Include User Scripts
+
+<<<<<<< HEAD
+//Contentent_almc_general_OnSubmit @6-321F56F8
+function Contentent_almc_general_OnSubmit()
+{
+    var result = true;
+//End Contentent_almc_general_OnSubmit
+
+//Get Data From Form @47-1F4D18FC
+    var frmMaster = document.getElementById("Contentent_almc_general");
+    var frmDetail = document.getElementById("Contentdetail_entalmgeneral");
+    if (frmMaster && frmDetail) {
+        var elements = frmDetail.elements;
+        var res = {};
+        var i;
+        for (i = 0; i < elements.length; i++) {
+            if (elements[i].type == "checkbox") {
+                if (elements[i].checked) res[elements[i].name] = elements[i].value;
+            } else {
+                res[elements[i].name] = elements[i].value;
+            }
+        }
+        var ctrl  = document.createElement("input");
+        ctrl.type = "hidden";
+        ctrl.value = Object.toJSON(res).toString();
+        ctrl.name  = "CCSDetailControls";
+        frmMaster.appendChild(ctrl);
+    }
+//End Get Data From Form
+
+//Close Contentent_almc_general_OnSubmit @6-BC33A33A
+    return result;
+}
+//End Close Contentent_almc_general_OnSubmit
+
+//ContentInsert_OnLoad @38-7958026B
+function ContentInsert_OnLoad()
+{
+    var result = true;
+//End ContentInsert_OnLoad
+
+//Emulate Record Button @39-03A59217
+    var frmRecord = document.getElementById("Contentent_almc_general");
+    var btn = document.getElementById("ContentInsert");
+    if (frmRecord && btn) {
+        var action = frmRecord.action;
+        var editMode = /ccsForm=ent_almc_general(?:(?:%3A)+|:+)Edit/i.test(action) ? true : false;
+        btn.style.display = !editMode ? "inline-block" : "none";
+        addEventHandler("ContentInsert", "click", function() {
+            var frm = document.getElementById("Contentent_almc_general");
+            var ctrl  = document.createElement("input");
+            ctrl.type = "hidden";
+            ctrl.value = "{res:CCS_Insert}";
+            ctrl.name  = "Button_Insert";
+            frm.appendChild(ctrl);
+            if (Contentent_almc_general_OnSubmit()) frm.submit();
+        });
+    }
+//End Emulate Record Button
+
+//Close ContentInsert_OnLoad @38-BC33A33A
+    return result;
+}
+//End Close ContentInsert_OnLoad
+
+//ContentUpdate_OnLoad @40-9931D260
+function ContentUpdate_OnLoad()
+{
+    var result = true;
+//End ContentUpdate_OnLoad
+
+//Emulate Record Button @41-F7E8A3A7
+    var frmRecord = document.getElementById("Contentent_almc_general");
+    var btn = document.getElementById("ContentUpdate");
+    if (frmRecord && btn) {
+        var action = frmRecord.action;
+        var editMode = /ccsForm=ent_almc_general(?:(?:%3A)+|:+)Edit/i.test(action) ? true : false;
+        btn.style.display = editMode ? "inline-block" : "none";
+        addEventHandler("ContentUpdate", "click", function() {
+            var frm = document.getElementById("Contentent_almc_general");
+            var ctrl  = document.createElement("input");
+            ctrl.type = "hidden";
+            ctrl.value = "{res:CCS_Update}";
+            ctrl.name  = "Button_Update";
+            frm.appendChild(ctrl);
+            if (Contentent_almc_general_OnSubmit()) frm.submit();
+        });
+    }
+//End Emulate Record Button
+
+//Close ContentUpdate_OnLoad @40-BC33A33A
+    return result;
+}
+//End Close ContentUpdate_OnLoad
+
+//ContentCancel_OnLoad @42-F4E74473
+function ContentCancel_OnLoad()
+{
+    var result = true;
+//End ContentCancel_OnLoad
+
+//Emulate Record Button @43-528CAB0F
+    var frmRecord = document.getElementById("Contentent_almc_general");
+    var btn = document.getElementById("ContentCancel");
+    if (frmRecord && btn) {
+        var action = frmRecord.action;
+        var editMode = /ccsForm=ent_almc_general(?:(?:%3A)+|:+)Edit/i.test(action) ? true : false;
+        btn.style.display = editMode ? "inline-block" : "none";
+        addEventHandler("ContentCancel", "click", function() {
+            var frm = document.getElementById("Contentent_almc_general");
+            var ctrl  = document.createElement("input");
+            ctrl.type = "hidden";
+            ctrl.value = "{res:CCS_Cancel}";
+            ctrl.name  = "Button_Cancel";
+            frm.appendChild(ctrl);
+            if (Contentent_almc_general_OnSubmit()) frm.submit();
+        });
+    }
+//End Emulate Record Button
+
+//Close ContentCancel_OnLoad @42-AEF500E0
+    disableValidation = true;
+    return result;
+}
+//End Close ContentCancel_OnLoad
+
+//Contentent_almc_generalHide_PanelButton_Cancel_OnClick @12-92334803
+function Contentent_almc_generalHide_PanelButton_Cancel_OnClick()
+=======
+//Contentent_alm_general2Button_Cancel_OnClick @65-1467BDAF
+function Contentent_alm_general2Button_Cancel_OnClick()
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+{
+    disableValidation = true;
+    return true;
+}
+<<<<<<< HEAD
+//End Contentent_almc_generalHide_PanelButton_Cancel_OnClick
+
+//ContentCancel_OnClick @42-9345EB04
+function ContentCancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End ContentCancel_OnClick
+
+//Handle Contentent_almc_generalfecha_registroInlineDatePicker1 @15-618580C0
+function Contentent_almc_generalfecha_registroInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "ShortDate","Blueprint");
+}
+//End Handle Contentent_almc_generalfecha_registroInlineDatePicker1
+
+//bind_events @1-8ECD48C0
+function bind_events() {
+    addEventHandler("Contentent_almc_generalfecha_registro", "load", Contentent_almc_generalfecha_registroInlineDatePicker1_start);
+    addEventHandler("Contentent_almc_general", "submit", Contentent_almc_general_OnSubmit);
+    addEventHandler("ContentInsert", "load", ContentInsert_OnLoad);
+    addEventHandler("ContentUpdate", "load", ContentUpdate_OnLoad);
+    addEventHandler("ContentCancel", "load", ContentCancel_OnLoad);
+    addEventHandler("ContentCancel", "click", ContentCancel_OnClick);
+    addEventHandler("Contentent_almc_generalHide_PanelButton_Cancel", "click", Contentent_almc_generalHide_PanelButton_Cancel_OnClick);
+=======
+//End Contentent_alm_general2Button_Cancel_OnClick
+
+//Handle Contentent_alm_general2fecha_procesoInlineDatePicker1 @67-CE2BE8A1
+function Contentent_alm_general2fecha_procesoInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "ShortDate","Blueprint");
+}
+//End Handle Contentent_alm_general2fecha_procesoInlineDatePicker1
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
 
 //bind_events @1-BF0EB765
 function bind_events() {
+<<<<<<< HEAD
+=======
+    addEventHandler("Contentent_alm_general2fecha_proceso", "load", Contentent_alm_general2fecha_procesoInlineDatePicker1_start);
+    addEventHandler("Contentent_alm_general2Button_Cancel", "click", Contentent_alm_general2Button_Cancel_OnClick);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
 }
 //End bind_events
 
@@ -26,7 +219,30 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
 
 //End CCS script
 </script>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Compact/Style_Components_doctype.css">
+=======
+<<<<<<< HEAD
+<title>ent_alm_general</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record ent_almc_general -->
+<form id="Contentent_almc_general" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:ent_almc_general_RecordForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+=======
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style_Components_doctype.css">
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
 <title>ent_alm_general</title>
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 <!-- END Panel Head -->
@@ -42,12 +258,151 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
             <td class="thCompact"><strong>{res:Search_Form}</strong></td> 
             <td class="HeaderRightCompact"><img alt="" src="Styles/Compact/Images/Spacer.gif"></td>
           </tr>
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
         </table>
  
         <table class="RecordCompact" cellspacing="0" cellpadding="0">
           <!-- BEGIN Error -->
+<<<<<<< HEAD
           <tr class="ErrorCompact">
             <td colspan="6">{Error}</td>
+=======
+          <tr class="ErrorBlueprint">
+<<<<<<< HEAD
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_almc_generalfecha_registro">{res:fecha_registro}</label></td> 
+            <td><input id="Contentent_almc_generalfecha_registro" maxlength="100" size="8" value="{fecha_registro}" name="{fecha_registro_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_almc_generalid_usuario">{res:id_usuario}</label></td> 
+            <td><input id="Contentent_almc_generalid_usuario" maxlength="10" size="10" value="{id_usuario}" name="{id_usuario_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_almc_generalid_producto">{res:id_producto}</label></td> 
+            <td><input id="Contentent_almc_generalid_producto" maxlength="10" size="10" value="{id_producto}" name="{id_producto_Name}"></td>
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_almc_generalcantidad">{res:cantidad}</label></td> 
+            <td><input id="Contentent_almc_generalcantidad" maxlength="10" size="10" value="{cantidad}" name="{cantidad_Name}"></td>
+          </tr>
+ 
+          <!-- BEGIN Panel Hide_Panel -->
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" id="Contentent_almc_generalHide_PanelButton_Insert" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif" value="{res:CCS_Insert}" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" id="Contentent_almc_generalHide_PanelButton_Update" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" id="Contentent_almc_generalHide_PanelButton_Cancel" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+ <!-- END Panel Hide_Panel -->
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ent_almc_general --><br>
+<!-- BEGIN EditableGrid detail_entalmgeneral -->
+<form id="Contentdetail_entalmgeneral" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:detail_entalmgeneral_EditableGridForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="GridBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="RowBlueprint">
+            <td colspan="3">{res:CCS_TotalRecords}&nbsp;{detail_entalmgeneral_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="CaptionBlueprint">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id_EntAlmGeneral --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_entalmgeneralSorter_id_EntAlmGeneral">{res:id_EntAlmGeneral}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id_EntAlmGeneral --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_id_producto --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_entalmgeneralSorter_id_producto">{res:id_producto}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_id_producto --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_cantidad --><span class="Sorter"><a href="{Sort_URL}" id="Contentdetail_entalmgeneralSorter_cantidad">{res:cantidad}</a> 
+            <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_cantidad --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="ErrorBlueprint">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="RowBlueprint">
+            <td><label for="Contentdetail_entalmgeneralid_EntAlmGeneral_{detail_entalmgeneral:rowNumber}" style="display: none;">{res:id_EntAlmGeneral}</label><input id="Contentdetail_entalmgeneralid_EntAlmGeneral_{detail_entalmgeneral:rowNumber}" maxlength="10" size="10" value="{id_EntAlmGeneral}" name="{id_EntAlmGeneral_Name}"></td> 
+            <td><label for="Contentdetail_entalmgeneralid_producto_{detail_entalmgeneral:rowNumber}" style="display: none;">{res:id_producto}</label><input id="Contentdetail_entalmgeneralid_producto_{detail_entalmgeneral:rowNumber}" maxlength="10" size="10" value="{id_producto}" name="{id_producto_Name}"></td> 
+            <td><label for="Contentdetail_entalmgeneralcantidad_{detail_entalmgeneral:rowNumber}" style="display: none;">{res:cantidad}</label><input id="Contentdetail_entalmgeneralcantidad_{detail_entalmgeneral:rowNumber}" maxlength="10" size="10" value="{cantidad}" name="{cantidad_Name}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN Separator -->
+          <tr class="SeparatorBlueprint">
+            <td colspan="3"></td>
+          </tr>
+          <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecordsBlueprint">
+            <td colspan="3">{res:CCS_NoRecords}</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="FooterBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="3">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">{res:CCS_RecPerPage} 
+              <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img alt="{First_URL}" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="image" id="Contentdetail_entalmgeneralButton_Submit" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid detail_entalmgeneral --><br>
+<!-- BEGIN Button Insert --><input type="image" id="ContentInsert" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Insert}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonInsert.gif" value="{res:CCS_Insert}" name="{Button_Name}"><!-- END Button Insert -->
+<!-- BEGIN Button Update --><input type="image" id="ContentUpdate" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Update}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" name="{Button_Name}"><!-- END Button Update -->
+<!-- BEGIN Button Cancel --><input type="image" id="ContentCancel" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="{res:CCS_Cancel}" src="Styles/Blueprint/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" name="{Button_Name}"><!-- END Button Cancel --><!-- END Panel Content -->
+=======
+            <td colspan="6">{Error}</td> 
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
           </tr>
           <!-- END Error -->
           <tr class="ControlsCompact">
@@ -171,9 +526,70 @@ window.onload = bind_events; //Assign bind_events @1-19F7B649
     </td>
   </tr>
 </table>
+<<<<<<< HEAD
 <!-- END Grid ent_alm_general1 --><!-- END Panel Content -->
 <!-- BEGIN Panel Menu -->&nbsp;<a href="{Logout_Src}" id="MenuLogout">{res:CCS_LogoutBtn}</a><!-- END Panel Menu -->
 <!-- BEGIN Panel Sidebar1 -->
 <p>&nbsp;&nbsp;<a href="{Link1_Src}" id="Sidebar1Link1">Volver al menú</a></p>
 <p><a href="{Link2_Src}" id="Sidebar1Link2">Ingresar productos</a></p>
 <!-- END Panel Sidebar1 -->
+=======
+<!-- END Grid ent_alm_general1 --><br>
+<!-- BEGIN Record ent_alm_general2 -->
+<form id="Contentent_alm_general2" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="HeaderBlueprint" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeftBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <td class="thBlueprint"><strong>{res:ent_alm_general_RecordForm}</strong></td> 
+            <td class="HeaderRightBlueprint"><img alt="" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="RecordBlueprint" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="ErrorBlueprint">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general2fecha_proceso">{res:fecha_proceso}</label></td> 
+            <td><input id="Contentent_alm_general2fecha_proceso" name="{fecha_proceso_Name}" maxlength="100" value="{fecha_proceso}" size="8"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general2num_factura">{res:num_factura}</label></td> 
+            <td><input id="Contentent_alm_general2num_factura" name="{num_factura_Name}" maxlength="100" value="{num_factura}" size="50"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general2observaciones">{res:observaciones}</label></td> 
+            <td><input id="Contentent_alm_general2observaciones" name="{observaciones_Name}" maxlength="200" value="{observaciones}" size="50"></td> 
+          </tr>
+ 
+          <tr class="ControlsBlueprint">
+            <td class="thBlueprint"><label for="Contentent_alm_general2activa">{res:activa}</label></td> 
+            <td><input id="Contentent_alm_general2activa" name="{activa_Name}" maxlength="200" value="{activa}" size="50"></td> 
+          </tr>
+ 
+          <tr class="BottomBlueprint">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Contentent_alm_general2Button_Insert" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Contentent_alm_general2Button_Cancel" class="ButtonBlueprint" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record ent_alm_general2 --><br>
+<!-- END Panel Content -->
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+<!-- BEGIN Panel Menu --><!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab

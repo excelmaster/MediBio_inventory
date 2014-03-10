@@ -53,7 +53,11 @@
 							<Features/>
 						</Sorter>
 						<Link id="16" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Detail" wizardCaption="{res:Detail}" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" hrefSource="crud_provee.ccp" wizardThemeItem="GridA" PathID="ContentproveedoresDetail" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_CustomLinkField}','textSourceDB':'','hrefSource':'crud_provee.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id','parameterName':'id'},'length':1,'objectType':'linkParameters'}}" urlType="Relative">
+<<<<<<< HEAD
+<Components/>
+=======
 							<Components/>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 							<Events/>
 							<LinkParameters>
 								<LinkParameter id="17" sourceType="DataField" format="yyyy-mm-dd" name="id" source="id"/>
@@ -86,7 +90,11 @@
 							<Features/>
 						</Label>
 						<Link id="25" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="{res:CCS_CustomLinkField}" hrefSource="crud_provee.ccp" wizardThemeItem="FooterA" PathID="ContentproveedoresAlt_Detail" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_CustomLinkField}','textSourceDB':'','hrefSource':'crud_provee.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id','parameterName':'id'},'length':1,'objectType':'linkParameters'}}" urlType="Relative">
+<<<<<<< HEAD
+<Components/>
+=======
 							<Components/>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 							<Events/>
 							<LinkParameters>
 								<LinkParameter id="26" sourceType="DataField" format="yyyy-mm-dd" name="id" source="id"/>
@@ -124,6 +132,9 @@
 							<Attributes/>
 							<Features/>
 						</Navigator>
+<<<<<<< HEAD
+					</Components>
+=======
 						<Link id="47" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="proveedores_Insert1" hrefSource="crud_provee.ccp" removeParameters="id" wizardThemeItem="FooterA" wizardDefaultValue="{res:CCS_InsertLink}" wizardUseTemplateBlock="False" PathID="Contentproveedoresproveedores_Insert1" wizardTheme="Blueprint" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_InsertLink}','textSourceDB':'','hrefSource':'crud_provee.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
 							<Events/>
 							<LinkParameters/>
@@ -131,6 +142,7 @@
 							<Features/>
 						</Link>
 </Components>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 					<Events>
 						<Event name="BeforeBuildSelect" type="Server">
 							<Actions>
@@ -271,6 +283,9 @@
 			<Features/>
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
+<<<<<<< HEAD
+			<Components/>
+=======
 			<Components>
 <Link id="45" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
 <Components/>
@@ -282,6 +297,7 @@
 <Features/>
 </Link>
 </Components>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 			<Events/>
 			<Attributes/>
 			<Features/>

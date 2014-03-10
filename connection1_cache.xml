@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False">
+=======
+<<<<<<< HEAD
+<LldlCache allCatalogs="False" allSchemes="False" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" />
+=======
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
   <catalog allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
     <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="a4104228_mb" allColumns="False" allPrimaryKeys="False" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
@@ -289,3 +296,4 @@
     </schema>
   </catalog>
 </LldlCache>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
