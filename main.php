@@ -46,7 +46,7 @@ class clsGridmain_redirection { //main_redirection class @6-29DF65D9
     public $RowControls;
 //End Variables
 
-//Class_Initialize Event @6-D281196E
+//Class_Initialize Event @6-4F9E518C
     function clsGridmain_redirection($RelativePath, & $Parent)
     {
         global $FileName;
@@ -72,6 +72,7 @@ class clsGridmain_redirection { //main_redirection class @6-29DF65D9
             $this->Errors->addError("<p>Form: Grid " . $this->ComponentName . "<BR>Error: (CCS06) Invalid page size.</p>");
         $this->PageNumber = intval(CCGetParam($this->ComponentName . "Page", 1));
         if ($this->PageNumber <= 0) $this->PageNumber = 1;
+        $this->Visible = (CCSecurityAccessCheck("1;2;3;4") == "success");
 
         $this->name_sitio = new clsControl(ccsLabel, "name_sitio", "name_sitio", ccsText, "", CCGetRequestParam("name_sitio", ccsGet, NULL), $this);
         $this->img_sitio = new clsControl(ccsImageLink, "img_sitio", "img_sitio", ccsText, "", CCGetRequestParam("img_sitio", ccsGet, NULL), $this);
@@ -90,7 +91,7 @@ class clsGridmain_redirection { //main_redirection class @6-29DF65D9
     }
 //End Initialize Method
 
-//Show Method @6-34579DB6
+//Show Method @6-36E5E51B
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -100,6 +101,7 @@ class clsGridmain_redirection { //main_redirection class @6-29DF65D9
         $this->RowNumber = 0;
 
         $this->DataSource->Parameters["sesGroupID"] = CCGetSession("GroupID", NULL);
+        $this->DataSource->Parameters["expr44"] = 'main';
 
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeSelect", $this);
 
@@ -213,26 +215,30 @@ class clsmain_redirectionDataSource extends clsDBConnection1 {  //main_redirecti
     }
 //End SetOrder Method
 
-//Prepare Method @6-92B6EEFE
+//Prepare Method @6-ACE915F7
     function Prepare()
     {
         global $CCSLocales;
         global $DefaultDateFormat;
         $this->wp = new clsSQLParameters($this->ErrorBlock);
         $this->wp->AddParameter("1", "sesGroupID", ccsInteger, "", "", $this->Parameters["sesGroupID"], "", false);
+        $this->wp->AddParameter("2", "expr44", ccsText, "", "", $this->Parameters["expr44"], "", false);
         $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "grupo", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
-        $this->Where = 
-             $this->wp->Criterion[1];
+        $this->wp->Criterion[2] = $this->wp->Operation(opEqual, "page", $this->wp->GetDBValue("2"), $this->ToSQL($this->wp->GetDBValue("2"), ccsText),false);
+        $this->Where = $this->wp->opAND(
+             false, 
+             $this->wp->Criterion[1], 
+             $this->wp->Criterion[2]);
     }
 //End Prepare Method
 
-//Open Method @6-439B888E
+//Open Method @6-E5A26397
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
         $this->CountSQL = "SELECT COUNT(*)\n\n" .
         "FROM main_redirection";
-        $this->SQL = "SELECT id, grupo, name_sitio, link_sitio, img_sitio \n\n" .
+        $this->SQL = "SELECT id, grupo, name_sitio, link_sitio, img_sitio, page \n\n" .
         "FROM main_redirection {SQL_Where} {SQL_OrderBy}";
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         if ($this->CountSQL) 
@@ -285,6 +291,8 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
+<<<<<<< HEAD
+=======
 //Authenticate User @1-BF95B68F
 CCSecurityRedirect("1;2;3;4", "");
 //End Authenticate User
@@ -293,11 +301,16 @@ CCSecurityRedirect("1;2;3;4", "");
 include_once("./main_events.php");
 //End Include events file
 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
+<<<<<<< HEAD
+//Initialize Objects @1-81A39C34
+=======
 //Initialize Objects @1-81B8EF32
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -315,14 +328,23 @@ $Content->PlaceholderName = "Content";
 $main_redirection = new clsGridmain_redirection("", $MainPage);
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
+<<<<<<< HEAD
+=======
 $Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
 $Logout->Page = "login.php";
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
 $Sidebar1->PlaceholderName = "Sidebar1";
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->main_redirection = & $main_redirection;
 $MainPage->Menu = & $Menu;
+<<<<<<< HEAD
+$MainPage->Sidebar1 = & $Sidebar1;
+$Content->AddComponent("main_redirection", $main_redirection);
+$main_redirection->Initialize();
+
+=======
 $MainPage->Logout = & $Logout;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("main_redirection", $main_redirection);
@@ -333,6 +355,7 @@ $main_redirection->Initialize();
 
 BindEvents();
 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
 if ($Charset) {

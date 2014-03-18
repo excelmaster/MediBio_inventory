@@ -13,6 +13,8 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Designs/medibio_reports/medibio_reports/MasterPage.php");
 //End Master Page implementation
 
+<<<<<<< HEAD
+=======
 //clientes ReportGroup class @8-0FF3315E
 class clsReportGroupclientes {
     public $GroupType;
@@ -903,6 +905,7 @@ class clsRecordclientesSearch { //clientesSearch Class @33-DF0C7DE5
 
 } //End clientesSearch Class @33-FCB6E20C
 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Initialize Page @1-40F4C8AC
 // Variables
 $FileName = "";
@@ -931,17 +934,24 @@ $PathToRoot = "./";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
+<<<<<<< HEAD
+=======
 //Include events file @1-4ED04437
 include_once("./rpt_clientes_events.php");
 //End Include events file
 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
+<<<<<<< HEAD
+//Initialize Objects @1-40D2AF0E
+=======
 //Initialize Objects @1-744A8F53
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
@@ -954,6 +964,13 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
+<<<<<<< HEAD
+$Menu = new clsPanel("Menu", $MainPage);
+$Menu->PlaceholderName = "Menu";
+$MainPage->Head = & $Head;
+$MainPage->Content = & $Content;
+$MainPage->Menu = & $Menu;
+=======
 $Report_Print = new clsControl(ccsLink, "Report_Print", "Report_Print", ccsText, "", CCGetRequestParam("Report_Print", ccsGet, NULL), $MainPage);
 $Report_Print->Page = "rpt_clientes.php";
 $clientes = new clsReportclientes("", $MainPage);
@@ -979,6 +996,7 @@ $Report_Print->Parameters = CCAddParam($Report_Print->Parameters, "ViewMode", "P
 $clientes->Initialize();
 
 BindEvents();
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 
@@ -1005,6 +1023,17 @@ $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
+<<<<<<< HEAD
+//Execute Components @1-910C1783
+$MasterPage->Operations();
+//End Execute Components
+
+//Go to destination page @1-FBA93089
+if($Redirect)
+{
+    $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+    header("Location: " . $Redirect);
+=======
 //Execute Components @1-3F626C66
 $MasterPage->Operations();
 $clientesSearch->Operation();
@@ -1018,6 +1047,7 @@ if($Redirect)
     header("Location: " . $Redirect);
     unset($clientes);
     unset($clientesSearch);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     unset($Tpl);
     exit;
 }
@@ -1037,12 +1067,18 @@ $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
+<<<<<<< HEAD
+//Unload Page @1-88C40CD3
+$CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
+unset($MasterPage);
+=======
 //Unload Page @1-289E8542
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
 unset($clientes);
 unset($clientesSearch);
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 unset($Tpl);
 //End Unload Page
 

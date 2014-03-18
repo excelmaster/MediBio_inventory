@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" masterPage="Designs/medibio_reports/medibio_reports/MasterPage.ccp">
+	<Components>
+		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
+=======
 <Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" masterPage="Designs/medibio_reports/medibio_reports/MasterPage.ccp" needGeneration="0">
 	<Components>
 		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
@@ -28,10 +33,15 @@
 <Section id="10" visible="True" lines="0" name="Report_Header" wizardSectionType="ReportHeader" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components>
 <ReportLabel id="16" fieldSourceType="DBColumn" dataType="Text" html="False" hideDuplicates="False" resetAt="Report" name="Report_TotalRecords" function="Count" wizardTheme="Blueprint" wizardUseTemplateBlock="False" PathID="ContentclientesReport_HeaderReport_TotalRecords" wizardThemeVersion="3.0">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 <Components/>
 <Events/>
 <Attributes/>
 <Features/>
+<<<<<<< HEAD
+</Panel>
+<Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
+=======
 </ReportLabel>
 </Components>
 <Events/>
@@ -41,10 +51,15 @@
 <Section id="11" visible="True" lines="1" name="Page_Header" wizardSectionType="PageHeader" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components>
 <Sorter id="19" visible="True" name="Sorter_id" column="id" wizardCaption="{res:id}" wizardTheme="Blueprint" wizardSortingType="SimpleDir" wizardControl="id" wizardThemeVersion="3.0">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 <Components/>
 <Events/>
 <Attributes/>
 <Features/>
+<<<<<<< HEAD
+</Panel>
+<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
+=======
 </Sorter>
 <Sorter id="21" visible="True" name="Sorter_priapellido" column="priapellido" wizardCaption="{res:priapellido}" wizardTheme="Blueprint" wizardSortingType="SimpleDir" wizardControl="priapellido" wizardThemeVersion="3.0">
 <Components/>
@@ -139,12 +154,23 @@
 <Section id="13" visible="True" lines="0" name="Report_Footer" wizardSectionType="ReportFooter" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 <Components>
 <Panel id="14" visible="True" name="NoRecords" wizardNoRecords="{res:CCS_NoRecords}" wizardTheme="Blueprint" wizardThemeVersion="3.0">
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 <Components/>
 <Events/>
 <Attributes/>
 <Features/>
 </Panel>
 </Components>
+<<<<<<< HEAD
+	<CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="rpt_clientes.php" forShow="True" url="rpt_clientes.php" comment="//" codePage="windows-1252"/>
+</CodeFiles>
+	<SecurityGroups/>
+<CachingParameters/>
+<Attributes/>
+<Features/>
+<Events/>
+=======
 <Events/>
 <Attributes/>
 <Features/>
@@ -314,4 +340,5 @@
 	<Attributes/>
 	<Features/>
 	<Events/>
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 </Page>

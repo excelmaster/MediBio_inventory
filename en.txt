@@ -1,31 +1,67 @@
+<<<<<<< HEAD
 activo=Activo
+cantidad_producto=Cantidad
+categoria_descrip=Categoria
+<<<<<<< HEAD
+categoria_producto_id=Categoria
+=======
+activa=Activa
+activo=Activo
+cantidad=Cantidad
 cantidad_producto=Cantidad
 categoria_descrip=Categoria
 categoria_producto_id=Categoria
 categoria_productos_GridForm=categoria_productos_GridForm
 categoria_productos_RecordForm=Agregar / Editar Categoria Productos 
+categoria_productosunidadesmedidaproductos_ReportForm= Categoria Productos, Unidadesmedida, Productos 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_AdvSearchAllWords=Todas
 CCS_AdvSearchAnyOfWords=Alguna
 CCS_AdvSearchConditionsCaption=filtrar por
 CCS_AdvSearchExactPhrase=Exacto
+<<<<<<< HEAD
+=======
+categoria_producto_id=Categoria Producto Id
+categoria_productosunidadesmedidaproductos_ReportForm= Categoria Productos, Unidadesmedida, Productos 
+CCS_AdvSearchAllWords=todas las frases
+CCS_AdvSearchAnyOfWords=Cualquier frase
+CCS_AdvSearchConditionsCaption=buscar por
+CCS_AdvSearchExactPhrase=Frase exacta
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_ASC=Ascending
 CCS_Bytes=bytes
 CCS_CalendarFormPrefix=
 CCS_CalendarFormSuffix=
-CCS_Cancel=Cancel
+CCS_Cancel=Cancelar
 CCS_CannotSeek=Cannot find specified record.
 CCS_Captcha_ControlValidation=The value does not match validation code.
+<<<<<<< HEAD
+<<<<<<< HEAD
 CCS_Clear=Borrar filtro
 CCS_CustomLinkField=Detalle
+=======
+CCS_Clear=Mostrar todo
+CCS_CustomLinkField=Detail
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+CCS_Clear=Borrar filtro
+CCS_CustomLinkField=Detalle
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_CustomOperationError_MissingParameters=One or more parameters missing to perform the Update/Delete. The application is misconfigured.
 CCS_DatabaseCommandError=Database command error.
 CCS_DatePickerNav61=Date Picker component is not compatible with Netscape 6.1
-CCS_Delete=Delete
-CCS_DeleteConfirmation=Delete record?
+CCS_Delete=Borrar
+CCS_DeleteConfirmation=Borrar el registro?
 CCS_DESC=Descending
-CCS_DirectoryFormPrefix=List of
+CCS_DirectoryFormPrefix=Listado de
 CCS_DirectoryFormSuffix=
+<<<<<<< HEAD
+CCS_EditableGridFormPrefix=Ingresar/Editar
+=======
 CCS_EditableGridFormPrefix=Agregar / Editar
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_EditableGridFormSuffix=
 CCS_FileNotFound=The file {0} specified in {1} was not found.
 CCS_FilesFolderNotFound=Unable to upload the file specified in {0} - upload folder doesn't exist.
@@ -43,8 +79,18 @@ CCS_IncorrectFormat=The value in field {0} is not valid. Use the following forma
 CCS_IncorrectPhoneFormat=Invalid phone number format in field {0}.
 CCS_IncorrectValue=The value in field {0} is not valid.
 CCS_IncorrectZipFormat=Invalid zip code format in field {0}.
+<<<<<<< HEAD
+<<<<<<< HEAD
+CCS_Insert=Add
+CCS_InsertLink=Nuevo registro
+=======
+CCS_Insert=Insertar
+CCS_InsertLink=Insertar nuevo
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
 CCS_Insert=Insertar
 CCS_InsertLink=Nuevo registro
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_InsufficientPermissions=Insufficient filesystem permissions to upload the file specified in {0}.
 CCS_LanguageID=en
 CCS_LargeFile=The file size in field {0} is too large.
@@ -80,34 +126,65 @@ CCS_PrevMonthHint=Prev Month
 CCS_PrevQuarterHint=Prev Quarter
 CCS_PrevThreeMonthsHint=Prev Three Months
 CCS_PrevYearHint=Prev Year
+<<<<<<< HEAD
+CCS_RecordFormPrefix=Ingresar/Editar
+=======
 CCS_RecordFormPrefix=Agregar / Editar
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_RecordFormPrefix2=View
 CCS_RecordFormSuffix=
 CCS_RecPerPage=Registros por pagina
 CCS_RememberLogin=Remember my Login and Password
 CCS_ReportFormPrefix=
 CCS_ReportFormSuffix=
-CCS_ReportPageNumber1=Page
-CCS_ReportPageNumber2=of
-CCS_ReportPrintLink=Printable version
+<<<<<<< HEAD
+CCS_ReportPageNumber1=Pagina
+CCS_ReportPageNumber2=de
+CCS_ReportPrintLink=Version Imprimible
+=======
+CCS_ReportPageNumber1=Página
+CCS_ReportPageNumber2=De
+CCS_ReportPrintLink=Edición para imprimir
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_ReportSubTotal=Sub Total
-CCS_ReportTotal=Grand Total
+CCS_ReportTotal=Gran Total
 CCS_RequiredField=The value in field {0} is required.
 CCS_RequiredFieldUpload=The file attachment in field {0} is required.
 CCS_RequiredSMTPserver_or_Dir=Please specify the SMTP server or Pickup directory for the CDO.Message email component.
 CCS_Search=Buscar
 CCS_SearchFormPrefix=Buscar
 CCS_SearchFormSuffix=
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_SelectField=Escoja un campo
 CCS_SelectOrder=Escoja el orden
 CCS_SelectValue=Seleccione
 CCS_SortBy=Agrupar por
+<<<<<<< HEAD
+=======
+CCS_SelectField=Select Field
+CCS_SelectOrder=Select Order
+CCS_SelectValue=Escoja un valor
+CCS_SortBy=Sort by
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_SortDir=Sort direction
 CCS_SubmitConfirmation=Submit records?
 CCS_TempFolderNotFound=Unable to upload the file specified in {0} - temporary upload folder doesn't exist.
 CCS_TempInsufficientPermissions=Insufficient filesystem permissions to upload the file specified in {0} into temporary folder.
 CCS_Today=Today
+<<<<<<< HEAD
+<<<<<<< HEAD
 CCS_TotalRecords=Total de registros
+=======
+CCS_TotalRecords=Total Registros:
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
+CCS_TotalRecords=Total de registros
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 CCS_UniqueValue=The value in field {0} is already in database.
 CCS_Update=Enviar
 CCS_UploadComponentError=Error occurred while initializing the upload component.
@@ -116,19 +193,34 @@ CCS_UploadingError=An error occured when uploading file specified in {0}. Error 
 CCS_UploadingTempFolderError=An error occured when uploading file specified in {0} into temporary folder. Error description: {1}.
 CCS_WrongType=The file type specified in field {0} is not allowed.
 celular_1=Celular 1
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 celular_2=Celular 2
 celular_3=Celular 3
 celular_cliente_1=Celular 1
 celular_cliente_2=Celular 2
 celular_cliente_3=Celular 3
 clientes_RecordForm=Ingreso / Edicion Clientes 
+<<<<<<< HEAD
+=======
 clientes_ReportForm= Clientes 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 clientestipo_doc_GridForm=Lista de clientes
 demasnombres=Segundo nombre(s)
 descripcion_producto=Descripcion
 descrp_unidad=Unidad
 Detail=Detalle
+<<<<<<< HEAD
+detail_ent_alm_general_EditableGridForm=detalle
+=======
+<<<<<<< HEAD
+=======
+detail_ent_alm_general_EditableGridForm=Agregar / Editar Detail Ent Alm General 
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
 detail_entalmgeneral_EditableGridForm=Add/Edit Detail Entalmgeneral 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 direccion_1=Direccion 1
 direccion_2=Direccion 2
 direccion_3=Direccion 3
@@ -136,37 +228,85 @@ direccion_residencia=Direccion Residencia
 email_cliente_1=Email 1
 email_cliente_2=Email 2
 email_cliente_3=Email 3
-ent_almc_general_RecordForm=ent_almc_general_RecordForm
+<<<<<<< HEAD
+ent_alm_general_EditableGridForm=Agregar / Editar Ent Alm General 
+ent_alm_general_GridForm=Lista de entradas de almacen
+ent_alm_general_RecordForm=Agregar / Editar Entrada de almacen
+ent_almc_general_RecordForm=Edición de entradas de almacen
+farmacias_GridForm=List of Farmacias 
+farmacias_RecordForm=Agregar / Editar Farmacias 
+=======
+<<<<<<< HEAD
 fecha_nacimiento=Fecha Nacimiento
+=======
+ent_alm_general_GridForm=ent_alm_general_GridForm
+ent_alm_general_RecordForm=Agregar / Editar Ent Alm General 
+ent_almc_general_RecordForm=ent_almc_general_RecordForm
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab
+fecha_nacimiento=Fecha Nacimiento
+fecha_proceso=Fecha Proceso
+fechareg=Fechareg
 group_init_GridForm=List of Group Init 
 group_init_RecordForm=Agregar / Editar Group Init 
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 id=Id
+id_ent_alm_general=Id Ent Alm General
 id_producto=Id Producto
 img_producto_1=Imagen 1
 img_producto_2=Imagen 2
 img_producto_3=Imagen 3
+<<<<<<< HEAD
 lugar_nacimiento=Lugar Nacimiento
 lugar_residencia=Lugar Residencia
 max_stock=Stock maximo
 min_stock=Stock minimo
 name_producto=Nombre
+=======
+img_sitio=Vinculo
+lugar_nacimiento=Lugar Nacimiento
+lugar_residencia=Lugar Residencia
+main_redirection_GridForm=Menu de opciones
+max_stock=Stock maximo
+min_stock=Stock minimo
+name_producto=Nombre
+name_sitio=Opcion
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 nit=Nit
 nivel_pedido=Nivel Pedido
 nombre=Nombre
 num_documento=Numero de Documento
-observa_categdescrip=Observa Categdescrip
-obsv_unidad=Obsv Unidad
+<<<<<<< HEAD
 priapellido=Primer apellido
 prinombre=Primer nombre
+proveedores_GridForm=proveedores_GridForm
+proveedores_RecordForm=Add/Edit Proveedores 
+proveedores_ReportForm= Proveedores 
+razon_social=Razon Social
+=======
+num_factura=Num Factura
+observa_categdescrip=Observa Categdescrip
+observacion=Observacion
+observaciones=Observaciones
+obsv_unidad=Obsv Unidad
+Orden_compra=Orden Compra
+priapellido=Primer apellido
+prinombre=Primer nombre
+productoscategoria_productosunidadesmedida_ReportForm= Productos, Categoria Productos, Unidadesmedida 
+productosunidadesmedidacategoria_productos_ReportForm= Productos, Unidadesmedida, Categoria Productos 
 proveedores_GridForm=proveedores_GridForm
 proveedores_RecordForm=Agregar / Editar Proveedores 
 proveedores_ReportForm= Proveedores 
 razon_social=Razon Social
+Report_Row_Number=Fila del reporte
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 representante_legal=Representante Legal
 Search_Form=Busqueda
 segapellido=Segundo apellido
 slogan=Slogan
+<<<<<<< HEAD
+=======
 tag_categdescrip=Tag Categdescrip
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 telfijo_1=Telfijo 1
 telfijo_2=Telfijo 2
 telfijo_3=Telfijo 3
@@ -177,5 +317,62 @@ Text1=<STRONG>Busqueda </STRONG>
 Text2=Volver al panel principal
 tipo_documento=Tipo Documento
 unidad_medida_id=Unidad de Medida
+<<<<<<< HEAD
+ent_almc_general_RecordForm=ent_almc_general_RecordForm
+detail_entalmgeneral_EditableGridForm=Add/Edit Detail Entalmgeneral 
+=======
+celular_cliente_1=Celular Cliente 1
+celular_cliente_2=Celular Cliente 2
+celular_cliente_3=Celular Cliente 3
+clientes_EditableGridForm=Ingresar/Editar Clientes 
+clientes_GridForm=clientes_GridForm
+clientes_RecordForm=Ingresar/Editar Clientes 
+company_EditableGridForm=Ingresar/Editar Company 
+demasnombres=Demasnombres
+descripcion_producto=Descripcion
+descrp_unidad=Unidad de medida
+Detail=Detail
+direccion_1=Direccion 1
+direccion_2=Direccion 2
+direccion_residencia=Direccion Residencia
+email_cliente_1=Email Cliente 1
+email_cliente_2=Email Cliente 2
+email_cliente_3=Email Cliente 3
+fecha_nacimiento=Fecha Nacimiento
+id=Id
+id_producto=Id Producto
+img_producto_1=Img Producto 1
+img_producto_2=Img Producto 2
+img_producto_3=Img Producto 3
+lugar_nacimiento=Lugar Nacimiento
+lugar_residencia=Lugar Residencia
+max_stock=Max Stock
+min_stock=Min Stock
+name_producto=Producto
+nit=Nit
+nivel_pedido=Nivel Pedido
+nombre=Nombre
+num_documento=Num Documento
+priapellido=Priapellido
+prinombre=Prinombre
+Report_Row_Number=Report Row Number
+Search_Form=Busqueda
+segapellido=Segapellido
+telfijo_1=Telfijo 1
+telfijo_cliente_1=Telfijo Cliente 1
+telfijo_cliente_2=Telfijo Cliente 2
+telfijo_cliente_3=Telfijo Cliente 3
+Text1=<STRONG>Busqueda </STRONG>
+Text2=Volver al panel principal
+tipo_documento=Tipo Documento
+unidad_medida_id=Unidad Medida Id
+>>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
+=======
 unidadesmedida_GridForm=Unidades de Medida
 unidadesmedida_RecordForm=Agregar / Editar Unidades de medida 
+<<<<<<< HEAD
+detail_ent_alm_general_GridForm=detail_ent_alm_general_GridForm
+detail_ent_alm_general_RecordForm=Agregar / Editar Detail Ent Alm General 
+=======
+>>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
+>>>>>>> 0d9d85a9b3ba8ba0f7f763b55455aa47c1a421ab

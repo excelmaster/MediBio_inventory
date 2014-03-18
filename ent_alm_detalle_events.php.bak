@@ -1,0 +1,254 @@
+<?php
+//BindEvents Method @1-9D22CBA4
+function BindEvents()
+{
+    global $ent_alm_general;
+    global $ent_alm_generalSearch;
+    global $detail_ent_alm_general;
+    $ent_alm_general->ent_alm_general_TotalRecords->CCSEvents["BeforeShow"] = "ent_alm_general_ent_alm_general_TotalRecords_BeforeShow";
+    $ent_alm_general->CCSEvents["BeforeShowRow"] = "ent_alm_general_BeforeShowRow";
+    $ent_alm_general->ds->CCSEvents["BeforeBuildSelect"] = "ent_alm_general_ds_BeforeBuildSelect";
+    $ent_alm_generalSearch->ds->CCSEvents["BeforeExecuteInsert"] = "ent_alm_generalSearch_ds_BeforeExecuteInsert";
+    $ent_alm_generalSearch->ds->CCSEvents["AfterExecuteInsert"] = "ent_alm_generalSearch_ds_AfterExecuteInsert";
+    $ent_alm_generalSearch->ds->CCSEvents["AfterExecuteUpdate"] = "ent_alm_generalSearch_ds_AfterExecuteUpdate";
+    $detail_ent_alm_general->detail_ent_alm_general_TotalRecords->CCSEvents["BeforeShow"] = "detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow";
+    $detail_ent_alm_general->CCSEvents["BeforeShow"] = "detail_ent_alm_general_BeforeShow";
+}
+//End BindEvents Method
+
+//ent_alm_general_ent_alm_general_TotalRecords_BeforeShow @8-EB1DEAF8
+function ent_alm_general_ent_alm_general_TotalRecords_BeforeShow(& $sender)
+{
+    $ent_alm_general_ent_alm_general_TotalRecords_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_general; //Compatibility
+//End ent_alm_general_ent_alm_general_TotalRecords_BeforeShow
+
+//Retrieve number of records @9-ABE656B4
+    $Component->SetValue($Container->DataSource->RecordsCount);
+//End Retrieve number of records
+
+//Close ent_alm_general_ent_alm_general_TotalRecords_BeforeShow @8-0A879B5F
+    return $ent_alm_general_ent_alm_general_TotalRecords_BeforeShow;
+}
+//End Close ent_alm_general_ent_alm_general_TotalRecords_BeforeShow
+
+//ent_alm_general_BeforeShowRow @6-A9FD7344
+function ent_alm_general_BeforeShowRow(& $sender)
+{
+    $ent_alm_general_BeforeShowRow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_general; //Compatibility
+//End ent_alm_general_BeforeShowRow
+
+//Set Row Style @20-7E398AE2
+    $styles = array("RowBlueprint_1", "AltRowBlueprint_1");
+    if (count($styles)) {
+        $Style = $styles[($Component->RowNumber - 1) % count($styles)];
+        if (strlen($Style) && !strpos($Style, "="))
+            $Style = (strpos($Style, ":") ? 'style="' : 'class="'). $Style . '"';
+        $Component->Attributes->SetValue("rowStyle", $Style);
+    }
+//End Set Row Style
+
+//Close ent_alm_general_BeforeShowRow @6-5C506782
+    return $ent_alm_general_BeforeShowRow;
+}
+//End Close ent_alm_general_BeforeShowRow
+
+//ent_alm_general_ds_BeforeBuildSelect @6-D7C57939
+function ent_alm_general_ds_BeforeBuildSelect(& $sender)
+{
+    $ent_alm_general_ds_BeforeBuildSelect = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_general; //Compatibility
+//End ent_alm_general_ds_BeforeBuildSelect
+
+//Advanced Search @38-0497F4F7
+    global $ent_alm_generalSearch;
+    $s_keyword = CCGetParam("s_keyword", "");
+    $searchConditions = CCGetParam("searchConditions", "");
+    if (!in_array($searchConditions, array("1", "2", "3"))) $searchConditions = 1;
+    $keywords = explode(" ", trim($s_keyword));
+    if (strlen($s_keyword)) {
+        $f_id = "";
+        $f_fecha_proceso = "";
+        $f_num_factura = "";
+        $f_observaciones = "";
+        $f_activa = "";
+        $f_fechareg = "";
+        // Any of words
+        if ($searchConditions == "1") {
+            foreach ($keywords as $keyword) {
+                $keyword = str_replace("'", "''", trim($keyword));
+                if (strlen($f_id)) $f_id .= " OR ";
+                if (strlen($f_fecha_proceso)) $f_fecha_proceso .= " OR ";
+                if (strlen($f_num_factura)) $f_num_factura .= " OR ";
+                if (strlen($f_observaciones)) $f_observaciones .= " OR ";
+                if (strlen($f_activa)) $f_activa .= " OR ";
+                if (strlen($f_fechareg)) $f_fechareg .= " OR ";
+                $f_id .= "id LIKE '%" . $keyword . "%'";
+                $f_fecha_proceso .= "fecha_proceso LIKE '%" . $keyword . "%'";
+                $f_num_factura .= "num_factura LIKE '%" . $keyword . "%'";
+                $f_observaciones .= "observaciones LIKE '%" . $keyword . "%'";
+                $f_activa .= "activa LIKE '%" . $keyword . "%'";
+                $f_fechareg .= "fechareg LIKE '%" . $keyword . "%'";
+            }
+        // All words
+        } else if ($searchConditions == "2") {
+            foreach ($keywords as $keyword) {
+                $keyword = str_replace("'", "''", trim($keyword));
+                if (strlen($f_id)) $f_id .= " AND ";
+                if (strlen($f_fecha_proceso)) $f_fecha_proceso .= " AND ";
+                if (strlen($f_num_factura)) $f_num_factura .= " AND ";
+                if (strlen($f_observaciones)) $f_observaciones .= " AND ";
+                if (strlen($f_activa)) $f_activa .= " AND ";
+                if (strlen($f_fechareg)) $f_fechareg .= " AND ";
+                $f_id .= "id LIKE '%" . $keyword . "%'";
+                $f_fecha_proceso .= "fecha_proceso LIKE '%" . $keyword . "%'";
+                $f_num_factura .= "num_factura LIKE '%" . $keyword . "%'";
+                $f_observaciones .= "observaciones LIKE '%" . $keyword . "%'";
+                $f_activa .= "activa LIKE '%" . $keyword . "%'";
+                $f_fechareg .= "fechareg LIKE '%" . $keyword . "%'";
+            }
+        // Exact Phrase
+        } else if ($searchConditions == "3") {
+            $keyword = str_replace("'", "''", $s_keyword);
+            $f_id = "id LIKE '%" . $keyword . "%'";
+            $f_fecha_proceso = "fecha_proceso LIKE '%" . $keyword . "%'";
+            $f_num_factura = "num_factura LIKE '%" . $keyword . "%'";
+            $f_observaciones = "observaciones LIKE '%" . $keyword . "%'";
+            $f_activa = "activa LIKE '%" . $keyword . "%'";
+            $f_fechareg = "fechareg LIKE '%" . $keyword . "%'";
+        }
+        if (strlen($Container->DataSource->Where) > 0 ) $Container->DataSource->Where .= " AND ";
+        $Container->DataSource->Where .= "((" . $f_id . ")";
+        if (strlen($f_fecha_proceso))
+            $Container->DataSource->Where .= " OR (". $f_fecha_proceso .")";
+        if (strlen($f_num_factura))
+            $Container->DataSource->Where .= " OR (". $f_num_factura .")";
+        if (strlen($f_observaciones))
+            $Container->DataSource->Where .= " OR (". $f_observaciones .")";
+        if (strlen($f_activa))
+            $Container->DataSource->Where .= " OR (". $f_activa .")";
+        if (strlen($f_fechareg))
+            $Container->DataSource->Where .= " OR (". $f_fechareg .")";
+        $Container->DataSource->Where .= " ) ";
+    } else {
+        $ent_alm_generalSearch->s_keyword->SetValue("");
+    }
+//End Advanced Search
+
+//Close ent_alm_general_ds_BeforeBuildSelect @6-DE21E44D
+    return $ent_alm_general_ds_BeforeBuildSelect;
+}
+//End Close ent_alm_general_ds_BeforeBuildSelect
+
+//ent_alm_generalSearch_ds_BeforeExecuteInsert @32-7AB357FC
+function ent_alm_generalSearch_ds_BeforeExecuteInsert(& $sender)
+{
+    $ent_alm_generalSearch_ds_BeforeExecuteInsert = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_generalSearch; //Compatibility
+//End ent_alm_generalSearch_ds_BeforeExecuteInsert
+
+//Master Detail Validate @60-945FDB2E
+    global $detail_ent_alm_general, $CCSLocales;
+    if (!CCInitializeDetails($detail_ent_alm_general, "EditableGrid")) {
+        $Component->DataSource->Errors->addError($CCSLocales->GetText("CCS_MasterDetailError_DetailsValidateFail"));
+    }
+//End Master Detail Validate
+
+//Close ent_alm_generalSearch_ds_BeforeExecuteInsert @32-FE4ABB9F
+    return $ent_alm_generalSearch_ds_BeforeExecuteInsert;
+}
+//End Close ent_alm_generalSearch_ds_BeforeExecuteInsert
+
+//ent_alm_generalSearch_ds_AfterExecuteInsert @32-36D8F8E2
+function ent_alm_generalSearch_ds_AfterExecuteInsert(& $sender)
+{
+    $ent_alm_generalSearch_ds_AfterExecuteInsert = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_generalSearch; //Compatibility
+//End ent_alm_generalSearch_ds_AfterExecuteInsert
+
+//Master Detail Insert @61-133901BC
+    global $detail_ent_alm_general;
+    if ($ent_alm_generalSearch->DataSource->Errors->Count() == 0) {
+        $ent_alm_generalSearch->DataSource->query("SELECT MAX() FROM ");
+        $ent_alm_generalSearch->DataSource->next_record();
+        $last_id = $ent_alm_generalSearch->DataSource->f(0);
+        $_GET["id_ent_alm_general"] = $last_id;
+    }
+//End Master Detail Insert
+
+//Close ent_alm_generalSearch_ds_AfterExecuteInsert @32-CB9D4744
+    return $ent_alm_generalSearch_ds_AfterExecuteInsert;
+}
+//End Close ent_alm_generalSearch_ds_AfterExecuteInsert
+
+//ent_alm_generalSearch_ds_AfterExecuteUpdate @32-0FB527EF
+function ent_alm_generalSearch_ds_AfterExecuteUpdate(& $sender)
+{
+    $ent_alm_generalSearch_ds_AfterExecuteUpdate = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_generalSearch; //Compatibility
+//End ent_alm_generalSearch_ds_AfterExecuteUpdate
+
+//Master Detail Update @62-C1A4D5B1
+    global $detail_ent_alm_general;
+    CCInitializeDetails($detail_ent_alm_general, "EditableGrid");
+//End Master Detail Update
+
+//Close ent_alm_generalSearch_ds_AfterExecuteUpdate @32-04B486CB
+    return $ent_alm_generalSearch_ds_AfterExecuteUpdate;
+}
+//End Close ent_alm_generalSearch_ds_AfterExecuteUpdate
+
+//detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow @42-42372971
+function detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow(& $sender)
+{
+    $detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $detail_ent_alm_general; //Compatibility
+//End detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow
+
+//Retrieve number of records @43-ABE656B4
+    $Component->SetValue($Container->DataSource->RecordsCount);
+//End Retrieve number of records
+
+//Close detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow @42-42533231
+    return $detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow;
+}
+//End Close detail_ent_alm_general_detail_ent_alm_general_TotalRecords_BeforeShow
+
+//detail_ent_alm_general_BeforeShow @39-76F9E887
+function detail_ent_alm_general_BeforeShow(& $sender)
+{
+    $detail_ent_alm_general_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $detail_ent_alm_general; //Compatibility
+//End detail_ent_alm_general_BeforeShow
+
+//Hide-Show Component @54-16FE48D1
+    $Parameter1 = 1;
+    $Parameter2 = 1;
+    if (0 == CCCompareValues($Parameter1, $Parameter2, ccsInteger))
+        $Component->Button_Submit->Visible = false;
+//End Hide-Show Component
+
+//Close detail_ent_alm_general_BeforeShow @39-DDAFF451
+    return $detail_ent_alm_general_BeforeShow;
+}
+//End Close detail_ent_alm_general_BeforeShow
+
+
+?>
