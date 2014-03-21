@@ -1,7 +1,7 @@
 <?php
-//Include Common Files @1-2795F8C3
-define("RelativePath", ".");
-define("PathToCurrentPage", "/");
+//Include Common Files @1-ABF3DA37
+define("RelativePath", "..");
+define("PathToCurrentPage", "/invt_alternativo/");
 define("FileName", "rpt_provee.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
@@ -9,8 +9,8 @@ include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-//Master Page implementation @1-E714A8AA
-include_once(RelativePath . "/Designs/medibio_reports/medibio_reports/MasterPage.php");
+//Master Page implementation @1-1DBC85D1
+include_once(RelativePath . "/invt_alternativo/Designs/medibio_reports/medibio_reports/MasterPage.php");
 //End Master Page implementation
 
 //proveedores ReportGroup class @8-5A44EF1A
@@ -907,7 +907,7 @@ class clsRecordproveedoresSearch { //proveedoresSearch Class @34-3F993C90
 
 } //End proveedoresSearch Class @34-FCB6E20C
 
-//Initialize Page @1-708BB94F
+//Initialize Page @1-55BB4685
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -931,7 +931,7 @@ $TemplateFileName = "rpt_provee.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
-$PathToRoot = "./";
+$PathToRoot = "../";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -943,7 +943,7 @@ include_once("./rpt_provee_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-95787FFD
+//Initialize Objects @1-40BBE5E0
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -951,7 +951,7 @@ $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$MasterPage = new clsMasterPage("/Designs/medibio_reports/medibio_reports/", "MasterPage", $MainPage);
+$MasterPage = new clsMasterPage("/invt_alternativo/Designs/medibio_reports/medibio_reports/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
@@ -993,7 +993,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-554B8835
+//Initialize HTML Template @1-21B65862
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -1005,7 +1005,7 @@ $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
-$Attributes->SetValue("pathToRoot", "");
+$Attributes->SetValue("pathToRoot", "../");
 $Attributes->Show();
 //End Initialize HTML Template
 

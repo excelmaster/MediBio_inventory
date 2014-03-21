@@ -90,7 +90,7 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     }
 //End Initialize Method
 
-//Show Method @7-1C9EFCB2
+//Show Method @7-E8C9AF04
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -99,7 +99,6 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
 
         $this->RowNumber = 0;
 
-        $this->DataSource->Parameters["sesgroupID"] = CCGetSession("groupID", NULL);
 
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeSelect", $this);
 
@@ -213,26 +212,21 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
     }
 //End SetOrder Method
 
-//Prepare Method @7-38849A92
+//Prepare Method @7-14D6CD9D
     function Prepare()
     {
         global $CCSLocales;
         global $DefaultDateFormat;
-        $this->wp = new clsSQLParameters($this->ErrorBlock);
-        $this->wp->AddParameter("1", "sesgroupID", ccsInteger, "", "", $this->Parameters["sesgroupID"], "", false);
-        $this->wp->Criterion[1] = $this->wp->Operation(opEqual, "grupo", $this->wp->GetDBValue("1"), $this->ToSQL($this->wp->GetDBValue("1"), ccsInteger),false);
-        $this->Where = 
-             $this->wp->Criterion[1];
     }
 //End Prepare Method
 
-//Open Method @7-169A97C8
+//Open Method @7-A21EB5B5
     function Open()
     {
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
         $this->CountSQL = "SELECT COUNT(*)\n\n" .
         "FROM admin_redir";
-        $this->SQL = "SELECT *, id \n\n" .
+        $this->SQL = "SELECT * \n\n" .
         "FROM admin_redir {SQL_Where} {SQL_OrderBy}";
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         if ($this->CountSQL) 
@@ -291,11 +285,7 @@ CCSecurityRedirect("1", "");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-<<<<<<< HEAD
-//Initialize Objects @1-9DF023A0
-=======
 //Initialize Objects @1-D35E23FC
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -310,10 +300,6 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
-<<<<<<< HEAD
-$Sidebar1 = new clsPanel("Sidebar1", $MainPage);
-$Sidebar1->PlaceholderName = "Sidebar1";
-=======
 $Logout = new clsControl(ccsLink, "Logout", "Logout", ccsText, "", CCGetRequestParam("Logout", ccsGet, NULL), $MainPage);
 $Logout->Page = "login.php";
 $Sidebar1 = new clsPanel("Sidebar1", $MainPage);
@@ -321,18 +307,11 @@ $Sidebar1->PlaceholderName = "Sidebar1";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "main.php";
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
 $admin_redir = new clsGridadmin_redir("", $MainPage);
 $MainPage->Head = & $Head;
 $MainPage->Menu = & $Menu;
-<<<<<<< HEAD
-$MainPage->Sidebar1 = & $Sidebar1;
-$MainPage->Content = & $Content;
-$MainPage->admin_redir = & $admin_redir;
-$Content->AddComponent("admin_redir", $admin_redir);
-=======
 $MainPage->Logout = & $Logout;
 $MainPage->Sidebar1 = & $Sidebar1;
 $MainPage->Link1 = & $Link1;
@@ -343,7 +322,6 @@ $Sidebar1->AddComponent("Link1", $Link1);
 $Content->AddComponent("admin_redir", $admin_redir);
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $admin_redir->Initialize();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);

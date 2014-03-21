@@ -1,4 +1,4 @@
-<Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" useDesign="True" masterPage="Designs/medibio_reports/medibio_reports/MasterPage.ccp" needGeneration="0">
+<Page id="1" templateExtension="html" relativePath=".." fullRelativePath=".\invt_alternativo" secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" useDesign="True" masterPage="Designs/medibio_reports/medibio_reports/MasterPage.ccp" needGeneration="0">
 	<Components>
 		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
 			<Components/>

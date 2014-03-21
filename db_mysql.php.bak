@@ -424,7 +424,7 @@ class DB_MySQL {
     if ($this->Connected) {
       return mysql_real_escape_string($value, $this->Link_ID);
     } elseif (function_exists("mysql_escape_string")) {
-      return mysql_escape_string($value);
+      return mysql_real_escape_string($value);
     } else {
       return addslashes($value);
     }    

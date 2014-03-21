@@ -1,17 +1,13 @@
 <?php
-//Include Common Files @1-331F52C7
-define("RelativePath", ".");
-define("PathToCurrentPage", "/");
+//Include Common Files @1-82B10B0A
+define("RelativePath", "..");
+define("PathToCurrentPage", "/invt_alternativo/");
 define("FileName", "Clientes_mant.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
 include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
-
-//Master Page implementation @1-8E4799B9
-include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
-//End Master Page implementation
 
 class clsGridclientes { //clientes class @68-9CC2092A
 
@@ -652,7 +648,7 @@ class clsRecordclientesSearch { //clientesSearch Class @110-DF0C7DE5
 
 
 
-//Initialize Page @1-1DBA1798
+//Initialize Page @1-FE0AF66C
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -661,13 +657,10 @@ $TemplateFileName = "";
 $BlockToParse = "";
 $ComponentName = "";
 $Attributes = "";
-$PathToCurrentMasterPage = "";
-$TemplatePathValue = "";
 
 // Events;
 $CCSEvents = "";
 $CCSEventResult = "";
-$MasterPage = null;
 $TemplateSource = "";
 
 $FileName = FileName;
@@ -676,7 +669,7 @@ $TemplateFileName = "Clientes_mant.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
-$PathToRoot = "./";
+$PathToRoot = "../";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -688,7 +681,7 @@ include_once("./Clientes_mant_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-D8394736
+//Initialize Objects @1-17EAFC27
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -696,43 +689,23 @@ $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$MasterPage = new clsMasterPage("/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
-$MasterPage->Attributes = $Attributes;
-$MasterPage->Initialize();
-$Head = new clsPanel("Head", $MainPage);
-$Head->PlaceholderName = "Head";
-$Content = new clsPanel("Content", $MainPage);
-$Content->PlaceholderName = "Content";
 $clientes = new clsGridclientes("", $MainPage);
 $clientesSearch = new clsRecordclientesSearch("", $MainPage);
 $Panel1 = new clsPanel("Panel1", $MainPage);
 $Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
-$Menu = new clsPanel("Menu", $MainPage);
-$Menu->PlaceholderName = "Menu";
-$Sidebar1 = new clsPanel("Sidebar1", $MainPage);
-$Sidebar1->PlaceholderName = "Sidebar1";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "admin.php";
 $Link2 = new clsControl(ccsLink, "Link2", "Link2", ccsText, "", CCGetRequestParam("Link2", ccsGet, NULL), $MainPage);
 $Link2->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link2->Page = "rpt_clientes.php";
-$MainPage->Head = & $Head;
-$MainPage->Content = & $Content;
 $MainPage->clientes = & $clientes;
 $MainPage->clientesSearch = & $clientesSearch;
 $MainPage->Panel1 = & $Panel1;
 $MainPage->Label1 = & $Label1;
-$MainPage->Menu = & $Menu;
-$MainPage->Sidebar1 = & $Sidebar1;
 $MainPage->Link1 = & $Link1;
 $MainPage->Link2 = & $Link2;
-$Content->AddComponent("clientes", $clientes);
-$Content->AddComponent("clientesSearch", $clientesSearch);
-$Content->AddComponent("Panel1", $Panel1);
 $Panel1->AddComponent("Label1", $Label1);
-$Sidebar1->AddComponent("Link1", $Link1);
-$Sidebar1->AddComponent("Link2", $Link2);
 if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
     $Label1->SetText("MANTENIMIENTO DE CLIENTES");
 $clientes->Initialize();
@@ -748,7 +721,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-554B8835
+//Initialize HTML Template @1-28BF1EE2
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -757,15 +730,13 @@ if (strlen($TemplateSource)) {
     $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "CP1252", "replace");
 }
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
-$Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
-$Attributes->SetValue("pathToRoot", "");
+$Attributes->SetValue("pathToRoot", "../");
 $Attributes->Show();
 //End Initialize HTML Template
 
-//Execute Components @1-3F626C66
-$MasterPage->Operations();
+//Execute Components @1-D417D000
 $clientesSearch->Operation();
 //End Execute Components
 
@@ -782,26 +753,23 @@ if($Redirect)
 }
 //End Go to destination page
 
-//Show Page @1-F6C60005
-$Head->Show();
-$Content->Show();
-$Menu->Show();
-$Sidebar1->Show();
-$MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
-$MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
-$MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
-$MasterPage->Tpl->SetVar("Sidebar1", $Tpl->GetVar("Panel Sidebar1"));
-$MasterPage->Show();
-if (!isset($main_block)) $main_block = $MasterPage->HTML;
+//Show Page @1-19505E38
+$clientes->Show();
+$clientesSearch->Show();
+$Panel1->Show();
+$Link1->Show();
+$Link2->Show();
+$Tpl->block_path = "";
+$Tpl->Parse($BlockToParse, false);
+if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-//Unload Page @1-289E8542
+//Unload Page @1-EBD79DF9
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
-unset($MasterPage);
 unset($clientes);
 unset($clientesSearch);
 unset($Tpl);

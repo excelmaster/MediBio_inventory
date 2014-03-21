@@ -1,7 +1,7 @@
 <?php
-//Include Common Files @1-58B7EC09
-define("RelativePath", ".");
-define("PathToCurrentPage", "/");
+//Include Common Files @1-EED0A8B2
+define("RelativePath", "..");
+define("PathToCurrentPage", "/invt_alternativo/");
 define("FileName", "login.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
@@ -9,8 +9,8 @@ include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-//Master Page implementation @1-8E4799B9
-include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
+//Master Page implementation @1-07539F59
+include_once(RelativePath . "/invt_alternativo/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
 class clsRecordLogin1 { //Login1 Class @2-621CEC6C
@@ -204,7 +204,7 @@ class clsRecordLogin1 { //Login1 Class @2-621CEC6C
 
 } //End Login1 Class @2-FCB6E20C
 
-//Initialize Page @1-92E602F1
+//Initialize Page @1-7980B5B5
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -228,7 +228,7 @@ $TemplateFileName = "login.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
-$PathToRoot = "./";
+$PathToRoot = "../";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -240,13 +240,13 @@ include_once("./login_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-0E2035E5
+//Initialize Objects @1-32E73105
 $Attributes = new clsAttributes("page:");
 $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$MasterPage = new clsMasterPage("/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
+$MasterPage = new clsMasterPage("/invt_alternativo/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
@@ -276,7 +276,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-554B8835
+//Initialize HTML Template @1-21B65862
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -288,7 +288,7 @@ $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
-$Attributes->SetValue("pathToRoot", "");
+$Attributes->SetValue("pathToRoot", "../");
 $Attributes->Show();
 //End Initialize HTML Template
 

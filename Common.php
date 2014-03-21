@@ -5,50 +5,16 @@ include(RelativePath . "/Classes.php");
 include(RelativePath . "/db_adapter.php");
 //End Include Files
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Connection Settings @0-7BA92B93
-=======
 //Connection Settings @0-F6C2C609
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-//Connection Settings @0-22312690
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $CCConnectionSettings = array (
     "Connection1" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Database" => "a4104228_mb",
-=======
-        "Database" => "u392883857_inven",
-        "Host" => "localhost",
-        "Port" => "3306;Database=u392883857_inven",
-        "User" => "u392883857_admin",
-        "Password" => "mb2013",
-        "Encoding" => array("", "cp1252"),
-        "Persistent" => false,
-        "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
-        "BooleanFormat" => array(1, 0, ""),
-        "Uppercase" => false
-    ), 
-    "invt" => array(
-        "Type" => "MySQL",
-        "DBLib" => "MySQL",
-        "Database" => "invt_mb",
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
-        "Host" => "localhost",
-        "Port" => "3306;Database=a4104228_mb",
-        "User" => "a4104228_admin",
-        "Password" => "mb2013",
-=======
         "Database" => "inventario_mb",
         "Host" => "127.0.0.1",
         "Port" => "3306;Database=inventario_mb",
         "User" => "hfTest",
         "Password" => "HFpruebas*",
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
         "Encoding" => array("", "cp1252"),
         "Persistent" => false,
         "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
@@ -166,9 +132,9 @@ class clsDBConnection1 extends DB_Adapter
 //End Connection1 Connection Class
 
 //invt Connection Class @-A60876B4
-
+class clsDBinvt extends DB_Adapter
 {
-    function clsDBConnection1()
+    function clsDBinvt()
     {
         $this->Initialize();
     }
@@ -184,6 +150,25 @@ class clsDBConnection1 extends DB_Adapter
 
 }
 //End invt Connection Class
+
+//DEL  
+//DEL  {
+//DEL      function clsDBConnection1()
+//DEL      {
+//DEL          $this->Initialize();
+//DEL      }
+//DEL  
+//DEL      function Initialize()
+//DEL      {
+//DEL          global $CCConnectionSettings;
+//DEL          $this->SetProvider($CCConnectionSettings["invt"]);
+//DEL          parent::Initialize();
+//DEL          $this->DateLeftDelimiter = "'";
+//DEL          $this->DateRightDelimiter = "'";
+//DEL      }
+//DEL  
+//DEL  }
+
 
 //Initialize Cookie Check @0-56800F96
 CCCheckAutoLoginCookies();

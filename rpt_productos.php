@@ -9,45 +9,23 @@ include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Master Page implementation @1-E714A8AA
 include_once(RelativePath . "/Designs/medibio_reports/medibio_reports/MasterPage.php");
 //End Master Page implementation
 
-<<<<<<< HEAD
-//categoria_productos_unida ReportGroup class @8-A1755BAA
-=======
-//categoria_productos_unida ReportGroup class @71-A1755BAA
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //categoria_productos_unida ReportGroup class @73-A0A354D2
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 class clsReportGroupcategoria_productos_unida {
     public $GroupType;
     public $mode; //1 - open, 2 - close
     public $Report_TotalRecords, $_Report_TotalRecordsAttributes;
     public $categoria_descrip, $_categoria_descripAttributes;
     public $Report_Row_Number, $_Report_Row_NumberAttributes;
-<<<<<<< HEAD
-    public $descrp_unidad, $_descrp_unidadAttributes;
-    public $name_producto, $_name_productoAttributes;
-    public $cantidad_producto, $_cantidad_productoAttributes;
-    public $descripcion_producto, $_descripcion_productoAttributes;
-    public $activo, $_activoAttributes;
-    public $min_stock, $_min_stockAttributes;
-    public $max_stock, $_max_stockAttributes;
-    public $nivel_pedido, $_nivel_pedidoAttributes;
-=======
     public $name_producto, $_name_productoAttributes;
     public $cantidad_producto, $_cantidad_productoAttributes;
     public $descripcion_producto, $_descripcion_productoAttributes;
     public $categoria_producto_id, $_categoria_producto_idAttributes;
     public $descrp_unidad, $_descrp_unidadAttributes;
     public $id_producto, $_id_productoAttributes;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $Report_CurrentDateTime, $_Report_CurrentDateTimeAttributes;
     public $Report_CurrentPage, $_Report_CurrentPageAttributes;
     public $Report_TotalPages, $_Report_TotalPagesAttributes;
@@ -65,49 +43,18 @@ class clsReportGroupcategoria_productos_unida {
     }
     function SetControls($PrevGroup = "") {
         $this->categoria_descrip = $this->Parent->categoria_descrip->Value;
-<<<<<<< HEAD
-        $this->descrp_unidad = $this->Parent->descrp_unidad->Value;
-        $this->name_producto = $this->Parent->name_producto->Value;
-        $this->cantidad_producto = $this->Parent->cantidad_producto->Value;
-        $this->descripcion_producto = $this->Parent->descripcion_producto->Value;
-        $this->activo = $this->Parent->activo->Value;
-        $this->min_stock = $this->Parent->min_stock->Value;
-        $this->max_stock = $this->Parent->max_stock->Value;
-        $this->nivel_pedido = $this->Parent->nivel_pedido->Value;
-=======
         $this->name_producto = $this->Parent->name_producto->Value;
         $this->cantidad_producto = $this->Parent->cantidad_producto->Value;
         $this->descripcion_producto = $this->Parent->descripcion_producto->Value;
         $this->categoria_producto_id = $this->Parent->categoria_producto_id->Value;
         $this->descrp_unidad = $this->Parent->descrp_unidad->Value;
         $this->id_producto = $this->Parent->id_producto->Value;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     }
 
     function SetTotalControls($mode = "", $PrevGroup = "") {
         $this->Report_TotalRecords = $this->Parent->Report_TotalRecords->GetTotalValue($mode);
         $this->Report_Row_Number = $this->Parent->Report_Row_Number->GetTotalValue($mode);
         $this->_Report_TotalRecordsAttributes = $this->Parent->Report_TotalRecords->Attributes->GetAsArray();
-<<<<<<< HEAD
-        $this->_categoria_descripAttributes = $this->Parent->categoria_descrip->Attributes->GetAsArray();
-        $this->_Sorter_descrp_unidadAttributes = $this->Parent->Sorter_descrp_unidad->Attributes->GetAsArray();
-        $this->_Sorter_name_productoAttributes = $this->Parent->Sorter_name_producto->Attributes->GetAsArray();
-        $this->_Sorter_cantidad_productoAttributes = $this->Parent->Sorter_cantidad_producto->Attributes->GetAsArray();
-        $this->_Sorter_descripcion_productoAttributes = $this->Parent->Sorter_descripcion_producto->Attributes->GetAsArray();
-        $this->_Sorter_activoAttributes = $this->Parent->Sorter_activo->Attributes->GetAsArray();
-        $this->_Sorter_min_stockAttributes = $this->Parent->Sorter_min_stock->Attributes->GetAsArray();
-        $this->_Sorter_max_stockAttributes = $this->Parent->Sorter_max_stock->Attributes->GetAsArray();
-        $this->_Sorter_nivel_pedidoAttributes = $this->Parent->Sorter_nivel_pedido->Attributes->GetAsArray();
-        $this->_Report_Row_NumberAttributes = $this->Parent->Report_Row_Number->Attributes->GetAsArray();
-        $this->_descrp_unidadAttributes = $this->Parent->descrp_unidad->Attributes->GetAsArray();
-        $this->_name_productoAttributes = $this->Parent->name_producto->Attributes->GetAsArray();
-        $this->_cantidad_productoAttributes = $this->Parent->cantidad_producto->Attributes->GetAsArray();
-        $this->_descripcion_productoAttributes = $this->Parent->descripcion_producto->Attributes->GetAsArray();
-        $this->_activoAttributes = $this->Parent->activo->Attributes->GetAsArray();
-        $this->_min_stockAttributes = $this->Parent->min_stock->Attributes->GetAsArray();
-        $this->_max_stockAttributes = $this->Parent->max_stock->Attributes->GetAsArray();
-        $this->_nivel_pedidoAttributes = $this->Parent->nivel_pedido->Attributes->GetAsArray();
-=======
         $this->_Sorter_name_productoAttributes = $this->Parent->Sorter_name_producto->Attributes->GetAsArray();
         $this->_Sorter_cantidad_productoAttributes = $this->Parent->Sorter_cantidad_producto->Attributes->GetAsArray();
         $this->_Sorter_descripcion_productoAttributes = $this->Parent->Sorter_descripcion_producto->Attributes->GetAsArray();
@@ -122,7 +69,6 @@ class clsReportGroupcategoria_productos_unida {
         $this->_categoria_producto_idAttributes = $this->Parent->categoria_producto_id->Attributes->GetAsArray();
         $this->_descrp_unidadAttributes = $this->Parent->descrp_unidad->Attributes->GetAsArray();
         $this->_id_productoAttributes = $this->Parent->id_producto->Attributes->GetAsArray();
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->_Report_CurrentDateTimeAttributes = $this->Parent->Report_CurrentDateTime->Attributes->GetAsArray();
         $this->_Report_CurrentPageAttributes = $this->Parent->Report_CurrentPage->Attributes->GetAsArray();
         $this->_Report_TotalPagesAttributes = $this->Parent->Report_TotalPages->Attributes->GetAsArray();
@@ -137,13 +83,6 @@ class clsReportGroupcategoria_productos_unida {
         $Header->_categoria_descripAttributes = $this->_categoria_descripAttributes;
         $this->Parent->categoria_descrip->Value = $Header->categoria_descrip;
         $this->Parent->categoria_descrip->Attributes->RestoreFromArray($Header->_categoria_descripAttributes);
-<<<<<<< HEAD
-        $this->descrp_unidad = $Header->descrp_unidad;
-        $Header->_descrp_unidadAttributes = $this->_descrp_unidadAttributes;
-        $this->Parent->descrp_unidad->Value = $Header->descrp_unidad;
-        $this->Parent->descrp_unidad->Attributes->RestoreFromArray($Header->_descrp_unidadAttributes);
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->name_producto = $Header->name_producto;
         $Header->_name_productoAttributes = $this->_name_productoAttributes;
         $this->Parent->name_producto->Value = $Header->name_producto;
@@ -156,24 +95,6 @@ class clsReportGroupcategoria_productos_unida {
         $Header->_descripcion_productoAttributes = $this->_descripcion_productoAttributes;
         $this->Parent->descripcion_producto->Value = $Header->descripcion_producto;
         $this->Parent->descripcion_producto->Attributes->RestoreFromArray($Header->_descripcion_productoAttributes);
-<<<<<<< HEAD
-        $this->activo = $Header->activo;
-        $Header->_activoAttributes = $this->_activoAttributes;
-        $this->Parent->activo->Value = $Header->activo;
-        $this->Parent->activo->Attributes->RestoreFromArray($Header->_activoAttributes);
-        $this->min_stock = $Header->min_stock;
-        $Header->_min_stockAttributes = $this->_min_stockAttributes;
-        $this->Parent->min_stock->Value = $Header->min_stock;
-        $this->Parent->min_stock->Attributes->RestoreFromArray($Header->_min_stockAttributes);
-        $this->max_stock = $Header->max_stock;
-        $Header->_max_stockAttributes = $this->_max_stockAttributes;
-        $this->Parent->max_stock->Value = $Header->max_stock;
-        $this->Parent->max_stock->Attributes->RestoreFromArray($Header->_max_stockAttributes);
-        $this->nivel_pedido = $Header->nivel_pedido;
-        $Header->_nivel_pedidoAttributes = $this->_nivel_pedidoAttributes;
-        $this->Parent->nivel_pedido->Value = $Header->nivel_pedido;
-        $this->Parent->nivel_pedido->Attributes->RestoreFromArray($Header->_nivel_pedidoAttributes);
-=======
         $this->categoria_producto_id = $Header->categoria_producto_id;
         $Header->_categoria_producto_idAttributes = $this->_categoria_producto_idAttributes;
         $this->Parent->categoria_producto_id->Value = $Header->categoria_producto_id;
@@ -186,7 +107,6 @@ class clsReportGroupcategoria_productos_unida {
         $Header->_id_productoAttributes = $this->_id_productoAttributes;
         $this->Parent->id_producto->Value = $Header->id_producto;
         $this->Parent->id_producto->Attributes->RestoreFromArray($Header->_id_productoAttributes);
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     }
     function ChangeTotalControls() {
         $this->Report_TotalRecords = $this->Parent->Report_TotalRecords->GetValue();
@@ -195,15 +115,7 @@ class clsReportGroupcategoria_productos_unida {
 }
 //End categoria_productos_unida ReportGroup class
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//categoria_productos_unida GroupsCollection class @8-435C7BED
-=======
-//categoria_productos_unida GroupsCollection class @71-435C7BED
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //categoria_productos_unida GroupsCollection class @73-9F793216
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 class clsGroupsCollectioncategoria_productos_unida {
     public $Groups;
     public $mPageCurrentHeaderIndex;
@@ -238,23 +150,12 @@ class clsGroupsCollectioncategoria_productos_unida {
         $this->Parent->Report_TotalRecords->Value = $this->Parent->Report_TotalRecords->initialValue;
         $this->Parent->categoria_descrip->Value = $this->Parent->categoria_descrip->initialValue;
         $this->Parent->Report_Row_Number->Value = $this->Parent->Report_Row_Number->initialValue;
-<<<<<<< HEAD
-        $this->Parent->descrp_unidad->Value = $this->Parent->descrp_unidad->initialValue;
-        $this->Parent->name_producto->Value = $this->Parent->name_producto->initialValue;
-        $this->Parent->cantidad_producto->Value = $this->Parent->cantidad_producto->initialValue;
-        $this->Parent->descripcion_producto->Value = $this->Parent->descripcion_producto->initialValue;
-        $this->Parent->activo->Value = $this->Parent->activo->initialValue;
-        $this->Parent->min_stock->Value = $this->Parent->min_stock->initialValue;
-        $this->Parent->max_stock->Value = $this->Parent->max_stock->initialValue;
-        $this->Parent->nivel_pedido->Value = $this->Parent->nivel_pedido->initialValue;
-=======
         $this->Parent->name_producto->Value = $this->Parent->name_producto->initialValue;
         $this->Parent->cantidad_producto->Value = $this->Parent->cantidad_producto->initialValue;
         $this->Parent->descripcion_producto->Value = $this->Parent->descripcion_producto->initialValue;
         $this->Parent->categoria_producto_id->Value = $this->Parent->categoria_producto_id->initialValue;
         $this->Parent->descrp_unidad->Value = $this->Parent->descrp_unidad->initialValue;
         $this->Parent->id_producto->Value = $this->Parent->id_producto->initialValue;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     }
 
     function OpenPage() {
@@ -310,10 +211,6 @@ class clsGroupsCollectioncategoria_productos_unida {
             $Groupcategoria_descrip->GroupType = "categoria_descrip";
             $this->mcategoria_descripCurrentHeaderIndex = count($this->Groups);
             $this->Groups[] = & $Groupcategoria_descrip;
-<<<<<<< HEAD
-            $this->Parent->Report_Row_Number->Reset();
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         }
     }
 
@@ -374,10 +271,6 @@ class clsGroupsCollectioncategoria_productos_unida {
             $this->CurrentPageSize = $this->CurrentPageSize + $this->Parent->categoria_descrip_Footer->Height;
         $this->Parent->categoria_descrip_Footer->CCSEventResult = CCGetEvent($this->Parent->categoria_descrip_Footer->CCSEvents, "OnCalculate", $this->Parent->categoria_descrip_Footer);
         $Groupcategoria_descrip->SetControls();
-<<<<<<< HEAD
-        $this->Parent->Report_Row_Number->Reset();
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->RestoreValues();
         $Groupcategoria_descrip->Mode = 2;
         $Groupcategoria_descrip->GroupType ="categoria_descrip";
@@ -412,21 +305,9 @@ class clsGroupsCollectioncategoria_productos_unida {
 }
 //End categoria_productos_unida GroupsCollection class
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-class clsReportcategoria_productos_unida { //categoria_productos_unida Class @8-6F52D54A
-
-//categoria_productos_unida Variables @8-DB32099B
-=======
-class clsReportcategoria_productos_unida { //categoria_productos_unida Class @71-6F52D54A
-
-//categoria_productos_unida Variables @71-DB32099B
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73-6F52D54A
 
 //categoria_productos_unida Variables @73-15833775
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
     public $ComponentType = "Report";
     public $PageSize;
@@ -462,23 +343,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
     public $StaticControls, $RowControls, $Report_FooterControls, $Report_HeaderControls;
     public $Page_FooterControls, $Page_HeaderControls;
     public $categoria_descrip_HeaderControls, $categoria_descrip_FooterControls;
-<<<<<<< HEAD
-    public $Sorter_descrp_unidad;
-    public $Sorter_name_producto;
-    public $Sorter_cantidad_producto;
-    public $Sorter_descripcion_producto;
-    public $Sorter_activo;
-    public $Sorter_min_stock;
-    public $Sorter_max_stock;
-    public $Sorter_nivel_pedido;
-//End categoria_productos_unida Variables
-
-<<<<<<< HEAD
-//Class_Initialize Event @8-41CCE709
-=======
-//Class_Initialize Event @71-41CCE709
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
     public $Sorter_name_producto;
     public $Sorter_cantidad_producto;
     public $Sorter_descripcion_producto;
@@ -488,7 +352,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
 //End categoria_productos_unida Variables
 
 //Class_Initialize Event @73-6DDE4AA3
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsReportcategoria_productos_unida($RelativePath = "", & $Parent)
     {
         global $FileName;
@@ -510,17 +373,11 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
         $this->Page_Footer->Height = 2;
         $MinPageSize += $this->Page_Footer->Height;
         $this->Page_Header = new clsSection($this);
-<<<<<<< HEAD
-        $this->categoria_descrip_Footer = new clsSection($this);
-        $this->categoria_descrip_Header = new clsSection($this);
-        $this->categoria_descrip_Header->Height = 2;
-=======
         $this->Page_Header->Height = 1;
         $MinPageSize += $this->Page_Header->Height;
         $this->categoria_descrip_Footer = new clsSection($this);
         $this->categoria_descrip_Header = new clsSection($this);
         $this->categoria_descrip_Header->Height = 1;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $MaxSectionSize = max($MaxSectionSize, $this->categoria_descrip_Header->Height);
         $this->Errors = new clsErrors();
         $this->DataSource = new clscategoria_productos_unidaDataSource($this);
@@ -557,28 +414,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
         $this->Report_TotalRecords = new clsControl(ccsReportLabel, "Report_TotalRecords", "Report_TotalRecords", ccsText, "", 0, $this);
         $this->Report_TotalRecords->TotalFunction = "Count";
         $this->Report_TotalRecords->IsEmptySource = true;
-<<<<<<< HEAD
-        $this->categoria_descrip = new clsControl(ccsReportLabel, "categoria_descrip", "categoria_descrip", ccsText, "", "", $this);
-        $this->Sorter_descrp_unidad = new clsSorter($this->ComponentName, "Sorter_descrp_unidad", $FileName, $this);
-        $this->Sorter_name_producto = new clsSorter($this->ComponentName, "Sorter_name_producto", $FileName, $this);
-        $this->Sorter_cantidad_producto = new clsSorter($this->ComponentName, "Sorter_cantidad_producto", $FileName, $this);
-        $this->Sorter_descripcion_producto = new clsSorter($this->ComponentName, "Sorter_descripcion_producto", $FileName, $this);
-        $this->Sorter_activo = new clsSorter($this->ComponentName, "Sorter_activo", $FileName, $this);
-        $this->Sorter_min_stock = new clsSorter($this->ComponentName, "Sorter_min_stock", $FileName, $this);
-        $this->Sorter_max_stock = new clsSorter($this->ComponentName, "Sorter_max_stock", $FileName, $this);
-        $this->Sorter_nivel_pedido = new clsSorter($this->ComponentName, "Sorter_nivel_pedido", $FileName, $this);
-        $this->Report_Row_Number = new clsControl(ccsReportLabel, "Report_Row_Number", "Report_Row_Number", ccsInteger, "", 0, $this);
-        $this->Report_Row_Number->TotalFunction = "Count";
-        $this->Report_Row_Number->IsEmptySource = true;
-        $this->descrp_unidad = new clsControl(ccsReportLabel, "descrp_unidad", "descrp_unidad", ccsText, "", "", $this);
-        $this->name_producto = new clsControl(ccsReportLabel, "name_producto", "name_producto", ccsText, "", "", $this);
-        $this->cantidad_producto = new clsControl(ccsReportLabel, "cantidad_producto", "cantidad_producto", ccsInteger, "", "", $this);
-        $this->descripcion_producto = new clsControl(ccsReportLabel, "descripcion_producto", "descripcion_producto", ccsText, "", "", $this);
-        $this->activo = new clsControl(ccsReportLabel, "activo", "activo", ccsInteger, "", "", $this);
-        $this->min_stock = new clsControl(ccsReportLabel, "min_stock", "min_stock", ccsInteger, "", "", $this);
-        $this->max_stock = new clsControl(ccsReportLabel, "max_stock", "max_stock", ccsInteger, "", "", $this);
-        $this->nivel_pedido = new clsControl(ccsReportLabel, "nivel_pedido", "nivel_pedido", ccsInteger, "", "", $this);
-=======
         $this->Sorter_name_producto = new clsSorter($this->ComponentName, "Sorter_name_producto", $FileName, $this);
         $this->Sorter_cantidad_producto = new clsSorter($this->ComponentName, "Sorter_cantidad_producto", $FileName, $this);
         $this->Sorter_descripcion_producto = new clsSorter($this->ComponentName, "Sorter_descripcion_producto", $FileName, $this);
@@ -595,31 +430,18 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
         $this->categoria_producto_id = new clsControl(ccsReportLabel, "categoria_producto_id", "categoria_producto_id", ccsInteger, "", "", $this);
         $this->descrp_unidad = new clsControl(ccsReportLabel, "descrp_unidad", "descrp_unidad", ccsText, "", "", $this);
         $this->id_producto = new clsControl(ccsReportLabel, "id_producto", "id_producto", ccsInteger, "", "", $this);
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Separator = new clsPanel("Separator", $this);
         $this->NoRecords = new clsPanel("NoRecords", $this);
         $this->PageBreak = new clsPanel("PageBreak", $this);
         $this->Report_CurrentDateTime = new clsControl(ccsReportLabel, "Report_CurrentDateTime", "Report_CurrentDateTime", ccsText, array('ShortDate', ' ', 'ShortTime'), "", $this);
         $this->Report_CurrentPage = new clsControl(ccsReportLabel, "Report_CurrentPage", "Report_CurrentPage", ccsInteger, "", "", $this);
         $this->Report_TotalPages = new clsControl(ccsReportLabel, "Report_TotalPages", "Report_TotalPages", ccsInteger, "", "", $this);
-<<<<<<< HEAD
-        $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpSimple, $this);
-=======
         $this->Navigator = new clsNavigator($this->ComponentName, "Navigator", $FileName, 10, tpCentered, $this);
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->Navigator->PageSizes = array("1", "5", "10", "25", "50");
     }
 //End Class_Initialize Event
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Initialize Method @8-6C59EE65
-=======
-//Initialize Method @71-6C59EE65
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Initialize Method @73-6C59EE65
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Initialize()
     {
         if(!$this->Visible) return;
@@ -630,38 +452,19 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
     }
 //End Initialize Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//CheckErrors Method @8-DAE3287E
-=======
-//CheckErrors Method @71-DAE3287E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //CheckErrors Method @73-0AB53A57
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function CheckErrors()
     {
         $errors = false;
         $errors = ($errors || $this->Report_TotalRecords->Errors->Count());
         $errors = ($errors || $this->categoria_descrip->Errors->Count());
         $errors = ($errors || $this->Report_Row_Number->Errors->Count());
-<<<<<<< HEAD
-        $errors = ($errors || $this->descrp_unidad->Errors->Count());
-        $errors = ($errors || $this->name_producto->Errors->Count());
-        $errors = ($errors || $this->cantidad_producto->Errors->Count());
-        $errors = ($errors || $this->descripcion_producto->Errors->Count());
-        $errors = ($errors || $this->activo->Errors->Count());
-        $errors = ($errors || $this->min_stock->Errors->Count());
-        $errors = ($errors || $this->max_stock->Errors->Count());
-        $errors = ($errors || $this->nivel_pedido->Errors->Count());
-=======
         $errors = ($errors || $this->name_producto->Errors->Count());
         $errors = ($errors || $this->cantidad_producto->Errors->Count());
         $errors = ($errors || $this->descripcion_producto->Errors->Count());
         $errors = ($errors || $this->categoria_producto_id->Errors->Count());
         $errors = ($errors || $this->descrp_unidad->Errors->Count());
         $errors = ($errors || $this->id_producto->Errors->Count());
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $errors = ($errors || $this->Report_CurrentDateTime->Errors->Count());
         $errors = ($errors || $this->Report_CurrentPage->Errors->Count());
         $errors = ($errors || $this->Report_TotalPages->Errors->Count());
@@ -671,38 +474,19 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
     }
 //End CheckErrors Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//GetErrors Method @8-667FC6DA
-=======
-//GetErrors Method @71-667FC6DA
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //GetErrors Method @73-37A8693F
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function GetErrors()
     {
         $errors = "";
         $errors = ComposeStrings($errors, $this->Report_TotalRecords->Errors->ToString());
         $errors = ComposeStrings($errors, $this->categoria_descrip->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Report_Row_Number->Errors->ToString());
-<<<<<<< HEAD
-        $errors = ComposeStrings($errors, $this->descrp_unidad->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->name_producto->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->cantidad_producto->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->descripcion_producto->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->activo->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->min_stock->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->max_stock->Errors->ToString());
-        $errors = ComposeStrings($errors, $this->nivel_pedido->Errors->ToString());
-=======
         $errors = ComposeStrings($errors, $this->name_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->cantidad_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->descripcion_producto->Errors->ToString());
         $errors = ComposeStrings($errors, $this->categoria_producto_id->Errors->ToString());
         $errors = ComposeStrings($errors, $this->descrp_unidad->Errors->ToString());
         $errors = ComposeStrings($errors, $this->id_producto->Errors->ToString());
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $errors = ComposeStrings($errors, $this->Report_CurrentDateTime->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Report_CurrentPage->Errors->ToString());
         $errors = ComposeStrings($errors, $this->Report_TotalPages->Errors->ToString());
@@ -712,15 +496,7 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
     }
 //End GetErrors Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Show Method @8-AF6477EE
-=======
-//Show Method @71-AF6477EE
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Show Method @73-4781CEE1
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Show()
     {
         $Tpl = & CCGetTemplate($this);
@@ -745,23 +521,12 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
         while($is_next_record) {
             $this->DataSource->SetValues();
             $this->categoria_descrip->SetValue($this->DataSource->categoria_descrip->GetValue());
-<<<<<<< HEAD
-            $this->descrp_unidad->SetValue($this->DataSource->descrp_unidad->GetValue());
-            $this->name_producto->SetValue($this->DataSource->name_producto->GetValue());
-            $this->cantidad_producto->SetValue($this->DataSource->cantidad_producto->GetValue());
-            $this->descripcion_producto->SetValue($this->DataSource->descripcion_producto->GetValue());
-            $this->activo->SetValue($this->DataSource->activo->GetValue());
-            $this->min_stock->SetValue($this->DataSource->min_stock->GetValue());
-            $this->max_stock->SetValue($this->DataSource->max_stock->GetValue());
-            $this->nivel_pedido->SetValue($this->DataSource->nivel_pedido->GetValue());
-=======
             $this->name_producto->SetValue($this->DataSource->name_producto->GetValue());
             $this->cantidad_producto->SetValue($this->DataSource->cantidad_producto->GetValue());
             $this->descripcion_producto->SetValue($this->DataSource->descripcion_producto->GetValue());
             $this->categoria_producto_id->SetValue($this->DataSource->categoria_producto_id->GetValue());
             $this->descrp_unidad->SetValue($this->DataSource->descrp_unidad->GetValue());
             $this->id_producto->SetValue($this->DataSource->id_producto->GetValue());
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->Report_TotalRecords->SetValue(1);
             $this->Report_Row_Number->SetValue(1);
             if (count($Groups->Groups) == 0) $Groups->OpenGroup("Report");
@@ -799,25 +564,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
             $items = & $Groups->Groups;
             $i = $Groups->Pages[min($this->PageNumber, $Groups->TotalPages) - 1];
             $this->ControlsVisible["categoria_descrip"] = $this->categoria_descrip->Visible;
-<<<<<<< HEAD
-            $this->ControlsVisible["Sorter_descrp_unidad"] = $this->Sorter_descrp_unidad->Visible;
-            $this->ControlsVisible["Sorter_name_producto"] = $this->Sorter_name_producto->Visible;
-            $this->ControlsVisible["Sorter_cantidad_producto"] = $this->Sorter_cantidad_producto->Visible;
-            $this->ControlsVisible["Sorter_descripcion_producto"] = $this->Sorter_descripcion_producto->Visible;
-            $this->ControlsVisible["Sorter_activo"] = $this->Sorter_activo->Visible;
-            $this->ControlsVisible["Sorter_min_stock"] = $this->Sorter_min_stock->Visible;
-            $this->ControlsVisible["Sorter_max_stock"] = $this->Sorter_max_stock->Visible;
-            $this->ControlsVisible["Sorter_nivel_pedido"] = $this->Sorter_nivel_pedido->Visible;
-            $this->ControlsVisible["Report_Row_Number"] = $this->Report_Row_Number->Visible;
-            $this->ControlsVisible["descrp_unidad"] = $this->descrp_unidad->Visible;
-            $this->ControlsVisible["name_producto"] = $this->name_producto->Visible;
-            $this->ControlsVisible["cantidad_producto"] = $this->cantidad_producto->Visible;
-            $this->ControlsVisible["descripcion_producto"] = $this->descripcion_producto->Visible;
-            $this->ControlsVisible["activo"] = $this->activo->Visible;
-            $this->ControlsVisible["min_stock"] = $this->min_stock->Visible;
-            $this->ControlsVisible["max_stock"] = $this->max_stock->Visible;
-            $this->ControlsVisible["nivel_pedido"] = $this->nivel_pedido->Visible;
-=======
             $this->ControlsVisible["Report_Row_Number"] = $this->Report_Row_Number->Visible;
             $this->ControlsVisible["name_producto"] = $this->name_producto->Visible;
             $this->ControlsVisible["cantidad_producto"] = $this->cantidad_producto->Visible;
@@ -825,7 +571,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
             $this->ControlsVisible["categoria_producto_id"] = $this->categoria_producto_id->Visible;
             $this->ControlsVisible["descrp_unidad"] = $this->descrp_unidad->Visible;
             $this->ControlsVisible["id_producto"] = $this->id_producto->Visible;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->ControlsVisible["Separator"] = $this->Separator->Visible;
             do {
                 $this->Attributes->RestoreFromArray($items[$i]->Attributes);
@@ -836,38 +581,12 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
                         $Tpl->block_path = $ParentPath . "/" . $ReportBlock . "/Section Detail";
                         $this->Report_Row_Number->SetValue($items[$i]->Report_Row_Number);
                         $this->Report_Row_Number->Attributes->RestoreFromArray($items[$i]->_Report_Row_NumberAttributes);
-<<<<<<< HEAD
-                        $this->descrp_unidad->SetValue($items[$i]->descrp_unidad);
-                        $this->descrp_unidad->Attributes->RestoreFromArray($items[$i]->_descrp_unidadAttributes);
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                         $this->name_producto->SetValue($items[$i]->name_producto);
                         $this->name_producto->Attributes->RestoreFromArray($items[$i]->_name_productoAttributes);
                         $this->cantidad_producto->SetValue($items[$i]->cantidad_producto);
                         $this->cantidad_producto->Attributes->RestoreFromArray($items[$i]->_cantidad_productoAttributes);
                         $this->descripcion_producto->SetValue($items[$i]->descripcion_producto);
                         $this->descripcion_producto->Attributes->RestoreFromArray($items[$i]->_descripcion_productoAttributes);
-<<<<<<< HEAD
-                        $this->activo->SetValue($items[$i]->activo);
-                        $this->activo->Attributes->RestoreFromArray($items[$i]->_activoAttributes);
-                        $this->min_stock->SetValue($items[$i]->min_stock);
-                        $this->min_stock->Attributes->RestoreFromArray($items[$i]->_min_stockAttributes);
-                        $this->max_stock->SetValue($items[$i]->max_stock);
-                        $this->max_stock->Attributes->RestoreFromArray($items[$i]->_max_stockAttributes);
-                        $this->nivel_pedido->SetValue($items[$i]->nivel_pedido);
-                        $this->nivel_pedido->Attributes->RestoreFromArray($items[$i]->_nivel_pedidoAttributes);
-                        $this->Detail->CCSEventResult = CCGetEvent($this->Detail->CCSEvents, "BeforeShow", $this->Detail);
-                        $this->Attributes->Show();
-                        $this->Report_Row_Number->Show();
-                        $this->descrp_unidad->Show();
-                        $this->name_producto->Show();
-                        $this->cantidad_producto->Show();
-                        $this->descripcion_producto->Show();
-                        $this->activo->Show();
-                        $this->min_stock->Show();
-                        $this->max_stock->Show();
-                        $this->nivel_pedido->Show();
-=======
                         $this->categoria_producto_id->SetValue($items[$i]->categoria_producto_id);
                         $this->categoria_producto_id->Attributes->RestoreFromArray($items[$i]->_categoria_producto_idAttributes);
                         $this->descrp_unidad->SetValue($items[$i]->descrp_unidad);
@@ -883,7 +602,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
                         $this->categoria_producto_id->Show();
                         $this->descrp_unidad->Show();
                         $this->id_producto->Show();
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                         $this->Separator->Show();
                         $Tpl->block_path = $ParentPath . "/" . $ReportBlock;
                         if ($this->Detail->Visible)
@@ -919,15 +637,12 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
                             if ($this->Page_Header->Visible) {
                                 $Tpl->block_path = $ParentPath . "/" . $ReportBlock . "/Section Page_Header";
                                 $this->Attributes->Show();
-<<<<<<< HEAD
-=======
                                 $this->Sorter_name_producto->Show();
                                 $this->Sorter_cantidad_producto->Show();
                                 $this->Sorter_descripcion_producto->Show();
                                 $this->Sorter_categoria_producto_id->Show();
                                 $this->Sorter_descrp_unidad->Show();
                                 $this->Sorter_id_producto->Show();
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                                 $Tpl->block_path = $ParentPath . "/" . $ReportBlock;
                                 $Tpl->parseto("Section Page_Header", true, "Section Detail");
                             }
@@ -966,17 +681,6 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
                                 $Tpl->block_path = $ParentPath . "/" . $ReportBlock . "/Section categoria_descrip_Header";
                                 $this->Attributes->Show();
                                 $this->categoria_descrip->Show();
-<<<<<<< HEAD
-                                $this->Sorter_descrp_unidad->Show();
-                                $this->Sorter_name_producto->Show();
-                                $this->Sorter_cantidad_producto->Show();
-                                $this->Sorter_descripcion_producto->Show();
-                                $this->Sorter_activo->Show();
-                                $this->Sorter_min_stock->Show();
-                                $this->Sorter_max_stock->Show();
-                                $this->Sorter_nivel_pedido->Show();
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
                                 $Tpl->block_path = $ParentPath . "/" . $ReportBlock;
                                 $Tpl->parseto("Section categoria_descrip_Header", true, "Section Detail");
                             }
@@ -1002,27 +706,11 @@ class clsReportcategoria_productos_unida { //categoria_productos_unida Class @73
     }
 //End Show Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-} //End categoria_productos_unida Class @8-FCB6E20C
-
-class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categoria_productos_unidaDataSource Class @8-256C841A
-
-//DataSource Variables @8-68666D63
-=======
-} //End categoria_productos_unida Class @71-FCB6E20C
-
-class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categoria_productos_unidaDataSource Class @71-256C841A
-
-//DataSource Variables @71-68666D63
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 } //End categoria_productos_unida Class @73-FCB6E20C
 
 class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categoria_productos_unidaDataSource Class @73-256C841A
 
 //DataSource Variables @73-D17C34C7
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     public $Parent = "";
     public $CCSEvents = "";
     public $CCSEventResult;
@@ -1034,23 +722,6 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
 
     // Datasource fields
     public $categoria_descrip;
-<<<<<<< HEAD
-    public $descrp_unidad;
-    public $name_producto;
-    public $cantidad_producto;
-    public $descripcion_producto;
-    public $activo;
-    public $min_stock;
-    public $max_stock;
-    public $nivel_pedido;
-//End DataSource Variables
-
-<<<<<<< HEAD
-//DataSourceClass_Initialize Event @8-069E4CD9
-=======
-//DataSourceClass_Initialize Event @71-069E4CD9
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
     public $name_producto;
     public $cantidad_producto;
     public $descripcion_producto;
@@ -1060,7 +731,6 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
 //End DataSource Variables
 
 //DataSourceClass_Initialize Event @73-F48DF138
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clscategoria_productos_unidaDataSource(& $Parent)
     {
         $this->Parent = & $Parent;
@@ -1068,64 +738,22 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
         $this->Initialize();
         $this->categoria_descrip = new clsField("categoria_descrip", ccsText, "");
         
-<<<<<<< HEAD
-        $this->descrp_unidad = new clsField("descrp_unidad", ccsText, "");
-        
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->name_producto = new clsField("name_producto", ccsText, "");
         
         $this->cantidad_producto = new clsField("cantidad_producto", ccsInteger, "");
         
         $this->descripcion_producto = new clsField("descripcion_producto", ccsText, "");
         
-<<<<<<< HEAD
-        $this->activo = new clsField("activo", ccsInteger, "");
-        
-        $this->min_stock = new clsField("min_stock", ccsInteger, "");
-        
-        $this->max_stock = new clsField("max_stock", ccsInteger, "");
-        
-        $this->nivel_pedido = new clsField("nivel_pedido", ccsInteger, "");
-=======
         $this->categoria_producto_id = new clsField("categoria_producto_id", ccsInteger, "");
         
         $this->descrp_unidad = new clsField("descrp_unidad", ccsText, "");
         
         $this->id_producto = new clsField("id_producto", ccsInteger, "");
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         
 
     }
 //End DataSourceClass_Initialize Event
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//SetOrder Method @8-E11DC20E
-=======
-//SetOrder Method @71-E11DC20E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-    function SetOrder($SorterName, $SorterDirection)
-    {
-        $this->Order = "name_producto";
-        $this->Order = CCGetOrder($this->Order, $SorterName, $SorterDirection, 
-            array("Sorter_descrp_unidad" => array("descrp_unidad", ""), 
-            "Sorter_name_producto" => array("name_producto", ""), 
-            "Sorter_cantidad_producto" => array("cantidad_producto", ""), 
-            "Sorter_descripcion_producto" => array("descripcion_producto", ""), 
-            "Sorter_activo" => array("activo", ""), 
-            "Sorter_min_stock" => array("min_stock", ""), 
-            "Sorter_max_stock" => array("max_stock", ""), 
-            "Sorter_nivel_pedido" => array("nivel_pedido", "")));
-    }
-//End SetOrder Method
-
-<<<<<<< HEAD
-//Prepare Method @8-14D6CD9D
-=======
-//Prepare Method @71-14D6CD9D
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //SetOrder Method @73-306087D1
     function SetOrder($SorterName, $SorterDirection)
     {
@@ -1141,7 +769,6 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
 //End SetOrder Method
 
 //Prepare Method @73-14D6CD9D
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Prepare()
     {
         global $CCSLocales;
@@ -1149,20 +776,6 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
     }
 //End Prepare Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Open Method @8-61B68DE4
-=======
-//Open Method @71-61B68DE4
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-    function Open()
-    {
-        $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildSelect", $this->Parent);
-        $this->SQL = "SELECT categoria_descrip, descrp_unidad, name_producto, cantidad_producto, descripcion_producto, activo, min_stock, max_stock, nivel_pedido \n\n" .
-        "FROM (productos INNER JOIN categoria_productos ON\n\n" .
-        "productos.categoria_producto_id = categoria_productos.id) INNER JOIN unidadesmedida ON\n\n" .
-        "productos.unidad_medida_id = unidadesmedida.id {SQL_Where} {SQL_OrderBy}";
-=======
 //Open Method @73-48606C8A
     function Open()
     {
@@ -1171,47 +784,12 @@ class clscategoria_productos_unidaDataSource extends clsDBConnection1 {  //categ
         "FROM (productos INNER JOIN unidadesmedida ON\n\n" .
         "productos.unidad_medida_id = unidadesmedida.id) INNER JOIN categoria_productos ON\n\n" .
         "productos.categoria_producto_id = categoria_productos.id {SQL_Where} {SQL_OrderBy}";
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeExecuteSelect", $this->Parent);
         $this->query(CCBuildSQL($this->SQL, $this->Where, "categoria_productos.categoria_descrip asc" .  ($this->Order ? ", " . $this->Order: "")));
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "AfterExecuteSelect", $this->Parent);
     }
 //End Open Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//SetValues Method @8-335F6AF1
-=======
-//SetValues Method @71-335F6AF1
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-    function SetValues()
-    {
-        $this->categoria_descrip->SetDBValue($this->f("categoria_descrip"));
-        $this->descrp_unidad->SetDBValue($this->f("descrp_unidad"));
-        $this->name_producto->SetDBValue($this->f("name_producto"));
-        $this->cantidad_producto->SetDBValue(trim($this->f("cantidad_producto")));
-        $this->descripcion_producto->SetDBValue($this->f("descripcion_producto"));
-        $this->activo->SetDBValue(trim($this->f("activo")));
-        $this->min_stock->SetDBValue(trim($this->f("min_stock")));
-        $this->max_stock->SetDBValue(trim($this->f("max_stock")));
-        $this->nivel_pedido->SetDBValue(trim($this->f("nivel_pedido")));
-    }
-//End SetValues Method
-
-<<<<<<< HEAD
-} //End categoria_productos_unidaDataSource Class @8-FCB6E20C
-
-class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @60-0BEBE0BD
-
-//Variables @60-9E315808
-=======
-} //End categoria_productos_unidaDataSource Class @71-FCB6E20C
-
-class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-0BEBE0BD
-
-//Variables @120-9E315808
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //SetValues Method @73-38BDC5C6
     function SetValues()
     {
@@ -1230,7 +808,6 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @120-
 class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-0BEBE0BD
 
 //Variables @116-9E315808
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
     // Public variables
     public $ComponentType = "Record";
@@ -1264,15 +841,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
     // Class variables
 //End Variables
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Class_Initialize Event @60-2FA41560
-=======
-//Class_Initialize Event @120-FF5248DD
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Class_Initialize Event @116-FF5248DD
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function clsRecordproductos_unidadesmedida($RelativePath, & $Parent)
     {
 
@@ -1300,18 +869,6 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
             $this->ClearParameters->Parameters = CCGetQueryString("QueryString", array("s_keyword", "categoria_productos_unidaPageSize", "ccsForm"));
             $this->ClearParameters->Page = "rpt_productos.php";
             $this->Button_DoSearch = new clsButton("Button_DoSearch", $Method, $this);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $this->s_keyword = new clsControl(ccsTextBox, "s_keyword", "Keyword", ccsText, "", CCGetRequestParam("s_keyword", $Method, NULL), $this);
-            $this->searchConditions = new clsControl(ccsListBox, "searchConditions", "searchConditions", ccsText, "", CCGetRequestParam("searchConditions", $Method, NULL), $this);
-            $this->searchConditions->DSType = dsListOfValues;
-            $this->searchConditions->Values = array(array("1", "Any Of Words"), array("2", "All Words"), array("3", "Exact Phrase"));
-            $this->categoria_productos_unidaPageSize = new clsControl(ccsListBox, "categoria_productos_unidaPageSize", "categoria_productos_unidaPageSize", ccsText, "", CCGetRequestParam("categoria_productos_unidaPageSize", $Method, NULL), $this);
-            $this->categoria_productos_unidaPageSize->DSType = dsListOfValues;
-            $this->categoria_productos_unidaPageSize->Values = array(array("", "Select Value"), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
-=======
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
             $this->s_keyword = new clsControl(ccsTextBox, "s_keyword", $CCSLocales->GetText("CCS_Filter"), ccsText, "", CCGetRequestParam("s_keyword", $Method, NULL), $this);
             $this->searchConditions = new clsControl(ccsListBox, "searchConditions", "searchConditions", ccsText, "", CCGetRequestParam("searchConditions", $Method, NULL), $this);
             $this->searchConditions->DSType = dsListOfValues;
@@ -1319,23 +876,11 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
             $this->categoria_productos_unidaPageSize = new clsControl(ccsListBox, "categoria_productos_unidaPageSize", "categoria_productos_unidaPageSize", ccsText, "", CCGetRequestParam("categoria_productos_unidaPageSize", $Method, NULL), $this);
             $this->categoria_productos_unidaPageSize->DSType = dsListOfValues;
             $this->categoria_productos_unidaPageSize->Values = array(array("", $CCSLocales->GetText("CCS_SelectValue")), array("5", "5"), array("10", "10"), array("25", "25"), array("100", "100"));
-<<<<<<< HEAD
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
         }
     }
 //End Class_Initialize Event
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Validate Method @60-904DC0ED
-=======
-//Validate Method @120-904DC0ED
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Validate Method @116-904DC0ED
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Validate()
     {
         global $CCSLocales;
@@ -1352,15 +897,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
     }
 //End Validate Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//CheckErrors Method @60-6AF4D452
-=======
-//CheckErrors Method @120-6AF4D452
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //CheckErrors Method @116-6AF4D452
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function CheckErrors()
     {
         $errors = false;
@@ -1373,15 +910,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
     }
 //End CheckErrors Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Operation Method @60-4B4CBAFE
-=======
-//Operation Method @120-4B4CBAFE
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Operation Method @116-4B4CBAFE
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Operation()
     {
         if(!$this->Visible)
@@ -1414,15 +943,7 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
     }
 //End Operation Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Show Method @60-2A398313
-=======
-//Show Method @120-2A398313
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Show Method @116-2A398313
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
     function Show()
     {
         global $CCSUseAmp;
@@ -1479,21 +1000,9 @@ class clsRecordproductos_unidadesmedida { //productos_unidadesmedida Class @116-
     }
 //End Show Method
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-} //End productos_unidadesmedida Class @60-FCB6E20C
-
-//Initialize Page @1-3E9CFFCA
-=======
-} //End productos_unidadesmedida Class @120-FCB6E20C
-
-//Initialize Page @1-3320E132
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 } //End productos_unidadesmedida Class @116-FCB6E20C
 
 //Initialize Page @1-3E9CFFCA
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -1502,28 +1011,13 @@ $TemplateFileName = "";
 $BlockToParse = "";
 $ComponentName = "";
 $Attributes = "";
-<<<<<<< HEAD
-<<<<<<< HEAD
 $PathToCurrentMasterPage = "";
 $TemplatePathValue = "";
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-$PathToCurrentMasterPage = "";
-$TemplatePathValue = "";
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 
 // Events;
 $CCSEvents = "";
 $CCSEventResult = "";
-<<<<<<< HEAD
-<<<<<<< HEAD
 $MasterPage = null;
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-$MasterPage = null;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $TemplateSource = "";
 
 $FileName = FileName;
@@ -1544,15 +1038,7 @@ include_once("./rpt_productos_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Initialize Objects @1-101AF1E9
-=======
-//Initialize Objects @1-8779D13A
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 //Initialize Objects @1-8CFBE910
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1560,10 +1046,6 @@ $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MasterPage = new clsMasterPage("/Designs/medibio_reports/medibio_reports/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
@@ -1571,32 +1053,17 @@ $Head = new clsPanel("Head", $MainPage);
 $Head->PlaceholderName = "Head";
 $Content = new clsPanel("Content", $MainPage);
 $Content->PlaceholderName = "Content";
-<<<<<<< HEAD
-=======
-$Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
-$Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
-$Link1->Page = "productos_mant.php";
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Report_Print = new clsControl(ccsLink, "Report_Print", "Report_Print", ccsText, "", CCGetRequestParam("Report_Print", ccsGet, NULL), $MainPage);
 $Report_Print->Page = "rpt_productos.php";
 $categoria_productos_unida = new clsReportcategoria_productos_unida("", $MainPage);
 $productos_unidadesmedida = new clsRecordproductos_unidadesmedida("", $MainPage);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Menu = new clsPanel("Menu", $MainPage);
 $Menu->PlaceholderName = "Menu";
 $Link1 = new clsControl(ccsLink, "Link1", "Link1", ccsText, "", CCGetRequestParam("Link1", ccsGet, NULL), $MainPage);
 $Link1->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Link1->Page = "productos_mant.php";
-<<<<<<< HEAD
-=======
 $Panel1 = new clsPanel("Panel1", $MainPage);
 $Label1 = new clsControl(ccsLabel, "Label1", "Label1", ccsText, "", CCGetRequestParam("Label1", ccsGet, NULL), $MainPage);
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MainPage->Head = & $Head;
 $MainPage->Content = & $Content;
 $MainPage->Report_Print = & $Report_Print;
@@ -1604,27 +1071,15 @@ $MainPage->categoria_productos_unida = & $categoria_productos_unida;
 $MainPage->productos_unidadesmedida = & $productos_unidadesmedida;
 $MainPage->Menu = & $Menu;
 $MainPage->Link1 = & $Link1;
-<<<<<<< HEAD
-=======
 $MainPage->Panel1 = & $Panel1;
 $MainPage->Label1 = & $Label1;
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Content->AddComponent("categoria_productos_unida", $categoria_productos_unida);
 $Content->AddComponent("productos_unidadesmedida", $productos_unidadesmedida);
 $Content->AddComponent("Report_Print", $Report_Print);
 $Menu->AddComponent("Link1", $Link1);
-<<<<<<< HEAD
-=======
-$MainPage->Link1 = & $Link1;
-$MainPage->Report_Print = & $Report_Print;
-$MainPage->categoria_productos_unida = & $categoria_productos_unida;
-$MainPage->productos_unidadesmedida = & $productos_unidadesmedida;
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
 $Panel1->AddComponent("Label1", $Label1);
 if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== false)
     $Label1->SetText("REPORTE DE PRODUCTOS");
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Report_Print->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Report_Print->Parameters = CCAddParam($Report_Print->Parameters, "ViewMode", "Print");
 $categoria_productos_unida->Initialize();
@@ -1640,15 +1095,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Initialize HTML Template @1-554B8835
-=======
-//Initialize HTML Template @1-FFE96B5E
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-//Initialize HTML Template @1-554B8835
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -1657,31 +1104,15 @@ if (strlen($TemplateSource)) {
     $Tpl->LoadTemplate(PathToCurrentPage . $TemplateFileName, $BlockToParse, "CP1252", "replace");
 }
 $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
-<<<<<<< HEAD
-<<<<<<< HEAD
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
-=======
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-$Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
 $Attributes->SetValue("pathToRoot", "");
 $Attributes->Show();
 //End Initialize HTML Template
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Execute Components @1-B8A719E1
 $MasterPage->Operations();
-=======
-//Execute Components @1-2F193346
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
-//Execute Components @1-B8A719E1
-$MasterPage->Operations();
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $productos_unidadesmedida->Operation();
 //End Execute Components
 
@@ -1698,58 +1129,25 @@ if($Redirect)
 }
 //End Go to destination page
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Show Page @1-9289D706
-$Head->Show();
-$Content->Show();
-$Menu->Show();
-=======
 //Show Page @1-F3A9ED8C
 $Head->Show();
 $Content->Show();
 $Menu->Show();
 $Panel1->Show();
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $MasterPage->Tpl->SetVar("Head", $Tpl->GetVar("Panel Head"));
 $MasterPage->Tpl->SetVar("Content", $Tpl->GetVar("Panel Content"));
 $MasterPage->Tpl->SetVar("Menu", $Tpl->GetVar("Panel Menu"));
 $MasterPage->Show();
 if (!isset($main_block)) $main_block = $MasterPage->HTML;
-<<<<<<< HEAD
-=======
-//Show Page @1-CEE080AB
-$categoria_productos_unida->Show();
-$productos_unidadesmedida->Show();
-$Link1->Show();
-$Report_Print->Show();
-$Tpl->block_path = "";
-$Tpl->Parse($BlockToParse, false);
-if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 $main_block = CCConvertEncoding($main_block, $FileEncoding, $CCSLocales->GetFormatInfo("Encoding"));
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeOutput", $MainPage);
 if ($CCSEventResult) echo $main_block;
 //End Show Page
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 //Unload Page @1-5A5C25A0
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBConnection1->close();
 unset($MasterPage);
-<<<<<<< HEAD
-=======
-//Unload Page @1-A94C3B0E
-$CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
-$DBConnection1->close();
->>>>>>> 98f0fd6e5605492a464ab15470b9fd57f723f449
-=======
->>>>>>> 50e0f25d6fa1975a75dca2dcf27391d36b22ec9b
 unset($categoria_productos_unida);
 unset($productos_unidadesmedida);
 unset($Tpl);

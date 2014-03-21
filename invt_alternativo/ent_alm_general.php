@@ -1,7 +1,7 @@
 <?php
-//Include Common Files @1-C862D99B
-define("RelativePath", ".");
-define("PathToCurrentPage", "/");
+//Include Common Files @1-4D4D1D62
+define("RelativePath", "..");
+define("PathToCurrentPage", "/invt_alternativo/");
 define("FileName", "ent_alm_general.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
@@ -10,8 +10,8 @@ include_once(RelativePath . "/Navigator.php");
 include_once(RelativePath . "/Services.php");
 //End Include Common Files
 
-//Master Page implementation @1-8E4799B9
-include_once(RelativePath . "/Designs/medibio_template/medibio_template/MasterPage.php");
+//Master Page implementation @1-07539F59
+include_once(RelativePath . "/invt_alternativo/Designs/medibio_template/medibio_template/MasterPage.php");
 //End Master Page implementation
 
 class clsRecordent_almc_general { //ent_almc_general Class @6-96F4F23E
@@ -1090,7 +1090,7 @@ class clsdetail_entalmgeneralDataSource extends clsDBConnection1 {  //detail_ent
 
 } //End detail_entalmgeneralDataSource Class @19-FCB6E20C
 
-//Initialize Page @1-018C381F
+//Initialize Page @1-3EA110F0
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -1114,7 +1114,7 @@ $TemplateFileName = "ent_alm_general.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
-$PathToRoot = "./";
+$PathToRoot = "../";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -1126,7 +1126,7 @@ include_once("./ent_alm_general_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-09E7BDA9
+//Initialize Objects @1-94731FAF
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1134,7 +1134,7 @@ $Attributes->SetValue("pathToRoot", $PathToRoot);
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$MasterPage = new clsMasterPage("/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
+$MasterPage = new clsMasterPage("/invt_alternativo/Designs/medibio_template/medibio_template/", "MasterPage", $MainPage);
 $MasterPage->Attributes = $Attributes;
 $MasterPage->Initialize();
 $Head = new clsPanel("Head", $MainPage);
@@ -1178,7 +1178,7 @@ if ($Charset) {
 }
 //End Initialize Objects
 
-//Initialize HTML Template @1-554B8835
+//Initialize HTML Template @1-21B65862
 $CCSEventResult = CCGetEvent($CCSEvents, "OnInitializeView", $MainPage);
 $Tpl = new clsTemplate($FileEncoding, $TemplateEncoding);
 if (strlen($TemplateSource)) {
@@ -1190,7 +1190,7 @@ $Tpl->SetVar("CCS_PathToRoot", $PathToRoot);
 $Tpl->SetVar("CCS_PathToMasterPage", RelativePath . $PathToCurrentMasterPage);
 $Tpl->block_path = "/$BlockToParse";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeShow", $MainPage);
-$Attributes->SetValue("pathToRoot", "");
+$Attributes->SetValue("pathToRoot", "../");
 $Attributes->Show();
 //End Initialize HTML Template
 
