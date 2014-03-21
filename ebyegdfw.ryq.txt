@@ -1,0 +1,145 @@
+﻿Merge branch 'master' of https://github.com/excelmaster/MediBio_inventory
+
+Conflicts:
+	connection1_cache.xml
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 14 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   Clientes_mant.ccp
+#	modified:   Clientes_mant_events.php
+#	modified:   Crud_Clientes.ccp
+#	modified:   Crud_Clientes.html
+#	modified:   Crud_Clientes.php
+#	new file:   Styles/Basic/Images/Asc.gif
+#	new file:   Styles/Basic/Images/AscOff.gif
+#	new file:   Styles/Basic/Images/Back.gif
+#	new file:   Styles/Basic/Images/DatePicker.gif
+#	new file:   Styles/Basic/Images/Desc.gif
+#	new file:   Styles/Basic/Images/DescOff.gif
+#	new file:   Styles/Basic/Images/First.gif
+#	new file:   Styles/Basic/Images/FirstOff.gif
+#	new file:   Styles/Basic/Images/Forward.gif
+#	new file:   Styles/Basic/Images/HeaderBg.gif
+#	new file:   Styles/Basic/Images/HeaderLeft.gif
+#	new file:   Styles/Basic/Images/HeaderRight.gif
+#	new file:   Styles/Basic/Images/Last.gif
+#	new file:   Styles/Basic/Images/LastOff.gif
+#	new file:   Styles/Basic/Images/MenuActiveBg.gif
+#	new file:   Styles/Basic/Images/MenuBg.gif
+#	new file:   Styles/Basic/Images/Next.gif
+#	new file:   Styles/Basic/Images/NextOff.gif
+#	new file:   Styles/Basic/Images/Prev.gif
+#	new file:   Styles/Basic/Images/PrevOff.gif
+#	new file:   Styles/Basic/Images/Spacer.gif
+#	new file:   Styles/Basic/Images/SubmenuArrow.gif
+#	new file:   Styles/Basic/Images/en/ButtonCancel.gif
+#	new file:   Styles/Basic/Images/en/ButtonDelete.gif
+#	new file:   Styles/Basic/Images/en/ButtonFirst.gif
+#	new file:   Styles/Basic/Images/en/ButtonFirstOff.gif
+#	new file:   Styles/Basic/Images/en/ButtonInsert.gif
+#	new file:   Styles/Basic/Images/en/ButtonLast.gif
+#	new file:   Styles/Basic/Images/en/ButtonLastOff.gif
+#	new file:   Styles/Basic/Images/en/ButtonLogin.gif
+#	new file:   Styles/Basic/Images/en/ButtonLogout.gif
+#	new file:   Styles/Basic/Images/en/ButtonNext.gif
+#	new file:   Styles/Basic/Images/en/ButtonNextOff.gif
+#	new file:   Styles/Basic/Images/en/ButtonPrev.gif
+#	new file:   Styles/Basic/Images/en/ButtonPrevOff.gif
+#	new file:   Styles/Basic/Images/en/ButtonSearch.gif
+#	new file:   Styles/Basic/Images/en/ButtonToday.gif
+#	new file:   Styles/Basic/Images/en/ButtonUpdate.gif
+#	new file:   Styles/Basic/Images/extjs/spinner/spinner.gif
+#	new file:   Styles/Basic/Images/yui/calendar/callt.gif
+#	new file:   Styles/Basic/Images/yui/calendar/calrt.gif
+#	new file:   Styles/Basic/Images/yui/container/sprite.gif
+#	new file:   Styles/Basic/Images/yui/slider/sc.gif
+#	new file:   Styles/Basic/Images/yui/slider/se.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-1.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-2.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-3.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-4.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-5.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-6.gif
+#	new file:   Styles/Basic/Images/yui/slider/thumb-7.gif
+#	new file:   Styles/Basic/Images/yui/tabs/sprite.gif
+#	new file:   Styles/Basic/Menu.css
+#	new file:   Styles/Basic/Menu_Components.css
+#	new file:   Styles/Basic/Style.css
+#	new file:   Styles/Basic/Style_Components.css
+#	new file:   Styles/Basic/Style_Components_doctype.css
+#	new file:   Styles/Basic/Style_doctype.css
+#	new file:   Styles/Basic/ccs-spinner.css
+#	new file:   Styles/Basic/ccs-yui-calendar.css
+#	new file:   Styles/Basic/ccs-yui-container.css
+#	new file:   Styles/Basic/ccs-yui-slider.css
+#	new file:   Styles/Basic/ccs-yui-tabs.css
+#	modified:   admin.ccp
+#	modified:   admin.html
+#	modified:   admin.php
+#	new file:   admin_events.php
+#	new file:   admin_events.php.bak
+#	new file:   bdBone/a4104228_mb_20130901-0615.sql
+#	new file:   bdBone/a4104228_mb_20131016-2230.sql
+#	new file:   bdBone/invent_mb_20130810-0708.sql
+#	new file:   bdBone/invent_mb_backup_20130903-0734.sql
+#	new file:   bdBone/invent_mb_backup_20131220-0553.sql
+#	new file:   catprod_mant.ccp
+#	new file:   catprod_mant.html
+#	new file:   catprod_mant.php
+#	new file:   catprod_mant_events.php
+#	modified:   connection1_cache.xml
+#	new file:   crud_Unimed.ccp
+#	new file:   crud_Unimed.html
+#	new file:   crud_catproducto.ccp
+#	new file:   crud_catproducto.html
+#	new file:   crud_catproducto.php
+#	modified:   crud_provee.ccp
+#	modified:   crud_provee.html
+#	modified:   crud_provee.php
+#	new file:   crud_unimed.php
+#	new file:   crud_unimed_events.php
+#	modified:   en.txt
+#	modified:   invt_alternativo.ccs
+#	modified:   invt_cache.xml
+#	modified:   login.html
+#	modified:   main.ccp
+#	modified:   main.html
+#	modified:   main.php
+#	modified:   main_events.php
+#	modified:   main_events.php.bak
+#	modified:   productos_mant.ccp
+#	modified:   productos_mant.html
+#	modified:   productos_mant.php
+#	modified:   provee_mant.ccp
+#	modified:   provee_mant.html
+#	modified:   provee_mant.php
+#	modified:   rpt_clientes.ccp
+#	modified:   rpt_clientes.html
+#	modified:   rpt_clientes.php
+#	new file:   rpt_clientes_events.php
+#	modified:   rpt_productos.ccp
+#	modified:   rpt_productos.html
+#	modified:   rpt_productos.php
+#	modified:   rpt_provee.html
+#	new file:   unimed_mant.ccp
+#	new file:   unimed_mant.html
+#	new file:   unimed_mant.php
+#	new file:   unimed_mant_events.php
+#
+

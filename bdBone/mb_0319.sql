@@ -206,7 +206,9 @@ CREATE TABLE IF NOT EXISTS `detail_ent_alm_general` (
   CONSTRAINT `FK2_idproducto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
+
 -- Volcando datos para la tabla u392883857_inven.detail_ent_alm_general: ~0 rows (aproximadamente)
+
 DELETE FROM `detail_ent_alm_general`;
 /*!40000 ALTER TABLE `detail_ent_alm_general` DISABLE KEYS */;
 /*!40000 ALTER TABLE `detail_ent_alm_general` ENABLE KEYS */;
