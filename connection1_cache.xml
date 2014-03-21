@@ -6,30 +6,30 @@
     <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="u392883857_inven" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
-      <table TABLE_NAME="admin_redir" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="categoria_productos" TABLE_TYPE="Table" DESCRIPTION="tabla de categorizacion de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="clientes" TABLE_TYPE="Table" DESCRIPTION="tabla de clientes de MediBiologica" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="company" TABLE_TYPE="Table" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="depto_dame" TABLE_TYPE="Table" DESCRIPTION="tabla de departamentos del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="detail_ent_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="detail_sal_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="detail_sal_farmacia" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="ent_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="farmacias" TABLE_TYPE="Table" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="group_init" TABLE_TYPE="Table" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="main_redirection" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="menu_categories" TABLE_TYPE="Table" DESCRIPTION="menu dinamico con categorias&#xD;&#xA;" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="munc_dane" TABLE_TYPE="Table" DESCRIPTION="tabla de municipios del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="orden_compra" TABLE_TYPE="Table" DESCRIPTION="Objeto que almacena las facturas de los pedidos realizados. Desde aqui se puede filtrar el estado y fecha de entrega." allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="productos" TABLE_TYPE="Table" DESCRIPTION="listado de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="proveedores" TABLE_TYPE="Table" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="roles" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="sal_alm_general" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="sal_farmacia" TABLE_TYPE="Table" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="tipo_doc" TABLE_TYPE="Table" DESCRIPTION="tipos de documento para clientes y proveedores" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="unidadesmedida" TABLE_TYPE="Table" DESCRIPTION="unidades de medida" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="users" TABLE_TYPE="Table" DESCRIPTION="tabla de usuarios del sistema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
-      <table TABLE_NAME="warehouse" TABLE_TYPE="Table" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="admin_redir" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="categoria_productos" DESCRIPTION="tabla de categorizacion de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="clientes" DESCRIPTION="tabla de clientes de MediBiologica" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="company" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="depto_dame" DESCRIPTION="tabla de departamentos del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="detail_ent_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="detail_sal_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="detail_sal_farmacia" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ent_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="farmacias" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="group_init" DESCRIPTION="begin page to init the app for the groupid of session" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="main_redirection" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="menu_categories" DESCRIPTION="menu dinamico con categorias&#xD;&#xA;" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="munc_dane" DESCRIPTION="tabla de municipios del DANE" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="orden_compra" DESCRIPTION="Objeto que almacena las facturas de los pedidos realizados. Desde aqui se puede filtrar el estado y fecha de entrega." allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="productos" DESCRIPTION="listado de productos" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="proveedores" DESCRIPTION="List of company" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="roles" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="sal_alm_general" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="sal_farmacia" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tipo_doc" DESCRIPTION="tipos de documento para clientes y proveedores" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="unidadesmedida" DESCRIPTION="unidades de medida" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="users" DESCRIPTION="tabla de usuarios del sistema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="warehouse" DESCRIPTION="list of warehouses" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
     </schema>
   </catalog>
 </LldlCache>

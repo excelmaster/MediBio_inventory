@@ -133,10 +133,10 @@ class clsGridclientes { //clientes class @68-9CC2092A
     }
 //End Initialize Method
 
-//Show Method @68-D85679AE
+//Show Method @68-AB953B9B
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $CCSLocales;
         if(!$this->Visible) return;
 
@@ -585,11 +585,11 @@ class clsRecordclientesSearch { //clientesSearch Class @110-DF0C7DE5
     }
 //End Operation Method
 
-//Show Method @110-105D55DC
+//Show Method @110-4CFB25A4
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -652,7 +652,7 @@ class clsRecordclientesSearch { //clientesSearch Class @110-DF0C7DE5
 
 
 
-//Initialize Page @1-1DBA1798
+//Initialize Page @1-E6364E64
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -677,6 +677,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|js/jquery/jquery.js|js/jquery/event-manager.js|js/jquery/selectors.js|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -688,7 +690,7 @@ include_once("./Clientes_mant_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-81695227
+//Initialize Objects @1-F39E74AC
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -742,6 +744,12 @@ if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== fa
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $clientes->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 BindEvents();
 

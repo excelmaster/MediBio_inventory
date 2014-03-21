@@ -84,10 +84,10 @@ class clsGrident_alm_general2 { //ent_alm_general2 class @2-C9A86702
     }
 //End Initialize Method
 
-//Show Method @2-02E9C6C4
+//Show Method @2-888C0DA4
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $CCSLocales;
         if(!$this->Visible) return;
 
@@ -241,7 +241,7 @@ class clsent_alm_general2DataSource extends clsDBConnection1 {  //ent_alm_genera
 
 } //End ent_alm_general2DataSource Class @2-FCB6E20C
 
-//Initialize Page @1-9F6789EA
+//Initialize Page @1-F86893BF
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -263,13 +263,15 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "../";
+$PathToRootOpt = "../";
+$Scripts = "|";
 //End Initialize Page
 
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-71D15A65
+//Initialize Objects @1-1CC6D1A4
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -280,6 +282,12 @@ $MainPage->Attributes = & $Attributes;
 $ent_alm_general2 = new clsGrident_alm_general2("", $MainPage);
 $MainPage->ent_alm_general2 = & $ent_alm_general2;
 $ent_alm_general2->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

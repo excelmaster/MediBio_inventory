@@ -279,11 +279,11 @@ class clsRecordproductos { //productos Class @6-36DBC647
     }
 //End UpdateRow Method
 
-//Show Method @6-791A37D1
+//Show Method @6-E0D652A6
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -580,7 +580,7 @@ class clsproductosDataSource extends clsDBConnection1 {  //productosDataSource C
 
 } //End productosDataSource Class @6-FCB6E20C
 
-//Initialize Page @1-1B490370
+//Initialize Page @1-33AB07F7
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -605,6 +605,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -616,7 +618,7 @@ include_once("./CrudProducto_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-FFB90775
+//Initialize Objects @1-02CFA53B
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -643,6 +645,12 @@ $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("productos", $productos);
 $productos->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 BindEvents();
 

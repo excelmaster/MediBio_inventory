@@ -93,12 +93,18 @@
 							<Events/>
 							<Attributes/>
 							<Features>
-								<InlineDatePicker id="20" enabled="Yes" name="InlineDatePicker2" category="YahooUI" featureNameChanged="No">
+								<JDateTimePicker id="20" enabled="True" name="InlineDatePicker2" category="jQuery" featureNameChanged="No" show_weekend="True">
 									<Components/>
 									<Events/>
 									<ControlPoints/>
 									<Features/>
-								</InlineDatePicker>
+									<TableParameters/>
+									<SPParameters/>
+									<SQLParameters/>
+									<JoinTables/>
+									<JoinLinks/>
+									<Fields/>
+								</JDateTimePicker>
 							</Features>
 						</TextBox>
 						<ListBox id="21" visible="Yes" fieldSourceType="DBColumn" sourceType="Table" dataType="Integer" returnValueType="Number" name="lugar_residencia" fieldSource="lugar_residencia" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardCaption="{res:lugar_residencia}" caption="{res:lugar_residencia}" required="False" unique="False" connection="Connection1" wizardEmptyCaption="{res:CCS_SelectValue}" dataSource="munc_dane" boundColumn="Id" textColumn="Munc_Depto" PathID="Contentclientes1lugar_residencia" wizardThemeVersion="3.0">
@@ -229,29 +235,29 @@
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
-<Link id="38" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout" wizardTheme="Basic" wizardThemeVersion="3.0">
-<Components/>
-<Events/>
-<LinkParameters>
-<LinkParameter id="39" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="38" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout" wizardTheme="Basic" wizardThemeVersion="3.0">
+					<Components/>
+					<Events/>
+					<LinkParameters>
+						<LinkParameter id="39" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
 		</Panel>
 		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
 			<Components>
-<Link id="40" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Sidebar1Link1" hrefSource="Clientes_mant.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver a Clientes','textSourceDB':'','hrefSource':'Clientes_mant.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
-<Events/>
-<LinkParameters/>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="40" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" wizardTheme="None" wizardThemeType="File" wizardThemeVersion="3.0" PathID="Sidebar1Link1" hrefSource="Clientes_mant.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver a Clientes','textSourceDB':'','hrefSource':'Clientes_mant.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+					<Events/>
+					<LinkParameters/>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -259,6 +265,7 @@
 	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="Crud_Clientes.php" forShow="True" url="Crud_Clientes.php" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Events" language="PHPTemplates" name="Crud_Clientes_events.php" forShow="False" comment="//" codePage="windows-1252"/>
 	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>

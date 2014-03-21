@@ -1,10 +1,12 @@
 <?php
-//BindEvents Method @1-616B61C5
+//BindEvents Method @1-70876931
 function BindEvents()
 {
     global $ent_alm_general1;
+    global $ent_alm_general2;
     $ent_alm_general1->ent_alm_general1_TotalRecords->CCSEvents["BeforeShow"] = "ent_alm_general1_ent_alm_general1_TotalRecords_BeforeShow";
     $ent_alm_general1->ds->CCSEvents["BeforeBuildSelect"] = "ent_alm_general1_ds_BeforeBuildSelect";
+    $ent_alm_general2->fecha_proceso->CCSEvents["BeforeShow"] = "ent_alm_general2_fecha_proceso_BeforeShow";
 }
 //End BindEvents Method
 
@@ -106,4 +108,18 @@ function ent_alm_general1_ds_BeforeBuildSelect(& $sender)
     return $ent_alm_general1_ds_BeforeBuildSelect;
 }
 //End Close ent_alm_general1_ds_BeforeBuildSelect
+
+//ent_alm_general2_fecha_proceso_BeforeShow @66-974E4D43
+function ent_alm_general2_fecha_proceso_BeforeShow(& $sender)
+{
+    $ent_alm_general2_fecha_proceso_BeforeShow = true;
+    $Component = & $sender;
+    $Container = & CCGetParentContainer($sender);
+    global $ent_alm_general2; //Compatibility
+//End ent_alm_general2_fecha_proceso_BeforeShow
+
+//Close ent_alm_general2_fecha_proceso_BeforeShow @66-41FA392E
+    return $ent_alm_general2_fecha_proceso_BeforeShow;
+}
+//End Close ent_alm_general2_fecha_proceso_BeforeShow
 ?>

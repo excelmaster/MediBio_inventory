@@ -87,16 +87,16 @@
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
-<Link id="16" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-<Components/>
-<Events/>
-<LinkParameters>
-<LinkParameter id="17" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="16" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
+					<Components/>
+					<Events/>
+					<LinkParameters>
+						<LinkParameter id="17" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -109,18 +109,18 @@
 		</Panel>
 	</Components>
 	<CodeFiles>
-		<CodeFile id="Code" language="PHPTemplates" name="crud_unimed.php" forShow="True" url="crud_unimed.php" comment="//" codePage="windows-1252"/>
-		<CodeFile id="Events" language="PHPTemplates" name="crud_unimed_events.php" forShow="False" comment="//" codePage="windows-1252"/>
-</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="crud_Unimed.php" forShow="True" url="crud_Unimed.php" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Events" language="PHPTemplates" name="crud_Unimed_events.php" forShow="False" comment="//" codePage="windows-1252"/>
+	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>
 	<Features/>
 	<Events>
-<Event name="AfterInitialize" type="Server">
-<Actions>
-<Action actionName="Logout" actionCategory="Security" id="18" pageRedirects="True" parameterName="Logout" returnPage="crud_unimed.ccp"/>
-</Actions>
-</Event>
-</Events>
+		<Event name="AfterInitialize" type="Server">
+			<Actions>
+				<Action actionName="Logout" actionCategory="Security" id="18" pageRedirects="True" parameterName="Logout" returnPage="crud_unimed.ccp"/>
+			</Actions>
+		</Event>
+	</Events>
 </Page>

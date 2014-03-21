@@ -65,7 +65,7 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
     }
 //End Operations Method
 
-//Initialize Method @1-CB63E24D
+//Initialize Method @1-7AF43959
     function Initialize($Path = "")
     {
         global $FileName;
@@ -74,6 +74,12 @@ class clsBlockTemplate { //BlockTemplate class @1-17E84031
         global $PathToCurrentMasterPage;
         $this->TemplatePathValue = $Path;
         $PathToCurrentMasterPage = $this->RelativePath;
+        global $Scripts;
+        $IncScripts = "|";
+        $SList = explode("|", $IncScripts);
+        foreach ($SList as $Script) {
+            if ($Script != "" && strpos($Scripts, "|" . $Script . "|") === false)  $Scripts = $Scripts . $Script . "|";
+        }
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInitialize", $this);
         if(!$this->Visible)
             return "";

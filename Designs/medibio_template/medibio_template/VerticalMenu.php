@@ -65,7 +65,7 @@ class clsVerticalMenu { //VerticalMenu class @1-4B8F1AB5
     }
 //End Operations Method
 
-//Initialize Method @1-62FA101C
+//Initialize Method @1-E09353E3
     function Initialize($Path = "")
     {
         global $FileName;
@@ -74,6 +74,12 @@ class clsVerticalMenu { //VerticalMenu class @1-4B8F1AB5
         global $PathToCurrentMasterPage;
         $this->TemplatePathValue = $Path;
         $PathToCurrentMasterPage = $this->RelativePath;
+        global $Scripts;
+        $IncScripts = "|";
+        $SList = explode("|", $IncScripts);
+        foreach ($SList as $Script) {
+            if ($Script != "" && strpos($Scripts, "|" . $Script . "|") === false)  $Scripts = $Scripts . $Script . "|";
+        }
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInitialize", $this);
         if(!$this->Visible)
             return "";

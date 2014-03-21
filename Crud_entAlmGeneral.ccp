@@ -33,13 +33,11 @@
 							<Events/>
 							<Attributes/>
 							<Features>
-								<InlineDatePicker id="13" enabled="Yes" name="InlineDatePicker1" category="YahooUI">
-									<Components/>
+								<JDateTimePicker id="13" enabled="True" name="InlineDatePicker1" category="jQuery"><Components/>
 									<Events/>
 									<ControlPoints/>
 									<Features/>
-								</InlineDatePicker>
-							</Features>
+								</JDateTimePicker></Features>
 						</TextBox>
 						<ListBox id="14" visible="Yes" fieldSourceType="DBColumn" sourceType="Table" dataType="Integer" returnValueType="Number" name="Orden_compra" fieldSource="Orden_compra" wizardTheme="Compact" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardCaption="{res:Orden_compra}" caption="{res:Orden_compra}" required="False" unique="False" connection="Connection1" wizardEmptyCaption="{res:CCS_SelectValue}" dataSource="orden_compra" boundColumn="Id" textColumn="Documento_Contable" PathID="Contentent_alm_generalOrden_compra" wizardThemeVersion="3.0">
 							<Components/>
@@ -77,17 +75,17 @@
 						</ListBox>
 					</Components>
 					<Events>
-<Event name="BeforeExecuteInsert" type="Server">
-<Actions>
-<Action actionName="Master Detail Validate" actionCategory="General" id="35" detailsComponentName="detail_ent_alm_general"/>
-</Actions>
-</Event>
-<Event name="OnSubmit" type="Client">
-<Actions>
-<Action actionName="Get Data From Form" actionCategory="General" id="36" detailForm="detail_ent_alm_general"/>
-</Actions>
-</Event>
-</Events>
+						<Event name="BeforeExecuteInsert" type="Server">
+							<Actions>
+								<Action actionName="Master Detail Validate" actionCategory="General" id="35" detailsComponentName="detail_ent_alm_general"/>
+							</Actions>
+						</Event>
+						<Event name="OnSubmit" type="Client">
+							<Actions>
+								<Action actionName="Get Data From Form" actionCategory="General" id="36" detailForm="detail_ent_alm_general"/>
+							</Actions>
+						</Event>
+					</Events>
 					<TableParameters>
 						<TableParameter id="11" conditionType="Parameter" useIsNull="False" field="id" parameterSource="id" dataType="Integer" logicOperator="And" searchConditionType="Equal" parameterType="URL" orderNumber="1"/>
 					</TableParameters>
@@ -134,7 +132,7 @@
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="Crud_entAlmGeneral.php" forShow="True" url="Crud_entAlmGeneral.php" comment="//" codePage="windows-1252"/>
 		<CodeFile id="Events" language="PHPTemplates" name="Crud_entAlmGeneral_events.php" forShow="False" comment="//" codePage="windows-1252"/>
-</CodeFiles>
+	</CodeFiles>
 	<SecurityGroups/>
 	<CachingParameters/>
 	<Attributes/>

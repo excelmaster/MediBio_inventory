@@ -65,7 +65,7 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
     }
 //End Operations Method
 
-//Initialize Method @1-BDF56F85
+//Initialize Method @1-CBE82304
     function Initialize($Path = "")
     {
         global $FileName;
@@ -74,6 +74,12 @@ class clsMasterPage { //MasterPage class @1-BFE8F48A
         global $PathToCurrentMasterPage;
         $this->TemplatePathValue = $Path;
         $PathToCurrentMasterPage = $this->RelativePath;
+        global $Scripts;
+        $IncScripts = "|";
+        $SList = explode("|", $IncScripts);
+        foreach ($SList as $Script) {
+            if ($Script != "" && strpos($Scripts, "|" . $Script . "|") === false)  $Scripts = $Scripts . $Script . "|";
+        }
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeInitialize", $this);
         if(!$this->Visible)
             return "";

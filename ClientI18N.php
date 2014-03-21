@@ -1,6 +1,6 @@
 <?php
         
-//Client @0-0C6F9A9D
+//Client @0-3100F6A7
 define("RelativePath", ".");
 define("PathToCurrentPage", "");
 define("FileName", "");
@@ -9,6 +9,7 @@ $ClientFileEncoding = "UTF-8";
 $AllowedFiles = array(
     "/^DatePicker\\.js$/" => "content-type: text/javascript; charset=$ClientFileEncoding",
     "/^Functions\\.js$/" => "content-type: text/javascript; charset=$ClientFileEncoding",
+    "/^Globalize\\.js$/" => "content-type: text/javascript; charset=$ClientFileEncoding",
     "/^[\\w\\/]+_events\\.js$/" => "content-type: text/javascript; charset=$ClientFileEncoding"
 );
 $file = CCGetFromGet("file");

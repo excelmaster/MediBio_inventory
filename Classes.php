@@ -102,7 +102,7 @@ function CCCheckValue($Value, $DataType)
 }
 //End CCCheckValue
 
-//clsMenu Class @0-868A4561
+//clsMenu Class @0-29CF1700
 
 class clsMenu {
 
@@ -218,7 +218,7 @@ class clsMenu {
   }
 
   function DrawMenuItem($Component) {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     $CurrentLevel = $Component->DataSource->f("CCS_Level");
     $Component->Attributes->SetValue("Item_Level", $CurrentLevel);
     $Component->Attributes->Show();
@@ -258,7 +258,7 @@ class clsMenu {
   } 
   
   function Show() {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     global $CCSLocales;
     if(!$this->Visible) return;
 
@@ -561,7 +561,7 @@ class clsSQLParameters
 }
 //End clsSQLParameters Class
 
-//clsSQLParameter Class @0-937AF97C
+//clsSQLParameter Class @0-7313812C
 class clsSQLParameter
 {
   public $Errors;
@@ -599,7 +599,7 @@ class clsSQLParameter
 
   function GetParsedValue($ParsingValue, $Format, $isDbFormat = false)
   {
-    $Tpl = & CCGetTemplate();
+    $Tpl = CCGetTemplate();
     global $CCSLocales;
     $varResult = "";
 
@@ -794,7 +794,7 @@ class clsSQLParameter
 
 //End clsSQLParameter Class
 
-//clsControl Class @0-58BB604D
+//clsControl Class @0-FE861DA1
 class clsControl
 {
   public $ComponentType = "Control";
@@ -1019,7 +1019,7 @@ class clsControl
 
   function Show($RowNumber = "")
   {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     global $CCSIsXHTML;
     $this->EventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
     
@@ -1534,7 +1534,7 @@ class clsField
 
 //End clsField Class
 
-//clsButton Class @0-CFEA9C87
+//clsButton Class @0-69A53F7B
 class clsButton
 {
   public $ComponentType = "Button";
@@ -1560,7 +1560,7 @@ class clsButton
 
   function Show($RowNumber = "")
   {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
     if($this->Visible)
     {
@@ -1579,7 +1579,7 @@ class clsButton
 
 //End clsButton Class
 
-//clsPanel Class @0-33E280E7
+//clsPanel Class @0-FE662C2F
 class clsPanel
 {
   public $ComponentType = "Panel";
@@ -1595,6 +1595,8 @@ class clsPanel
   public $PathToCurrentPage;
   public $TemplateSource = "";
   public $isContentPlaceholder = false;
+  public $GenerateDiv = false;
+  public $PanelId = "";
 
   function clsPanel($Name, & $Parent)
   {
@@ -1615,7 +1617,7 @@ class clsPanel
   {
     global $CCSFormFilter, $PathToCurrentMasterPage;
     if ($this->isContentPlaceholder) return;
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
     if($this->Visible)
     {
@@ -1646,6 +1648,10 @@ class clsPanel
         $this->MasterPage->Show();
         $Tpl->setblockvar("Panel ". $this->Name, $this->MasterPage->HTML);
       }
+			if ($this->GenerateDiv){
+				$this->BlockPrefix = "<div id=\"" . $this->PanelId . "\">" . $this->BlockPrefix;
+				$this->BlockSuffix = $this->BlockSuffix . "</div>";
+			}
       $Tpl->setblockvar("Panel " . $this->Name, $this->BlockPrefix . $Tpl->getvar("Panel " . $this->Name) . $this->BlockSuffix);
     }
     else
@@ -1669,7 +1675,7 @@ class clsPanel
 
 //End clsPanel Class
 
-//clsFileUpload Class @0-8EBC1D11
+//clsFileUpload Class @0-B0EDC0DA
 class clsFileUpload
 {
   public $ComponentType = "FileUpload";
@@ -1908,7 +1914,7 @@ class clsFileUpload
 
   function Show($RowNumber = "")
   {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     if($this->Visible)
     {
       $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
@@ -2013,7 +2019,7 @@ class clsFileUpload
 
 //End clsFileUpload Class
 
-//clsCaptcha Class @0-531AA63E
+//clsCaptcha Class @0-0290B765
 class clsCaptcha {
     public $ComponentType = "Captcha";
     public $Name;
@@ -2059,7 +2065,7 @@ class clsCaptcha {
     }
 
     function Show() {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         $ParentPath = $Tpl->block_path;
         $BlockToParse = $ParentPath . "/Captcha " . $this->Name;
         $Tpl->block_path = $BlockToParse;
@@ -2081,7 +2087,7 @@ class clsCaptcha {
 }
 //End clsCaptcha Class
 
-//clsDatePicker Class @0-5ED7ABB2
+//clsDatePicker Class @0-C17F69AF
 class clsDatePicker
 {
   public $ComponentType = "DatePicker";
@@ -2114,7 +2120,7 @@ class clsDatePicker
 
   function Show($RowNumber = "")
   {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     if($this->Visible)
     {
       $this->Attributes->Show();
@@ -2206,7 +2212,7 @@ class clsSection
 }
 //End clsSection Class
 
-//clsLocaleInfo @0-D5E5039B
+//clsLocaleInfo @0-2B050E1A
 class clsLocaleInfo {
   public $FormatInfo;
   public $Name;
@@ -2265,7 +2271,7 @@ class clsLocaleInfo {
     foreach ($this->ShortDate as $val) {
      array_push($this->GeneralDate, $val);
     }
-     array_push($this->GeneralDate, " ");
+     array_push($this->GeneralDate, ", ");
     foreach ($this->LongTime as $val) {
      array_push($this->GeneralDate, $val);
     }
@@ -2499,7 +2505,7 @@ class clsMainPage
 }
 //End clsMainPage Class
 
-//clsAttribute class @0-6EAC1FE9
+//clsAttribute class @0-738BF458
 class clsAttribute {
   public  $ComponentType = "Attribute";
   public  $DataType = ccsText;
@@ -2528,7 +2534,7 @@ class clsAttribute {
   }  
 
   function Show() {
-    $Tpl = & CCGetTemplate();
+    $Tpl = CCGetTemplate();
     $Tpl->SetVar($this->Prefix . $this->Name, $this->GetText());
   }
 
@@ -2632,7 +2638,7 @@ class clsAttributes {
 }
 //End clsAttributes class
 
-//clsFlashChart class @0-3DCF2A66
+//clsFlashChart class @0-B549D5FA
 class clsFlashChart {
   public $Name;
   public $Title = "";
@@ -2654,7 +2660,7 @@ class clsFlashChart {
   }
 
   function Show() {
-    $Tpl = & CCGetTemplate($this);
+    $Tpl = CCGetTemplate($this);
     if (!$this->Visible) return;
     $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeShow", $this);
     if ($this->Visible) {

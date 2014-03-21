@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
@@ -21,29 +22,41 @@
 <script language="JavaScript" type="text/javascript">
 //End Include User Scripts
 
-//Contentent_alm_general2Button_Cancel_OnClick @65-1467BDAF
-function Contentent_alm_general2Button_Cancel_OnClick()
-{
-    disableValidation = true;
-    return true;
-}
-//End Contentent_alm_general2Button_Cancel_OnClick
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
 
-//Handle Contentent_alm_general2fecha_procesoInlineDatePicker1 @67-CE2BE8A1
-function Contentent_alm_general2fecha_procesoInlineDatePicker1_start(sender) {
-    if (!sender || sender === window) return;
-    generateDatePicker(sender.id, "ShortDate","Blueprint");
-}
-//End Handle Contentent_alm_general2fecha_procesoInlineDatePicker1
+//Controls Selecting @1-4FDBB0FE
+    $('body').ccsBind(function() {
+        features["Contentent_alm_general2fecha_procesoInlineDatePicker1"] = $('*:ccsControl(Content, ent_alm_general2, fecha_proceso)');
+    });
+//End Controls Selecting
 
-//bind_events @1-07CFEABE
-function bind_events() {
-    addEventHandler("Contentent_alm_general2fecha_proceso", "load", Contentent_alm_general2fecha_procesoInlineDatePicker1_start);
-    addEventHandler("Contentent_alm_general2Button_Cancel", "click", Contentent_alm_general2Button_Cancel_OnClick);
-}
-//End bind_events
+//Feature Parameters @1-E7B5562E
+    params["Contentent_alm_general2fecha_procesoInlineDatePicker1"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+//End Feature Parameters
 
-window.onload = bind_events; //Assign bind_events @1-19F7B649
+//Feature Init @1-62D41975
+    features["Contentent_alm_general2fecha_procesoInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["Contentent_alm_general2fecha_procesoInlineDatePicker1"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-9DCAC5D3
+    $('*:ccsControl(Content, ent_alm_general2, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
 
 //End CCS script
 </script>

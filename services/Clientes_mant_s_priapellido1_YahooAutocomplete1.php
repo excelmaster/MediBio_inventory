@@ -84,10 +84,10 @@ class clsGridclientes { //clientes class @2-9CC2092A
     }
 //End Initialize Method
 
-//Show Method @2-8991636F
+//Show Method @2-6E512955
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $CCSLocales;
         if(!$this->Visible) return;
 
@@ -241,7 +241,7 @@ class clsclientesDataSource extends clsDBConnection1 {  //clientesDataSource Cla
 
 } //End clientesDataSource Class @2-FCB6E20C
 
-//Initialize Page @1-8840C0F6
+//Initialize Page @1-7F838A35
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -263,13 +263,15 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "../";
+$PathToRootOpt = "../";
+$Scripts = "|";
 //End Initialize Page
 
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-40C8E0F5
+//Initialize Objects @1-582933FC
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -280,6 +282,12 @@ $MainPage->Attributes = & $Attributes;
 $clientes = new clsGridclientes("", $MainPage);
 $MainPage->clientes = & $clientes;
 $clientes->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

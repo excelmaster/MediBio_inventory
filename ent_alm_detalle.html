@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
@@ -11,21 +12,28 @@
 <script language="JavaScript" type="text/javascript">
 //End Include Common JSFunctions
 
-//Contentdetail_ent_alm_generalCancel_OnClick @28-E6EA2F77
-function Contentdetail_ent_alm_generalCancel_OnClick()
-{
-    disableValidation = true;
-    return true;
-}
-//End Contentdetail_ent_alm_generalCancel_OnClick
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
 
-//bind_events @1-772E3CAB
-function bind_events() {
-    addEventHandler("Contentdetail_ent_alm_generalCancel", "click", Contentdetail_ent_alm_generalCancel_OnClick);
-}
-//End bind_events
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
 
-window.onload = bind_events; //Assign bind_events @1-19F7B649
+//Plugin Calls @1-EFDCEE98
+    $('*:ccsControl(Content, detail_ent_alm_general, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
 
 //End CCS script
 </script>

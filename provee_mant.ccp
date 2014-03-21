@@ -130,7 +130,7 @@
 							<Attributes/>
 							<Features/>
 						</Link>
-</Components>
+					</Components>
 					<Events>
 						<Event name="BeforeBuildSelect" type="Server">
 							<Actions>
@@ -272,16 +272,16 @@
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
-<Link id="45" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-<Components/>
-<Events/>
-<LinkParameters>
-<LinkParameter id="46" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="45" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
+					<Components/>
+					<Events/>
+					<LinkParameters>
+						<LinkParameter id="46" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>

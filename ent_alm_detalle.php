@@ -416,10 +416,10 @@ class clsEditableGriddetail_ent_alm_general { //detail_ent_alm_general Class @6-
     }
 //End GetFormState Method
 
-//Show Method @6-9267B115
+//Show Method @6-298CA23A
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         global $CCSUseAmp;
@@ -747,7 +747,7 @@ class clsdetail_ent_alm_generalDataSource extends clsDBConnection1 {  //detail_e
 
 
 
-//Initialize Page @1-778E52D6
+//Initialize Page @1-EB781CCE
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -772,6 +772,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|js/jquery/jquery.js|js/jquery/event-manager.js|js/jquery/selectors.js|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -783,7 +785,7 @@ include_once("./ent_alm_detalle_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-E8D6A8F1
+//Initialize Objects @1-513E1355
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -810,6 +812,12 @@ $MainPage->Menu = & $Menu;
 $MainPage->Sidebar1 = & $Sidebar1;
 $Content->AddComponent("detail_ent_alm_general", $detail_ent_alm_general);
 $detail_ent_alm_general->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 BindEvents();
 

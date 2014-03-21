@@ -17,6 +17,6 @@
 	<Features/>
 	<Events/>
 	<CodeFiles>
-<CodeFile id="Code" language="PHPTemplates" name="BlockTemplate.php" forShow="True" url="BlockTemplate.php" comment="//" codePage="windows-1252"/>
-</CodeFiles>
+		<CodeFile id="Code" language="PHPTemplates" name="BlockTemplate.php" forShow="True" url="BlockTemplate.php" comment="//" codePage="windows-1252"/>
+	</CodeFiles>
 </Page>

@@ -328,11 +328,11 @@ class clsRecordclientes1 { //clientes1 Class @6-7A5F99DF
     }
 //End UpdateRow Method
 
-//Show Method @6-9B62CF2F
+//Show Method @6-8B2D8DF2
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -709,7 +709,7 @@ class clsclientes1DataSource extends clsDBConnection1 {  //clientes1DataSource C
 
 } //End clientes1DataSource Class @6-FCB6E20C
 
-//Initialize Page @1-BED044FF
+//Initialize Page @1-AF23E785
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -734,14 +734,20 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|js/jquery/jquery.js|js/jquery/event-manager.js|js/jquery/selectors.js|js/jquery/ui/jquery.ui.core.js|js/jquery/ui/jquery.ui.widget.js|js/jquery/ui/jquery.ui.datepicker.js|js/jquery/datepicker/ccs-date-timepicker.js|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
+
+//Include events file @1-F059728D
+include_once("./Crud_Clientes_events.php");
+//End Include events file
 
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-F6438B9A
+//Initialize Objects @1-43FC0634
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -787,6 +793,14 @@ if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== fa
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $clientes1->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
+
+BindEvents();
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

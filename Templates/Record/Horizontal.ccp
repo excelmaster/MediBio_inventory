@@ -10,4 +10,3 @@
 	<Features/>
 	<Events/>
 </Page>
-

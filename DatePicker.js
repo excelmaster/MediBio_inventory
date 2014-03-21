@@ -1,4 +1,4 @@
-//JS DatePicker @0-3872491A
+//JS DatePicker @0-AB171009
 
 var DateMasks = new Array(26);
     DateMasks["d"] = 0;
@@ -519,21 +519,20 @@ function buildTop()
   var imgPrevMonth = DatePickerObject.themePath+"Images/Prev.gif";
   var imgNextMonth = DatePickerObject.themePath+"Images/Next.gif";
   var imgNextYear  = DatePickerObject.themePath+"Images/Forward.gif";
-  if (DatePickerObject.hasMasterPage)
-  {
+  /*if (DatePickerObject.hasMasterPage) {
     imgPrevYear  = DatePickerObject.themePath+"Images/NavigatorFirst.png";
     imgPrevMonth = DatePickerObject.themePath+"Images/NavigatorPrev.png";
     imgNextMonth = DatePickerObject.themePath+"Images/NavigatorNext.png";
     imgNextYear  = DatePickerObject.themePath+"Images/NavigatorLast.png";
-  }
+  }*/
 
-  var datepickerDocument = (DatePickerObject.themeVersion=="3.0"?"":"<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 CLASS=CalendarControls>");
+  var datepickerDocument = (DatePickerObject.themeVersion=="3.0"?"":"<TABLE CELLPADDING=0 CELLSPACING=0 CLASS=CalendarControls>");
   if (DatePickerObject.themeVersion!="3.0") datepickerDocument += "<TR><TD>";
   datepickerDocument += 
       "<A " +
-      "HREF=\"javascript:parent.opener.setPreviousYear()\"><IMG SRC=\""+imgPrevYear+"\" BORDER=\"0\"></A><A " +
-      "HREF=\"javascript:parent.opener.setPreviousMonth()\"><IMG SRC=\""+imgPrevMonth+"\" BORDER=\"0\"></A>";
-  if (DatePickerObject.themeVersion!="3.0") datepickerDocument += "</TD><TD ALIGN=\"center\" WIDTH=\"100%\">";
+      "HREF=\"javascript:parent.opener.setPreviousYear()\"><IMG SRC=\""+imgPrevYear+"\"></A><A " +
+      "HREF=\"javascript:parent.opener.setPreviousMonth()\"><IMG SRC=\""+imgPrevMonth+"\"></A>";
+  if (DatePickerObject.themeVersion!="3.0") datepickerDocument += "</TD><TD style=\"text-align:center;\" style=\"width:100%;\">";
   else datepickerDocument += "&nbsp;&nbsp;&nbsp;&nbsp;";
   datepickerDocument += 
       "<LABEL ID=\"labelMonth\">"+listMonths[DatePickerObject.currentMonth]+"</LABEL>&nbsp;<LABEL ID=\"labelYear\">"+DatePickerObject.currentYear+"</LABEL>";
@@ -541,8 +540,8 @@ function buildTop()
   else datepickerDocument += "&nbsp;&nbsp;&nbsp;&nbsp;";
   datepickerDocument += 
       "<A " +
-      "HREF=\"javascript:parent.opener.setNextMonth()\"><IMG SRC=\""+imgNextMonth+"\" BORDER=\"0\"></A><A " +
-      "HREF=\"javascript:parent.opener.setNextYear()\"><IMG SRC=\""+imgNextYear+"\" BORDER=\"0\"></A>";
+      "HREF=\"javascript:parent.opener.setNextMonth()\"><IMG SRC=\""+imgNextMonth+"\"></A><A " +
+      "HREF=\"javascript:parent.opener.setNextYear()\"><IMG SRC=\""+imgNextYear+"\"></A>";
   if (DatePickerObject.themeVersion!="3.0") datepickerDocument += "</TD></TR></TABLE>";
   //prompt("",datepickerDocument)
   return datepickerDocument;
@@ -642,7 +641,7 @@ function buildBottom()
     // Add the day to the DatePicker string depending on workday or not. 
     if ((columnCount + firstWeekDayIndex) % 7 == 0 || (columnCount + firstWeekDayIndex) % 7 == 6)
     {
-      datepickerDocument += "<TD align=center class=\""+(dayBackground?dayBackground:"CalendarWeekend")+"\">" +
+      datepickerDocument += "<TD style=\"text-align:center;\" class=\""+(dayBackground?dayBackground:"CalendarWeekend")+"\">" +
 		padding + 
                 "<a href=\"javascript:parent.opener.returnDate(" + 
                 currentDay + ")\">" + currentDay + "</a>" + 
@@ -650,7 +649,7 @@ function buildBottom()
     }
     else 
     {
-      datepickerDocument += "<TD align=center class=\""+(dayBackground?dayBackground:"CalendarDay")+"\">" +
+      datepickerDocument += "<TD style=\"text-align:center;\" class=\""+(dayBackground?dayBackground:"CalendarDay")+"\">" +
 		padding + 
                 "<a href=\"javascript:parent.opener.returnDate(" + 
                 currentDay + ")\">" + currentDay + "</a>" +
@@ -869,7 +868,7 @@ function createWeekdayList()
   var columnCount = 0;
   for (var i = 0; i < listShortWeekdays.length; i++)
   {
-    weekdays += "<TD class=\"CalendarWeekdayName\" align=\"center\">" + newWeekdayArray[i] + "</TD>";
+    weekdays += "<TD class=\"CalendarWeekdayName\" style=\"text-align:center;\">" + newWeekdayArray[i] + "</TD>";
     columnCount++;
   }
 
@@ -886,13 +885,13 @@ function buildDatePickerParts()
   weekdays = createWeekdayList();
 
   // Build the blank cell rows
-  blankCell = "<TD align=center class=\"CalendarDay\">&nbsp;&nbsp;&nbsp;</TD>";
-  blankCellWeekend = "<TD align=center class=\"CalendarWeekend\">&nbsp;&nbsp;&nbsp;</TD>";
+  blankCell = "<TD style=\"text-align:center;\" class=\"CalendarDay\">&nbsp;&nbsp;&nbsp;</TD>";
+  blankCellWeekend = "<TD style=\"text-align:center;\" class=\"CalendarWeekend\">&nbsp;&nbsp;&nbsp;</TD>";
 
   // Build the top portion of the DatePicker page using css to control some display elements
   var stylePath=DatePickerObject.style;
-  if (DatePickerObject.hasMasterPage == true)
-  	stylePath += "Style.css";
+  /*if (DatePickerObject.hasMasterPage == true)
+  	stylePath += "Style.css";*/
   DatePickerBegin =
       (isNav?"":"<HTML>" +
       "<HEAD>" +
@@ -901,50 +900,49 @@ function buildDatePickerParts()
       "<LINK REL=\"stylesheet\" TYPE=\"text/css\" HREF=\""+stylePath+"\">" +
       "<TITLE> Date Picker </TITLE>" +
       "</HEAD>" +
-      "<BODY ONUNLOAD='parent.opener.UnLoad();'>") + "<CENTER>";
+      "<BODY ONUNLOAD='parent.opener.UnLoad();'>") + "<DIV STYLE='text-align:center'>";
 
   // Navigator needs a table container to display the table outlines properly
   if (DatePickerObject.themeVersion=="3.0")
-    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD>";
+    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 style='width: 100%; margin-left: auto; margin-right: auto'><TR><TD>";
   else
-    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD>{datepickerDocumentTop}</TD></TR><TR><TD ALIGN=CENTER VALIGN=TOP>";
+    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 style='width: 100%; margin-left: auto; margin-right: auto'><TR><TD>{datepickerDocumentTop}</TD></TR><TR><TD style=\"text-align:center;vertical-align:top;\">";
 
   // Build weekday headings
   if (DatePickerObject.themeVersion=="3.0")
   {
-    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 CLASS=\"Grid\"><TR CLASS=Footer><TD COLSPAN=7>{datepickerDocumentTop}</TD></TR>";
+    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 CLASS=\"Grid\"><TR CLASS=Footer><TD COLSPAN=7>{datepickerDocumentTop}</TD></TR>";
     DatePickerBegin += weekdays + "<TR>";
   }else
-    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 CLASS=\"Calendar\">" + weekdays + "<TR>";
+    DatePickerBegin += "<TABLE CELLPADDING=0 CELLSPACING=0 CLASS=\"Calendar\">" + weekdays + "<TR>";
 
   // Build the bottom portion of the DatePicker page
   DatePickerEnd = "";
 
-  if (DatePickerObject.themeVersion=="3.0")
-  {
+  if (DatePickerObject.themeVersion=="3.0") {
     var translation_language = "{res:CCS_LanguageID}";
     var imgToday = DatePickerObject.themePath+"Images/"+translation_language+"/ButtonToday.gif";
-    DatePickerEnd += "<tr class=Footer><form id=calTable name=calTable><td colspan=7><input type=image src="+imgToday+" name=today onClick=\"parent.opener.setToday()\"></td></form></tr>";
+    DatePickerEnd += '<tr class=Footer><form id="calTable" name="calTable"><td colspan=7><input type=image src="' + imgToday + '" name=today onClick="parent.opener.setToday()"></td></form></tr>';
   }
 
   // Navigator needs a table container to display the borders properly
   DatePickerEnd += "</TABLE>";
 
   // End the table and html document
-  if (DatePickerObject.themeVersion!="3.0")
+  if (DatePickerObject.themeVersion != "3.0")
     DatePickerEnd +=
-      "</TABLE>" +
-      (isNav?"<FORM NAME='calTable' onSubmit='return false;'>":"") + 
-      "<TABLE CELLPADDING=0 CELLSPACING=0 BORDER='0'>" + 
-      (isNav?"":"<FORM NAME='calTable' onSubmit='return false;'>") +
-      "<TD>" +
-      "<INPUT TYPE='button' CLASS='CalendarButton' NAME='today' VALUE='{res:CCS_Today}' onClick=\"parent.opener.setToday()\">" + 
-      "</TD>" + 
-      (isNav?"":"</FORM>")+
-      "</TABLE>" +
-      (isNav?"</FORM>":"")+
-      "</CENTER>" +
-      "</HTML>";
+      '</TABLE>' +
+      (isNav ? '<FORM NAME="calTable" onSubmit="return false;">' : '') + 
+      '<TABLE CELLPADDING=0 CELLSPACING=0>' + 
+      (isNav ? "" : '<FORM NAME="calTable" onSubmit="return false;">') +
+      '<TD>' +
+      '<INPUT TYPE="button" CLASS="CalendarButton" NAME="today" VALUE="{res:CCS_Today}" onClick="parent.opener.setToday()">' + 
+      '</TD>' + 
+      (isNav ? '' : '</FORM>')+
+      '</TABLE>' +
+      (isNav ? '</FORM>' : '')+
+      '</DIV>' +
+      '</HTML>';
 }
 
 // Set field value to the date selected and close the DatePicker window

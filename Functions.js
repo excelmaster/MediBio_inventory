@@ -1,4 +1,4 @@
-//JS Functions @0-89A37D48
+//JS Functions @0-528BFB17
 var isNN = (navigator.appName.indexOf("Netscape") != -1);
 //var isIE = (navigator.appName.indexOf("Microsoft") != -1);
 var isIE = !!(window.attachEvent && !window.opera);  // Internet Explorer
@@ -710,8 +710,6 @@ function addEventHandler(elementId, event, handler) {
                 }
             }
         }
-        if (wereFound && !element)
-            break;
     }
 
     addEventHandler.isOnLoad = false;

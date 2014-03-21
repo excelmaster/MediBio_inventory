@@ -43,7 +43,7 @@
 					</TableParameters>
 					<JoinTables>
 						<JoinTable id="21" tableName="main_redirection"/>
-</JoinTables>
+					</JoinTables>
 					<JoinLinks/>
 					<Fields>
 						<Field id="10" fieldName="name_sitio" tableName="main_redirection"/>

@@ -90,10 +90,10 @@ class clsGridadmin_redir { //admin_redir class @7-7E7F1718
     }
 //End Initialize Method
 
-//Show Method @7-E8C9AF04
+//Show Method @7-60DDAFCF
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $CCSLocales;
         if(!$this->Visible) return;
 
@@ -249,7 +249,7 @@ class clsadmin_redirDataSource extends clsDBConnection1 {  //admin_redirDataSour
 
 } //End admin_redirDataSource Class @7-FCB6E20C
 
-//Initialize Page @1-CB057696
+//Initialize Page @1-64947CE5
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -274,6 +274,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -285,7 +287,7 @@ CCSecurityRedirect("1", "");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-D35E23FC
+//Initialize Objects @1-90516EEF
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -323,6 +325,12 @@ $Content->AddComponent("admin_redir", $admin_redir);
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $admin_redir->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

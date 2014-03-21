@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 
 <!-- BEGIN Panel Head -->
 <meta name="GENERATOR" content="CodeCharge Studio 5.0.0.16254">
@@ -20,40 +21,47 @@
 <script language="JavaScript" type="text/javascript">
 //End Include User Scripts
 
-//Date Picker Object Definitions @1-C586A1EA
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
 
-var clientes1_DatePicker_fecha_nacimiento1 = new Object(); 
-clientes1_DatePicker_fecha_nacimiento1.format           = "yyyy/mm/dd";
-clientes1_DatePicker_fecha_nacimiento1.style            = "Designs/medibio_template/medibio_template";
-clientes1_DatePicker_fecha_nacimiento1.relativePathPart = "";
-clientes1_DatePicker_fecha_nacimiento1.themeVersion     = "3.0";
-clientes1_DatePicker_fecha_nacimiento1.hasMasterPage    = true;
+//Controls Selecting @1-F58EE24F
+    $('body').ccsBind(function() {
+        features["Contentclientes1fecha_nacimientoInlineDatePicker2"] = $('*:ccsControl(Content, clientes1, fecha_nacimiento)');
+    });
+//End Controls Selecting
 
-//End Date Picker Object Definitions
+//Feature Parameters @1-873E6EC8
+    params["Contentclientes1fecha_nacimientoInlineDatePicker2"] = { 
+        dateFormat: "yyyy/MM/dd",
+        isWeekend: true
+    };
+//End Feature Parameters
 
-//Contentclientes1Button_Cancel_OnClick @9-9A7FAF8C
-function Contentclientes1Button_Cancel_OnClick()
-{
-    disableValidation = true;
-    return true;
-}
-//End Contentclientes1Button_Cancel_OnClick
+//Feature Init @1-570AB60B
+    features["Contentclientes1fecha_nacimientoInlineDatePicker2"].ccsBind(function() {
+        this.ccsDateTimePicker(params["Contentclientes1fecha_nacimientoInlineDatePicker2"]);
+    });
+//End Feature Init
 
-//Handle Contentclientes1fecha_nacimientoInlineDatePicker2 @20-2BA175E8
-function Contentclientes1fecha_nacimientoInlineDatePicker2_start(sender) {
-    if (!sender || sender === window) return;
-    generateDatePicker(sender.id, "yyyy/mm/dd","");
-}
-//End Handle Contentclientes1fecha_nacimientoInlineDatePicker2
+//Plugin Calls @1-59F62712
+    $('*:ccsControl(Content, clientes1, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    clientes1_DatePicker_fecha_nacimiento1 = new Object(); 
+    clientes1_DatePicker_fecha_nacimiento1.format           = "yyyy/mm/dd";
+    clientes1_DatePicker_fecha_nacimiento1.style            = "Styles/Compact/Style.css";
+    clientes1_DatePicker_fecha_nacimiento1.relativePathPart = "";
+    clientes1_DatePicker_fecha_nacimiento1.themeVersion     = "3.0";
+    clientes1_DatePicker_fecha_nacimiento1.hasMasterPage    = true;
+//End Plugin Calls
 
-//bind_events @1-6D59E6C4
-function bind_events() {
-    addEventHandler("Contentclientes1fecha_nacimiento", "load", Contentclientes1fecha_nacimientoInlineDatePicker2_start);
-    addEventHandler("Contentclientes1Button_Cancel", "click", Contentclientes1Button_Cancel_OnClick);
-}
-//End bind_events
-
-window.onload = bind_events; //Assign bind_events @1-19F7B649
+//Common Script End @1-562554DE
+});
+//End Common Script End
 
 //End CCS script
 </script>

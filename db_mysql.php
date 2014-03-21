@@ -1,6 +1,6 @@
 <?php
 
-//DB MySQL Class @0-1B904918
+//DB MySQL Class @0-56DDB8F7
 /*
  * Database Management for PHP
  *
@@ -423,8 +423,6 @@ class DB_MySQL {
   function esc($value) {
     if ($this->Connected) {
       return mysql_real_escape_string($value, $this->Link_ID);
-    } elseif (function_exists("mysql_escape_string")) {
-      return mysql_escape_string($value);
     } else {
       return addslashes($value);
     }    

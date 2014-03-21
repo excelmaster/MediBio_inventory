@@ -1,14 +1,14 @@
 <Page id="1" templateExtension="html" relativePath="." fullRelativePath="." secured="False" urlType="Relative" isIncluded="False" SSLAccess="False" isService="False" cachingEnabled="False" cachingDuration="1 minutes" wizardTheme="Compact" wizardThemeVersion="3.0" useDesign="False" needGeneration="0" masterPage="Designs/medibio_template/medibio_template/MasterPage.ccp">
 	<Components>
 		<Panel id="2" visible="True" name="Head" contentPlaceholder="Head">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
-<Components>
-<Record id="6" sourceType="Table" urlType="Relative" secured="False" allowInsert="True" allowUpdate="True" allowDelete="False" validateData="True" preserveParameters="GET" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="categoria_productos1" connection="Connection1" dataSource="categoria_productos" errorSummator="Error" allowCancel="True" recordDeleteConfirmation="False" buttonsType="button" wizardRecordKey="id" encryptPasswordField="False" wizardUseInterVariables="True" pkIsAutoincrement="True" wizardCaption="{res:categoria_productos_RecordForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardFormMethod="post" wizardType="GridRecord" changedCaptionRecord="False" recordDirection="Vertical" templatePageRecord="C:/Users/betofierro/Documents/GitHub/invt_alternativo/Templates/Record/Horizontal.ccp|userTemplate" recordAddTemplatePanel="False" PathID="Contentcategoria_productos1" wizardThemeVersion="3.0" composition="22">
+			<Components/>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="3" visible="True" name="Content" contentPlaceholder="Content">
+			<Components>
+				<Record id="6" sourceType="Table" urlType="Relative" secured="False" allowInsert="True" allowUpdate="True" allowDelete="False" validateData="True" preserveParameters="GET" returnValueType="Number" returnValueTypeForDelete="Number" returnValueTypeForInsert="Number" returnValueTypeForUpdate="Number" name="categoria_productos1" connection="Connection1" dataSource="categoria_productos" errorSummator="Error" allowCancel="True" recordDeleteConfirmation="False" buttonsType="button" wizardRecordKey="id" encryptPasswordField="False" wizardUseInterVariables="True" pkIsAutoincrement="True" wizardCaption="{res:categoria_productos_RecordForm}" wizardTheme="Blueprint" wizardThemeApplyTo="Component" wizardFormMethod="post" wizardType="GridRecord" changedCaptionRecord="False" recordDirection="Vertical" templatePageRecord="C:/Users/betofierro/Documents/GitHub/invt_alternativo/Templates/Record/Horizontal.ccp|userTemplate" recordAddTemplatePanel="False" PathID="Contentcategoria_productos1" wizardThemeVersion="3.0" composition="22">
 					<Components>
 						<Button id="7" urlType="Relative" enableValidation="True" isDefault="False" name="Button_Insert" operation="Insert" wizardTheme="Blueprint" wizardCaption="{res:CCS_Insert}" PathID="Contentcategoria_productos1Button_Insert" wizardThemeVersion="3.0">
 							<Components/>
@@ -73,24 +73,24 @@
 					<Attributes/>
 					<Features/>
 				</Record>
-</Components>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
-<Components/>
-<Events/>
-<Attributes/>
-<Features/>
-</Panel>
-</Components>
+			</Components>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
+			<Components/>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
+			<Components/>
+			<Events/>
+			<Attributes/>
+			<Features/>
+		</Panel>
+	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="crud_catproducto.php" forShow="True" url="crud_catproducto.php" comment="//" codePage="windows-1252"/>
 	</CodeFiles>

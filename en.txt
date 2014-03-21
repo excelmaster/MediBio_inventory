@@ -194,3 +194,4 @@ tipo_documento=Tipo Documento
 unidad_medida_id=Unidad de Medida
 unidadesmedida_GridForm=Unidades de Medida
 unidadesmedida_RecordForm=Agregar / Editar Unidades de medida 
+CCS_Now=Now

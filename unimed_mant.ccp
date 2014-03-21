@@ -132,7 +132,7 @@
 						<Panel id="30" visible="True" name="Data_Alt_Detail" wizardTheme="Blueprint" wizardThemeVersion="3.0">
 							<Components>
 								<Link id="31" visible="Yes" fieldSourceType="CodeExpression" html="False" hrefType="Page" preserveParameters="GET" name="Alt_Detail" wizardCaption="{res:Detail}" wizardTheme="Blueprint" wizardIsPassword="False" wizardUseTemplateBlock="False" wizardAddNbsp="True" dataType="Text" wizardDefaultValue="{res:CCS_CustomLinkField}" hrefSource="crud_unimed.ccp" wizardThemeItem="FooterA" PathID="ContentunidadesmedidaData_Alt_DetailAlt_Detail" wizardThemeVersion="3.0" linkProperties="{'textSource':'{res:CCS_CustomLinkField}','textSourceDB':'','hrefSource':'crud_unimed.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'0':{'sourceType':'DataField','parameterSource':'id','parameterName':'id'},'length':1,'objectType':'linkParameters'}}" urlType="Relative">
-<Components/>
+									<Components/>
 									<Events/>
 									<LinkParameters>
 										<LinkParameter id="32" sourceType="DataField" format="yyyy-mm-dd" name="id" source="id"/>
@@ -331,16 +331,16 @@
 		</Panel>
 		<Panel id="4" visible="True" name="Menu" contentPlaceholder="Menu">
 			<Components>
-<Link id="51" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
-<Components/>
-<Events/>
-<LinkParameters>
-<LinkParameter id="52" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
-</LinkParameters>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="51" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Logout" hrefSource="login.ccp" wizardDefaultValue="{res:CCS_LogoutBtn}" PathID="MenuLogout">
+					<Components/>
+					<Events/>
+					<LinkParameters>
+						<LinkParameter id="52" sourceType="Expression" format="yyyy-mm-dd" name="Logout" source="&quot;True&quot;"/>
+					</LinkParameters>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>
@@ -361,10 +361,10 @@
 	<Attributes/>
 	<Features/>
 	<Events>
-<Event name="AfterInitialize" type="Server">
-<Actions>
-<Action actionName="Logout" actionCategory="Security" id="53" pageRedirects="True" parameterName="Logout" returnPage="unimed_mant.ccp"/>
-</Actions>
-</Event>
-</Events>
+		<Event name="AfterInitialize" type="Server">
+			<Actions>
+				<Action actionName="Logout" actionCategory="Security" id="53" pageRedirects="True" parameterName="Logout" returnPage="unimed_mant.ccp"/>
+			</Actions>
+		</Event>
+	</Events>
 </Page>

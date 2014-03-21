@@ -24,13 +24,13 @@
 		</Panel>
 		<Panel id="5" visible="True" name="Sidebar1" contentPlaceholder="Sidebar1">
 			<Components>
-<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel de control','textSourceDB':'','hrefSource':'main.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
-<Events/>
-<LinkParameters/>
-<Attributes/>
-<Features/>
-</Link>
-</Components>
+				<Link id="13" visible="Yes" fieldSourceType="DBColumn" dataType="Text" html="False" hrefType="Page" urlType="Relative" preserveParameters="GET" name="Link1" PathID="Sidebar1Link1" hrefSource="main.ccp" wizardUseTemplateBlock="False" linkProperties="{'textSource':'Volver al panel de control','textSourceDB':'','hrefSource':'main.ccp','hrefSourceDB':'','title':'','target':'','name':'','linkParameters':{'length':0,'objectType':'linkParameters'}}"><Components/>
+					<Events/>
+					<LinkParameters/>
+					<Attributes/>
+					<Features/>
+				</Link>
+			</Components>
 			<Events/>
 			<Attributes/>
 			<Features/>

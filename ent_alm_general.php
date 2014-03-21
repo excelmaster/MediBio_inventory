@@ -157,10 +157,10 @@ class clsGrident_alm_general1 { //ent_alm_general1 class @6-E28534C1
     }
 //End Initialize Method
 
-//Show Method @6-9B568F04
+//Show Method @6-1BCB99F4
     function Show()
     {
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $CCSLocales;
         if(!$this->Visible) return;
 
@@ -567,11 +567,11 @@ class clsRecordent_alm_generalSearch { //ent_alm_generalSearch Class @54-AB7350D
     }
 //End Operation Method
 
-//Show Method @54-34517E60
+//Show Method @54-80826A38
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -800,11 +800,11 @@ class clsRecordent_alm_general2 { //ent_alm_general2 Class @61-E7BB016C
     }
 //End InsertRow Method
 
-//Show Method @61-DA7D6E80
+//Show Method @61-B4D24763
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -979,7 +979,7 @@ class clsent_alm_general2DataSource extends clsDBConnection1 {  //ent_alm_genera
 
 } //End ent_alm_general2DataSource Class @61-FCB6E20C
 
-//Initialize Page @1-018C381F
+//Initialize Page @1-665D1330
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -1004,6 +1004,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|js/jquery/jquery.js|js/jquery/event-manager.js|js/jquery/selectors.js|js/jquery/ui/jquery.ui.core.js|js/jquery/ui/jquery.ui.widget.js|js/jquery/ui/jquery.ui.datepicker.js|js/jquery/datepicker/ccs-date-timepicker.js|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -1015,7 +1017,7 @@ include_once("./ent_alm_general_events.php");
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-3779326D
+//Initialize Objects @1-EB700A6B
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -1049,6 +1051,12 @@ $Content->AddComponent("ent_alm_generalSearch", $ent_alm_generalSearch);
 $Content->AddComponent("ent_alm_general2", $ent_alm_general2);
 $ent_alm_general1->Initialize();
 $ent_alm_general2->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 BindEvents();
 

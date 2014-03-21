@@ -268,11 +268,11 @@ class clsRecordproveedores1 { //proveedores1 Class @30-F284CF0B
     }
 //End UpdateRow Method
 
-//Show Method @30-64AB5699
+//Show Method @30-8B94FB87
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -578,7 +578,7 @@ class clsproveedores1DataSource extends clsDBConnection1 {  //proveedores1DataSo
 
 } //End proveedores1DataSource Class @30-FCB6E20C
 
-//Initialize Page @1-A34CF007
+//Initialize Page @1-CFF9E05B
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -603,6 +603,8 @@ $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
@@ -610,7 +612,7 @@ $Charset = $Charset ? $Charset : "windows-1252";
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-929CB34D
+//Initialize Objects @1-41D6EAFD
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -647,6 +649,12 @@ $Sidebar1->AddComponent("Link1", $Link1);
 $Sidebar1->AddComponent("Link2", $Link2);
 $Content->AddComponent("proveedores1", $proveedores1);
 $proveedores1->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 $CCSEventResult = CCGetEvent($CCSEvents, "AfterInitialize", $MainPage);
 

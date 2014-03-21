@@ -11,11 +11,11 @@
 			<Features/>
 		</ContentPlaceholder>
 		<ContentPlaceholder id="5" name="cabecera" PathID="cabecera">
-<Components/>
-<Events/>
-<Features/>
-</ContentPlaceholder>
-</Components>
+			<Components/>
+			<Events/>
+			<Features/>
+		</ContentPlaceholder>
+	</Components>
 	<CodeFiles>
 		<CodeFile id="Code" language="PHPTemplates" name="masterpage.php" forShow="True" url="masterpage.php" comment="//" codePage="windows-1252"/>
 	</CodeFiles>

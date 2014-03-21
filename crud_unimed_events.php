@@ -7,13 +7,13 @@ function BindEvents()
 }
 //End BindEvents Method
 
-//Page_AfterInitialize @1-89580187
+//Page_AfterInitialize @1-01C79344
 function Page_AfterInitialize(& $sender)
 {
     $Page_AfterInitialize = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $crud_unimed; //Compatibility
+    global $crud_Unimed; //Compatibility
 //End Page_AfterInitialize
 
 //Logout @18-9B3D070E

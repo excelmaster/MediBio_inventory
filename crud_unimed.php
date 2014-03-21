@@ -1,8 +1,8 @@
 <?php
-//Include Common Files @1-065F43BF
+//Include Common Files @1-B7EF7652
 define("RelativePath", ".");
 define("PathToCurrentPage", "/");
-define("FileName", "crud_unimed.php");
+define("FileName", "crud_Unimed.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
 include_once(RelativePath . "/Sorter.php");
@@ -202,11 +202,11 @@ class clsRecordunidadesmedida { //unidadesmedida Class @6-1420E799
     }
 //End UpdateRow Method
 
-//Show Method @6-E2A324BF
+//Show Method @6-392FA755
     function Show()
     {
         global $CCSUseAmp;
-        $Tpl = & CCGetTemplate($this);
+        $Tpl = CCGetTemplate($this);
         global $FileName;
         global $CCSLocales;
         $Error = "";
@@ -391,7 +391,7 @@ class clsunidadesmedidaDataSource extends clsDBConnection1 {  //unidadesmedidaDa
 
 } //End unidadesmedidaDataSource Class @6-FCB6E20C
 
-//Initialize Page @1-B123BF2C
+//Initialize Page @1-45812DB7
 // Variables
 $FileName = "";
 $Redirect = "";
@@ -411,23 +411,25 @@ $TemplateSource = "";
 
 $FileName = FileName;
 $Redirect = "";
-$TemplateFileName = "crud_unimed.html";
+$TemplateFileName = "crud_Unimed.html";
 $BlockToParse = "main";
 $TemplateEncoding = "CP1252";
 $ContentType = "text/html";
 $PathToRoot = "./";
+$PathToRootOpt = "";
+$Scripts = "|";
 $Charset = $Charset ? $Charset : "windows-1252";
 //End Initialize Page
 
-//Include events file @1-51BEA529
-include_once("./crud_unimed_events.php");
+//Include events file @1-4B42F522
+include_once("./crud_Unimed_events.php");
 //End Include events file
 
 //Before Initialize @1-E870CEBC
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeInitialize", $MainPage);
 //End Before Initialize
 
-//Initialize Objects @1-654A692C
+//Initialize Objects @1-9CFAE509
 $DBConnection1 = new clsDBConnection1();
 $MainPage->Connections["Connection1"] = & $DBConnection1;
 $Attributes = new clsAttributes("page:");
@@ -468,6 +470,12 @@ if(!is_array($Label1->Value) && !strlen($Label1->Value) && $Label1->Value !== fa
 $Logout->Parameters = CCGetQueryString("QueryString", array("ccsForm"));
 $Logout->Parameters = CCAddParam($Logout->Parameters, "Logout", "True");
 $unidadesmedida->Initialize();
+$ScriptIncludes = "";
+$SList = explode("|", $Scripts);
+foreach ($SList as $Script) {
+    if ($Script != "") $ScriptIncludes = $ScriptIncludes . "<script src=\"" . $PathToRoot . $Script . "\" type=\"text/javascript\"></script>\n";
+}
+$Attributes->SetValue("scriptIncludes", $ScriptIncludes);
 
 BindEvents();
 

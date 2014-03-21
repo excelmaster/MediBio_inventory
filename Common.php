@@ -5,16 +5,16 @@ include(RelativePath . "/Classes.php");
 include(RelativePath . "/db_adapter.php");
 //End Include Files
 
-//Connection Settings @0-F6C2C609
+//Connection Settings @0-22312690
 $CCConnectionSettings = array (
     "Connection1" => array(
         "Type" => "MySQL",
         "DBLib" => "MySQL",
-        "Database" => "inventario_mb",
-        "Host" => "127.0.0.1",
-        "Port" => "3306;Database=inventario_mb",
-        "User" => "hfTest",
-        "Password" => "HFpruebas*",
+        "Database" => "u392883857_inven",
+        "Host" => "localhost",
+        "Port" => "3306;Database=u392883857_inven",
+        "User" => "u392883857_admin",
+        "Password" => "mb2013",
         "Encoding" => array("", "cp1252"),
         "Persistent" => false,
         "DateFormat" => array("mm", "/", "dd", "/", "yyyy", " ", "HH", ":", "nn", ":", "ss"),
@@ -25,7 +25,7 @@ $CCConnectionSettings = array (
         "Type" => "MySQL",
         "DBLib" => "MySQL",
         "Database" => "invt_mb",
-        "Host" => "127.0.0.1",
+        "Host" => "localhost",
         "Port" => "3306;Database=invt_mb",
         "User" => "hfTest",
         "Password" => "HFpruebas*",
@@ -38,12 +38,13 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-//Initialize Common Variables @0-B887EE7B
+//Initialize Common Variables @0-2587E408
 $PHPVersion = explode(".",  phpversion());
 if (($PHPVersion[0] < 4) || ($PHPVersion[0] == 4  && $PHPVersion[1] < 1)) {
     echo "Sorry. This program requires PHP 4.1 and above to run. You may upgrade your php at <a href='http://www.php.net/downloads.php'>http://www.php.net/downloads.php</a>";
     exit;
 }
+if (session_id() == "") { session_start(); }
 if (CCGetUserAddr() != $_SERVER["REMOTE_ADDR"]) { CCLogoutUser(); }
 
 header('Pragma: ');
@@ -243,22 +244,17 @@ function CCGetValue(&$db, $fieldname)
 }
 //End CCGetValue
 
-//CCGetSession @0-F4650E55
+//CCGetSession @0-A9848448
 function CCGetSession($parameter_name, $default_value = "")
 {
-    session_start();
-    $result = isset($_SESSION[$parameter_name]) ? $_SESSION[$parameter_name] : $default_value;
-    session_write_close();
-    return $result;
+    return isset($_SESSION[$parameter_name]) ? $_SESSION[$parameter_name] : $default_value;
 }
 //End CCGetSession
 
-//CCSetSession @0-025730A6
+//CCSetSession @0-7889A59E
 function CCSetSession($param_name, $param_value)
 {
-    session_start();
     $_SESSION[$param_name] = $param_value;
-    session_write_close();
 }
 //End CCSetSession
 
@@ -383,7 +379,7 @@ function CCGetDBValue($sql, &$db)
 }
 //End CCGetDBValue
 
-//CCGetListValues @0-74F64ABA
+//CCGetListValues @0-DCBE0F84
 function CCGetListValues(&$db, $sql, $where = "", $order_by = "", $bound_column = "", $text_column = "", $dbformat = "", $datatype = "", $errorclass = "", $fieldname = "", $DSType = dsSQL)
 {
     $errors = new clsErrors();
@@ -392,7 +388,7 @@ function CCGetListValues(&$db, $sql, $where = "", $order_by = "", $bound_column 
         $bound_column = 0;
     if(!strlen($text_column))
         $text_column = 1;
-    if ($DSType == dsProcedure && $db->DB == "MSSQL" && count($db->Binds)) 
+    if ($DSType == dsProcedure && ($db->DB == "MSSQL" || $db->DB == "SQLSRV") && count($db->Binds)) 
         $db->execute($sql);
     else
         $db->query(CCBuildSQL($sql, $where, $order_by));
@@ -1783,10 +1779,13 @@ function CCStrLen($str, $encoding = false) {
 }
 //End CCStrLen
 
-//CCGetTemplate @0-D8640D95
-function & CCGetTemplate(& $Component = null) {
+//CCGetTemplate @0-14DD93C4
+function CCGetTemplate() {
     global $Tpl;
-    if ($Component == null) return $Tpl;
+    $numargs = func_num_args();
+    if ($numargs == 0) return $Tpl;
+    $args = func_get_args();
+    $Component = $args[0];
     $TplClassName = "clsTemplate";
     $parent_page = & CCGetParentPage($Component);
     if (!isset($parent_page->Tpl) || !($parent_page->Tpl instanceof $TplClassName)) { return $Tpl; } 
@@ -1830,8 +1829,8 @@ function CCSubStr($str, $offset, $length = null, $encoding = false) {
 }
 //End CCSubStr
 
-//CCStrPos @0-AF02D9ED
-function CCStrPos($haystack, $needle, $offset = "", $encoding = false) {
+//CCStrPos @0-1EA48B0E
+function CCStrPos($haystack, $needle, $offset = 0, $encoding = false) {
     global $FileEncoding;
     global $PHPVersion;
     if (false === $encoding) $encoding = $FileEncoding;
